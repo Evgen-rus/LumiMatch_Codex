@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 
-from .discovery import link_urls, product_url_score, sitemap_urls
+from .availability import normalize_availability
+from .discovery import discover_product_urls
 from .extract import parse_product_page
 from .fetch import PublicFetcher
 from .storage import CatalogStore
@@ -24,6 +26,14 @@ class CollectionResult:
     pages_visited: int = 0
     products_found: int = 0
     images_saved: int = 0
+    discovered_product_urls: int = 0
+    parsed_products: int = 0
+    in_stock_products: int = 0
+    out_of_stock: int = 0
+    discontinued: int = 0
+    failed_products: int = 0
+    status: str = "not_started"
+    last_refresh: str | None = None
     errors: list[str] = field(default_factory=list)
 
 
@@ -44,34 +54,18 @@ class CatalogCollector:
     ) -> CollectionResult:
         base_url = base_url.rstrip("/")
         result = CollectionResult(supplier=supplier_name(base_url))
+        result.last_refresh = datetime.now(timezone.utc).isoformat()
         try:
-            sitemap, _ = sitemap_urls(
-                self.fetcher, base_url, max_urls=max(max_pages * 40, 200)
+            candidates, _, _ = discover_product_urls(
+                self.fetcher, base_url, max_urls=max(max_pages * 4, 60)
             )
-            home = self.fetcher.get(base_url)
-            seeds = [base_url]
-            if home:
-                seeds.extend(
-                    link_urls(
-                        home.content.decode("utf-8", "replace"),
-                        home.final_url,
-                        base_url,
-                    )[:80]
-                )
-            candidates = sorted(
-                set(sitemap + seeds), key=product_url_score, reverse=True
-            )
-            queue = list(candidates)
-            visited: set[str] = set()
-            while queue and result.pages_visited < max_pages:
-                url = queue.pop(0)
-                if url in visited or urlparse(url).query.lower().startswith(
-                    ("utm_", "yclid")
-                ):
-                    continue
-                visited.add(url)
+            result.discovered_product_urls = len(candidates)
+            for url in candidates:
+                if result.pages_visited >= max_pages:
+                    break
                 page = self.fetcher.get(url)
                 if not page:
+                    result.failed_products += 1
                     continue
                 result.pages_visited += 1
                 html = page.content.decode("utf-8", "replace")
@@ -84,18 +78,21 @@ class CatalogCollector:
                             result.images_saved += 1
                     self.store.upsert(product)
                     result.products_found += 1
-                    continue
-                discovered = link_urls(html, page.final_url, base_url)
-                new_links = [
-                    link
-                    for link in discovered
-                    if link not in visited and link not in queue
-                ]
-                new_links.sort(key=product_url_score, reverse=True)
-                queue.extend(new_links[: max_pages * 2])
+                    result.parsed_products += 1
+                    status = normalize_availability(product.availability_source_text or product.availability)
+                    if status == "in_stock":
+                        result.in_stock_products += 1
+                    elif status == "out_of_stock":
+                        result.out_of_stock += 1
+                    elif status == "discontinued":
+                        result.discontinued += 1
+                else:
+                    result.failed_products += 1
+            result.status = "complete" if result.discovered_product_urls else "partial"
         except Exception as exc:
             message = f"{type(exc).__name__}: {exc}"
             result.errors.append(message)
+            result.status = "failed"
             LOGGER.exception("Supplier failed: %s", base_url)
         return result
 

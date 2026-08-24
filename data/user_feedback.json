@@ -1,0 +1,6 @@
+[
+  {"requirement_id": "F-01", "sku": "a040264", "decision": "accepted", "reason": "visual_positive", "comment": "Первый вариант F-01 признан более-менее похожим; positive regression example, без хардкода SKU."},
+  {"requirement_id": "F-01", "decision": "rejected", "reason": "out_of_stock_or_classic", "comment": "Классические/хрустальные люстры вместо современного цилиндрического подвеса не подходят; товары без наличия не показывать."},
+  {"requirement_id": "F-03", "decision": "rejected", "reason": "visual_mismatch", "comment": "Бра с другой геометрией или абажуром не выдавать ради заполнения количества."},
+  {"requirement_id": "F-04", "decision": "rejected", "reason": "visual_mismatch", "comment": "Нужен близкий светящийся вертикальный контур; обычные бра не считать аналогами."}
+]

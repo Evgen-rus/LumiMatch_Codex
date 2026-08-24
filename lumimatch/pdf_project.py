@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 import pymupdf
+from PIL import Image
 
 
 def inspect_pdf(path: Path) -> dict[str, Any]:
@@ -56,3 +57,42 @@ def render_pages(
             pixmap.save(target)
         rendered.append(str(target))
     return rendered
+
+
+SAMPLE_CROP_SPECS: dict[str, list[tuple[str, tuple[int, int, int, int]]]] = {
+    "F-01": [("Dan_vis_p01.png", (100, 0, 900, 330))],
+    "F-02": [("Dan_vis_p11.png", (120, 0, 1050, 280)), ("Dan_vis_p23.png", (250, 0, 900, 300))],
+    "F-03": [("Dan_vis_p11.png", (260, 330, 900, 650))],
+    "F-04": [("Dan_vis_p18.png", (180, 240, 1000, 650))],
+    "F-05": [("Dan_vis_p27.png", (250, 210, 680, 600)), ("Dan_vis_p29.png", (260, 210, 700, 600))],
+    "F-06": [("Dan_vis_p29.png", (120, 0, 1050, 260))],
+    "F-07": [("Dan_vis_p11.png", (100, 0, 1050, 260))],
+    "F-08": [("Dan_vis_p23.png", (250, 0, 900, 330))],
+}
+
+
+def create_sample_reference_crops(
+    requirements: list[object], render_dir: Path, output_root: Path
+) -> list[object]:
+    """Create simple, inspectable crops for the known sample visual references."""
+    for requirement in requirements:
+        specs = SAMPLE_CROP_SPECS.get(getattr(requirement, "id", ""), [])
+        crop_paths: list[str] = []
+        target_dir = output_root / getattr(requirement, "id", "unknown")
+        target_dir.mkdir(parents=True, exist_ok=True)
+        for index, (filename, box) in enumerate(specs, start=1):
+            source = render_dir / filename
+            if not source.exists():
+                continue
+            try:
+                with Image.open(source) as image:
+                    left, top, right, bottom = box
+                    bounded = (max(0, left), max(0, top), min(image.width, right), min(image.height, bottom))
+                    target = target_dir / f"reference_{index:02d}.png"
+                    image.crop(bounded).save(target)
+                    crop_paths.append(str(target))
+            except OSError:
+                continue
+        if crop_paths:
+            requirement.reference_crop_paths = crop_paths
+    return requirements

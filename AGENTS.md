@@ -287,3 +287,16 @@ Hard constraints важнее визуального сходства.
 - сделай реальный sample run;
 - исправь очевидные проблемы;
 - сохрани результат в `docs/SAMPLE_RUN.md` и `output/`.
+
+## V2 фактическая архитектура и обязательные gates
+
+Текущий pipeline visual-first: `discovery -> product extraction -> availability normalization -> taxonomy/hard filters -> wide candidate pool -> contact sheets -> visual review Codex -> reject -> live availability recheck -> 0-5 finalists`.
+
+- Допустимый финальный статус наличия только `availability_status=in_stock`; `unknown`, `OutOfStock`, `Нет в наличии`, снятые с производства, preorder/expected и `Уточняйте наличие` исключаются до визуального ranking.
+- `FixtureRequirement.taxonomy_family` и `CatalogProduct.product_family` используют практическую taxonomy. Несовместимые family не попадают в visual pool.
+- Для декоративного света lexical scoring является coarse retrieval. Не выбирать top-5 до visual review; использовать широкий pool и `output/review/<requirement>/sheet_*.jpg`.
+- `data/visual_review.json` может содержать явные `decision=accept/reject`; reject обязан исчезать из финального отчёта и сохраняться в `output/debug/rejected_candidates.json`.
+- Другой цвет разрешён только в `color_mode=color_alternative`, после отсутствия хорошего кандидата нужного цвета.
+- Любой финальный кандидат проходит live повторное открытие карточки поставщика. Если повторная проверка не доказала `in_stock`, товар не показывать.
+- Размеры товара хранятся в `width_mm/height_mm/length_mm/diameter_mm/depth_mm`; размеры упаковки не считать размерами светильника.
+- Поля характеристик брать из JSON-LD/specification table/site-specific selectors, а не из полного body text. `image_urls` должны относиться к текущему SKU, не к related/recommendations/certificates/counters.

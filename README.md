@@ -25,10 +25,10 @@
 ```powershell
 .\.venv\Scripts\python.exe -m lumimatch audit
 .\.venv\Scripts\python.exe -m lumimatch collect --max-pages 28
-.\.venv\Scripts\python.exe -m lumimatch shortlist --requirements data/fixture_requirements.json --top-n 5
+.\.venv\Scripts\python.exe -m lumimatch shortlist --requirements data/fixture_requirements.json --top-n 80
 ```
 
-В `data/visual_review.json` хранится ручная визуальная проверка текущего sample shortlist, выполненная Codex. При новом проекте этот файл нужно обновить после просмотра фотографий кандидатов; автоматический score не объявляет недоказанные совпадения точными.
+В `data/visual_review.json` хранится ручная визуальная проверка Codex. Для sample V2 широкие pools и contact sheets находятся в `output/review/<requirement>/`; явный reject никогда не остаётся в финальном отчёте. Если хороших вариантов нет, отчёт намеренно показывает `Ничего не найдено. Попробуйте подобрать вручную.`.
 
 `requirements.txt` — стартовый список зависимостей MVP. Codex может менять его по мере реализации, но зависимости должны устанавливаться только в локальное `.venv`.
 
@@ -45,7 +45,7 @@
 - `data/catalog/` — локальные данные каталога.
 - `output/` — результаты подборов.
 - `docs/` — аудит поставщиков и технические заметки.
-- `lumimatch/` — рабочие модели, HTTP-first collector, extractor, SQLite/FTS индекс, PDF cache, scoring и отчёты.
+- `lumimatch/` — модели, HTTP-first discovery/collector, консервативный extractor, availability/taxonomy gates, SQLite/FTS индекс, PDF/reference crops, contact sheets, visual review и отчёты.
 - `tests/` — unit-тесты извлечения, discovery и shortlist.
 
 ## Важно
@@ -53,5 +53,7 @@
 AI-часть выполняет сам Codex в рамках своей сессии и подписки. Не подключать OpenAI API только ради vision/LLM.
 
 Python-скрипты нужны для рутинной работы: обход каталогов, извлечение карточек, скачивание фото, локальный индекс, фильтрация, кэширование и формирование отчёта.
+
+Перед финалом система повторно открывает публичную карточку и проверяет наличие без кэша. В каталоге могут оставаться неизвестные или недоступные товары для диагностики, но они никогда не попадают в подборку.
 
 Если в будущем понадобится полностью автономная программа, которой пользуются без Codex, это будет отдельная задача.

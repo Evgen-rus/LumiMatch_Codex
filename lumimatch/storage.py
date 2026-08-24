@@ -8,8 +8,10 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from .availability import normalize_availability
 from .models import CatalogProduct
 from .paths import CATALOG, ensure_dirs
+from .taxonomy import classify_product
 
 
 def _key(value: str) -> str:
@@ -49,6 +51,7 @@ class CatalogStore:
             )
 
     def upsert(self, product: CatalogProduct) -> None:
+        product = self._normalize_product(product)
         payload = product.model_dump(mode="json")
         search_text = " ".join(
             str(value)
@@ -125,7 +128,7 @@ class CatalogStore:
                 ).fetchall()
             else:
                 rows = con.execute("SELECT payload_json FROM products").fetchall()
-        return [CatalogProduct.model_validate(json.loads(row[0])) for row in rows]
+        return [self._normalize_product(CatalogProduct.model_validate(json.loads(row[0]))) for row in rows]
 
     def fts(self, query: str, limit: int = 100) -> list[CatalogProduct]:
         terms = " ".join(token for token in query.split() if token.isalnum())
@@ -140,7 +143,27 @@ class CatalogStore:
                 """,
                 (terms, limit),
             ).fetchall()
-        return [CatalogProduct.model_validate(json.loads(row[0])) for row in rows]
+        return [self._normalize_product(CatalogProduct.model_validate(json.loads(row[0]))) for row in rows]
+
+    @staticmethod
+    def _normalize_product(product: CatalogProduct) -> CatalogProduct:
+        updates: dict[str, object] = {}
+        if product.availability_status == "unknown" and product.availability:
+            updates["availability_status"] = normalize_availability(product.availability)
+        if not product.availability_source_text and product.availability:
+            updates["availability_source_text"] = product.availability
+        inferred_family = classify_product(product)
+        if not product.product_family or product.product_family == "wall_sconce" and inferred_family != "wall_sconce":
+            updates["product_family"] = inferred_family
+        for short_name, normalized_name in (
+            ("width", "width_mm"),
+            ("height", "height_mm"),
+            ("diameter", "diameter_mm"),
+            ("depth", "depth_mm"),
+        ):
+            if getattr(product, normalized_name) is None and getattr(product, short_name) is not None:
+                updates[normalized_name] = getattr(product, short_name)
+        return product.model_copy(update=updates) if updates else product
 
     def response_cache_path(self, url: str) -> Path:
         path = CATALOG / "cache" / f"{_key(url)}.json"

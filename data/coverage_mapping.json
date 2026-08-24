@@ -1,0 +1,10 @@
+[
+  {"plan_element": "точки подвесов над гостиной/столовой", "visual_reference": "Dan_vis.pdf pages 1-8", "requirement_id": "F-01", "status": "matched", "note": "компактные чёрные цилиндрические подвесы; конкретная модель не указана"},
+  {"plan_element": "непрерывные линии в потолке", "visual_reference": "Dan_vis.pdf pages 11 and 23", "requirement_id": "F-02", "status": "matched", "note": "линейный профиль не подменяется track spot"},
+  {"plan_element": "парные бра у кровати в мастер-спальне", "visual_reference": "Dan_vis.pdf pages 11-17", "requirement_id": "F-03", "status": "matched", "note": "мягкий свет, небольшой светлый абажур и тёмное основание"},
+  {"plan_element": "вертикальные бра на тёмной стене", "visual_reference": "Dan_vis.pdf pages 18-22", "requirement_id": "F-04", "status": "matched", "note": "современный светящийся контур; обычные абажурные бра отвергаются"},
+  {"plan_element": "подсветка зеркал/санузлов", "visual_reference": "Dan_vis.pdf pages 23-30", "requirement_id": "F-05", "status": "ambiguous", "note": "конструкция и IP не доказаны; требуется ручная проверка зоны"},
+  {"plan_element": "направленные потолочные приборы", "visual_reference": "Dan_vis.pdf pages 1-2 and 18", "requirement_id": "F-06", "status": "matched", "note": "узкие чёрные цилиндрические споты; округлый белый Nove отклонён"},
+  {"plan_element": "возможная трековая система", "visual_reference": "Dan_dia-2.pdf sheets 10-11", "requirement_id": "F-07", "status": "ambiguous", "note": "серия шинопровода и напряжение в проекте не подтверждены"},
+  {"plan_element": "скрытые линии в мебели, нишах и зеркалах", "visual_reference": "Dan_vis.pdf pages 23-30", "requirement_id": "F-08", "status": "visual_only", "note": "LED-лента/профиль не специфицированы; длину считать вручную"}
+]
