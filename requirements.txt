@@ -1,0 +1,16 @@
+httpx>=0.28,<1
+beautifulsoup4>=4.15,<5
+lxml>=6,<7
+pydantic>=2.12,<3
+tenacity>=9.1,<10
+playwright>=1.55,<2
+PyMuPDF>=1.26,<2
+Pillow>=11,<13
+typer>=0.16,<1
+rich>=14,<16
+structlog>=25,<27
+pytest>=8.4,<10
+pytest-asyncio>=1,<2
+respx>=0.22,<1
+ruff>=0.12,<1
+mypy>=1.17,<2
