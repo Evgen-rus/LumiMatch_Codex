@@ -4,9 +4,7 @@
 
 ## Как запустить
 
-1. Распакуйте архив и скопируйте содержимое в рабочую папку проекта.
-2. Локальное `.venv` уже можно оставить существующее — архив его не содержит и не перезаписывает.
-3. В PowerShell из корня проекта выполните:
+Локальное `.venv` проекта используется без глобального Python. Если окружение отсутствует или изменился `requirements.txt`, выполните:
 
 ```powershell
 .\setup.ps1
@@ -14,9 +12,23 @@
 
 Скрипт использует существующее `.venv`, устанавливает/обновляет зависимости из `requirements.txt` и ставит Chromium для Playwright. Если `.venv` вдруг отсутствует, скрипт сможет создать его сам.
 
-4. Откройте эту папку как отдельный проект в Codex.
-5. Отправьте текст из `START.txt`.
-6. Codex изучит sample PDF, сайты поставщиков и референсный репозиторий Contact_harvester, затем реализует workflow и проведёт реальный sample run.
+После установки полный прогон на реальных sample PDF запускается так:
+
+```powershell
+.\.venv\Scripts\python.exe -m lumimatch sample-run
+```
+
+Команда выполняет bounded-аудит поставщиков, обновляет локальный SQLite-каталог и кэш фотографий, читает `samples/Dan_dia-2.pdf` и `samples/Dan_vis.pdf`, строит shortlist и сохраняет Markdown/HTML/JSON в `output/`.
+
+Отдельные этапы:
+
+```powershell
+.\.venv\Scripts\python.exe -m lumimatch audit
+.\.venv\Scripts\python.exe -m lumimatch collect --max-pages 28
+.\.venv\Scripts\python.exe -m lumimatch shortlist --requirements data/fixture_requirements.json --top-n 5
+```
+
+В `data/visual_review.json` хранится ручная визуальная проверка текущего sample shortlist, выполненная Codex. При новом проекте этот файл нужно обновить после просмотра фотографий кандидатов; автоматический score не объявляет недоказанные совпадения точными.
 
 `requirements.txt` — стартовый список зависимостей MVP. Codex может менять его по мере реализации, но зависимости должны устанавливаться только в локальное `.venv`.
 
@@ -33,6 +45,8 @@
 - `data/catalog/` — локальные данные каталога.
 - `output/` — результаты подборов.
 - `docs/` — аудит поставщиков и технические заметки.
+- `lumimatch/` — рабочие модели, HTTP-first collector, extractor, SQLite/FTS индекс, PDF cache, scoring и отчёты.
+- `tests/` — unit-тесты извлечения, discovery и shortlist.
 
 ## Важно
 

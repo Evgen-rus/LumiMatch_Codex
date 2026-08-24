@@ -1,0 +1,128 @@
+[
+  {
+    "id": "F-01",
+    "room": "гостиная / столовая",
+    "fixture_type": "подвесной светильник",
+    "quantity": 3,
+    "visual_description": "Несколько компактных чёрных цилиндрических подвесов с направленным светом над зоной гостиной/столовой.",
+    "color": "чёрный",
+    "shape": "цилиндрический",
+    "mounting": "подвесной, потолочный",
+    "approximate_dimensions": null,
+    "exact_dimensions": null,
+    "technical_constraints": ["визуально компактный корпус", "направленный свет", "для жилого интерьера"],
+    "source_pages": ["Dan_dia-2.pdf, лист 10", "Dan_dia-2.pdf, лист 11", "Dan_dia-2.pdf, лист 14", "Dan_vis.pdf, страницы 1-8"],
+    "source_refs": [
+      {"file": "samples/Dan_dia-2.pdf", "page": 10, "source_type": "план освещения", "note": "На плане отмечены точки подвесов и группы света; маркировка модели не дана.", "confidence": 0.78},
+      {"file": "samples/Dan_vis.pdf", "page": 1, "source_type": "интерьерная визуализация", "note": "В потолочной зоне видны компактные тёмные цилиндрические приборы.", "confidence": 0.82}
+    ],
+    "confidence": 0.78,
+    "reference_pages": ["Dan_dia-2.pdf#page=10", "Dan_vis.pdf#page=1", "Dan_vis.pdf#page=2"],
+    "reference_image_paths": ["output/sample_references/Dan_dia-2_p10.png", "output/sample_references/Dan_vis_p01.png"]
+  },
+  {
+    "id": "F-02",
+    "room": "гостиная / спальни",
+    "fixture_type": "линейный потолочный светильник",
+    "quantity": null,
+    "visual_description": "Тонкие чёрные линейные элементы света, встроенные или установленные в деревянный потолок; точная система не указана.",
+    "color": "чёрный",
+    "shape": "линейный",
+    "mounting": "потолочный",
+    "approximate_dimensions": null,
+    "exact_dimensions": null,
+    "technical_constraints": ["тонкий профиль", "непрерывная световая линия", "совместимость с деревянной обшивкой потолка"],
+    "source_pages": ["Dan_dia-2.pdf, лист 10", "Dan_dia-2.pdf, лист 11", "Dan_vis.pdf, страницы 1-8 и 11-22"],
+    "source_refs": [
+      {"file": "samples/Dan_dia-2.pdf", "page": 10, "source_type": "план освещения", "note": "Линейные участки отмечены на плане без артикула и сечения.", "confidence": 0.65},
+      {"file": "samples/Dan_vis.pdf", "page": 11, "source_type": "интерьерная визуализация", "note": "В спальне видны две тонкие световые линии на потолке.", "confidence": 0.83}
+    ],
+    "confidence": 0.69,
+    "reference_pages": ["Dan_dia-2.pdf#page=10", "Dan_vis.pdf#page=11", "Dan_vis.pdf#page=18"],
+    "reference_image_paths": ["output/sample_references/Dan_dia-2_p10.png", "output/sample_references/Dan_vis_p11.png"]
+  },
+  {
+    "id": "F-03",
+    "room": "мастер-спальня",
+    "fixture_type": "настенное бра у кровати",
+    "quantity": 2,
+    "visual_description": "Парные бра по сторонам кровати: небольшой светлый абажур и тёмное основание, мягкий локальный свет.",
+    "color": "чёрный / светлый абажур",
+    "shape": "компактный вертикальный",
+    "mounting": "настенный",
+    "approximate_dimensions": {"height_mm": 250},
+    "exact_dimensions": null,
+    "technical_constraints": ["парная установка", "мягкий свет для прикроватной зоны", "настенный монтаж"],
+    "source_pages": ["Dan_dia-2.pdf, лист 11", "Dan_dia-2.pdf, лист 14", "Dan_vis.pdf, страницы 11-17"],
+    "source_refs": [
+      {"file": "samples/Dan_vis.pdf", "page": 11, "source_type": "интерьерная визуализация", "note": "Светильники видны по обеим сторонам кровати; точная модель отсутствует.", "confidence": 0.86},
+      {"file": "samples/Dan_dia-2.pdf", "page": 14, "source_type": "план развёрток стен", "note": "На стенах спальни есть точки/обозначения бра, без спецификации модели.", "confidence": 0.66}
+    ],
+    "confidence": 0.82,
+    "reference_pages": ["Dan_vis.pdf#page=11", "Dan_vis.pdf#page=12", "Dan_vis.pdf#page=17"],
+    "reference_image_paths": ["output/sample_references/Dan_vis_p11.png"]
+  },
+  {
+    "id": "F-04",
+    "room": "гостевая спальня",
+    "fixture_type": "декоративное настенное бра",
+    "quantity": 2,
+    "visual_description": "Парные вертикальные бра с округлым светящимся контуром и тёмной центральной частью по сторонам кровати.",
+    "color": "чёрный / белый свет",
+    "shape": "вертикальный овальный",
+    "mounting": "настенный",
+    "approximate_dimensions": null,
+    "exact_dimensions": null,
+    "technical_constraints": ["парная установка", "вертикальный световой рисунок", "декоративный акцент"],
+    "source_pages": ["Dan_dia-2.pdf, лист 11", "Dan_dia-2.pdf, лист 14", "Dan_vis.pdf, страницы 18-22"],
+    "source_refs": [
+      {"file": "samples/Dan_vis.pdf", "page": 18, "source_type": "интерьерная визуализация", "note": "На тёмной стене показана пара вертикальных светильников рядом с кроватью.", "confidence": 0.91},
+      {"file": "samples/Dan_dia-2.pdf", "page": 11, "source_type": "план подключения светильников", "note": "В соответствующей зоне есть настенные точки подключения.", "confidence": 0.64}
+    ],
+    "confidence": 0.84,
+    "reference_pages": ["Dan_vis.pdf#page=18", "Dan_vis.pdf#page=19"],
+    "reference_image_paths": ["output/sample_references/Dan_vis_p18.png"]
+  },
+  {
+    "id": "F-05",
+    "room": "санузлы",
+    "fixture_type": "подсветка зеркала",
+    "quantity": null,
+    "visual_description": "Вертикальные или контурные световые элементы возле зеркал в санузлах; конкретная конструкция и размеры не указаны.",
+    "color": "нейтральный белый свет",
+    "shape": "вертикальный / линейный",
+    "mounting": "настенный",
+    "approximate_dimensions": null,
+    "exact_dimensions": null,
+    "technical_constraints": ["для влажного помещения", "свет у зеркала", "нужен подбор по IP после уточнения зоны"],
+    "source_pages": ["Dan_dia-2.pdf, лист 11", "Dan_dia-2.pdf, лист 19", "Dan_vis.pdf, страницы 23-30"],
+    "source_refs": [
+      {"file": "samples/Dan_vis.pdf", "page": 24, "source_type": "интерьерная визуализация", "note": "В санузлах видны подсвеченные зеркальные зоны, но тип прибора не отделён от подсветки зеркала.", "confidence": 0.69},
+      {"file": "samples/Dan_dia-2.pdf", "page": 19, "source_type": "развёртка стен", "note": "На развёртке есть зеркала и световые/электрические точки; IP и модель не указаны.", "confidence": 0.61}
+    ],
+    "confidence": 0.62,
+    "reference_pages": ["Dan_vis.pdf#page=24", "Dan_vis.pdf#page=27", "Dan_vis.pdf#page=30"],
+    "reference_image_paths": ["output/sample_references/Dan_vis_p24.png", "output/sample_references/Dan_vis_p30.png"]
+  },
+  {
+    "id": "F-06",
+    "room": "гостиная / спальни",
+    "fixture_type": "точечный или трековый светильник",
+    "quantity": null,
+    "visual_description": "Небольшие направленные потолочные приборы, часть из них визуально похожа на чёрные цилиндрические споты.",
+    "color": "чёрный",
+    "shape": "цилиндрический",
+    "mounting": "потолочный / трековый",
+    "approximate_dimensions": null,
+    "exact_dimensions": null,
+    "technical_constraints": ["направленный свет", "совместимость с потолочной схемой", "не считать конкретный трек доказанным"],
+    "source_pages": ["Dan_dia-2.pdf, лист 10", "Dan_dia-2.pdf, лист 11", "Dan_vis.pdf, страницы 1-8 и 11-22"],
+    "source_refs": [
+      {"file": "samples/Dan_dia-2.pdf", "page": 10, "source_type": "план освещения", "note": "Точки направленного света присутствуют, но условные обозначения не содержат товарной спецификации.", "confidence": 0.71},
+      {"file": "samples/Dan_vis.pdf", "page": 2, "source_type": "интерьерная визуализация", "note": "В потолке видны отдельные направленные приборы.", "confidence": 0.77}
+    ],
+    "confidence": 0.70,
+    "reference_pages": ["Dan_dia-2.pdf#page=10", "Dan_vis.pdf#page=2", "Dan_vis.pdf#page=18"],
+    "reference_image_paths": ["output/sample_references/Dan_dia-2_p10.png", "output/sample_references/Dan_vis_p18.png"]
+  }
+]
