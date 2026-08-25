@@ -47,6 +47,7 @@ class CatalogProduct(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     supplier: str
+    brand: str | None = None
     source_url: str
     canonical_url: str
     sku: str | None = None

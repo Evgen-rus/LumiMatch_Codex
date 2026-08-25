@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass, field
@@ -62,6 +63,7 @@ def product_text(product: CatalogProduct) -> str:
         str(value)
         for value in (
             product.name,
+            product.brand,
             product.category,
             product.collection,
             product.description,
@@ -238,6 +240,21 @@ def wide_candidate_pool(
         candidates.append(score_product(requirement, product, color_mode=mode))
     candidates.sort(key=lambda item: (item.color_mode != "primary", -item.overall_score, item.product.supplier, item.product.sku or ""))
     return candidates[:limit]
+
+
+def candidate_set_fingerprint(candidates: Iterable[ScoredCandidate]) -> str:
+    """Stable identity of the reviewed candidate set, independent of order."""
+    keys = sorted(
+        f"{candidate.product.supplier}|{candidate.product.sku or ''}|{candidate.product.canonical_url}"
+        for candidate in candidates
+    )
+    return hashlib.sha256("\n".join(keys).encode("utf-8")).hexdigest()
+
+
+def visual_review_is_current(review_record: dict[str, object], candidates: Iterable[ScoredCandidate]) -> bool:
+    """A review is complete only when it names the exact current candidate set."""
+    expected = review_record.get("candidate_set_fingerprint")
+    return isinstance(expected, str) and expected == candidate_set_fingerprint(candidates)
 
 
 def candidate_pool_diagnostics(

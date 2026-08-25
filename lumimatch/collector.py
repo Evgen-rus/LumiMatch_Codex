@@ -35,8 +35,20 @@ class CollectionResult:
     unknown_products: int = 0
     failed_products: int = 0
     status: str = "not_started"
+    coverage_quality: str = "unverified"
+    parse_success_rate: float = 0.0
     last_refresh: str | None = None
     errors: list[str] = field(default_factory=list)
+
+
+def coverage_state(discovered_product_urls: int, parsed_products: int) -> tuple[str, str, float]:
+    """Classify inventory quality; discovery alone is never healthy coverage."""
+    rate = parsed_products / discovered_product_urls if discovered_product_urls else 0.0
+    if not discovered_product_urls or not parsed_products:
+        return "broken", "broken", rate
+    if rate >= 0.5:
+        return "healthy", "healthy", rate
+    return "partial", "partial", rate
 
 
 class CatalogCollector:
@@ -96,7 +108,9 @@ class CatalogCollector:
                         result.unknown_products += 1
                 else:
                     result.failed_products += 1
-            result.status = "complete" if result.discovered_product_urls else "partial"
+            result.status, result.coverage_quality, result.parse_success_rate = coverage_state(
+                result.discovered_product_urls, result.parsed_products
+            )
         except Exception as exc:
             message = f"{type(exc).__name__}: {exc}"
             result.errors.append(message)

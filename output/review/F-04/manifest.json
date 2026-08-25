@@ -2,6 +2,39 @@
   {
     "number": 1,
     "requirement_id": "F-04",
+    "supplier": "freya-light.com",
+    "sku": "FR2066WL-L40B",
+    "name": "серия Кремень / Flint",
+    "source_url": "https://freya-light.com/products/nastennye-svetilniki/fr2066wl_l40b/",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\00663064caa14ea30752e665848c49f37f83d893bb3ec60733ddd8ee45eeeea1.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 2,
+    "requirement_id": "F-04",
+    "supplier": "shop.lussole.ru",
+    "sku": "LSP-7187",
+    "name": "Бра Lussole LSP-7187",
+    "source_url": "https://shop.lussole.ru/bra-lussole-lsp-7187/",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ef996f7e6a42a9d65c5bf4b5b6edb690debfac3184cc30dfb61dc9d674587d7e.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 3,
+    "requirement_id": "F-04",
+    "supplier": "eurosvet.ru",
+    "sku": "a040510",
+    "name": "Настенный светодиодный светильник Tabla",
+    "source_url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-tabla-tabla-led-khrom-a040510",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ac315f42fef591b2933388cb83326ea3b8becd98e9c46d5654725c160150a420.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 4,
+    "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "080942",
     "name": "Светильник потолочный 9W 750LM 4000K, черный/золото Guarda",
@@ -11,7 +44,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 2,
+    "number": 5,
     "requirement_id": "F-04",
     "supplier": "artelamp.ru",
     "sku": "A631105E",
@@ -22,7 +55,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 3,
+    "number": 6,
     "requirement_id": "F-04",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -33,7 +66,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 4,
+    "number": 7,
     "requirement_id": "F-04",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -44,7 +77,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 5,
+    "number": 8,
     "requirement_id": "F-04",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -55,7 +88,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 6,
+    "number": 9,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "002000",
@@ -66,7 +99,95 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 7,
+    "number": 10,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003350",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003350",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\e8aa4e94e1ed6b00715845abc0553a3c22ada1ab1ddabdc6a840b83256c86bda.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 11,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003351",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003351",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\15ae9077b64a31d07edf9b862efb5b11b353611a9adb6b25021d6d56464fa1f4.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 12,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003352",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003352",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\90001b021732cc212009435b1466e8152eeef771ff6acc25042cea002b1fa7a9.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 13,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003354",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003354",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\4291dd5ff8f8c2022c457f296965f3d1fd3c8440a1e43ae60d4bd7af47643c50.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 14,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003450",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003450",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\4a44e50e4b31c37249d175f9bd232c71648ff06d7967ae3035964ebb29644f3b.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 15,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003451",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003451",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\b4d8bdde19ec9d84a2b6ed449db59eea5cfa5ed7bc89db3ce7dfdf74b5f154e0.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 16,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003454",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003454",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\a232912d5dffd1df5db24a57773c49b17ce29da3940c4a08864d6a0ecc3f2d58.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 17,
+    "requirement_id": "F-04",
+    "supplier": "lightstar.ru",
+    "sku": "003455",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003455",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\9add2c87a63eaa818c9b09592a297dc448f39c546581601d39f583aa8f2ac554.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 18,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "011626",
@@ -77,7 +198,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 8,
+    "number": 19,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "032016",
@@ -88,7 +209,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 9,
+    "number": 20,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "075003",
@@ -99,7 +220,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 10,
+    "number": 21,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "075084",
@@ -107,10 +228,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075084",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\1b2be1d3463bf4d85071536d50ccf1657c9c93d47dba3a794822c7b0777eef53.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 11,
+    "number": 22,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "075092",
@@ -118,10 +239,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075092",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\5d0a71442fb3756ae67e56ddab2d16a02339120aa865e680fec6bc5f45cf4304.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 12,
+    "number": 23,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "075514",
@@ -129,10 +250,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075514",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ba7f0f8cfe8b7fbd60dc179621cbbae37fe3249a598c9fd02fef6e17612e23c0.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 13,
+    "number": 24,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "081346",
@@ -140,10 +261,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/081346",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\cec11a1d06b5d72b6b4afcad5f4272752e208016faf9cb17aef7ae3644822770.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 14,
+    "number": 25,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225430",
@@ -151,10 +272,10 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225430",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ff64ec741457183b5a46921e403fdcc70a679ac19bd3ef59354c77f776ae3a51.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 15,
+    "number": 26,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225530",
@@ -162,10 +283,10 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225530",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\3c944938229029124f4567c487560000cbc28fc6a36a7e6cabf8b4de6c00d4d4.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 16,
+    "number": 27,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225540",
@@ -173,10 +294,10 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225540",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\bf026732055cc3f055ab07f4b8cbbb6d7636d14c18245ea767e4cb1acb523d20.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 17,
+    "number": 28,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225630",
@@ -184,10 +305,10 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225630",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c39d91056670910b2324d67f7209125e7c8d5d752189328b71e7813c67eb2edf.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 18,
+    "number": 29,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225640",
@@ -195,10 +316,10 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225640",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ce3ece6b9d54d6a6642a017c012ff7a05f95dd18132ce399a42567033fb485e6.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 19,
+    "number": 30,
     "requirement_id": "F-04",
     "supplier": "lightstar.ru",
     "sku": "225660",
@@ -206,6 +327,17 @@
     "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225660",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\eca27d55d97c0f76d614f612bc7b122f8ae5d3252609d273649fd49ae75c15cb.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 31,
+    "requirement_id": "F-04",
+    "supplier": "shop.lussole.ru",
+    "sku": "LSP-4001",
+    "name": "Бра Lussole LSP-4001",
+    "source_url": "https://shop.lussole.ru/bra-lussole-lsp-4001/",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\41d38ace1ceddf2caa004d0cb8c213b5bc332ca6560e8a0e200c05d82f2ec0ff.jpg",
+    "color_mode": "color_alternative",
+    "sheet": "sheet_02.jpg"
   }
 ]

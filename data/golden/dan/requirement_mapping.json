@@ -1,0 +1,178 @@
+[
+  {
+    "kp_position": 1,
+    "sku": "50248",
+    "matched_fixture_requirement": "F-01",
+    "confidence": 0.88,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present or verified by the Elektrostandard catalog family; cylindrical pendant directly matches the F-01 visual family"
+  },
+  {
+    "kp_position": 2,
+    "sku": null,
+    "matched_fixture_requirement": null,
+    "confidence": null,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand/series verified from the product naming and allowed supplier list; no confident FixtureRequirement mapping"
+  },
+  {
+    "kp_position": 3,
+    "sku": "2207B,19",
+    "matched_fixture_requirement": "F-03",
+    "confidence": 0.49,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand/series verified from the product naming and allowed supplier list; wall-light role overlaps F-03, but source project room is not proven"
+  },
+  {
+    "kp_position": 4,
+    "sku": "LL-894-1",
+    "matched_fixture_requirement": "F-02",
+    "confidence": 0.56,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand inferred from the public product naming; no allowed supplier domain verified; linear fixture role is compatible with F-02; source dimensions differ from the visual brief"
+  },
+  {
+    "kp_position": 5,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 6,
+    "sku": "GP8052",
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 7,
+    "sku": "GP8050",
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 8,
+    "sku": "GP8060",
+    "matched_fixture_requirement": "F-07",
+    "confidence": 0.78,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present in the product name or GP accessory family; system component aligned with the sample track-system requirement"
+  },
+  {
+    "kp_position": 9,
+    "sku": "FR2066WL-L40B",
+    "matched_fixture_requirement": "F-03",
+    "confidence": 0.72,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present in the product name; wall sconce role and bedside use are consistent with F-03"
+  },
+  {
+    "kp_position": 10,
+    "sku": "5610/37WL",
+    "matched_fixture_requirement": "F-04",
+    "confidence": 0.58,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present; public Lumion catalog is hosted by Odeon Light; wall-light role may correspond to the decorative vertical wall-light requirement"
+  },
+  {
+    "kp_position": 11,
+    "sku": "1108",
+    "matched_fixture_requirement": "F-05",
+    "confidence": 0.44,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present or verified by the Elektrostandard catalog family; functional wall/step-light role may overlap F-05, but mirror use is not proven"
+  },
+  {
+    "kp_position": 12,
+    "sku": "lsp-4001",
+    "matched_fixture_requirement": "F-05",
+    "confidence": 0.54,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present in the product name; vertical wall light may serve the mirror-light requirement; dimensions need confirmation"
+  },
+  {
+    "kp_position": 13,
+    "sku": "lsp-7187",
+    "matched_fixture_requirement": "F-04",
+    "confidence": 0.67,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present in the product name; decorative wall-light role is consistent with F-04"
+  },
+  {
+    "kp_position": 14,
+    "sku": "LSP-4016",
+    "matched_fixture_requirement": "F-01",
+    "confidence": 0.42,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present in the product name; pendant role overlaps F-01, but geometry/model identity is not proven"
+  },
+  {
+    "kp_position": 15,
+    "sku": "85081/00",
+    "matched_fixture_requirement": "F-07",
+    "confidence": 0.78,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement"
+  },
+  {
+    "kp_position": 16,
+    "sku": "85078/01",
+    "matched_fixture_requirement": "F-06",
+    "confidence": 0.79,
+    "product_role": "VISUAL_SELECTION",
+    "note": "brand explicitly present or verified by the Elektrostandard catalog family; track-spot role directly matches the F-06 directional-light family"
+  },
+  {
+    "kp_position": 17,
+    "sku": "TRF-1-200-BK",
+    "matched_fixture_requirement": "F-07",
+    "confidence": 0.78,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement"
+  },
+  {
+    "kp_position": 18,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 19,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 20,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 21,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement"
+  },
+  {
+    "kp_position": 22,
+    "sku": null,
+    "matched_fixture_requirement": "F-08",
+    "confidence": 0.66,
+    "product_role": "SYSTEM_BOM",
+    "note": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement"
+  }
+]

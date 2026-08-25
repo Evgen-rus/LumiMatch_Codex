@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T03:51:17.028580+00:00",
+  "generated_at": "2026-08-25T06:19:01.195616+00:00",
   "requirements": [
     {
       "requirement": {
@@ -58,25 +58,25 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 155,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 205,
         "excluded_missing_photo": 0,
-        "excluded_mounting": 37,
+        "excluded_mounting": 62,
         "excluded_dimensions": 0,
-        "primary_color_pool": 22,
-        "color_alternative_pool": 0,
-        "visual_pool": 22,
+        "primary_color_pool": 39,
+        "color_alternative_pool": 3,
+        "visual_pool": 42,
         "rejected_by_visual": 0,
         "finalists": 1,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 22,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 42,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 1,
@@ -148,25 +148,25 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 170,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 231,
         "excluded_missing_photo": 0,
         "excluded_mounting": 0,
         "excluded_dimensions": 0,
-        "primary_color_pool": 19,
+        "primary_color_pool": 28,
         "color_alternative_pool": 0,
-        "visual_pool": 19,
+        "visual_pool": 28,
         "rejected_by_visual": 0,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 19,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 28,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,
@@ -238,25 +238,25 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 156,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 206,
         "excluded_missing_photo": 0,
         "excluded_mounting": 1,
-        "excluded_dimensions": 38,
-        "primary_color_pool": 19,
+        "excluded_dimensions": 42,
+        "primary_color_pool": 29,
         "color_alternative_pool": 0,
-        "visual_pool": 19,
+        "visual_pool": 29,
         "rejected_by_visual": 0,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 19,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 29,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,
@@ -325,25 +325,25 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 156,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 206,
         "excluded_missing_photo": 0,
         "excluded_mounting": 1,
         "excluded_dimensions": 0,
-        "primary_color_pool": 19,
-        "color_alternative_pool": 0,
-        "visual_pool": 19,
+        "primary_color_pool": 30,
+        "color_alternative_pool": 1,
+        "visual_pool": 31,
         "rejected_by_visual": 0,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 19,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 31,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,
@@ -415,9 +415,9 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 156,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 206,
         "excluded_missing_photo": 0,
         "excluded_mounting": 1,
         "excluded_dimensions": 0,
@@ -429,7 +429,7 @@
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
         "wide_candidates_considered": 0,
@@ -504,25 +504,25 @@
         "coverage_note": null
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 165,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 223,
         "excluded_missing_photo": 0,
         "excluded_mounting": 0,
         "excluded_dimensions": 0,
-        "primary_color_pool": 21,
+        "primary_color_pool": 30,
         "color_alternative_pool": 0,
-        "visual_pool": 21,
+        "visual_pool": 30,
         "rejected_by_visual": 1,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 21,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 30,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,
@@ -571,25 +571,25 @@
         "coverage_note": "На визуализациях видны направленные приборы; отдельный шинопровод и его серия не подтверждены."
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 96,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 156,
         "excluded_missing_photo": 0,
         "excluded_mounting": 0,
         "excluded_dimensions": 0,
-        "primary_color_pool": 78,
-        "color_alternative_pool": 8,
+        "primary_color_pool": 80,
+        "color_alternative_pool": 9,
         "visual_pool": 80,
         "rejected_by_visual": 0,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
         "wide_candidates_considered": 80,
-        "unavailable_wide_candidates_considered": 1,
+        "unavailable_wide_candidates_considered": 2,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,
@@ -638,25 +638,25 @@
         "coverage_note": "В проекте есть несколько скрытых световых линий, но нет спецификации профиля/ленты."
       },
       "search_stats": {
-        "total_catalog": 206,
-        "excluded_availability": 85,
-        "excluded_family": 170,
+        "total_catalog": 301,
+        "excluded_availability": 129,
+        "excluded_family": 231,
         "excluded_missing_photo": 0,
         "excluded_mounting": 0,
         "excluded_dimensions": 0,
-        "primary_color_pool": 18,
+        "primary_color_pool": 27,
         "color_alternative_pool": 1,
-        "visual_pool": 19,
+        "visual_pool": 28,
         "rejected_by_visual": 0,
         "finalists": 0,
         "discontinued_rejected": 0,
         "availability_not_published_pool": 0,
         "supplier_availability_modes": {
-          "stock_tracked": 206
+          "stock_tracked": 301
         },
         "reasons": [],
-        "wide_candidates_considered": 19,
-        "unavailable_wide_candidates_considered": 0,
+        "wide_candidates_considered": 28,
+        "unavailable_wide_candidates_considered": 1,
         "live_recheck_rejected": 0,
         "unavailable_live_recheck_rejected": 0,
         "in_stock_visual_finalists": 0,

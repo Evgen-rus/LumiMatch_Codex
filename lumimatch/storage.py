@@ -52,11 +52,31 @@ class CatalogStore:
 
     def upsert(self, product: CatalogProduct) -> None:
         product = self._normalize_product(product)
+        with self._connect() as con:
+            existing_row = con.execute(
+                "SELECT payload_json FROM products WHERE canonical_url = ?",
+                (product.canonical_url,),
+            ).fetchone()
+        if existing_row:
+            existing = CatalogProduct.model_validate(json.loads(existing_row[0]))
+            preserved: dict[str, object] = {}
+            for field_name in (
+                "sku",
+                "brand",
+                "primary_image_url",
+                "local_image_path",
+            ):
+                if not getattr(product, field_name) and getattr(existing, field_name):
+                    preserved[field_name] = getattr(existing, field_name)
+            if preserved:
+                product = product.model_copy(update=preserved)
+
         payload = product.model_dump(mode="json")
         search_text = " ".join(
             str(value)
             for value in (
                 product.name,
+                product.brand,
                 product.category,
                 product.collection,
                 product.description,

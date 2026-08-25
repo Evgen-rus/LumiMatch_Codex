@@ -3,6 +3,72 @@
     "number": 1,
     "requirement_id": "F-01",
     "supplier": "eurosvet.ru",
+    "sku": "a059811",
+    "name": "Подвесной светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnie-lustri/podvesnoy-svetilnik-6006-a059811",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\77ab3230116eee1d8c7e69cd330532a416e848c253036c21df9f3cfaf220d25e.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 2,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a059812",
+    "name": "Подвесной светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnie-lustri/podvesnoy-svetilnik-6003-a059812",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\3b42d2d64180f895c1c0e2973d9977ceeef74b666e96a1a0f38c87c27b1e87fc.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 3,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a059787",
+    "name": "Подвесной светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnie-lustri/podvesnoy-svetilnik-3232-a059787",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\2c2b0170ff9695a12db7a0c37333d7f3c151163691e66f23135de06152d5a762.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 4,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a059790",
+    "name": "Подвесной светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnie-lustri/podvesnoy-svetilnik-3231-a059790",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\df5ef1036c92322b58c6cb2a60a75eb58e0209557d75df5eab7851c1b49da5b3.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 5,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a071545",
+    "name": "Подвесной светодиодный светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-604052-led-bezhevyy-a071545",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\30d4cef50c8070545ba112d1d9afaa3c892b7f3339d79f4694e5f99ee3d30efe.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 6,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a071588",
+    "name": "Подвесной светильник из травертина",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetilnik-iz-travertina-304051-travertin-a071588",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c8d4df851db8bb7aea8cf54816a37666f0830f9d0723bbf7fd983e33fba518bc.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 7,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
     "sku": "a040264",
     "name": "Подвесной светодиодный светильник",
     "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264",
@@ -11,7 +77,29 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 2,
+    "number": 8,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a048082",
+    "name": "Подвесной светильник со стеклянным плафоном",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetilnik-so-steklyannym-plafonom-50188-1-dymchatyy-a048082",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\79ef910bcb1e20060f416a325fcc35ab4c01fb1d02c5aec2facae93706262f71.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 9,
+    "requirement_id": "F-01",
+    "supplier": "shop.lussole.ru",
+    "sku": "LSP-4016",
+    "name": "Подвесной светильник Lussole LSP-4016",
+    "source_url": "https://shop.lussole.ru/podvesnoy-svetilnik-lussole-lsp-4016/",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\bb0b8ee5d800320d0aa042fe79a65ac683114bcd5a886361f75792c102660fd8.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 10,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "012806",
@@ -22,7 +110,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 3,
+    "number": 11,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "012926",
@@ -33,7 +121,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 4,
+    "number": 12,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "080942",
@@ -44,7 +132,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 5,
+    "number": 13,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225430",
@@ -55,7 +143,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 6,
+    "number": 14,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225530",
@@ -66,7 +154,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 7,
+    "number": 15,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225540",
@@ -77,7 +165,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 8,
+    "number": 16,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225630",
@@ -88,7 +176,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 9,
+    "number": 17,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225640",
@@ -99,7 +187,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 10,
+    "number": 18,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "225660",
@@ -110,7 +198,7 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 11,
+    "number": 19,
     "requirement_id": "F-01",
     "supplier": "artelamp.ru",
     "sku": "A631105E",
@@ -121,7 +209,18 @@
     "sheet": "sheet_01.jpg"
   },
   {
-    "number": 12,
+    "number": 20,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a040510",
+    "name": "Настенный светодиодный светильник Tabla",
+    "source_url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-tabla-tabla-led-khrom-a040510",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ac315f42fef591b2933388cb83326ea3b8becd98e9c46d5654725c160150a420.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 21,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "075003",
@@ -129,10 +228,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075003",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\588f962fff4f012749bf2991a97539958bd23549b1c07941c7ab3246616503ac.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 13,
+    "number": 22,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "075514",
@@ -140,10 +239,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075514",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ba7f0f8cfe8b7fbd60dc179621cbbae37fe3249a598c9fd02fef6e17612e23c0.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 14,
+    "number": 23,
     "requirement_id": "F-01",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -151,10 +250,10 @@
     "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAXz",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 15,
+    "number": 24,
     "requirement_id": "F-01",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -162,10 +261,10 @@
     "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAY1",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 16,
+    "number": 25,
     "requirement_id": "F-01",
     "supplier": "artelamp.ru",
     "sku": "A700106",
@@ -173,10 +272,10 @@
     "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAY2",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 17,
+    "number": 26,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "002000",
@@ -184,10 +283,98 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/002000",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\33574469a428bb560f6e9e7c4b157fabac1e244e9373acd539105994a005da3d.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 18,
+    "number": 27,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003350",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003350",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\e8aa4e94e1ed6b00715845abc0553a3c22ada1ab1ddabdc6a840b83256c86bda.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 28,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003351",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003351",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\15ae9077b64a31d07edf9b862efb5b11b353611a9adb6b25021d6d56464fa1f4.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 29,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003352",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003352",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\90001b021732cc212009435b1466e8152eeef771ff6acc25042cea002b1fa7a9.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 30,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003354",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003354",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\4291dd5ff8f8c2022c457f296965f3d1fd3c8440a1e43ae60d4bd7af47643c50.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 31,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003450",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003450",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\4a44e50e4b31c37249d175f9bd232c71648ff06d7967ae3035964ebb29644f3b.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 32,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003451",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003451",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\b4d8bdde19ec9d84a2b6ed449db59eea5cfa5ed7bc89db3ce7dfdf74b5f154e0.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 33,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003454",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003454",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\a232912d5dffd1df5db24a57773c49b17ce29da3940c4a08864d6a0ecc3f2d58.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 34,
+    "requirement_id": "F-01",
+    "supplier": "lightstar.ru",
+    "sku": "003455",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003455",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\9add2c87a63eaa818c9b09592a297dc448f39c546581601d39f583aa8f2ac554.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 35,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "011626",
@@ -195,10 +382,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/011626",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\632d84860858cc08a5e9aacb5d49bf68fb370dc66d0e3ba820bdca30a0abde29.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 19,
+    "number": 36,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "032016",
@@ -206,10 +393,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/032016",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c7cee69cbe1c70b5fe547e71ac570c702585d5d892956118309116b677fdadf3.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 20,
+    "number": 37,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "075084",
@@ -217,10 +404,10 @@
     "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075084",
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\1b2be1d3463bf4d85071536d50ccf1657c9c93d47dba3a794822c7b0777eef53.jpg",
     "color_mode": "primary",
-    "sheet": "sheet_01.jpg"
+    "sheet": "sheet_02.jpg"
   },
   {
-    "number": 21,
+    "number": 38,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "075092",
@@ -231,7 +418,7 @@
     "sheet": "sheet_02.jpg"
   },
   {
-    "number": 22,
+    "number": 39,
     "requirement_id": "F-01",
     "supplier": "lightstar.ru",
     "sku": "081346",
@@ -240,5 +427,38 @@
     "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\cec11a1d06b5d72b6b4afcad5f4272752e208016faf9cb17aef7ae3644822770.jpg",
     "color_mode": "primary",
     "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 40,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a037525",
+    "name": "Подвесной светодиодный светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-a037525",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\325d1c25d0d2451f8204e42e65f3edcff86a096a03b1b37d7324e2bbd7ea3e50.jpg",
+    "color_mode": "color_alternative",
+    "sheet": "sheet_02.jpg"
+  },
+  {
+    "number": 41,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a048904",
+    "name": "Подвесной светильник с тканевым плафоном",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetilnik-s-tkanevym-plafonom-4440-a048904",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\8889319b78a17a51ae8a917e6bad5bee42423deabf654837844cbcaf3798993b.jpg",
+    "color_mode": "color_alternative",
+    "sheet": "sheet_03.jpg"
+  },
+  {
+    "number": 42,
+    "requirement_id": "F-01",
+    "supplier": "eurosvet.ru",
+    "sku": "a061442",
+    "name": "Подвесной светильник",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetilnik-50247-1-led-khrom-a061442",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\eb82bf4a953fa4e4fb4495ed3c64329d8e1095b37a0f87104f3c8ae5536b6488.jpg",
+    "color_mode": "color_alternative",
+    "sheet": "sheet_03.jpg"
   }
 ]

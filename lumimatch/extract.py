@@ -21,6 +21,13 @@ from .taxonomy import classify_product
 
 BAD_IMAGE_MARKERS = ("logo", "icon", "sprite", "cert", "certificate", "partner", "banner", "counter", "analytics", "related", "recommend", "similar", "viewed", "update-viewed")
 PACKAGING_MARKERS = ("упаков", "package", "box", "packaging")
+SUPPLIER_BRAND_HINTS = {
+    "kinklight.ru": "Kink Light",
+    "freya-light.com": "Freya",
+    "odeon-light.com": "Lumion",
+    "shop.lussole.ru": "Lussole",
+    "ambrella.biz": "Ambrella",
+}
 
 
 def clean(value: object | None) -> str | None:
@@ -45,10 +52,20 @@ def _jsonld_items(value: object) -> Iterable[dict[str, object]]:
 
 def _jsonld_product(soup: BeautifulSoup) -> dict[str, object]:
     for script in soup.find_all("script", type="application/ld+json"):
+        raw_json = script.get_text()
         try:
-            payload = json.loads(script.get_text())
+            # Some public cards embed literal CR/LF control characters inside
+            # JSON-LD descriptions.  They are invalid JSON but do not change
+            # the product fields we need, so normalize only those controls.
+            safe_json = "".join(
+                character if ord(character) >= 32 else " "
+                for character in raw_json
+            )
+            payload = json.loads(safe_json)
         except (TypeError, json.JSONDecodeError):
             continue
+        if isinstance(payload, dict) and str(payload.get("@type", "")).casefold() == "product":
+            return payload
         for item in _jsonld_items(payload):
             types = item.get("@type", [])
             if isinstance(types, str):
@@ -262,6 +279,25 @@ def _attributes(rows: list[tuple[str, str]], data: dict[str, object]) -> dict[st
     return attributes
 
 
+def _brand(rows: list[tuple[str, str]], data: dict[str, object]) -> str | None:
+    value = data.get("brand")
+    if isinstance(value, dict):
+        value = value.get("name")
+    if value:
+        return clean(value)
+    for key, row_value in rows:
+        if key.strip().casefold() in {"бренд", "brand", "производитель", "manufacturer"}:
+            return row_value
+    return None
+
+
+def _brand_from_title(value: str | None) -> str | None:
+    for brand in ("Kink Light", "Elektrostandard", "Eurosvet", "Freya", "Lumion", "Lussole", "Ambrella", "Feron", "SWG"):
+        if brand.casefold() in (value or "").casefold():
+            return brand
+    return None
+
+
 def parse_product_page(html: str, url: str, supplier: str) -> CatalogProduct | None:
     soup = BeautifulSoup(html, "lxml")
     data = _jsonld_product(soup)
@@ -285,7 +321,7 @@ def parse_product_page(html: str, url: str, supplier: str) -> CatalogProduct | N
     sku = sku or _spec_value(rows, ("артикул", "арт.", "код товара", "sku", "модель", "article"))
     if sku and (len(sku) > 40 or " " in sku):
         sku = None
-    sku_match = re.search(r"\b(?:[A-ZА-Я]{1,8}\d{3,}[A-ZА-Я0-9-]*|\d{5,})\b", h1_text or "")
+    sku_match = re.search(r"\b(?:[A-ZА-Я]{1,8}[-/]?\d{3,}[A-ZА-Я0-9/-]*|\d{5,})\b", h1_text or "")
     sku = sku or (sku_match.group(0) if sku_match else None)
     if not sku and last_segment.isdigit():
         sku = last_segment
@@ -294,7 +330,7 @@ def parse_product_page(html: str, url: str, supplier: str) -> CatalogProduct | N
     availability_status = normalize_availability(availability_source_text)
     price, currency = _price(data, rows, scoped_text)
     images, image_source = _absolute_images(soup, url, data)
-    product_signal = bool(data) or (bool(sku) and bool(h1_text) and url_signal and bool(images))
+    product_signal = bool(data) or (bool(title) and bool(images) and (bool(sku) or url_signal))
     if not title or not product_signal:
         return None
     title = title[:240]
@@ -304,6 +340,7 @@ def parse_product_page(html: str, url: str, supplier: str) -> CatalogProduct | N
         if dimensions[key] is not None:
             dimension_parts.append(f"{label}: {dimensions[key]:g} мм")
     attributes = _attributes(rows, data)
+    brand = _brand(rows, data) or _brand_from_title(title) or SUPPLIER_BRAND_HINTS.get(supplier.casefold())
     color = _meta_or_data(data, "color", soup) or _spec_value(rows, ("цвет", "color"))
     if not color:
         color_match = re.search(r"(?i)(ч[её]рн(?:ый|ая|ое|ые)|бел(?:ый|ая|ое|ые)|black|white|графит|антрацит|венге)", f"{title} {url}")
@@ -322,6 +359,7 @@ def parse_product_page(html: str, url: str, supplier: str) -> CatalogProduct | N
     voltage = _spec_value(rows, ("напряжение", "voltage", "вольт"))
     product = CatalogProduct(
         supplier=supplier,
+        brand=brand,
         source_url=url,
         canonical_url=canonical,
         sku=sku,

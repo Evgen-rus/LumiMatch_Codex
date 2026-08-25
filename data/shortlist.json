@@ -4,6 +4,7 @@
       "requirement_id": "F-01",
       "product": {
         "supplier": "eurosvet.ru",
+        "brand": "Elektrostandard",
         "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264",
         "canonical_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264",
         "sku": "a040264",
@@ -16,7 +17,7 @@
         "availability": "InStock",
         "availability_status": "in_stock",
         "availability_source_text": "https://schema.org/InStock",
-        "availability_checked_at": "2026-08-25T03:51:09.943854+00:00",
+        "availability_checked_at": "2026-08-25T06:18:53.682695+00:00",
         "product_family": "pendant_single",
         "dimensions": "ширина: 100 мм; высота: 390 мм; длина: 103 мм",
         "width": 100.0,
@@ -58,7 +59,7 @@
         "primary_image_url": "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0001.jpg",
         "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\deef482f8686ffc6cf3bb0c51055979d08e4809392f214fa02167644b1e6e29a.jpg",
         "image_source": "jsonld",
-        "updated_at": "2026-08-25T03:51:09.891998+00:00"
+        "updated_at": "2026-08-25T06:18:53.658909+00:00"
       },
       "visual_similarity": 0.94,
       "color_match": 0.4,

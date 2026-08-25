@@ -1,0 +1,26 @@
+{
+  "freya-light.com": {
+    "brands": ["Freya"],
+    "evidence": "Публичные карточки freya-light.com содержат бренд Freya и артикулы FR*; supplier остаётся доменом, brand — отдельным полем."
+  },
+  "odeon-light.com": {
+    "brands": ["Lumion"],
+    "evidence": "Публичные карточки раздела catalog/lumion содержат производителя Lumion."
+  },
+  "eurosvet.ru": {
+    "brands": ["Elektrostandard"],
+    "evidence": "Публичные карточки Eurosvet показывают бренд Elektrostandard; бренд не заменяет supplier."
+  },
+  "shop.lussole.ru": {
+    "brands": ["Lussole"],
+    "evidence": "Публичные карточки shop.lussole.ru содержат бренд LUSSOLE и артикулы LSP-*."
+  },
+  "ambrella.biz": {
+    "brands": ["Ambrella"],
+    "evidence": "Название поставщика и карточки профилей относятся к Ambrella; отдельная проверка ассортимента нужна для golden BOM."
+  },
+  "kinklight.ru": {
+    "brands": ["Kink Light"],
+    "evidence": "Публичные карточки Kink Light содержат серии Мекли/Фирс и numeric product URLs; SKU извлекается из карточного текста."
+  }
+}

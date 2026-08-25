@@ -1,0 +1,442 @@
+[
+  {
+    "kp_position": 1,
+    "brand": "Elektrostandard",
+    "name": "Подвесной светодиодный светильник 50248 LED 7W 4000K чёрный",
+    "sku": "50248",
+    "discovery_query": null,
+    "quantity": 31,
+    "price": 4440.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "pendant",
+    "likely_supplier": "eurosvet.ru",
+    "matched_fixture_requirement": "F-01",
+    "match_confidence": 0.88,
+    "notes": "brand explicitly present or verified by the Elektrostandard catalog family; cylindrical pendant directly matches the F-01 visual family",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 2
+    }
+  },
+  {
+    "kp_position": 2,
+    "brand": "Kink Light",
+    "name": "Люстра диммируемая Мекли черный d90 h81 Led 3*12W+3*16W (4000К) с пультом ДУ",
+    "sku": null,
+    "discovery_query": "Мекли",
+    "quantity": 1,
+    "price": 17119.0,
+    "delivery_status": "В наличии",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "chandelier",
+    "likely_supplier": "kinklight.ru",
+    "matched_fixture_requirement": null,
+    "match_confidence": null,
+    "notes": "brand/series verified from the product naming and allowed supplier list; no confident FixtureRequirement mapping",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 3
+    }
+  },
+  {
+    "kp_position": 3,
+    "brand": "Kink Light",
+    "name": "2207B,19 Настенный светильник Томи (Фирс) черный Led 64W",
+    "sku": "2207B,19",
+    "discovery_query": null,
+    "quantity": 1,
+    "price": 20350.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "kinklight.ru",
+    "matched_fixture_requirement": "F-03",
+    "match_confidence": 0.49,
+    "notes": "brand/series verified from the product naming and allowed supplier list; wall-light role overlaps F-03, but source project room is not proven",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 4
+    }
+  },
+  {
+    "kp_position": 4,
+    "brand": "Feron",
+    "name": "LL-894-1 Светодиодный прожектор Световая линия, 4000K, 250*30*45mm, 3W, DC24V, IP65 53371",
+    "sku": "LL-894-1",
+    "discovery_query": null,
+    "quantity": 54,
+    "price": 4329.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "linear_fixture",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-02",
+    "match_confidence": 0.56,
+    "notes": "brand inferred from the public product naming; no allowed supplier domain verified; linear fixture role is compatible with F-02; source dimensions differ from the visual brief",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 5
+    }
+  },
+  {
+    "kp_position": 5,
+    "brand": "Ambrella",
+    "name": "Ambrella Алюминиевый профиль накладной/подвесной 35*67 для светодиодной ленты до 32,8мм",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 16,
+    "price": 4870.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "led_strip",
+    "likely_supplier": "ambrella.biz",
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 6
+    }
+  },
+  {
+    "kp_position": 6,
+    "brand": "Ambrella",
+    "name": "Соединитель угловой GP8052 SL серебро 48*48*10мм для алюминиевого профиля",
+    "sku": "GP8052",
+    "discovery_query": null,
+    "quantity": 10,
+    "price": 90.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "profile_connector",
+    "likely_supplier": "ambrella.biz",
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 7
+    }
+  },
+  {
+    "kp_position": 7,
+    "brand": "Ambrella",
+    "name": "Соединитель прямой GP8050 SL серебро 90*10*1.55мм для алюминиевого профиля",
+    "sku": "GP8050",
+    "discovery_query": null,
+    "quantity": 10,
+    "price": 90.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "profile_connector",
+    "likely_supplier": "ambrella.biz",
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 8
+    }
+  },
+  {
+    "kp_position": 8,
+    "brand": "Ambrella",
+    "name": "Подвес GP8060 SL серебро для профилей",
+    "sku": "GP8060",
+    "discovery_query": null,
+    "quantity": 28,
+    "price": 540.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "track_suspension",
+    "likely_supplier": "ambrella.biz",
+    "matched_fixture_requirement": "F-07",
+    "match_confidence": 0.78,
+    "notes": "brand explicitly present in the product name or GP accessory family; system component aligned with the sample track-system requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 9
+    }
+  },
+  {
+    "kp_position": 9,
+    "brand": "Freya",
+    "name": "Бра Freya Flint FR2066WL-L40B",
+    "sku": "FR2066WL-L40B",
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 8690.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "freya-light.com",
+    "matched_fixture_requirement": "F-03",
+    "match_confidence": 0.72,
+    "notes": "brand explicitly present in the product name; wall sconce role and bedside use are consistent with F-03",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 10
+    }
+  },
+  {
+    "kp_position": 10,
+    "brand": "Lumion",
+    "name": "Бра LUMION LEDIO CLIPE 5610/37WL",
+    "sku": "5610/37WL",
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 7760.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "odeon-light.com",
+    "matched_fixture_requirement": "F-04",
+    "match_confidence": 0.58,
+    "notes": "brand explicitly present; public Lumion catalog is hosted by Odeon Light; wall-light role may correspond to the decorative vertical wall-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 11
+    }
+  },
+  {
+    "kp_position": 11,
+    "brand": "Elektrostandard",
+    "name": "Elektrostandard Подсветка для лестниц и дорожек MRL LED 1108 чёрный",
+    "sku": "1108",
+    "discovery_query": null,
+    "quantity": 3,
+    "price": 2770.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "eurosvet.ru",
+    "matched_fixture_requirement": "F-05",
+    "match_confidence": 0.44,
+    "notes": "brand explicitly present or verified by the Elektrostandard catalog family; functional wall/step-light role may overlap F-05, but mirror use is not proven",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 12
+    }
+  },
+  {
+    "kp_position": 12,
+    "brand": "Lussole",
+    "name": "Бра настенное ЛЮССОЛЕ артикул LSP-4001, серия RIVER",
+    "sku": "lsp-4001",
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 6782.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "shop.lussole.ru",
+    "matched_fixture_requirement": "F-05",
+    "match_confidence": 0.54,
+    "notes": "brand explicitly present in the product name; vertical wall light may serve the mirror-light requirement; dimensions need confirmation",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 13
+    }
+  },
+  {
+    "kp_position": 13,
+    "brand": "Lussole",
+    "name": "Бра настенное ЛЮССОЛЕ артикул LSP-7187, серия BRADFORD",
+    "sku": "lsp-7187",
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 6522.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "wall_sconce",
+    "likely_supplier": "shop.lussole.ru",
+    "matched_fixture_requirement": "F-04",
+    "match_confidence": 0.67,
+    "notes": "brand explicitly present in the product name; decorative wall-light role is consistent with F-04",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 14
+    }
+  },
+  {
+    "kp_position": 14,
+    "brand": "Lussole",
+    "name": "Подвесной светильник Lussole LSP-4016",
+    "sku": "LSP-4016",
+    "discovery_query": null,
+    "quantity": 3,
+    "price": 6831.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "pendant",
+    "likely_supplier": "shop.lussole.ru",
+    "matched_fixture_requirement": "F-01",
+    "match_confidence": 0.42,
+    "notes": "brand explicitly present in the product name; pendant role overlaps F-01, but geometry/model identity is not proven",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 15
+    }
+  },
+  {
+    "kp_position": 15,
+    "brand": "Elektrostandard",
+    "name": "Шинопровод накладной (чёрный) (3м) 85081/00",
+    "sku": "85081/00",
+    "discovery_query": null,
+    "quantity": 1,
+    "price": 3240.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "track_rail",
+    "likely_supplier": "eurosvet.ru",
+    "matched_fixture_requirement": "F-07",
+    "match_confidence": 0.78,
+    "notes": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 16
+    }
+  },
+  {
+    "kp_position": 16,
+    "brand": "Elektrostandard",
+    "name": "Трековый светильник 12W 4200K (чёрный) 85078/01",
+    "sku": "85078/01",
+    "discovery_query": null,
+    "quantity": 3,
+    "price": 6840.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "VISUAL_SELECTION",
+    "golden_category": "track_spot",
+    "likely_supplier": "eurosvet.ru",
+    "matched_fixture_requirement": "F-06",
+    "match_confidence": 0.79,
+    "notes": "brand explicitly present or verified by the Elektrostandard catalog family; track-spot role directly matches the F-06 directional-light family",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 17
+    }
+  },
+  {
+    "kp_position": 17,
+    "brand": "Elektrostandard",
+    "name": "Набор для подвеса (чёрный) (2м) TRF-1-200-BK",
+    "sku": "TRF-1-200-BK",
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 499.0,
+    "delivery_status": "2-3 недели",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "track_suspension",
+    "likely_supplier": "eurosvet.ru",
+    "matched_fixture_requirement": "F-07",
+    "match_confidence": 0.78,
+    "notes": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 18
+    }
+  },
+  {
+    "kp_position": 18,
+    "brand": "SWG",
+    "name": "17,3W нейтральный белый 4000K SMD2835/168 24V 5м IP20 SWG PRO ABC",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 7,
+    "price": 5932.0,
+    "delivery_status": "В наличии",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "led_strip",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 19
+    }
+  },
+  {
+    "kp_position": 19,
+    "brand": "SWG",
+    "name": "Блок питания 100W 24V (узкий) SWG",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 1,
+    "price": 2528.0,
+    "delivery_status": "В наличии",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "power_supply",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 20
+    }
+  },
+  {
+    "kp_position": 20,
+    "brand": "SWG",
+    "name": "Блок питания 200W 24V (узкий) IP20 SWG",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 2,
+    "price": 3508.0,
+    "delivery_status": "В наличии",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "power_supply",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 21
+    }
+  },
+  {
+    "kp_position": 21,
+    "brand": "SWG",
+    "name": "Блок питания 60W 24V (узкий) IP20 SWG",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 1,
+    "price": 1853.0,
+    "delivery_status": "В наличии",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "power_supply",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 22
+    }
+  },
+  {
+    "kp_position": 22,
+    "brand": "SWG",
+    "name": "Блок питания 300W 24V (компактный) SWG",
+    "sku": null,
+    "discovery_query": null,
+    "quantity": 1,
+    "price": 5162.0,
+    "delivery_status": "В наличии",
+    "product_role": "SYSTEM_BOM",
+    "golden_category": "power_supply",
+    "likely_supplier": null,
+    "matched_fixture_requirement": "F-08",
+    "match_confidence": 0.66,
+    "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
+    "source": {
+      "file": "samples/golden/dan/expected_kp.docx",
+      "table_row": 23
+    }
+  }
+]

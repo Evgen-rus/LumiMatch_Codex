@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "number": 1,
+    "requirement_id": "F-06",
+    "supplier": "lightstar.ru",
+    "sku": "003355",
+    "name": "Мебельный светильник Mobiled",
+    "source_url": "https://lightstar.ru/catalog/mebelnye-svetilniki/003355",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\cac7f8fb6dc5b469b39d218d0a033369a30b2a9cfd6237f93f2d642ffbd501e4.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  }
+]

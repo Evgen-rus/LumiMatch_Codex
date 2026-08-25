@@ -1,0 +1,249 @@
+{
+  "run_id": "20260825T063424Z",
+  "generated_at": "2026-08-25T06:34:24.993455+00:00",
+  "requirements": {
+    "F-01": {
+      "candidate_set_fingerprint": "48151eed5789d3c204709cf401f146d906583c610cb70098e9aa6b8497b8ddd4",
+      "candidate_count": 70,
+      "reviews": {
+        "CL227011": {
+          "decision": "accept",
+          "visual_similarity": 0.84,
+          "reason": "тонкий чёрный цилиндрический подвес; близкая геометрия"
+        },
+        "CL331111": {
+          "decision": "reject",
+          "visual_similarity": 0.08,
+          "reason": "хрусталь и клетчатая люстра, не цилиндрический современный подвес"
+        },
+        "CL444210": {
+          "decision": "reject",
+          "visual_similarity": 0.12,
+          "reason": "витражная классическая форма"
+        },
+        "a040264": {
+          "decision": "accept",
+          "visual_similarity": 0.94,
+          "reason": "чёрный компактный цилиндрический подвес; наиболее близкий визуальный аналог"
+        },
+        "LSP-4016": {
+          "decision": "reject",
+          "visual_similarity": 0.28,
+          "reason": "группа колец/декоративная форма вместо компактного цилиндра"
+        }
+      },
+      "golden_target_reviews": {
+        "CL227011": {
+          "decision": "accept",
+          "visual_similarity": 0.84,
+          "reason": "тонкий чёрный цилиндрический подвес; близкая геометрия"
+        },
+        "a040264": {
+          "decision": "accept",
+          "visual_similarity": 0.94,
+          "reason": "чёрный компактный цилиндрический подвес; наиболее близкий визуальный аналог"
+        },
+        "CL331111": {
+          "decision": "reject",
+          "visual_similarity": 0.08,
+          "reason": "хрусталь и клетчатая люстра, не цилиндрический современный подвес"
+        },
+        "CL444210": {
+          "decision": "reject",
+          "visual_similarity": 0.12,
+          "reason": "витражная классическая форма"
+        },
+        "LSP-4016": {
+          "decision": "reject",
+          "visual_similarity": 0.28,
+          "reason": "группа колец/декоративная форма вместо компактного цилиндра"
+        }
+      }
+    },
+    "F-02": {
+      "candidate_set_fingerprint": "5d1c481d44868a9426430b50941f0e51d8df94805dcf8f88f4ab34b17e9a7ce2",
+      "candidate_count": 44,
+      "reviews": {},
+      "golden_target_reviews": {}
+    },
+    "F-03": {
+      "candidate_set_fingerprint": "7609bc4cf93bebfd1ed33d97f42b483a203e9ba50c4540f994b4f61579c2580d",
+      "candidate_count": 47,
+      "reviews": {
+        "FR2066WL-L40B": {
+          "decision": "accept",
+          "visual_similarity": 0.96,
+          "reason": "компактное бра с тёмным основанием и светлым абажуром; соответствует bedside reference"
+        },
+        "LSP-7187": {
+          "decision": "reject",
+          "visual_similarity": 0.43,
+          "reason": "вертикальная световая петля относится к другой декоративной геометрии"
+        },
+        "CL352321": {
+          "decision": "reject",
+          "visual_similarity": 0.05,
+          "reason": "классическая хрустальная люстра"
+        },
+        "2207B,19": {
+          "decision": "reject",
+          "visual_similarity": 0.36,
+          "reason": "ветвящаяся архитектурная форма без светлого локального абажура"
+        }
+      },
+      "golden_target_reviews": {
+        "FR2066WL-L40B": {
+          "decision": "accept",
+          "visual_similarity": 0.96,
+          "reason": "компактное бра с тёмным основанием и светлым абажуром; соответствует bedside reference"
+        },
+        "2207B,19": {
+          "decision": "reject",
+          "visual_similarity": 0.36,
+          "reason": "ветвящаяся архитектурная форма без светлого локального абажура"
+        },
+        "LSP-7187": {
+          "decision": "reject",
+          "visual_similarity": 0.43,
+          "reason": "вертикальная световая петля относится к другой декоративной геометрии"
+        },
+        "CL352321": {
+          "decision": "reject",
+          "visual_similarity": 0.05,
+          "reason": "классическая хрустальная люстра"
+        }
+      }
+    },
+    "F-04": {
+      "candidate_set_fingerprint": "ea45472152e918ce3992478ce990616a40b3c16ae19650323ad762f6d84ff023",
+      "candidate_count": 61,
+      "reviews": {
+        "FR2066WL-L40B": {
+          "decision": "reject",
+          "visual_similarity": 0.45,
+          "reason": "абажурное прикроватное бра, нет овального светящегося контура"
+        },
+        "CL704071": {
+          "decision": "reject",
+          "visual_similarity": 0.39,
+          "reason": "горизонтальный/угловой корпус, не вертикальный контур"
+        },
+        "LSP-7187": {
+          "decision": "accept",
+          "visual_similarity": 0.9,
+          "reason": "вертикальный светящийся контур с тёмной центральной частью; близко к reference"
+        },
+        "CL352321": {
+          "decision": "reject",
+          "visual_similarity": 0.05,
+          "reason": "хрустальная классика"
+        }
+      },
+      "golden_target_reviews": {
+        "LSP-7187": {
+          "decision": "accept",
+          "visual_similarity": 0.9,
+          "reason": "вертикальный светящийся контур с тёмной центральной частью; близко к reference"
+        },
+        "FR2066WL-L40B": {
+          "decision": "reject",
+          "visual_similarity": 0.45,
+          "reason": "абажурное прикроватное бра, нет овального светящегося контура"
+        },
+        "CL352321": {
+          "decision": "reject",
+          "visual_similarity": 0.05,
+          "reason": "хрустальная классика"
+        },
+        "CL704071": {
+          "decision": "reject",
+          "visual_similarity": 0.39,
+          "reason": "горизонтальный/угловой корпус, не вертикальный контур"
+        }
+      }
+    },
+    "F-05": {
+      "candidate_set_fingerprint": "db12ebaa74548eaf36da90b7455fcfcfd7c7d84c95971dea6f6308e403817b4b",
+      "candidate_count": 28,
+      "reviews": {
+        "CL330312": {
+          "decision": "reject",
+          "visual_similarity": 0.04,
+          "reason": "хрустальный декоративный светильник вместо mirror-light"
+        },
+        "CL704071": {
+          "decision": "reject",
+          "visual_similarity": 0.34,
+          "reason": "корпус не подтверждает подсветку зеркала и не имеет IP"
+        }
+      },
+      "golden_target_reviews": {
+        "LSP-4001": {
+          "decision": "accept",
+          "visual_similarity": 0.78,
+          "reason": "тонкая вертикальная подсветка стены; визуально подходит, но IP/влажная зона не доказаны"
+        },
+        "CL330312": {
+          "decision": "reject",
+          "visual_similarity": 0.04,
+          "reason": "хрустальный декоративный светильник вместо mirror-light"
+        },
+        "CL704071": {
+          "decision": "reject",
+          "visual_similarity": 0.34,
+          "reason": "корпус не подтверждает подсветку зеркала и не имеет IP"
+        }
+      }
+    },
+    "F-06": {
+      "candidate_set_fingerprint": "6d60f6dfdd60acea068d42735bed5ef564807b61c5a171ebe88f0a1925ba0ecc",
+      "candidate_count": 49,
+      "reviews": {
+        "208517": {
+          "decision": "reject",
+          "visual_similarity": 0.08,
+          "reason": "круглый белый шар; не узкий чёрный цилиндрический спот"
+        },
+        "080942": {
+          "decision": "reject",
+          "visual_similarity": 0.25,
+          "reason": "крупный круглый многосветный накладной прибор"
+        },
+        "225530": {
+          "decision": "reject",
+          "visual_similarity": 0.06,
+          "reason": "плоская круглая декоративная панель"
+        }
+      },
+      "golden_target_reviews": {
+        "208517": {
+          "decision": "reject",
+          "visual_similarity": 0.08,
+          "reason": "круглый белый шар; не узкий чёрный цилиндрический спот"
+        },
+        "080942": {
+          "decision": "reject",
+          "visual_similarity": 0.25,
+          "reason": "крупный круглый многосветный накладной прибор"
+        },
+        "225530": {
+          "decision": "reject",
+          "visual_similarity": 0.06,
+          "reason": "плоская круглая декоративная панель"
+        }
+      }
+    },
+    "F-07": {
+      "candidate_set_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_count": 0,
+      "reviews": {},
+      "golden_target_reviews": {}
+    },
+    "F-08": {
+      "candidate_set_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_count": 0,
+      "reviews": {},
+      "golden_target_reviews": {}
+    }
+  }
+}

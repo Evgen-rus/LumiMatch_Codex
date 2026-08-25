@@ -10,8 +10,14 @@ import typer
 
 from .audit import audit_all, write_audit
 from .availability import effective_availability_status
+from .benchmark import run_benchmark
 from .collector import CatalogCollector
 from .fetch import PublicFetcher
+from .golden import (
+    run_golden_discovery,
+    write_discovery_report,
+    write_golden_set,
+)
 from .models import FixtureRequirement, ScoredCandidate
 from .paths import OUTPUT, ensure_dirs
 from .pdf_project import create_sample_reference_crops, inspect_project, render_pages
@@ -116,6 +122,8 @@ def _supplier_stats(results: list[object]) -> list[dict[str, object]]:
             "failed_products": result.failed_products,
             "last_refresh": result.last_refresh,
             "status": result.status,
+            "coverage_quality": result.coverage_quality,
+            "parse_success_rate": result.parse_success_rate,
             "errors": result.errors,
         }
         for result in results
@@ -170,6 +178,55 @@ def shortlist_command(
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     typer.echo(f"Широкий candidate pool сохранён: {output}")
+
+
+@app.command("golden-prepare")
+def golden_prepare(
+    source: Path = typer.Option(Path("samples/golden/dan/expected_kp.docx"), exists=True),  # noqa: B008
+    output: Path = typer.Option(Path("data/golden/dan/golden_set.json")),  # noqa: B008
+) -> None:
+    """Parse the source commercial offer into the reproducible golden set."""
+    items = write_golden_set(source, output)
+    visual = sum(item.get("product_role") == "VISUAL_SELECTION" for item in items)
+    system = sum(item.get("product_role") == "SYSTEM_BOM" for item in items)
+    typer.echo(f"Golden set сохранён: {output}; позиций: {len(items)}; visual={visual}; system_bom={system}")
+
+
+@app.command("golden-discovery")
+def golden_discovery(
+    golden: Path = typer.Option(Path("data/golden/dan/golden_set.json"), exists=True),  # noqa: B008
+    suppliers_file: Path = typer.Option(Path("suppliers.txt"), exists=True),  # noqa: B008
+    output_dir: Path = typer.Option(Path("output/golden/dan")),  # noqa: B008
+) -> None:
+    """Discover exact golden SKUs through allowed public supplier inventories."""
+    ensure_dirs()
+    items = json.loads(golden.read_text(encoding="utf-8"))
+    store = CatalogStore()
+    results = run_golden_discovery(items, suppliers_file, store)
+    write_discovery_report(results, output_dir)
+    typer.echo(f"Golden discovery завершён: found={sum(bool(item.get('found')) for item in results)}/{len(results)}; отчёт: {output_dir}")
+
+
+@app.command("golden-benchmark")
+def golden_benchmark(
+    golden: Path = typer.Option(Path("data/golden/dan/golden_set.json"), exists=True),  # noqa: B008
+    discovery: Path = typer.Option(Path("output/golden/dan/discovery_report.json"), exists=True),  # noqa: B008
+    requirements: Path = typer.Option(Path("data/fixture_requirements.json"), exists=True),  # noqa: B008
+    output_dir: Path = typer.Option(Path("output/golden/dan")),  # noqa: B008
+) -> None:
+    """Measure golden discovery, retrieval and BOM coverage without score boosts."""
+    ensure_dirs()
+    golden_items = json.loads(golden.read_text(encoding="utf-8"))
+    discovery_payload = json.loads(discovery.read_text(encoding="utf-8"))
+    store = CatalogStore()
+    payload = run_benchmark(
+        golden_items,
+        discovery_payload.get("items", []),
+        _requirements(requirements),
+        store,
+        output_dir,
+    )
+    typer.echo(f"Golden benchmark завершён: discovery={payload['discovery']['found']}; visual@1={payload['retrieval']['visual_at']['visual_at_1']}; visual@10={payload['retrieval']['visual_at']['visual_at_10']}; отчёт: {output_dir}")
 
 
 @app.command("sample-run")

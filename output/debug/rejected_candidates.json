@@ -9,6 +9,7 @@
       "requirement_id": "F-06",
       "product": {
         "supplier": "lightstar.ru",
+        "brand": "Nove",
         "source_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
         "canonical_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
         "sku": "208517",
@@ -54,7 +55,7 @@
         "primary_image_url": "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-350x350.jpg",
         "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\dd850e1ea3e833b6255050f07b645e14aa89ce633855f07275ef6713e63a3304.jpg",
         "image_source": "jsonld",
-        "updated_at": "2026-08-25T03:50:40.051698+00:00"
+        "updated_at": "2026-08-25T06:18:13.634896+00:00"
       },
       "visual_similarity": 0.2,
       "color_match": 1.0,
