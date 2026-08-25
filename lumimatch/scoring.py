@@ -7,7 +7,14 @@ from collections.abc import Iterable
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
-from .availability import normalize_availability
+from .availability import (
+    AVAILABILITY_MODES,
+    availability_allowed,
+    effective_availability_status,
+    explicit_negative_availability,
+    negative_availability_from_html,
+    supplier_availability_mode,
+)
 from .models import CatalogProduct, FixtureRequirement, ScoredCandidate
 from .taxonomy import classify_product, classify_requirement, family_relation
 
@@ -35,6 +42,8 @@ class PoolDiagnostics:
     visual_pool: int = 0
     rejected_by_visual: int = 0
     finalists: int = 0
+    availability_not_published_pool: int = 0
+    supplier_availability_modes: dict[str, int] = field(default_factory=dict)
     reasons: list[str] = field(default_factory=list)
 
     def as_dict(self) -> dict[str, object]:
@@ -132,10 +141,16 @@ def _dimension_match(requirement: FixtureRequirement, product: CatalogProduct) -
     return sum(checks) / len(checks) if checks else 0.45
 
 
-def hard_filter(requirement: FixtureRequirement, product: CatalogProduct) -> tuple[bool, list[str]]:
+def hard_filter(
+    requirement: FixtureRequirement,
+    product: CatalogProduct,
+    *,
+    availability_mode: str | None = None,
+) -> tuple[bool, list[str]]:
     reasons: list[str] = []
-    status = product.availability_status or normalize_availability(product.availability)
-    if status != "in_stock":
+    status = effective_availability_status(product)
+    selected_mode = availability_mode if availability_mode in AVAILABILITY_MODES else None
+    if not availability_allowed(product, selected_mode):
         reasons.append(f"availability:{status}")
     if not product.sku:
         reasons.append("missing_sku")
@@ -219,6 +234,8 @@ def candidate_pool_diagnostics(requirement: FixtureRequirement, products: list[C
     primary: list[CatalogProduct] = []
     alternatives: list[CatalogProduct] = []
     for product in products:
+        mode = supplier_availability_mode(product.supplier)
+        diagnostics.supplier_availability_modes[mode] = diagnostics.supplier_availability_modes.get(mode, 0) + 1
         allowed, reasons = hard_filter(requirement, product)
         if not allowed:
             if any(reason.startswith("availability:") for reason in reasons):
@@ -232,6 +249,8 @@ def candidate_pool_diagnostics(requirement: FixtureRequirement, products: list[C
             if any(reason.startswith("dimension_mismatch") for reason in reasons):
                 diagnostics.excluded_dimensions += 1
             continue
+        if effective_availability_status(product) == "unknown" and mode in {"stock_not_published", "mixed"}:
+            diagnostics.availability_not_published_pool += 1
         color_status, _ = color_relation(requirement.color, product.color or product_text(product))
         (alternatives if color_status == "mismatch" else primary).append(product)
     diagnostics.primary_color_pool = min(len(primary), limit)
@@ -278,7 +297,7 @@ def apply_visual_review(candidate: ScoredCandidate, review: dict[str, object]) -
 
 def is_final_candidate(candidate: ScoredCandidate, *, min_visual: float = 0.60, min_overall: float = 0.55) -> bool:
     return (
-        candidate.product.availability_status == "in_stock"
+        availability_allowed(candidate.product)
         and candidate.family_relation in {"exact", "compatible", "unknown"}
         and candidate.visual_review_status == "проверено Codex по фото кандидата"
         and candidate.visual_similarity is not None
@@ -300,16 +319,42 @@ def finalize_candidates(primary: list[ScoredCandidate], alternatives: list[Score
     return finalists[:5], rejected
 
 
-def live_recheck_candidate(candidate: ScoredCandidate, fetcher: object) -> tuple[ScoredCandidate | None, str | None]:
+def _normalized_sku(value: str | None) -> str:
+    return re.sub(r"\W+", "", (value or "").casefold())
+
+
+def live_recheck_candidate(
+    candidate: ScoredCandidate,
+    fetcher: object,
+    *,
+    availability_mode: str | None = None,
+) -> tuple[ScoredCandidate | None, str | None]:
     """Re-fetch the public product page before it is shown to a user."""
     from .extract import parse_product_page
 
     page = fetcher.get(candidate.product.source_url, use_cache=False)
-    if not page:
-        return None, "live availability recheck failed"
-    fresh = parse_product_page(page.content.decode("utf-8", "replace"), page.final_url, candidate.product.supplier)
-    if not fresh or fresh.availability_status != "in_stock":
-        return None, f"live availability is {fresh.availability_status if fresh else 'unknown'}"
+    if not page or not 200 <= int(getattr(page, "status_code", 0)) < 400:
+        return None, "live product card recheck failed"
+    page_html = page.content.decode("utf-8", "replace")
+    fresh = parse_product_page(page_html, page.final_url, candidate.product.supplier)
+    if not fresh:
+        return None, "live product card could not be parsed"
+    selected_mode = availability_mode if availability_mode in AVAILABILITY_MODES else supplier_availability_mode(candidate.product.supplier)
+    expected_sku = _normalized_sku(candidate.product.sku)
+    fresh_sku = _normalized_sku(fresh.sku)
+    if expected_sku and fresh_sku != expected_sku:
+        if expected_sku in _normalized_sku(page_html):
+            fresh.sku = candidate.product.sku
+        else:
+            return None, "live product SKU mismatch"
+    negative = explicit_negative_availability(fresh)
+    if selected_mode != "stock_tracked":
+        negative = negative or negative_availability_from_html(page_html, candidate.product.sku)
+    if negative:
+        return None, f"live availability is {negative}"
+    if not availability_allowed(fresh, selected_mode):
+        status = effective_availability_status(fresh)
+        return None, f"live availability is {status}"
     fresh.local_image_path = candidate.product.local_image_path
     fresh.availability_checked_at = datetime.now(timezone.utc).isoformat()
     return candidate.model_copy(update={"product": fresh}), None

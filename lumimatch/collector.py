@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
-from .availability import normalize_availability
+from .availability import effective_availability_status, supplier_availability_mode
 from .discovery import discover_product_urls
 from .extract import parse_product_page
 from .fetch import PublicFetcher
@@ -23,6 +23,7 @@ def supplier_name(url: str) -> str:
 @dataclass
 class CollectionResult:
     supplier: str
+    availability_mode: str = "stock_tracked"
     pages_visited: int = 0
     products_found: int = 0
     images_saved: int = 0
@@ -31,6 +32,7 @@ class CollectionResult:
     in_stock_products: int = 0
     out_of_stock: int = 0
     discontinued: int = 0
+    unknown_products: int = 0
     failed_products: int = 0
     status: str = "not_started"
     last_refresh: str | None = None
@@ -53,7 +55,11 @@ class CatalogCollector:
         self, base_url: str, max_pages: int = 30, download_images: bool = True
     ) -> CollectionResult:
         base_url = base_url.rstrip("/")
-        result = CollectionResult(supplier=supplier_name(base_url))
+        supplier = supplier_name(base_url)
+        result = CollectionResult(
+            supplier=supplier,
+            availability_mode=supplier_availability_mode(supplier),
+        )
         result.last_refresh = datetime.now(timezone.utc).isoformat()
         try:
             candidates, _, _ = discover_product_urls(
@@ -79,13 +85,15 @@ class CatalogCollector:
                     self.store.upsert(product)
                     result.products_found += 1
                     result.parsed_products += 1
-                    status = normalize_availability(product.availability_source_text or product.availability)
+                    status = effective_availability_status(product)
                     if status == "in_stock":
                         result.in_stock_products += 1
                     elif status == "out_of_stock":
                         result.out_of_stock += 1
                     elif status == "discontinued":
                         result.discontinued += 1
+                    elif status == "unknown":
+                        result.unknown_products += 1
                 else:
                     result.failed_products += 1
             result.status = "complete" if result.discovered_product_urls else "partial"

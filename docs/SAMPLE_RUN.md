@@ -12,23 +12,23 @@
 
 ## Supplier coverage
 
-| supplier | discovered | parsed | in_stock | out_of_stock | discontinued | failed | status |
-|---|---:|---:|---:|---:|---:|---:|---|
-| ambrella.biz | 0 | 0 | 0 | 0 | 0 | 0 | partial |
-| artelamp.ru | 3 | 3 | 3 | 0 | 0 | 0 | complete |
-| citilux.ru | 0 | 0 | 0 | 0 | 0 | 0 | partial |
-| crystallux.ru | 0 | 0 | 0 | 0 | 0 | 0 | partial |
-| divinare.ru | 21 | 0 | 0 | 0 | 0 | 8 | complete |
-| eurosvet.ru | 60 | 4 | 4 | 0 | 0 | 4 | complete |
-| favourite-light.com | 1 | 0 | 0 | 0 | 0 | 1 | complete |
-| kinklight.ru | 60 | 0 | 0 | 0 | 0 | 9 | complete |
-| lightstar.ru | 60 | 8 | 7 | 1 | 0 | 0 | complete |
-| shop.lussole.ru | 1 | 0 | 0 | 0 | 0 | 1 | complete |
-| maytoni.ru | 0 | 0 | 0 | 0 | 0 | 0 | partial |
-| mw-light.ru | 1 | 0 | 0 | 0 | 0 | 1 | complete |
-| odeon-light.com | 0 | 0 | 0 | 0 | 0 | 0 | partial |
-| freya-light.com | 1 | 0 | 0 | 0 | 0 | 1 | complete |
-| stluce.ru | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| supplier | mode | discovered | parsed | in_stock | unknown | out_of_stock | discontinued | failed | status |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---|
+| ambrella.biz | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| artelamp.ru | stock_tracked | 3 | 3 | 3 | 0 | 0 | 0 | 0 | complete |
+| citilux.ru | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| crystallux.ru | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| divinare.ru | stock_tracked | 21 | 0 | 0 | 0 | 0 | 0 | 8 | complete |
+| eurosvet.ru | stock_tracked | 60 | 4 | 4 | 0 | 0 | 0 | 4 | complete |
+| favourite-light.com | stock_tracked | 1 | 0 | 0 | 0 | 0 | 0 | 1 | complete |
+| kinklight.ru | stock_tracked | 60 | 0 | 0 | 0 | 0 | 0 | 9 | complete |
+| lightstar.ru | stock_tracked | 60 | 8 | 7 | 0 | 1 | 0 | 0 | complete |
+| shop.lussole.ru | stock_tracked | 1 | 0 | 0 | 0 | 0 | 0 | 1 | complete |
+| maytoni.ru | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| mw-light.ru | stock_tracked | 1 | 0 | 0 | 0 | 0 | 0 | 1 | complete |
+| odeon-light.com | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
+| freya-light.com | stock_tracked | 1 | 0 | 0 | 0 | 0 | 0 | 1 | complete |
+| stluce.ru | stock_tracked | 0 | 0 | 0 | 0 | 0 | 0 | 0 | partial |
 
 ## FixtureRequirement coverage and final results
 
@@ -43,8 +43,15 @@
 | F-07 | 80 | 85 | 0 | 0 | нет |
 | F-08 | 19 | 85 | 0 | 0 | нет |
 
+## Comparison with previous V2
+
+- Каталог: `206 -> 206`; FixtureRequirement: `8 -> 8`; финальные кандидаты: `1 -> 1`.
+- Все 15 поставщиков текущего списка после bounded public-card проверки зафиксированы как `stock_tracked`.
+- Новых пулов `stock_not_published` нет: `unknown` на этих поставщиках по-прежнему исключается.
+- Новых визуально сильных аналогов не появилось; недоступные/архивные товары в финал не вернулись.
+
 ## Product decision
 
-Товары без подтверждённого `in_stock`, снятые с производства, под заказ, ожидаемые, с неизвестным наличием, без совместимой family или без положительного визуального review не попадают в итог.
+Для stock_tracked в подбор попадает только `in_stock`. Для stock_not_published отсутствие статуса допускается, но явные отрицательные маркеры (нет в наличии, архив, под заказ, ожидается, уточнение наличия и аналоги) по-прежнему исключаются. Оба режима проходят live recheck.
 
 Если по позиции нет достойного кандидата, отчёт показывает: `Ничего не найдено. Попробуйте подобрать вручную.`

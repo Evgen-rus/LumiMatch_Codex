@@ -9,7 +9,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .availability import availability_label
+from .availability import (
+    availability_label,
+    effective_availability_status,
+    supplier_availability_mode,
+)
 from .models import FixtureRequirement, ScoredCandidate
 
 
@@ -32,7 +36,9 @@ def _image_reference(candidate: ScoredCandidate, output_dir: Path) -> str | None
 def _candidate_dict(candidate: ScoredCandidate, output_dir: Path) -> dict[str, object]:
     value = candidate.model_dump(mode="json")
     value["image_reference"] = _image_reference(candidate, output_dir)
-    value["availability_label"] = availability_label(candidate.product.availability_status)
+    mode = supplier_availability_mode(candidate.product.supplier)
+    value["availability_mode"] = mode
+    value["availability_label"] = availability_label(effective_availability_status(candidate.product), mode)
     return value
 
 
@@ -64,7 +70,7 @@ def write_reports(
         "requirements": records,
         "supplier_stats": supplier_stats or [],
         "notes": [
-            "Финальная выдача содержит только товары с availability_status=in_stock и подтверждённой повторной проверкой карточки.",
+            "Для stock_tracked финальная выдача содержит только in_stock; для stock_not_published допускается отсутствие статуса, но live recheck исключает явные негативные маркеры.",
             "Товары без визуального подтверждения Codex и отклонённые по визуальному несоответствию не показываются.",
         ],
     }
@@ -81,7 +87,7 @@ def write_reports(
         "<!doctype html><html lang='ru'><head><meta charset='utf-8'><title>LumiMatch sample V2</title>",
         "<style>body{font-family:Arial,sans-serif;max-width:1380px;margin:30px auto;color:#202124;background:#fafafa}h1{margin-bottom:8px}.muted{color:#5f6368}.req{border-top:3px solid #202124;padding:26px 0}.context{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.context img{width:250px;height:170px;object-fit:contain;background:#fff;border:1px solid #ddd}.stats{background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px;margin:12px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}.card{border:1px solid #d9d9d9;border-radius:10px;padding:14px;background:#fff}.card img{width:100%;height:240px;object-fit:contain;background:#f3f4f6}.tag{display:inline-block;background:#e8f0fe;border-radius:5px;padding:3px 7px;margin:2px}.alternative{background:#fff4e5}.score{font-size:20px;font-weight:bold}.empty{border:1px dashed #9aa0a6;background:#fff;padding:18px;border-radius:8px;font-weight:bold}.diff{color:#7a3e00}</style></head><body>",
         "<h1>LumiMatch - подбор по sample V2</h1>",
-        "<p class='muted'>Поставщики ограничены списком suppliers.txt. Наличие не подтверждено - товар не показывается.</p>",
+        "<p class='muted'>Поставщики ограничены списком suppliers.txt. Для stock_tracked неизвестное наличие не показывается; для stock_not_published оно обозначается отдельно и не называется подтверждённым.</p>",
     ]
     for requirement in requirements:
         record_stats = search_stats.get(requirement.id, {})
@@ -119,7 +125,7 @@ def write_reports(
                 f"### {title}",
                 f"- Поставщик: `{product.supplier}`; артикул: `{product.sku or 'не извлечён'}`",
                 f"- Ссылка: [{product.source_url}]({product.source_url})",
-                f"- Наличие: `{availability_label(product.availability_status)}`; цена: `{product.price or 'не опубликована'} {product.currency or ''}`",
+                f"- Наличие: `{availability_label(effective_availability_status(product), supplier_availability_mode(product.supplier))}`; режим поставщика: `{supplier_availability_mode(product.supplier)}`; цена: `{product.price or 'не опубликована'} {product.currency or ''}`",
                 f"- Параметры: цвет `{product.color or 'неизвестен'}`, размеры `{product.dimensions or 'неизвестны'}`, family `{product.product_family or 'unknown'}`",
                 f"- Оценки: visual `{candidate.visual_similarity:.2f}`, overall `{candidate.overall_score:.2f}`, type `{candidate.type_match:.2f}`, dimensions `{candidate.dimension_match:.2f}`, technical `{candidate.technical_match:.2f}`",
                 f"- Почему подходит: {candidate.fit_explanation}",
@@ -130,7 +136,7 @@ def write_reports(
             html_parts.extend([
                 f"<article class='{classes}'>", image_html,
                 f"<h3>{html.escape(title)}</h3><span class='tag'>{html.escape(product.product_family or 'unknown')}</span> <span class='score'>{candidate.visual_similarity:.2f}</span>",
-                f"<p><b>Поставщик:</b> {html.escape(product.supplier)}<br><b>Артикул:</b> {html.escape(product.sku or 'не извлечён')}<br><b>Наличие:</b> {html.escape(availability_label(product.availability_status))}<br><b>Цена:</b> {html.escape(str(product.price or 'не опубликована'))} {html.escape(product.currency or '')}</p>",
+                f"<p><b>Поставщик:</b> {html.escape(product.supplier)}<br><b>Артикул:</b> {html.escape(product.sku or 'не извлечён')}<br><b>Наличие:</b> {html.escape(availability_label(effective_availability_status(product), supplier_availability_mode(product.supplier)))}<br><b>Режим поставщика:</b> {html.escape(supplier_availability_mode(product.supplier))}<br><b>Цена:</b> {html.escape(str(product.price or 'не опубликована'))} {html.escape(product.currency or '')}</p>",
                 f"<p><b>Параметры:</b> цвет {html.escape(product.color or 'неизвестен')}; размеры {html.escape(product.dimensions or 'неизвестны')}; family {html.escape(product.product_family or 'unknown')}</p>",
                 f"<p><b>Оценки:</b> visual {candidate.visual_similarity:.2f}; overall {candidate.overall_score:.2f}; type {candidate.type_match:.2f}; dimensions {candidate.dimension_match:.2f}; technical {candidate.technical_match:.2f}</p>",
                 f"<p>{html.escape(candidate.fit_explanation)}</p><p class='diff'>{html.escape(', '.join(candidate.differences) or 'Отличия не выявлены')}</p><p><a href='{link}'>Открыть карточку поставщика</a></p>",

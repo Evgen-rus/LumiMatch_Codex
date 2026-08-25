@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "checked_on": "2026-08-25",
+  "default_mode": "stock_tracked",
+  "suppliers": {
+    "ambrella.biz": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://www.ambrella.biz/catalog/?arrFilter_736_692938694=Y&set_filter=y",
+        "https://www.ambrella.biz/catalog/?PAGEN_1=8&arrFilter_567_3412221886=Y&complect=prod&set_filter=y"
+      ],
+      "evidence": "Каталог показывает В наличии с количеством, Нет в наличии, В производстве и Поступление."
+    },
+    "artelamp.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://artelamp.ru/catalog/trekovyie-sistemyi/komplektuyushhie-dlya-trekovyix-sistem/a641205l"
+      ],
+      "evidence": "Карточки публикуют остаток в штуках; в локальном каталоге есть также отрицательный статус."
+    },
+    "citilux.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://citilux.ru/store/cl232a185e/",
+        "https://citilux.ru/store/cl703a100g/",
+        "https://citilux.ru/store/cl714r48n/"
+      ],
+      "evidence": "Карточки показывают В наличии с количеством и Нет в наличии/Снят с производства."
+    },
+    "crystallux.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://market.crystallux.ru/products/svetilnik-trekovyiy-odnofaznyiy-clt-031-006-30w-wh-srystal-lux-100235",
+        "https://market.crystallux.ru/catalog/odnofaznaya-sistema-basic-220v?page=4"
+      ],
+      "evidence": "Официальный market-поддомен показывает карточки В наличии/В корзину и Нет в наличии."
+    },
+    "divinare.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://divinare.ru/catalog/podvesnyie-svetilniki/112501-sp-10",
+        "https://divinare.ru/catalog/podvesnyie-svetilniki/180833-sp-80"
+      ],
+      "evidence": "Карточки и связанные товары показывают Нет в наличии и В наличии с количеством."
+    },
+    "eurosvet.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264"
+      ],
+      "evidence": "JSON-LD карточки содержит schema.org InStock; локально также зафиксирован отрицательный статус."
+    },
+    "favourite-light.com": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://favourite-light.com/catalog/dekorativnyy-svet/potolochnye-lyustry/",
+        "https://ru.favourite-light.com/catalog/funktsionalnyy-svet/led-lenta/"
+      ],
+      "evidence": "Каталог показывает Много/Достаточно, В наличии и Под заказ/уточнение наличия."
+    },
+    "kinklight.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://kinklight.ru/",
+        "https://kinklight.ru/svetilniki/svetilniki-na-shtange/"
+      ],
+      "evidence": "Каталог показывает В наличии с количеством и Ожидается/Под заказ."
+    },
+    "lightstar.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovye-svetilniki/208142",
+        "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovye-sistemy-pro/trekovye-pro-svetilniki/205037"
+      ],
+      "evidence": "JSON-LD карточек содержит schema.org InStock; в локальном каталоге есть OutOfStock."
+    },
+    "shop.lussole.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://shop.lussole.ru/category/svetilniki/",
+        "https://shop.lussole.ru/svetilnik-potolochnyy-lussole-lsp-8377-gilbert/"
+      ],
+      "evidence": "Каталог и карточки показывают В наличии и Нет в наличии."
+    },
+    "maytoni.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://maytoni.ru/catalog/voltega/vgl002wg/",
+        "https://maytoni.ru/catalog/decorative/nastennye-svetilniki/mod417wl-01w/"
+      ],
+      "evidence": "Карточки показывают В наличии, Скоро в продаже и количество."
+    },
+    "mw-light.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://mw-light.ru/decity-vita-220013306/"
+      ],
+      "evidence": "Карточка содержит поле Наличие: Есть в наличии."
+    },
+    "odeon-light.com": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://odeon-light.com/catalog/odeon_light/nastennyy_svetilnik_1/"
+      ],
+      "evidence": "Каталог и карточки показывают В наличии рядом с товарами."
+    },
+    "freya-light.com": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://freya-light.com/products/potolocnye-svetilniki/fr5098pl_05bbs/",
+        "https://freya-light.com/products/nastennye-svetilniki/fr5186wl_01bs/"
+      ],
+      "evidence": "Карточки показывают В наличии с количеством."
+    },
+    "stluce.ru": {
+      "availability_mode": "stock_tracked",
+      "checked_urls": [
+        "https://stluce.ru/catalogs/filter/newproduct-is-y/apply/?PAGEN_1=11",
+        "https://stluce.ru/catalog/funktsionalnyy_svet/?PAGEN_1=73"
+      ],
+      "evidence": "Каталог показывает В наличии с количеством и фильтр наличия."
+    }
+  }
+}

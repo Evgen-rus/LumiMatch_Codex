@@ -8,7 +8,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from .availability import normalize_availability
+from .availability import effective_availability_status
 from .models import CatalogProduct
 from .paths import CATALOG, ensure_dirs
 from .taxonomy import classify_product
@@ -148,8 +148,9 @@ class CatalogStore:
     @staticmethod
     def _normalize_product(product: CatalogProduct) -> CatalogProduct:
         updates: dict[str, object] = {}
-        if product.availability_status == "unknown" and product.availability:
-            updates["availability_status"] = normalize_availability(product.availability)
+        effective_status = effective_availability_status(product)
+        if effective_status != product.availability_status:
+            updates["availability_status"] = effective_status
         if not product.availability_source_text and product.availability:
             updates["availability_source_text"] = product.availability
         inferred_family = classify_product(product)

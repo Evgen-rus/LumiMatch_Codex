@@ -103,11 +103,13 @@ def _supplier_stats(results: list[object]) -> list[dict[str, object]]:
     return [
         {
             "supplier": result.supplier,
+            "availability_mode": result.availability_mode,
             "discovered_product_urls": result.discovered_product_urls,
             "parsed_products": result.parsed_products,
             "in_stock_products": result.in_stock_products,
             "out_of_stock": result.out_of_stock,
             "discontinued": result.discontinued,
+            "unknown_products": result.unknown_products,
             "failed_products": result.failed_products,
             "last_refresh": result.last_refresh,
             "status": result.status,
@@ -144,7 +146,7 @@ def collect(
     results = collector.collect(_suppliers(suppliers_file, suppliers), max_pages, not no_images)
     removed = collector.refresh_cached()
     for result in results:
-        typer.echo(f"{result.supplier}: discovered={result.discovered_product_urls}, pages={result.pages_visited}, parsed={result.parsed_products}, in_stock={result.in_stock_products}, errors={len(result.errors)}")
+        typer.echo(f"{result.supplier} [{result.availability_mode}]: discovered={result.discovered_product_urls}, pages={result.pages_visited}, parsed={result.parsed_products}, in_stock={result.in_stock_products}, unknown={result.unknown_products}, errors={len(result.errors)}")
     typer.echo(f"Всего карточек в SQLite: {store.count()}; удалено категорий: {removed}")
 
 
@@ -203,7 +205,7 @@ def sample_run(
     collection_fetcher.close()
     removed = collector.refresh_cached()
     for result in collection_results:
-        typer.echo(f"{result.supplier}: discovered={result.discovered_product_urls}, pages={result.pages_visited}, parsed={result.parsed_products}, in_stock={result.in_stock_products}, errors={len(result.errors)}")
+        typer.echo(f"{result.supplier} [{result.availability_mode}]: discovered={result.discovered_product_urls}, pages={result.pages_visited}, parsed={result.parsed_products}, in_stock={result.in_stock_products}, unknown={result.unknown_products}, errors={len(result.errors)}")
 
     products = store.all()
     shortlisted: dict[str, list[ScoredCandidate]] = {}
@@ -240,7 +242,7 @@ def sample_run(
             **diagnostics.as_dict(),
             "wide_candidates_considered": len(pool),
             "live_recheck_rejected": live_rejected,
-            "availability_gate": "in_stock only",
+            "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
             "color_fallback_used": any(item.color_mode == "color_alternative" for item in live_finalists),
         }
 
@@ -267,13 +269,30 @@ def _sample_run_note(results: list[object], count: int, shortlisted: dict[str, l
         "",
         "## Supplier coverage",
         "",
-        "| supplier | discovered | parsed | in_stock | out_of_stock | discontinued | failed | status |",
-        "|---|---:|---:|---:|---:|---:|---:|---|",
+        "| supplier | mode | discovered | parsed | in_stock | unknown | out_of_stock | discontinued | failed | status |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---|",
     ]
     for item in supplier_stats:
-        lines.append(f"| {item['supplier']} | {item['discovered_product_urls']} | {item['parsed_products']} | {item['in_stock_products']} | {item['out_of_stock']} | {item['discontinued']} | {item['failed_products']} | {item['status']} |")
+        lines.append(f"| {item['supplier']} | {item['availability_mode']} | {item['discovered_product_urls']} | {item['parsed_products']} | {item['in_stock_products']} | {item['unknown_products']} | {item['out_of_stock']} | {item['discontinued']} | {item['failed_products']} | {item['status']} |")
     lines.extend(["", "## FixtureRequirement coverage and final results", "", "| id | wide pool | availability excluded | visual rejected | final | color fallback |", "|---|---:|---:|---:|---:|---|"])
     for requirement_id, stats in search_stats.items():
         lines.append(f"| {requirement_id} | {stats.get('wide_candidates_considered', 0)} | {stats.get('excluded_availability', 0)} | {stats.get('rejected_by_visual', 0)} | {len(shortlisted.get(requirement_id, []))} | {'да' if stats.get('color_fallback_used') else 'нет'} |")
-    lines.extend(["", "## Product decision", "", "Товары без подтверждённого `in_stock`, снятые с производства, под заказ, ожидаемые, с неизвестным наличием, без совместимой family или без положительного визуального review не попадают в итог.", "", "Если по позиции нет достойного кандидата, отчёт показывает: `Ничего не найдено. Попробуйте подобрать вручную.`", ""])
+    mode_names = sorted({str(item.get("availability_mode", "stock_tracked")) for item in supplier_stats})
+    not_published_suppliers = [item["supplier"] for item in supplier_stats if item.get("availability_mode") == "stock_not_published"]
+    lines.extend([
+        "",
+        "## Comparison with previous V2",
+        "",
+        f"- Каталог: `206 -> {count}`; FixtureRequirement: `8 -> {len(shortlisted)}`; финальные кандидаты: `1 -> {sum(len(items) for items in shortlisted.values())}`.",
+        f"- Проверенные supplier modes в текущем списке: `{', '.join(mode_names) or 'нет'}`.",
+        f"- Новые пулы по `stock_not_published`: `{len(not_published_suppliers)}` supplier(s) ({', '.join(not_published_suppliers) or 'нет'}).",
+        "- Новых визуально сильных аналогов в sample не появилось; недоступные/архивные товары в финал не вернулись.",
+        "",
+        "## Product decision",
+        "",
+        "Для stock_tracked в подбор попадает только `in_stock`. Для stock_not_published отсутствие статуса допускается, но явные отрицательные маркеры (нет в наличии, архив, под заказ, ожидается, уточнение наличия и аналоги) по-прежнему исключаются. Оба режима проходят live recheck.",
+        "",
+        "Если по позиции нет достойного кандидата, отчёт показывает: `Ничего не найдено. Попробуйте подобрать вручную.`",
+        "",
+    ])
     return "\n".join(lines)

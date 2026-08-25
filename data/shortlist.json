@@ -16,7 +16,7 @@
         "availability": "InStock",
         "availability_status": "in_stock",
         "availability_source_text": "https://schema.org/InStock",
-        "availability_checked_at": "2026-08-24T11:16:15.953073+00:00",
+        "availability_checked_at": "2026-08-25T03:06:41.623729+00:00",
         "product_family": "pendant_single",
         "dimensions": "ширина: 100 мм; высота: 390 мм; длина: 103 мм",
         "width": 100.0,
@@ -58,7 +58,7 @@
         "primary_image_url": "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0001.jpg",
         "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\deef482f8686ffc6cf3bb0c51055979d08e4809392f214fa02167644b1e6e29a.jpg",
         "image_source": "jsonld",
-        "updated_at": "2026-08-24T11:16:15.952907+00:00"
+        "updated_at": "2026-08-25T03:06:41.623473+00:00"
       },
       "visual_similarity": 0.94,
       "color_match": 0.4,
