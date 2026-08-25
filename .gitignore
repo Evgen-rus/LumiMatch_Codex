@@ -16,8 +16,12 @@ dist/
 .idea/
 .vscode/
 playwright/.cache/
+# Игнорируем локальные данные, но оставляем фото каталога в git.
+# Родительские папки нужно открывать по очереди, иначе Git не увидит файлы внутри.
+data/*
+!data/catalog/
 data/catalog/*
 !data/catalog/.gitkeep
-data/cache/
-data/images/
+!data/catalog/images/
+!data/catalog/images/**
 !output/.gitkeep
