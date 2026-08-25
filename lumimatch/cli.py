@@ -10,7 +10,7 @@ import typer
 
 from .audit import audit_all, write_audit
 from .availability import effective_availability_status
-from .benchmark import run_benchmark
+from .benchmark import prepare_actual_visual_review, run_benchmark
 from .collector import CatalogCollector
 from .fetch import PublicFetcher
 from .golden import (
@@ -124,6 +124,18 @@ def _supplier_stats(results: list[object]) -> list[dict[str, object]]:
             "status": result.status,
             "coverage_quality": result.coverage_quality,
             "parse_success_rate": result.parse_success_rate,
+            "adapter": result.adapter,
+            "discovery_method": result.discovery_method,
+            "sitemap_urls_total": result.sitemap_urls_total,
+            "sitemap_documents": result.sitemap_documents,
+            "category_pages_visited": result.category_pages_visited,
+            "cards_attempted": result.cards_attempted,
+            "approximate_catalog_urls": result.approximate_catalog_urls,
+            "discovery_coverage": result.discovery_coverage,
+            "discovery_quality": result.discovery_quality,
+            "parse_quality": result.parse_quality,
+            "coverage_basis": result.coverage_basis,
+            "availability_counts": result.availability_counts,
             "errors": result.errors,
         }
         for result in results
@@ -159,6 +171,42 @@ def collect(
     for result in results:
         typer.echo(f"{result.supplier} [{result.availability_mode}]: discovered={result.discovered_product_urls}, pages={result.pages_visited}, parsed={result.parsed_products}, in_stock={result.in_stock_products}, unknown={result.unknown_products}, errors={len(result.errors)}")
     typer.echo(f"Всего карточек в SQLite: {store.count()}; удалено категорий: {removed}")
+
+
+@app.command("production-build")
+def production_build(
+    suppliers_file: Path = typer.Option(Path("suppliers.txt"), exists=True),  # noqa: B008
+    suppliers: str | None = typer.Option(None, help="Домены через запятую; по умолчанию все разрешённые сайты."),
+    db: Path = typer.Option(Path("data/catalog/production_clean.sqlite3")),  # noqa: B008
+    max_pages: int = typer.Option(120, min=1, max=1000),
+    no_images: bool = typer.Option(False, help="Не скачивать локальные копии фотографий."),
+    fresh: bool = typer.Option(False, help="Очистить только явно указанный SQLite-файл перед сборкой."),
+) -> None:
+    """Build only the production catalog; golden data is not read by this command."""
+    ensure_dirs()
+    if fresh:
+        for candidate in (db, Path(f"{db}-wal"), Path(f"{db}-shm")):
+            if candidate.exists():
+                candidate.unlink()
+    store = CatalogStore(db)
+    collector = CatalogCollector(store)
+    results = collector.collect(_suppliers(suppliers_file, suppliers), max_pages, not no_images)
+    removed = collector.refresh_cached()
+    payload = {
+        "db": str(db),
+        "fresh": fresh,
+        "catalog_products": store.count(),
+        "removed_after_refresh": removed,
+        "suppliers": _supplier_stats(results),
+    }
+    output = Path("output/production_catalog_build.json")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    lines = ["# Production catalog build", "", f"- DB: `{db}`", f"- Products: `{store.count()}`", "", "| supplier | adapter | sitemap total | discovered | cards attempted | parsed | parse rate | discovery coverage | discovery quality | parse quality |", "|---|---|---:|---:|---:|---:|---:|---:|---|---|"]
+    for item in payload["suppliers"]:
+        lines.append(f"| {item['supplier']} | {item['adapter']} | {item['sitemap_urls_total']} | {item['discovered_product_urls']} | {item['cards_attempted']} | {item['parsed_products']} | {item['parse_success_rate']:.3f} | {item['discovery_coverage'] if item['discovery_coverage'] is not None else ''} | {item['discovery_quality']} | {item['parse_quality']} |")
+    Path("output/production_catalog_build.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    typer.echo(f"Production catalog build завершён: products={store.count()}; отчёт: {output}")
 
 
 @app.command("shortlist")
@@ -201,8 +249,8 @@ def golden_discovery(
     """Discover exact golden SKUs through allowed public supplier inventories."""
     ensure_dirs()
     items = json.loads(golden.read_text(encoding="utf-8"))
-    store = CatalogStore()
-    results = run_golden_discovery(items, suppliers_file, store)
+    scratch_store = CatalogStore(Path("tmp/golden_discovery.sqlite3"))
+    results = run_golden_discovery(items, suppliers_file, scratch_store, persist=False)
     write_discovery_report(results, output_dir)
     typer.echo(f"Golden discovery завершён: found={sum(bool(item.get('found')) for item in results)}/{len(results)}; отчёт: {output_dir}")
 
@@ -213,20 +261,36 @@ def golden_benchmark(
     discovery: Path = typer.Option(Path("output/golden/dan/discovery_report.json"), exists=True),  # noqa: B008
     requirements: Path = typer.Option(Path("data/fixture_requirements.json"), exists=True),  # noqa: B008
     output_dir: Path = typer.Option(Path("output/golden/dan")),  # noqa: B008
+    catalog: Path = typer.Option(Path("data/catalog/production_clean.sqlite3")),  # noqa: B008
+    actual_review: Path = typer.Option(Path("output/golden/dan/actual_visual_review.json")),  # noqa: B008
 ) -> None:
     """Measure golden discovery, retrieval and BOM coverage without score boosts."""
     ensure_dirs()
     golden_items = json.loads(golden.read_text(encoding="utf-8"))
     discovery_payload = json.loads(discovery.read_text(encoding="utf-8"))
-    store = CatalogStore()
+    store = CatalogStore(catalog)
     payload = run_benchmark(
         golden_items,
         discovery_payload.get("items", []),
         _requirements(requirements),
         store,
         output_dir,
+        actual_review_path=actual_review,
     )
-    typer.echo(f"Golden benchmark завершён: discovery={payload['discovery']['found']}; visual@1={payload['retrieval']['visual_at']['visual_at_1']}; visual@10={payload['retrieval']['visual_at']['visual_at_10']}; отчёт: {output_dir}")
+    typer.echo(f"Golden benchmark завершён: production_catalog_recall={payload['production_catalog_recall']['present']}/{payload['production_catalog_recall']['matchable_sku_targets']}; targeted={payload['targeted_discovery_recall']['found']}/{payload['targeted_discovery_recall']['matchable_sku_targets']}; visual@10={payload['retrieval']['visual_at']['visual_at_10']}; отчёт: {output_dir}")
+
+
+@app.command("golden-review-init")
+def golden_review_init(
+    requirements: Path = typer.Option(Path("data/fixture_requirements.json"), exists=True),  # noqa: B008
+    catalog: Path = typer.Option(Path("data/catalog/production_clean.sqlite3")),  # noqa: B008
+    output_dir: Path = typer.Option(Path("output/golden/dan")),  # noqa: B008
+    limit: int = typer.Option(100, min=1, max=200),
+) -> None:
+    """Prepare fresh contact sheets and a pending actual visual-review manifest."""
+    ensure_dirs()
+    payload = prepare_actual_visual_review(_requirements(requirements), CatalogStore(catalog), output_dir, limit=limit)
+    typer.echo(f"Actual visual review manifest создан: {output_dir / 'actual_visual_review.json'}; requirements={len(payload['requirements'])}")
 
 
 @app.command("sample-run")

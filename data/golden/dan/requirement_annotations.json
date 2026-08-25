@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "annotation_type": "manual_fixture_requirement_mapping",
+  "source": "Codex review of samples/golden/dan/expected_kp.docx against the Dan PDFs",
+  "sku_mapping": {
+    "50248": {"requirement_id": "F-01", "confidence": 0.88, "note": "cylindrical pendant directly matches the F-01 visual family"},
+    "fr2066wll40b": {"requirement_id": "F-03", "confidence": 0.72, "note": "wall sconce role and bedside use are consistent with F-03"},
+    "561037wl": {"requirement_id": "F-04", "confidence": 0.58, "note": "wall-light role may correspond to the decorative vertical wall-light requirement"},
+    "lsp4001": {"requirement_id": "F-05", "confidence": 0.54, "note": "vertical wall light may serve the mirror-light requirement; dimensions need confirmation"},
+    "lsp7187": {"requirement_id": "F-04", "confidence": 0.67, "note": "decorative wall-light role is consistent with F-04"},
+    "lsp4016": {"requirement_id": "F-01", "confidence": 0.42, "note": "pendant role overlaps F-01, but geometry/model identity is not proven"},
+    "2207b19": {"requirement_id": "F-03", "confidence": 0.49, "note": "wall-light role overlaps F-03, but source project room is not proven"},
+    "ll8941": {"requirement_id": "F-02", "confidence": 0.56, "note": "linear fixture role is compatible with F-02; source dimensions differ from the visual brief"},
+    "1108": {"requirement_id": "F-05", "confidence": 0.44, "note": "functional wall/step-light role may overlap F-05, but mirror use is not proven"},
+    "8507801": {"requirement_id": "F-06", "confidence": 0.79, "note": "track-spot role directly matches the F-06 directional-light family"}
+  },
+  "system_category_mapping": {
+    "track_rail": {"requirement_id": "F-07", "confidence": 0.78, "note": "system component aligned with the sample track-system requirement"},
+    "track_suspension": {"requirement_id": "F-07", "confidence": 0.78, "note": "system component aligned with the sample track-system requirement"},
+    "profile_connector": {"requirement_id": "F-08", "confidence": 0.66, "note": "system/BOM component aligned with the sample hidden linear-light requirement"},
+    "power_supply": {"requirement_id": "F-08", "confidence": 0.66, "note": "system/BOM component aligned with the sample hidden linear-light requirement"},
+    "led_strip": {"requirement_id": "F-08", "confidence": 0.66, "note": "system/BOM component aligned with the sample hidden linear-light requirement"},
+    "linear_profile": {"requirement_id": "F-08", "confidence": 0.66, "note": "system/BOM component aligned with the sample hidden linear-light requirement"}
+  },
+  "unmapped_notes": {
+    "chandelier": "No chandelier-specific FixtureRequirement is forced without a distinct project mapping."
+  }
+}

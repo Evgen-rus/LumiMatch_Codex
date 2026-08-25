@@ -11,6 +11,7 @@ import json
 import re
 import zipfile
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from urllib.parse import urlencode, urljoin, urlparse
 from xml.etree import ElementTree as ET
@@ -103,26 +104,32 @@ def _brand_supplier(name: str) -> tuple[str | None, str | None, str]:
     return None, None, "brand and supplier are not proven by the source row"
 
 
+@lru_cache(maxsize=1)
+def _requirement_annotations() -> dict[str, object]:
+    path = Path(__file__).resolve().parents[1] / "data" / "golden" / "dan" / "requirement_annotations.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
 def _fixture_mapping(category: str, sku: str | None, role: str) -> tuple[str | None, float | None, str]:
+    annotations = _requirement_annotations()
     if role == ROLE_SYSTEM:
-        if category in {"track_rail", "track_suspension"}:
-            return "F-07", 0.78, "system component aligned with the sample track-system requirement"
-        return "F-08", 0.66, "system/BOM component aligned with the sample hidden linear-light requirement"
+        system_mapping = annotations.get("system_category_mapping", {})
+        if isinstance(system_mapping, dict) and category in system_mapping:
+            entry = system_mapping[category]
+            if isinstance(entry, dict):
+                return entry.get("requirement_id"), entry.get("confidence"), str(entry.get("note") or "manual system annotation")
+        return None, None, "no manual system FixtureRequirement mapping"
     normalized = _key(sku)
-    direct = {
-        "50248": ("F-01", 0.88, "cylindrical pendant directly matches the F-01 visual family"),
-        "fr2066wll40b": ("F-03", 0.72, "wall sconce role and bedside use are consistent with F-03"),
-        "561037wl": ("F-04", 0.58, "wall-light role may correspond to the decorative vertical wall-light requirement"),
-        "lsp4001": ("F-05", 0.54, "vertical wall light may serve the mirror-light requirement; dimensions need confirmation"),
-        "lsp7187": ("F-04", 0.67, "decorative wall-light role is consistent with F-04"),
-        "lsp4016": ("F-01", 0.42, "pendant role overlaps F-01, but geometry/model identity is not proven"),
-        "2207b19": ("F-03", 0.49, "wall-light role overlaps F-03, but source project room is not proven"),
-        "ll8941": ("F-02", 0.56, "linear fixture role is compatible with F-02; source dimensions differ from the visual brief"),
-        "1108": ("F-05", 0.44, "functional wall/step-light role may overlap F-05, but mirror use is not proven"),
-        "8507801": ("F-06", 0.79, "track-spot role directly matches the F-06 directional-light family"),
-    }
-    if normalized in direct:
-        return direct[normalized]
+    mapping = annotations.get("sku_mapping", {})
+    if isinstance(mapping, dict):
+        entry = mapping.get(normalized)
+        if isinstance(entry, dict):
+            return entry.get("requirement_id"), entry.get("confidence"), str(entry.get("note") or "manual annotation")
     if "люстр" in category:
         return None, None, "golden product has no chandelier-specific FixtureRequirement in the current sample coverage"
     return None, None, "no confident FixtureRequirement mapping"
@@ -212,6 +219,7 @@ def parse_golden_docx(docx_path: Path) -> list[dict[str, object]]:
                 "likely_supplier": supplier,
                 "matched_fixture_requirement": matched,
                 "match_confidence": confidence,
+                "mapping_source": "manual_annotation",
                 "notes": f"{supplier_note}; {mapping_note}",
                 "source": {"file": str(docx_path).replace("\\", "/"), "table_row": row_index + 1},
             }
@@ -364,6 +372,7 @@ def run_golden_discovery(
     store: CatalogStore,
     *,
     max_targets: int | None = None,
+    persist: bool = False,
 ) -> list[dict[str, object]]:
     """Find exact golden SKUs through public inventories, never URL maps."""
     domains = _allowed_supplier_domains(suppliers_path)
@@ -419,7 +428,8 @@ def run_golden_discovery(
                         saved = fetcher.save_image(parsed.primary_image_url)
                         if saved:
                             parsed.local_image_path = saved
-                    store.upsert(parsed)
+                    if persist:
+                        store.upsert(parsed)
                     found_product = parsed
                     found_url = parsed.canonical_url
                     break

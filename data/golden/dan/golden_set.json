@@ -13,6 +13,7 @@
     "likely_supplier": "eurosvet.ru",
     "matched_fixture_requirement": "F-01",
     "match_confidence": 0.88,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present or verified by the Elektrostandard catalog family; cylindrical pendant directly matches the F-01 visual family",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -33,6 +34,7 @@
     "likely_supplier": "kinklight.ru",
     "matched_fixture_requirement": null,
     "match_confidence": null,
+    "mapping_source": "manual_annotation",
     "notes": "brand/series verified from the product naming and allowed supplier list; no confident FixtureRequirement mapping",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -53,6 +55,7 @@
     "likely_supplier": "kinklight.ru",
     "matched_fixture_requirement": "F-03",
     "match_confidence": 0.49,
+    "mapping_source": "manual_annotation",
     "notes": "brand/series verified from the product naming and allowed supplier list; wall-light role overlaps F-03, but source project room is not proven",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -73,6 +76,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-02",
     "match_confidence": 0.56,
+    "mapping_source": "manual_annotation",
     "notes": "brand inferred from the public product naming; no allowed supplier domain verified; linear fixture role is compatible with F-02; source dimensions differ from the visual brief",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -93,6 +97,7 @@
     "likely_supplier": "ambrella.biz",
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -113,6 +118,7 @@
     "likely_supplier": "ambrella.biz",
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -133,6 +139,7 @@
     "likely_supplier": "ambrella.biz",
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name or GP accessory family; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -153,6 +160,7 @@
     "likely_supplier": "ambrella.biz",
     "matched_fixture_requirement": "F-07",
     "match_confidence": 0.78,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name or GP accessory family; system component aligned with the sample track-system requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -173,6 +181,7 @@
     "likely_supplier": "freya-light.com",
     "matched_fixture_requirement": "F-03",
     "match_confidence": 0.72,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name; wall sconce role and bedside use are consistent with F-03",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -193,6 +202,7 @@
     "likely_supplier": "odeon-light.com",
     "matched_fixture_requirement": "F-04",
     "match_confidence": 0.58,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present; public Lumion catalog is hosted by Odeon Light; wall-light role may correspond to the decorative vertical wall-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -213,6 +223,7 @@
     "likely_supplier": "eurosvet.ru",
     "matched_fixture_requirement": "F-05",
     "match_confidence": 0.44,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present or verified by the Elektrostandard catalog family; functional wall/step-light role may overlap F-05, but mirror use is not proven",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -233,6 +244,7 @@
     "likely_supplier": "shop.lussole.ru",
     "matched_fixture_requirement": "F-05",
     "match_confidence": 0.54,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name; vertical wall light may serve the mirror-light requirement; dimensions need confirmation",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -253,6 +265,7 @@
     "likely_supplier": "shop.lussole.ru",
     "matched_fixture_requirement": "F-04",
     "match_confidence": 0.67,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name; decorative wall-light role is consistent with F-04",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -273,6 +286,7 @@
     "likely_supplier": "shop.lussole.ru",
     "matched_fixture_requirement": "F-01",
     "match_confidence": 0.42,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present in the product name; pendant role overlaps F-01, but geometry/model identity is not proven",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -293,6 +307,7 @@
     "likely_supplier": "eurosvet.ru",
     "matched_fixture_requirement": "F-07",
     "match_confidence": 0.78,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -313,6 +328,7 @@
     "likely_supplier": "eurosvet.ru",
     "matched_fixture_requirement": "F-06",
     "match_confidence": 0.79,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present or verified by the Elektrostandard catalog family; track-spot role directly matches the F-06 directional-light family",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -333,6 +349,7 @@
     "likely_supplier": "eurosvet.ru",
     "matched_fixture_requirement": "F-07",
     "match_confidence": 0.78,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicitly present or verified by the Elektrostandard catalog family; system component aligned with the sample track-system requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -353,6 +370,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -373,6 +391,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -393,6 +412,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -413,6 +433,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",
@@ -433,6 +454,7 @@
     "likely_supplier": null,
     "matched_fixture_requirement": "F-08",
     "match_confidence": 0.66,
+    "mapping_source": "manual_annotation",
     "notes": "brand explicit; no SWG domain is in suppliers.txt, so supplier is intentionally unverified; system/BOM component aligned with the sample hidden linear-light requirement",
     "source": {
       "file": "samples/golden/dan/expected_kp.docx",

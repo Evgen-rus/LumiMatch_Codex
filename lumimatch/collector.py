@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 from .availability import effective_availability_status, supplier_availability_mode
-from .discovery import discover_product_urls
+from .discovery import discover_inventory
 from .extract import parse_product_page
 from .fetch import PublicFetcher
 from .storage import CatalogStore
@@ -37,6 +37,18 @@ class CollectionResult:
     status: str = "not_started"
     coverage_quality: str = "unverified"
     parse_success_rate: float = 0.0
+    adapter: str = "generic"
+    discovery_method: str = "generic"
+    sitemap_urls_total: int = 0
+    sitemap_documents: int = 0
+    category_pages_visited: int = 0
+    cards_attempted: int = 0
+    approximate_catalog_urls: int | None = None
+    discovery_coverage: float | None = None
+    discovery_quality: str = "unverified"
+    parse_quality: str = "unverified"
+    coverage_basis: str = "unverified"
+    availability_counts: dict[str, int] = field(default_factory=dict)
     last_refresh: str | None = None
     errors: list[str] = field(default_factory=list)
 
@@ -49,6 +61,16 @@ def coverage_state(discovered_product_urls: int, parsed_products: int) -> tuple[
     if rate >= 0.5:
         return "healthy", "healthy", rate
     return "partial", "partial", rate
+
+
+def _quality(rate: float, denominator: int, *, empty: str = "broken") -> str:
+    if not denominator:
+        return empty
+    if rate >= 0.5:
+        return "healthy"
+    if rate > 0:
+        return "partial"
+    return "broken"
 
 
 class CatalogCollector:
@@ -74,13 +96,22 @@ class CatalogCollector:
         )
         result.last_refresh = datetime.now(timezone.utc).isoformat()
         try:
-            candidates, _, _ = discover_product_urls(
+            inventory = discover_inventory(
                 self.fetcher, base_url, max_urls=max(max_pages * 4, 60)
             )
+            result.adapter = inventory.adapter_name
+            result.discovery_method = inventory.discovery_method
+            result.sitemap_urls_total = inventory.sitemap_urls_total
+            result.sitemap_documents = inventory.sitemap_documents
+            result.category_pages_visited = inventory.category_pages_visited
+            result.approximate_catalog_urls = inventory.approximate_catalog_urls
+            result.coverage_basis = inventory.coverage_basis
+            candidates = inventory.urls
             result.discovered_product_urls = len(candidates)
             for url in candidates:
-                if result.pages_visited >= max_pages:
+                if result.cards_attempted >= max_pages:
                     break
+                result.cards_attempted += 1
                 page = self.fetcher.get(url)
                 if not page:
                     result.failed_products += 1
@@ -98,6 +129,7 @@ class CatalogCollector:
                     result.products_found += 1
                     result.parsed_products += 1
                     status = effective_availability_status(product)
+                    result.availability_counts[status] = result.availability_counts.get(status, 0) + 1
                     if status == "in_stock":
                         result.in_stock_products += 1
                     elif status == "out_of_stock":
@@ -108,9 +140,42 @@ class CatalogCollector:
                         result.unknown_products += 1
                 else:
                     result.failed_products += 1
-            result.status, result.coverage_quality, result.parse_success_rate = coverage_state(
-                result.discovered_product_urls, result.parsed_products
+            result.parse_success_rate = (
+                result.parsed_products / result.cards_attempted
+                if result.cards_attempted
+                else 0.0
             )
+            result.parse_quality = _quality(
+                result.parse_success_rate, result.cards_attempted
+            )
+            if result.approximate_catalog_urls:
+                result.discovery_coverage = min(
+                    result.discovered_product_urls / result.approximate_catalog_urls,
+                    1.0,
+                )
+                result.discovery_quality = _quality(
+                    result.discovery_coverage, result.approximate_catalog_urls
+                )
+            else:
+                result.discovery_quality = _quality(
+                    1.0 if result.discovered_product_urls else 0.0,
+                    result.discovered_product_urls,
+                    empty="unverified",
+                )
+            if not result.discovered_product_urls:
+                result.status = "broken"
+                result.coverage_quality = "discovery_broken"
+            elif result.parse_quality == "broken":
+                result.status = "partial"
+                result.coverage_quality = "parse_broken"
+            elif result.discovery_quality == "healthy" and result.parse_quality == "healthy":
+                result.status = "healthy"
+                result.coverage_quality = "healthy"
+            else:
+                result.status = "partial"
+                result.coverage_quality = (
+                    f"discovery_{result.discovery_quality}_parse_{result.parse_quality}"
+                )
         except Exception as exc:
             message = f"{type(exc).__name__}: {exc}"
             result.errors.append(message)

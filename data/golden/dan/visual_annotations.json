@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "annotation_type": "manual_golden_visual_annotation",
+  "source": "previous human/Codex golden judgment; not an autonomous review run",
+  "warning": "This file is retained as annotation data and is not used to calculate benchmark visual@K.",
+  "items": {
+    "F-01": {
+      "CL227011": {"decision": "accept", "visual_similarity": 0.84, "reason": "тонкий чёрный цилиндрический подвес; близкая геометрия"},
+      "a040264": {"decision": "accept", "visual_similarity": 0.94, "reason": "чёрный компактный цилиндрический подвес; наиболее близкий визуальный аналог"},
+      "CL331111": {"decision": "reject", "visual_similarity": 0.08, "reason": "хрусталь и клетчатая люстра, не цилиндрический современный подвес"},
+      "CL444210": {"decision": "reject", "visual_similarity": 0.12, "reason": "витражная классическая форма"},
+      "LSP-4016": {"decision": "reject", "visual_similarity": 0.28, "reason": "группа колец/декоративная форма вместо компактного цилиндра"}
+    },
+    "F-03": {
+      "FR2066WL-L40B": {"decision": "accept", "visual_similarity": 0.96, "reason": "компактное бра с тёмным основанием и светлым абажуром; соответствует bedside reference"},
+      "2207B,19": {"decision": "reject", "visual_similarity": 0.36, "reason": "ветвящаяся архитектурная форма без светлого локального абажура"},
+      "LSP-7187": {"decision": "reject", "visual_similarity": 0.43, "reason": "вертикальная световая петля относится к другой декоративной геометрии"},
+      "CL352321": {"decision": "reject", "visual_similarity": 0.05, "reason": "классическая хрустальная люстра"}
+    },
+    "F-04": {
+      "LSP-7187": {"decision": "accept", "visual_similarity": 0.90, "reason": "вертикальный светящийся контур с тёмной центральной частью; близко к reference"},
+      "FR2066WL-L40B": {"decision": "reject", "visual_similarity": 0.45, "reason": "абажурное прикроватное бра, нет овального светящегося контура"},
+      "CL352321": {"decision": "reject", "visual_similarity": 0.05, "reason": "хрустальная классика"},
+      "CL704071": {"decision": "reject", "visual_similarity": 0.39, "reason": "горизонтальный/угловой корпус, не вертикальный контур"}
+    },
+    "F-05": {
+      "LSP-4001": {"decision": "accept", "visual_similarity": 0.78, "reason": "тонкая вертикальная подсветка стены; визуально подходит, но IP/влажная зона не доказаны"},
+      "CL330312": {"decision": "reject", "visual_similarity": 0.04, "reason": "хрустальный декоративный светильник вместо mirror-light"},
+      "CL704071": {"decision": "reject", "visual_similarity": 0.34, "reason": "корпус не подтверждает подсветку зеркала и не имеет IP"}
+    },
+    "F-06": {
+      "208517": {"decision": "reject", "visual_similarity": 0.08, "reason": "круглый белый шар; не узкий чёрный цилиндрический спот"},
+      "080942": {"decision": "reject", "visual_similarity": 0.25, "reason": "крупный круглый многосветный накладной прибор"},
+      "225530": {"decision": "reject", "visual_similarity": 0.06, "reason": "плоская круглая декоративная панель"}
+    }
+  }
+}

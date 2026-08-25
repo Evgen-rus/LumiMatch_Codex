@@ -1,0 +1,65 @@
+{
+  "run_id": "20260825T075717Z",
+  "generated_at": "2026-08-25T08:05:00+00:00",
+  "review_type": "actual_codex_visual_review",
+  "source_manifest": "output/golden/dan/actual_visual_review.json",
+  "review_note": "Current contact sheets and reference crops were opened in the Codex session. Only the judgments below are used for visual@K; no golden annotation scores are copied.",
+  "requirements": {
+    "F-01": {
+      "candidate_set_fingerprint": "8b6fd21dd433715d1d4c8c55fe7200f8e567814253d2865659da7271cbeed1da",
+      "candidates": [
+        {"sku": "a059811", "decision": "reject", "visual_rank": null, "reason": "широкий купольный плафон, а reference требует узкий чёрный цилиндр"},
+        {"sku": "LSP-9600", "decision": "reject", "visual_rank": null, "reason": "широкий металлический диск и открытая лампа; геометрия не цилиндрическая"},
+        {"sku": "LSP-9604", "decision": "reject", "visual_rank": null, "reason": "широкий плоский плафон; не близок к чёрному цилиндру"}
+      ]
+    },
+    "F-02": {
+      "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+      "candidates": [
+        {"sku": "LSP-9702", "decision": "reject", "visual_rank": null, "reason": "трековый прожектор вместо непрерывной линейной линии"},
+        {"sku": "LSP-9825", "decision": "reject", "visual_rank": null, "reason": "декоративный многосоставный потолочный прибор"},
+        {"sku": "GV1451", "decision": "accept", "visual_rank": 1, "reason": "чёрный вытянутый линейный корпус визуально близок; существенное отличие — накладная/неподтверждённая установка вместо recessed reference"}
+      ]
+    },
+    "F-03": {
+      "candidate_set_fingerprint": "c0fc98bcf82a816547697e8e019577dcce4a628d25274db0eb54ab8a0fb8603f",
+      "candidates": [
+        {"sku": "LSP-9108", "decision": "reject", "visual_rank": null, "reason": "чёрный стеклянный цилиндр/клетка без светлого абажура"},
+        {"sku": "LSP-9320", "decision": "reject", "visual_rank": null, "reason": "открытая лампа на подвесе, нет bedside shade"},
+        {"sku": "00000055442", "decision": "accept", "visual_rank": 1, "reason": "настенное бра с локальным светлым абажуром подходит по роли и силуэту; существенное отличие — классическая латунная арматура вместо чёрного основания"}
+      ]
+    },
+    "F-04": {
+      "candidate_set_fingerprint": "022e016c2e6609253e368a5b9ffc6f3737c0991418cfa178cb6592a2adc7070f",
+      "candidates": [
+        {"sku": "LSP-9108", "decision": "reject", "visual_rank": null, "reason": "вертикальная форма есть, но это клетка с лампой, не светящийся овальный контур"},
+        {"sku": "LSP-9320", "decision": "reject", "visual_rank": null, "reason": "одиночная открытая лампа, нет овального светового контура"},
+        {"sku": "00000053358", "decision": "reject", "visual_rank": null, "reason": "классическое хрустальное бра, структурно не похоже на reference"}
+      ]
+    },
+    "F-05": {
+      "candidate_set_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidates": []
+    },
+    "F-06": {
+      "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+      "candidates": [
+        {"sku": "LSP-9702", "decision": "reject", "visual_rank": null, "reason": "крупный трековый прожектор другого силуэта; reference — небольшие чёрные цилиндры"},
+        {"sku": "LSP-9825", "decision": "reject", "visual_rank": null, "reason": "декоративный многосоставный светильник, не spot"},
+        {"sku": "003355", "decision": "reject", "visual_rank": null, "reason": "круглый серый встраиваемый прибор, не чёрный цилиндрический spot"}
+      ]
+    },
+    "F-07": {
+      "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+      "candidates": [
+        {"sku": "GV1076", "decision": "accept", "visual_rank": 1, "reason": "визуально является чёрным шинопроводом; серия/напряжение и совместимость требуют отдельной технической проверки"}
+      ]
+    },
+    "F-08": {
+      "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+      "candidates": [
+        {"sku": "GV1450", "decision": "reject", "visual_rank": null, "reason": "линейный прибор, но не доказанная скрытая LED-лента/профиль из reference"}
+      ]
+    }
+  }
+}

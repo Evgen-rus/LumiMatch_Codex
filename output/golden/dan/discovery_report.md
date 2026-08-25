@@ -1,6 +1,6 @@
 # Golden discovery — Dan
 
-- generated_at: `2026-08-25T06:13:40.374767+00:00`
+- generated_at: `2026-08-25T07:57:05.308956+00:00`
 
 | pos | sku | role | found | discovered | parsed | supplier | status | photo | method |
 |---:|---|---|---|---|---|---|---|---|---|

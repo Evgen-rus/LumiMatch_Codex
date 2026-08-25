@@ -142,3 +142,28 @@ def test_benchmark_exposes_retrieval_at_20_50_100(tmp_path: Path) -> None:
         "retrieval_at_50": 1,
         "retrieval_at_100": 1,
     }
+
+
+def test_target_aware_discovery_does_not_count_as_production_recall(tmp_path: Path) -> None:
+    store = CatalogStore(tmp_path / "catalog.sqlite3")
+    golden = [{
+        "kp_position": 1,
+        "sku": "SKU-EXPECTED",
+        "name": "Expected product",
+        "product_role": "VISUAL_SELECTION",
+        "golden_category": "decorative_pendant",
+        "matched_fixture_requirement": "F-test",
+        "match_confidence": 0.8,
+    }]
+    discovery = [{
+        "kp_position": 1,
+        "sku": "SKU-EXPECTED",
+        "found": True,
+        "discovered": True,
+        "parser_success": True,
+        "url": "https://supplier.test/product/SKU-EXPECTED",
+    }]
+    payload = run_benchmark(golden, discovery, [_fixture()], store, tmp_path / "out")
+    assert payload["targeted_discovery_recall"]["found"] == 1
+    assert payload["production_catalog_recall"]["present"] == 0
+    assert payload["retrieval"]["retrieval_at"]["retrieval_at_100"] == 0

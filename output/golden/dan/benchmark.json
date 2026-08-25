@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:34:29.865772+00:00",
+  "generated_at": "2026-08-25T08:01:54.854927+00:00",
   "golden_source": "samples/golden/dan/expected_kp.docx",
   "golden_items": 22,
   "visual_selection_items": 11,
@@ -11,6 +11,201 @@
     "parsed": 8,
     "photo": 6
   },
+  "targeted_discovery_recall": {
+    "visual_targets": 11,
+    "matchable_sku_targets": 10,
+    "found": 5,
+    "recall": 0.5,
+    "items": [
+      {
+        "kp_position": 1,
+        "sku": "50248",
+        "found": false,
+        "match_type": null,
+        "supplier": "eurosvet.ru"
+      },
+      {
+        "kp_position": 2,
+        "sku": null,
+        "found": true,
+        "match_type": "name_query",
+        "supplier": "kinklight.ru"
+      },
+      {
+        "kp_position": 3,
+        "sku": "2207B,19",
+        "found": true,
+        "match_type": "exact_sku",
+        "supplier": "kinklight.ru"
+      },
+      {
+        "kp_position": 4,
+        "sku": "LL-894-1",
+        "found": false,
+        "match_type": null,
+        "supplier": null
+      },
+      {
+        "kp_position": 9,
+        "sku": "FR2066WL-L40B",
+        "found": true,
+        "match_type": "exact_sku",
+        "supplier": "freya-light.com"
+      },
+      {
+        "kp_position": 10,
+        "sku": "5610/37WL",
+        "found": false,
+        "match_type": null,
+        "supplier": "odeon-light.com"
+      },
+      {
+        "kp_position": 11,
+        "sku": "1108",
+        "found": false,
+        "match_type": null,
+        "supplier": "eurosvet.ru"
+      },
+      {
+        "kp_position": 12,
+        "sku": "lsp-4001",
+        "found": true,
+        "match_type": "exact_sku",
+        "supplier": "shop.lussole.ru"
+      },
+      {
+        "kp_position": 13,
+        "sku": "lsp-7187",
+        "found": true,
+        "match_type": "exact_sku",
+        "supplier": "shop.lussole.ru"
+      },
+      {
+        "kp_position": 14,
+        "sku": "LSP-4016",
+        "found": true,
+        "match_type": "exact_sku",
+        "supplier": "shop.lussole.ru"
+      },
+      {
+        "kp_position": 16,
+        "sku": "85078/01",
+        "found": false,
+        "match_type": null,
+        "supplier": "eurosvet.ru"
+      }
+    ],
+    "note": "Target-aware discovery is diagnostic only and may use a known SKU/query."
+  },
+  "production_catalog_recall": {
+    "visual_targets": 11,
+    "matchable_sku_targets": 10,
+    "present": 0,
+    "recall": 0.0,
+    "not_matchable_no_sku": 1,
+    "items": [
+      {
+        "kp_position": 1,
+        "sku": "50248",
+        "matched_fixture_requirement": "F-01",
+        "status": "absent",
+        "supplier": "eurosvet.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 2,
+        "sku": null,
+        "matched_fixture_requirement": null,
+        "status": "not_matchable_no_sku",
+        "supplier": "kinklight.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 3,
+        "sku": "2207B,19",
+        "matched_fixture_requirement": "F-03",
+        "status": "absent",
+        "supplier": "kinklight.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 4,
+        "sku": "LL-894-1",
+        "matched_fixture_requirement": "F-02",
+        "status": "absent",
+        "supplier": null,
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 9,
+        "sku": "FR2066WL-L40B",
+        "matched_fixture_requirement": "F-03",
+        "status": "absent",
+        "supplier": "freya-light.com",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 10,
+        "sku": "5610/37WL",
+        "matched_fixture_requirement": "F-04",
+        "status": "absent",
+        "supplier": "odeon-light.com",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 11,
+        "sku": "1108",
+        "matched_fixture_requirement": "F-05",
+        "status": "absent",
+        "supplier": "eurosvet.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 12,
+        "sku": "lsp-4001",
+        "matched_fixture_requirement": "F-05",
+        "status": "absent",
+        "supplier": "shop.lussole.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 13,
+        "sku": "lsp-7187",
+        "matched_fixture_requirement": "F-04",
+        "status": "absent",
+        "supplier": "shop.lussole.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 14,
+        "sku": "LSP-4016",
+        "matched_fixture_requirement": "F-01",
+        "status": "absent",
+        "supplier": "shop.lussole.ru",
+        "url": null,
+        "availability_status": null
+      },
+      {
+        "kp_position": 16,
+        "sku": "85078/01",
+        "matched_fixture_requirement": "F-06",
+        "status": "absent",
+        "supplier": "eurosvet.ru",
+        "url": null,
+        "availability_status": null
+      }
+    ],
+    "note": "Measured only against the clean production catalog; golden discovery never populates it."
+  },
   "retrieval": {
     "visual_targets": [
       {
@@ -21,21 +216,22 @@
         "match_confidence": 0.88,
         "discovery_found": false,
         "discovery_match_type": null,
+        "production_catalog_present": false,
         "supplier": "eurosvet.ru",
         "url": null,
         "availability_status": null,
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "не проверено",
-        "fresh_visual_review_reason": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "48151eed5789d3c204709cf401f146d906583c610cb70098e9aa6b8497b8ddd4",
-        "diagnosis": "not_discovered"
+        "candidate_set_fingerprint": "8b6fd21dd433715d1d4c8c55fe7200f8e567814253d2865659da7271cbeed1da",
+        "diagnosis": "not_in_production_catalog"
       },
       {
         "kp_position": 2,
@@ -52,21 +248,22 @@
         "match_confidence": 0.49,
         "discovery_found": true,
         "discovery_match_type": "exact_sku",
+        "production_catalog_present": false,
         "supplier": "kinklight.ru",
         "url": "https://kinklight.ru/podsvetki-arxitekturnyie/19910.html",
         "availability_status": "unknown",
         "availability_gate": "not_in_sellable_pool",
-        "independent_retrieval_rank": 17,
+        "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "reject",
-        "fresh_visual_review_reason": "ветвящаяся архитектурная форма без светлого локального абажура",
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "7609bc4cf93bebfd1ed33d97f42b483a203e9ba50c4540f994b4f61579c2580d",
-        "diagnosis": "availability_gate_only"
+        "candidate_set_fingerprint": "c0fc98bcf82a816547697e8e019577dcce4a628d25274db0eb54ab8a0fb8603f",
+        "diagnosis": "targeted_only_not_in_production_catalog"
       },
       {
         "kp_position": 4,
@@ -76,21 +273,22 @@
         "match_confidence": 0.56,
         "discovery_found": false,
         "discovery_match_type": null,
+        "production_catalog_present": false,
         "supplier": null,
         "url": null,
         "availability_status": null,
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "не проверено",
-        "fresh_visual_review_reason": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "5d1c481d44868a9426430b50941f0e51d8df94805dcf8f88f4ab34b17e9a7ce2",
-        "diagnosis": "not_discovered"
+        "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+        "diagnosis": "not_in_production_catalog"
       },
       {
         "kp_position": 9,
@@ -100,21 +298,22 @@
         "match_confidence": 0.72,
         "discovery_found": true,
         "discovery_match_type": "exact_sku",
+        "production_catalog_present": false,
         "supplier": "freya-light.com",
         "url": "https://freya-light.com/products/nastennye-svetilniki/fr2066wl_l40b/",
         "availability_status": "in_stock",
-        "availability_gate": "passed",
-        "independent_retrieval_rank": 1,
-        "production_retrieval_rank": 1,
-        "visual_approved_from_golden_source": true,
-        "fresh_visual_review_status": "accept",
-        "fresh_visual_review_reason": "компактное бра с тёмным основанием и светлым абажуром; соответствует bedside reference",
-        "visual_at_1": true,
-        "visual_at_3": true,
-        "visual_at_5": true,
-        "visual_at_10": true,
-        "candidate_set_fingerprint": "7609bc4cf93bebfd1ed33d97f42b483a203e9ba50c4540f994b4f61579c2580d",
-        "diagnosis": "retrieved"
+        "availability_gate": "not_in_sellable_pool",
+        "independent_retrieval_rank": null,
+        "production_retrieval_rank": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
+        "visual_at_1": false,
+        "visual_at_3": false,
+        "visual_at_5": false,
+        "visual_at_10": false,
+        "candidate_set_fingerprint": "c0fc98bcf82a816547697e8e019577dcce4a628d25274db0eb54ab8a0fb8603f",
+        "diagnosis": "targeted_only_not_in_production_catalog"
       },
       {
         "kp_position": 10,
@@ -124,21 +323,22 @@
         "match_confidence": 0.58,
         "discovery_found": false,
         "discovery_match_type": null,
+        "production_catalog_present": false,
         "supplier": "odeon-light.com",
         "url": null,
         "availability_status": null,
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "не проверено",
-        "fresh_visual_review_reason": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "ea45472152e918ce3992478ce990616a40b3c16ae19650323ad762f6d84ff023",
-        "diagnosis": "not_discovered"
+        "candidate_set_fingerprint": "022e016c2e6609253e368a5b9ffc6f3737c0991418cfa178cb6592a2adc7070f",
+        "diagnosis": "not_in_production_catalog"
       },
       {
         "kp_position": 11,
@@ -148,21 +348,22 @@
         "match_confidence": 0.44,
         "discovery_found": false,
         "discovery_match_type": null,
+        "production_catalog_present": false,
         "supplier": "eurosvet.ru",
         "url": null,
         "availability_status": null,
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "не проверено",
-        "fresh_visual_review_reason": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "db12ebaa74548eaf36da90b7455fcfcfd7c7d84c95971dea6f6308e403817b4b",
-        "diagnosis": "not_discovered"
+        "candidate_set_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diagnosis": "not_in_production_catalog"
       },
       {
         "kp_position": 12,
@@ -172,21 +373,22 @@
         "match_confidence": 0.54,
         "discovery_found": true,
         "discovery_match_type": "exact_sku",
+        "production_catalog_present": false,
         "supplier": "shop.lussole.ru",
         "url": "https://shop.lussole.ru/bra-lussole-lsp-4001/",
         "availability_status": "in_stock",
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": true,
-        "fresh_visual_review_status": "accept",
-        "fresh_visual_review_reason": "тонкая вертикальная подсветка стены; визуально подходит, но IP/влажная зона не доказаны",
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "db12ebaa74548eaf36da90b7455fcfcfd7c7d84c95971dea6f6308e403817b4b",
-        "diagnosis": "retrieval_or_hard_gate_failure"
+        "candidate_set_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diagnosis": "targeted_only_not_in_production_catalog"
       },
       {
         "kp_position": 13,
@@ -196,21 +398,22 @@
         "match_confidence": 0.67,
         "discovery_found": true,
         "discovery_match_type": "exact_sku",
+        "production_catalog_present": false,
         "supplier": "shop.lussole.ru",
         "url": "https://shop.lussole.ru/bra-lussole-lsp-7187/",
         "availability_status": "in_stock",
-        "availability_gate": "passed",
-        "independent_retrieval_rank": 4,
-        "production_retrieval_rank": 2,
-        "visual_approved_from_golden_source": true,
-        "fresh_visual_review_status": "accept",
-        "fresh_visual_review_reason": "вертикальный светящийся контур с тёмной центральной частью; близко к reference",
+        "availability_gate": "not_in_sellable_pool",
+        "independent_retrieval_rank": null,
+        "production_retrieval_rank": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
-        "visual_at_5": true,
-        "visual_at_10": true,
-        "candidate_set_fingerprint": "ea45472152e918ce3992478ce990616a40b3c16ae19650323ad762f6d84ff023",
-        "diagnosis": "retrieved"
+        "visual_at_5": false,
+        "visual_at_10": false,
+        "candidate_set_fingerprint": "022e016c2e6609253e368a5b9ffc6f3737c0991418cfa178cb6592a2adc7070f",
+        "diagnosis": "targeted_only_not_in_production_catalog"
       },
       {
         "kp_position": 14,
@@ -220,21 +423,22 @@
         "match_confidence": 0.42,
         "discovery_found": true,
         "discovery_match_type": "exact_sku",
+        "production_catalog_present": false,
         "supplier": "shop.lussole.ru",
         "url": "https://shop.lussole.ru/podvesnoy-svetilnik-lussole-lsp-4016/",
         "availability_status": "in_stock",
-        "availability_gate": "passed",
-        "independent_retrieval_rank": 18,
-        "production_retrieval_rank": 9,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "reject",
-        "fresh_visual_review_reason": "группа колец/декоративная форма вместо компактного цилиндра",
+        "availability_gate": "not_in_sellable_pool",
+        "independent_retrieval_rank": null,
+        "production_retrieval_rank": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "48151eed5789d3c204709cf401f146d906583c610cb70098e9aa6b8497b8ddd4",
-        "diagnosis": "retrieved"
+        "candidate_set_fingerprint": "8b6fd21dd433715d1d4c8c55fe7200f8e567814253d2865659da7271cbeed1da",
+        "diagnosis": "targeted_only_not_in_production_catalog"
       },
       {
         "kp_position": 16,
@@ -244,33 +448,34 @@
         "match_confidence": 0.79,
         "discovery_found": false,
         "discovery_match_type": null,
+        "production_catalog_present": false,
         "supplier": "eurosvet.ru",
         "url": null,
         "availability_status": null,
         "availability_gate": "not_in_sellable_pool",
         "independent_retrieval_rank": null,
         "production_retrieval_rank": null,
-        "visual_approved_from_golden_source": false,
-        "fresh_visual_review_status": "не проверено",
-        "fresh_visual_review_reason": null,
+        "visual_review_status": "not_reviewed",
+        "visual_review_reason": null,
+        "visual_rank": null,
         "visual_at_1": false,
         "visual_at_3": false,
         "visual_at_5": false,
         "visual_at_10": false,
-        "candidate_set_fingerprint": "6d60f6dfdd60acea068d42735bed5ef564807b61c5a171ebe88f0a1925ba0ecc",
-        "diagnosis": "not_discovered"
+        "candidate_set_fingerprint": "301d4251bae5edc94086c3b74db70b87ab193648cc1477041360b5b93ffbae54",
+        "diagnosis": "not_in_production_catalog"
       }
     ],
     "by_requirement": {
       "F-01": {
         "targets": 2,
         "found": 1,
-        "retrieved": 1,
+        "retrieved": 0,
         "availability_gate_only": 0,
-        "not_discovered": 1,
-        "retrieval_at_20": 1,
-        "retrieval_at_50": 1,
-        "retrieval_at_100": 1,
+        "not_discovered": 2,
+        "retrieval_at_20": 0,
+        "retrieval_at_50": 0,
+        "retrieval_at_100": 0,
         "visual_at_1": 0,
         "visual_at_3": 0,
         "visual_at_5": 0,
@@ -279,16 +484,16 @@
       "F-03": {
         "targets": 2,
         "found": 2,
-        "retrieved": 2,
-        "availability_gate_only": 1,
-        "not_discovered": 0,
-        "retrieval_at_20": 2,
-        "retrieval_at_50": 2,
-        "retrieval_at_100": 2,
-        "visual_at_1": 1,
-        "visual_at_3": 1,
-        "visual_at_5": 1,
-        "visual_at_10": 1
+        "retrieved": 0,
+        "availability_gate_only": 0,
+        "not_discovered": 2,
+        "retrieval_at_20": 0,
+        "retrieval_at_50": 0,
+        "retrieval_at_100": 0,
+        "visual_at_1": 0,
+        "visual_at_3": 0,
+        "visual_at_5": 0,
+        "visual_at_10": 0
       },
       "F-02": {
         "targets": 1,
@@ -307,23 +512,23 @@
       "F-04": {
         "targets": 2,
         "found": 1,
-        "retrieved": 1,
+        "retrieved": 0,
         "availability_gate_only": 0,
-        "not_discovered": 1,
-        "retrieval_at_20": 1,
-        "retrieval_at_50": 1,
-        "retrieval_at_100": 1,
+        "not_discovered": 2,
+        "retrieval_at_20": 0,
+        "retrieval_at_50": 0,
+        "retrieval_at_100": 0,
         "visual_at_1": 0,
         "visual_at_3": 0,
-        "visual_at_5": 1,
-        "visual_at_10": 1
+        "visual_at_5": 0,
+        "visual_at_10": 0
       },
       "F-05": {
         "targets": 2,
         "found": 1,
         "retrieved": 0,
         "availability_gate_only": 0,
-        "not_discovered": 1,
+        "not_discovered": 2,
         "retrieval_at_20": 0,
         "retrieval_at_50": 0,
         "retrieval_at_100": 0,
@@ -348,15 +553,15 @@
       }
     },
     "retrieval_at": {
-      "retrieval_at_20": 4,
-      "retrieval_at_50": 4,
-      "retrieval_at_100": 4
+      "retrieval_at_20": 0,
+      "retrieval_at_50": 0,
+      "retrieval_at_100": 0
     },
     "visual_at": {
-      "visual_at_1": 1,
-      "visual_at_3": 1,
-      "visual_at_5": 2,
-      "visual_at_10": 2
+      "visual_at_1": 0,
+      "visual_at_3": 0,
+      "visual_at_5": 0,
+      "visual_at_10": 0
     }
   },
   "system_bom_coverage": {
@@ -424,9 +629,17 @@
       "coverage_state": "healthy"
     }
   ],
-  "fresh_review": {
-    "run_id": "20260825T063424Z",
-    "manifest": "output/golden/dan/visual_review_manifest.json",
-    "stale_review_rejected": true
+  "actual_visual_review": {
+    "path": "output\\golden\\dan\\actual_visual_review_completed.json",
+    "run_id": "20260825T075717Z",
+    "requirements": {
+      "F-01": "current",
+      "F-03": "current",
+      "F-02": "current",
+      "F-04": "current",
+      "F-05": "current",
+      "F-06": "current"
+    },
+    "visual_metrics_require_actual_review": true
   }
 }
