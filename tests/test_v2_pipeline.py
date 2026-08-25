@@ -1,15 +1,21 @@
+import json
+
 from lumimatch.availability import (
     availability_label,
+    diagnostic_availability_label,
     normalize_availability,
     supplier_availability_mode,
 )
 from lumimatch.extract import parse_product_page
 from lumimatch.models import CatalogProduct, FixtureRequirement
+from lumimatch.report import write_unavailable_report
 from lumimatch.scoring import (
     apply_visual_review,
     color_relation,
     finalize_candidates,
+    finalize_unavailable_visual_candidates,
     hard_filter,
+    is_final_candidate,
     live_recheck_candidate,
     score_product,
     wide_candidate_pool,
@@ -88,6 +94,53 @@ def test_stock_not_published_expected_is_rejected() -> None:
     allowed, reasons = hard_filter(requirement(), product(availability="Ожидается", availability_status="expected"), availability_mode="stock_not_published")
     assert not allowed
     assert "availability:expected" in reasons
+
+
+def test_unavailable_visual_pool_allows_temporary_statuses_but_not_unknown_or_discontinued() -> None:
+    candidates = wide_candidate_pool(
+        requirement(),
+        [
+            product(sku="OOS", availability="Нет в наличии", availability_status="out_of_stock"),
+            product(sku="UNKNOWN", availability=None, availability_status="unknown"),
+            product(sku="DISC", availability="Снят с производства", availability_status="discontinued"),
+        ],
+        availability_policy="unavailable_visual",
+    )
+    assert [item.product.sku for item in candidates] == ["OOS"]
+
+
+def test_unavailable_visual_finalist_is_independent_from_sellable_finalist() -> None:
+    candidate = apply_visual_review(
+        score_product(requirement(), product(availability="Нет в наличии", availability_status="out_of_stock")),
+        {"decision": "accept", "visual_similarity": 0.82, "overall_score": 0.76},
+    )
+    sellable, _ = finalize_candidates([candidate])
+    unavailable, _ = finalize_unavailable_visual_candidates([candidate])
+    assert sellable == []
+    assert [item.product.sku for item in unavailable] == ["SKU-1"]
+    assert not is_final_candidate(candidate)
+
+
+def test_unavailable_report_labels_are_explicit() -> None:
+    assert diagnostic_availability_label("out_of_stock") == "Сейчас нет в наличии"
+    assert diagnostic_availability_label("preorder") == "Под заказ"
+    assert diagnostic_availability_label("expected") == "Ожидается поступление"
+    assert diagnostic_availability_label("check_availability") == "Наличие нужно уточнить"
+
+
+def test_unavailable_report_serializes_diagnostic_label(tmp_path) -> None:
+    candidate = apply_visual_review(
+        score_product(requirement(), product(availability="Нет в наличии", availability_status="out_of_stock")),
+        {"decision": "accept", "visual_similarity": 0.82, "overall_score": 0.76},
+    )
+    write_unavailable_report(
+        [requirement()],
+        {"F-test": [candidate]},
+        tmp_path,
+        search_stats={"F-test": {"out_of_stock_visual_finalists": 1}},
+    )
+    payload = json.loads((tmp_path / "lumimatch_sample_unavailable.json").read_text(encoding="utf-8"))
+    assert payload["requirements"][0]["candidates"][0]["availability_label"] == "Сейчас нет в наличии"
 
 
 def test_supplier_config_defaults_to_tracked_and_exposes_verified_mode() -> None:

@@ -9,8 +9,10 @@ from datetime import datetime, timezone
 
 from .availability import (
     AVAILABILITY_MODES,
-    availability_allowed,
+    UNAVAILABLE_VISUAL_STATUSES,
+    availability_allowed_for_policy,
     effective_availability_status,
+    explicit_discontinued_availability,
     explicit_negative_availability,
     negative_availability_from_html,
     supplier_availability_mode,
@@ -42,6 +44,7 @@ class PoolDiagnostics:
     visual_pool: int = 0
     rejected_by_visual: int = 0
     finalists: int = 0
+    discontinued_rejected: int = 0
     availability_not_published_pool: int = 0
     supplier_availability_modes: dict[str, int] = field(default_factory=dict)
     reasons: list[str] = field(default_factory=list)
@@ -146,11 +149,12 @@ def hard_filter(
     product: CatalogProduct,
     *,
     availability_mode: str | None = None,
+    availability_policy: str = "supplier",
 ) -> tuple[bool, list[str]]:
     reasons: list[str] = []
     status = effective_availability_status(product)
     selected_mode = availability_mode if availability_mode in AVAILABILITY_MODES else None
-    if not availability_allowed(product, selected_mode):
+    if availability_policy != "ignore" and not availability_allowed_for_policy(product, availability_policy, selected_mode):
         reasons.append(f"availability:{status}")
     if not product.sku:
         reasons.append("missing_sku")
@@ -214,10 +218,17 @@ def score_product(requirement: FixtureRequirement, product: CatalogProduct, *, c
     )
 
 
-def wide_candidate_pool(requirement: FixtureRequirement, products: Iterable[CatalogProduct], limit: int = 80, *, include_color_alternatives: bool = False) -> list[ScoredCandidate]:
+def wide_candidate_pool(
+    requirement: FixtureRequirement,
+    products: Iterable[CatalogProduct],
+    limit: int = 80,
+    *,
+    include_color_alternatives: bool = False,
+    availability_policy: str = "sellable",
+) -> list[ScoredCandidate]:
     candidates: list[ScoredCandidate] = []
     for product in products:
-        allowed, _ = hard_filter(requirement, product)
+        allowed, _ = hard_filter(requirement, product, availability_policy=availability_policy)
         if not allowed:
             continue
         color_status, _ = color_relation(requirement.color, product.color or product_text(product))
@@ -229,14 +240,24 @@ def wide_candidate_pool(requirement: FixtureRequirement, products: Iterable[Cata
     return candidates[:limit]
 
 
-def candidate_pool_diagnostics(requirement: FixtureRequirement, products: list[CatalogProduct], limit: int = 80) -> PoolDiagnostics:
+def candidate_pool_diagnostics(
+    requirement: FixtureRequirement,
+    products: list[CatalogProduct],
+    limit: int = 80,
+    *,
+    availability_policy: str = "sellable",
+) -> PoolDiagnostics:
     diagnostics = PoolDiagnostics(total_catalog=len(products))
     primary: list[CatalogProduct] = []
     alternatives: list[CatalogProduct] = []
     for product in products:
         mode = supplier_availability_mode(product.supplier)
         diagnostics.supplier_availability_modes[mode] = diagnostics.supplier_availability_modes.get(mode, 0) + 1
-        allowed, reasons = hard_filter(requirement, product)
+        allowed, reasons = hard_filter(requirement, product, availability_policy=availability_policy)
+        if explicit_discontinued_availability(product):
+            non_availability_allowed, _ = hard_filter(requirement, product, availability_policy="ignore")
+            if non_availability_allowed:
+                diagnostics.discontinued_rejected += 1
         if not allowed:
             if any(reason.startswith("availability:") for reason in reasons):
                 diagnostics.excluded_availability += 1
@@ -297,7 +318,24 @@ def apply_visual_review(candidate: ScoredCandidate, review: dict[str, object]) -
 
 def is_final_candidate(candidate: ScoredCandidate, *, min_visual: float = 0.60, min_overall: float = 0.55) -> bool:
     return (
-        availability_allowed(candidate.product)
+        availability_allowed_for_policy(candidate.product, "sellable")
+        and candidate.family_relation in {"exact", "compatible", "unknown"}
+        and candidate.visual_review_status == "проверено Codex по фото кандидата"
+        and candidate.visual_similarity is not None
+        and candidate.visual_similarity >= min_visual
+        and candidate.overall_score >= min_overall
+    )
+
+
+def is_unavailable_visual_candidate(
+    candidate: ScoredCandidate,
+    *,
+    min_visual: float = 0.60,
+    min_overall: float = 0.55,
+) -> bool:
+    """Check the same hard/visual gates for the diagnostic unavailable report."""
+    return (
+        availability_allowed_for_policy(candidate.product, "unavailable_visual")
         and candidate.family_relation in {"exact", "compatible", "unknown"}
         and candidate.visual_review_status == "проверено Codex по фото кандидата"
         and candidate.visual_similarity is not None
@@ -319,6 +357,23 @@ def finalize_candidates(primary: list[ScoredCandidate], alternatives: list[Score
     return finalists[:5], rejected
 
 
+def finalize_unavailable_visual_candidates(
+    primary: list[ScoredCandidate],
+    alternatives: list[ScoredCandidate] | None = None,
+) -> tuple[list[ScoredCandidate], list[ScoredCandidate]]:
+    """Finalize temporary-unavailability candidates without weakening visual gates."""
+    reviewed = primary + (alternatives or [])
+    rejected = [candidate for candidate in reviewed if candidate.visual_review_status.startswith("отклонён")]
+    finalists = [candidate for candidate in reviewed if is_unavailable_visual_candidate(candidate)]
+    if not finalists and alternatives:
+        finalists = [candidate for candidate in alternatives if is_unavailable_visual_candidate(candidate)]
+        for candidate in finalists:
+            candidate.color_mode = "color_alternative"
+            candidate.differences = [f"Альтернатива по цвету: требуется {candidate.differences[0] if candidate.differences else 'другой цвет'}", *candidate.differences]
+    finalists.sort(key=lambda item: (item.color_mode != "primary", -(item.visual_similarity or 0), -item.overall_score))
+    return finalists[:5], rejected
+
+
 def _normalized_sku(value: str | None) -> str:
     return re.sub(r"\W+", "", (value or "").casefold())
 
@@ -328,6 +383,7 @@ def live_recheck_candidate(
     fetcher: object,
     *,
     availability_mode: str | None = None,
+    availability_policy: str = "supplier",
 ) -> tuple[ScoredCandidate | None, str | None]:
     """Re-fetch the public product page before it is shown to a user."""
     from .extract import parse_product_page
@@ -347,12 +403,23 @@ def live_recheck_candidate(
             fresh.sku = candidate.product.sku
         else:
             return None, "live product SKU mismatch"
-    negative = explicit_negative_availability(fresh)
-    if selected_mode != "stock_tracked":
-        negative = negative or negative_availability_from_html(page_html, candidate.product.sku)
-    if negative:
-        return None, f"live availability is {negative}"
-    if not availability_allowed(fresh, selected_mode):
+    html_negative = negative_availability_from_html(page_html, candidate.product.sku)
+    if availability_policy == "unavailable_visual":
+        if explicit_discontinued_availability(fresh) or html_negative == "discontinued":
+            return None, "live availability is discontinued"
+        if effective_availability_status(fresh) not in UNAVAILABLE_VISUAL_STATUSES:
+            if html_negative in UNAVAILABLE_VISUAL_STATUSES:
+                fresh.availability_status = html_negative
+            else:
+                status = effective_availability_status(fresh)
+                return None, f"live availability is {status}"
+    else:
+        negative = explicit_negative_availability(fresh)
+        if selected_mode != "stock_tracked":
+            negative = negative or html_negative
+        if negative:
+            return None, f"live availability is {negative}"
+    if not availability_allowed_for_policy(fresh, availability_policy, selected_mode):
         status = effective_availability_status(fresh)
         return None, f"live availability is {status}"
     fresh.local_image_path = candidate.product.local_image_path

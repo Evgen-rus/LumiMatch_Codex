@@ -20,5 +20,4 @@ data/catalog/*
 !data/catalog/.gitkeep
 data/cache/
 data/images/
-output/*
 !output/.gitkeep

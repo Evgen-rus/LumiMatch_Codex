@@ -22,6 +22,14 @@ AVAILABILITY_MODES = (
     "stock_not_published",
     "mixed",
 )
+UNAVAILABLE_VISUAL_STATUSES = frozenset(
+    {
+        "out_of_stock",
+        "preorder",
+        "expected",
+        "check_availability",
+    }
+)
 NEGATIVE_AVAILABILITY_STATUSES = frozenset(
     {
         "out_of_stock",
@@ -227,6 +235,22 @@ def explicit_negative_availability(product: object) -> str | None:
     return None
 
 
+def explicit_discontinued_availability(product: object) -> bool:
+    """Return whether a product contains an archive/discontinued marker."""
+    values = [
+        getattr(product, "availability_source_text", None),
+        getattr(product, "availability", None),
+    ]
+    attributes = getattr(product, "attributes", {})
+    if isinstance(attributes, dict):
+        values.extend(
+            value
+            for key, value in attributes.items()
+            if any(marker in str(key).casefold() for marker in ("налич", "остат", "stock", "status", "производ"))
+        )
+    return any(normalize_availability(value) == "discontinued" for value in values if value)
+
+
 def negative_availability_from_html(html: str, sku: str | None = None) -> str | None:
     """Find a negative marker close to the current product SKU in a page.
 
@@ -260,6 +284,37 @@ def availability_allowed(product: object, mode: str | None = None) -> bool:
     if selected_mode == "stock_tracked":
         return status == "in_stock"
     return status in {"in_stock", "unknown"}
+
+
+def availability_allowed_for_policy(
+    product: object,
+    policy: str = "supplier",
+    mode: str | None = None,
+) -> bool:
+    """Apply a report-specific availability gate.
+
+    ``supplier`` retains the supplier capability policy used by the V2
+    collector.  ``sellable`` is intentionally stricter and is the gate for
+    the customer-facing report: only confirmed ``in_stock`` is accepted.
+    ``unavailable_visual`` is a diagnostic-only gate for temporary negative
+    statuses; it never admits unknown or discontinued products.
+    """
+    status = effective_availability_status(product)
+    if policy == "sellable":
+        return status == "in_stock" and not explicit_discontinued_availability(product)
+    if policy == "unavailable_visual":
+        return status in UNAVAILABLE_VISUAL_STATUSES and not explicit_discontinued_availability(product)
+    return availability_allowed(product, mode)
+
+
+def diagnostic_availability_label(status: str | None) -> str:
+    """Use the explicit wording required by the unavailable-only report."""
+    return {
+        "out_of_stock": "Сейчас нет в наличии",
+        "preorder": "Под заказ",
+        "expected": "Ожидается поступление",
+        "check_availability": "Наличие нужно уточнить",
+    }.get(status or "unknown", "Наличие не подтверждено")
 
 
 def availability_label(status: str | None, mode: str | None = None) -> str:

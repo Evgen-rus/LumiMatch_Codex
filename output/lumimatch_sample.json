@@ -1,0 +1,1045 @@
+{
+  "generated_at": "2026-08-25T03:51:17.023940+00:00",
+  "requirements": [
+    {
+      "requirement": {
+        "id": "F-01",
+        "room": "гостиная / столовая",
+        "fixture_type": "подвесной светильник",
+        "quantity": 3,
+        "visual_description": "Несколько компактных чёрных цилиндрических подвесов с направленным светом над зоной гостиной/столовой.",
+        "color": "чёрный",
+        "shape": "цилиндрический",
+        "mounting": "подвесной, потолочный",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "визуально компактный корпус",
+          "направленный свет",
+          "для жилого интерьера"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 10",
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_dia-2.pdf, лист 14",
+          "Dan_vis.pdf, страницы 1-8"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 10,
+            "source_type": "план освещения",
+            "note": "На плане отмечены точки подвесов и группы света; маркировка модели не дана.",
+            "confidence": 0.78
+          },
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 1,
+            "source_type": "интерьерная визуализация",
+            "note": "В потолочной зоне видны компактные тёмные цилиндрические приборы.",
+            "confidence": 0.82
+          }
+        ],
+        "confidence": 0.78,
+        "reference_pages": [
+          "Dan_dia-2.pdf#page=10",
+          "Dan_vis.pdf#page=1",
+          "Dan_vis.pdf#page=2"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_dia-2_p10.png",
+          "output/sample_references/Dan_vis_p01.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-01\\reference_01.png"
+        ],
+        "taxonomy_family": "pendant_single",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 155,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 37,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 22,
+        "color_alternative_pool": 0,
+        "visual_pool": 22,
+        "rejected_by_visual": 0,
+        "finalists": 1,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 22,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 1,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [
+        {
+          "requirement_id": "F-01",
+          "product": {
+            "supplier": "eurosvet.ru",
+            "source_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264",
+            "canonical_url": "https://eurosvet.ru/catalog/lustri/podvesnye-svetilniki/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264",
+            "sku": "a040264",
+            "name": "Подвесной светодиодный светильник",
+            "category": null,
+            "collection": null,
+            "description": "<p>Светильники DLR023 12W 4200K превосходно справляются как с ролью источников основного, так и дополнительного освещения. С их помощью легко зонировать пространство и расставлять световые акценты. Высококачественный алюминиевый сплав, из которого изготовлен корпус, устойчив к механическим повреждениям. Светильники образуют равномерный поток благодаря матовому рассеивателю.</p>",
+            "price": 4210.0,
+            "currency": "RUB",
+            "availability": "InStock",
+            "availability_status": "in_stock",
+            "availability_source_text": "https://schema.org/InStock",
+            "availability_checked_at": "2026-08-25T03:51:09.943854+00:00",
+            "product_family": "pendant_single",
+            "dimensions": "ширина: 100 мм; высота: 390 мм; длина: 103 мм",
+            "width": 100.0,
+            "height": 390.0,
+            "diameter": null,
+            "depth": null,
+            "width_mm": 100.0,
+            "height_mm": 390.0,
+            "length_mm": 103.0,
+            "diameter_mm": null,
+            "depth_mm": null,
+            "color": null,
+            "material": null,
+            "mounting_type": null,
+            "light_source": null,
+            "wattage": null,
+            "color_temperature": null,
+            "ip_rating": null,
+            "style": null,
+            "system": null,
+            "series": null,
+            "voltage": null,
+            "attributes": {
+              "Кол-во": "20 шт.",
+              "Вес": "19.105 кг",
+              "Объем": "0.07624050 м 3",
+              "Длина": "530 мм",
+              "Ширина": "350 мм",
+              "Высота": "411 мм",
+              "Штрихкод": "14690389119726",
+              "brand": "Elektrostandard"
+            },
+            "image_urls": [
+              "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0001.jpg",
+              "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0002.jpg",
+              "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0003.jpg",
+              "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0004.jpg"
+            ],
+            "primary_image_url": "https://cdn.minimir.ru/images/catalog/podvesnoy-svetodiodnyy-svetilnik-dlr023-12w-4200k-chernyy-matovyy-a040264-0001.jpg",
+            "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\deef482f8686ffc6cf3bb0c51055979d08e4809392f214fa02167644b1e6e29a.jpg",
+            "image_source": "jsonld",
+            "updated_at": "2026-08-25T03:51:09.891998+00:00"
+          },
+          "visual_similarity": 0.94,
+          "color_match": 0.4,
+          "family_relation": "exact",
+          "type_match": 0.96,
+          "dimension_match": 0.55,
+          "technical_match": 0.62,
+          "overall_score": 0.82,
+          "result_class": "очень близкий аналог",
+          "fit_explanation": "На фото компактный чёрный цилиндрический подвес, по силуэту близкий к тёмным цилиндрам на визуализациях гостиной.",
+          "differences": [
+            "точная модель по проекту не доказана",
+            "размеры подвеса в sample не указаны",
+            "нужно проверить высоту подвеса и светораспределение"
+          ],
+          "color_mode": "primary",
+          "visual_review_status": "проверено Codex по фото кандидата",
+          "visual_reject_reason": null,
+          "image_reference": "../data/catalog/images/deef482f8686ffc6cf3bb0c51055979d08e4809392f214fa02167644b1e6e29a.jpg",
+          "availability_mode": "stock_tracked",
+          "availability_label": "Подтверждено в наличии"
+        }
+      ],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-02",
+        "room": "гостиная / спальни",
+        "fixture_type": "линейный потолочный светильник",
+        "quantity": null,
+        "visual_description": "Тонкие чёрные линейные элементы света, встроенные или установленные в деревянный потолок; точная система не указана.",
+        "color": "чёрный",
+        "shape": "линейный",
+        "mounting": "потолочный",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "тонкий профиль",
+          "непрерывная световая линия",
+          "совместимость с деревянной обшивкой потолка"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 10",
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_vis.pdf, страницы 1-8 и 11-22"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 10,
+            "source_type": "план освещения",
+            "note": "Линейные участки отмечены на плане без артикула и сечения.",
+            "confidence": 0.65
+          },
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 11,
+            "source_type": "интерьерная визуализация",
+            "note": "В спальне видны две тонкие световые линии на потолке.",
+            "confidence": 0.83
+          }
+        ],
+        "confidence": 0.69,
+        "reference_pages": [
+          "Dan_dia-2.pdf#page=10",
+          "Dan_vis.pdf#page=11",
+          "Dan_vis.pdf#page=18"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_dia-2_p10.png",
+          "output/sample_references/Dan_vis_p11.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-02\\reference_01.png",
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-02\\reference_02.png"
+        ],
+        "taxonomy_family": "linear_profile",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 170,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 0,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 19,
+        "color_alternative_pool": 0,
+        "visual_pool": 19,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 19,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-03",
+        "room": "мастер-спальня",
+        "fixture_type": "настенное бра у кровати",
+        "quantity": 2,
+        "visual_description": "Парные бра по сторонам кровати: небольшой светлый абажур и тёмное основание, мягкий локальный свет.",
+        "color": "чёрный / светлый абажур",
+        "shape": "компактный вертикальный",
+        "mounting": "настенный",
+        "approximate_dimensions": {
+          "height_mm": 250
+        },
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "парная установка",
+          "мягкий свет для прикроватной зоны",
+          "настенный монтаж"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_dia-2.pdf, лист 14",
+          "Dan_vis.pdf, страницы 11-17"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 11,
+            "source_type": "интерьерная визуализация",
+            "note": "Светильники видны по обеим сторонам кровати; точная модель отсутствует.",
+            "confidence": 0.86
+          },
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 14,
+            "source_type": "план развёрток стен",
+            "note": "На стенах спальни есть точки/обозначения бра, без спецификации модели.",
+            "confidence": 0.66
+          }
+        ],
+        "confidence": 0.82,
+        "reference_pages": [
+          "Dan_vis.pdf#page=11",
+          "Dan_vis.pdf#page=12",
+          "Dan_vis.pdf#page=17"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_vis_p11.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-03\\reference_01.png"
+        ],
+        "taxonomy_family": "wall_sconce",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 156,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 1,
+        "excluded_dimensions": 38,
+        "primary_color_pool": 19,
+        "color_alternative_pool": 0,
+        "visual_pool": 19,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 19,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-04",
+        "room": "гостевая спальня",
+        "fixture_type": "декоративное настенное бра",
+        "quantity": 2,
+        "visual_description": "Парные вертикальные бра с округлым светящимся контуром и тёмной центральной частью по сторонам кровати.",
+        "color": "чёрный / белый свет",
+        "shape": "вертикальный овальный",
+        "mounting": "настенный",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "парная установка",
+          "вертикальный световой рисунок",
+          "декоративный акцент"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_dia-2.pdf, лист 14",
+          "Dan_vis.pdf, страницы 18-22"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 18,
+            "source_type": "интерьерная визуализация",
+            "note": "На тёмной стене показана пара вертикальных светильников рядом с кроватью.",
+            "confidence": 0.91
+          },
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 11,
+            "source_type": "план подключения светильников",
+            "note": "В соответствующей зоне есть настенные точки подключения.",
+            "confidence": 0.64
+          }
+        ],
+        "confidence": 0.84,
+        "reference_pages": [
+          "Dan_vis.pdf#page=18",
+          "Dan_vis.pdf#page=19"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_vis_p18.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-04\\reference_01.png"
+        ],
+        "taxonomy_family": "decorative_wall",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 156,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 1,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 19,
+        "color_alternative_pool": 0,
+        "visual_pool": 19,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 19,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-05",
+        "room": "санузлы",
+        "fixture_type": "подсветка зеркала",
+        "quantity": null,
+        "visual_description": "Вертикальные или контурные световые элементы возле зеркал в санузлах; конкретная конструкция и размеры не указаны.",
+        "color": "нейтральный белый свет",
+        "shape": "вертикальный / линейный",
+        "mounting": "настенный",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "для влажного помещения",
+          "свет у зеркала",
+          "нужен подбор по IP после уточнения зоны"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_dia-2.pdf, лист 19",
+          "Dan_vis.pdf, страницы 23-30"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 24,
+            "source_type": "интерьерная визуализация",
+            "note": "В санузлах видны подсвеченные зеркальные зоны, но тип прибора не отделён от подсветки зеркала.",
+            "confidence": 0.69
+          },
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 19,
+            "source_type": "развёртка стен",
+            "note": "На развёртке есть зеркала и световые/электрические точки; IP и модель не указаны.",
+            "confidence": 0.61
+          }
+        ],
+        "confidence": 0.62,
+        "reference_pages": [
+          "Dan_vis.pdf#page=24",
+          "Dan_vis.pdf#page=27",
+          "Dan_vis.pdf#page=30"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_vis_p24.png",
+          "output/sample_references/Dan_vis_p30.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-05\\reference_01.png",
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-05\\reference_02.png"
+        ],
+        "taxonomy_family": "mirror_light",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 156,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 1,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 0,
+        "color_alternative_pool": 0,
+        "visual_pool": 0,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 0,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-06",
+        "room": "гостиная / спальни",
+        "fixture_type": "точечный или трековый светильник",
+        "quantity": null,
+        "visual_description": "Небольшие направленные потолочные приборы, часть из них визуально похожа на чёрные цилиндрические споты.",
+        "color": "чёрный",
+        "shape": "цилиндрический",
+        "mounting": "потолочный / трековый",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "направленный свет",
+          "совместимость с потолочной схемой",
+          "не считать конкретный трек доказанным"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 10",
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_vis.pdf, страницы 1-8 и 11-22"
+        ],
+        "source_refs": [
+          {
+            "file": "samples/Dan_dia-2.pdf",
+            "page": 10,
+            "source_type": "план освещения",
+            "note": "Точки направленного света присутствуют, но условные обозначения не содержат товарной спецификации.",
+            "confidence": 0.71
+          },
+          {
+            "file": "samples/Dan_vis.pdf",
+            "page": 2,
+            "source_type": "интерьерная визуализация",
+            "note": "В потолке видны отдельные направленные приборы.",
+            "confidence": 0.77
+          }
+        ],
+        "confidence": 0.7,
+        "reference_pages": [
+          "Dan_dia-2.pdf#page=10",
+          "Dan_vis.pdf#page=2",
+          "Dan_vis.pdf#page=18"
+        ],
+        "reference_image_paths": [
+          "output/sample_references/Dan_dia-2_p10.png",
+          "output/sample_references/Dan_vis_p18.png"
+        ],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-06\\reference_01.png"
+        ],
+        "taxonomy_family": "track_spot",
+        "coverage_status": "matched",
+        "coverage_note": null
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 165,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 0,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 21,
+        "color_alternative_pool": 0,
+        "visual_pool": 21,
+        "rejected_by_visual": 1,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 21,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 1,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": [
+        {
+          "requirement_id": "F-06",
+          "product": {
+            "supplier": "lightstar.ru",
+            "source_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
+            "canonical_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
+            "sku": "208517",
+            "name": "Светильник трековый 48V 12W 3000K 360° черный Nove",
+            "category": null,
+            "collection": null,
+            "description": "Светильник для трека NOVE — это современное и стильное решение для интерьеров, выполненное в минималистичном дизайне. Белоснежный сферический плафон из двухслойного стекла кажется парящим в воздухе. Светильник обеспечивает мягкое освещение на 360°, равномерно распределяя свет во всех направлениях. Это позволяет создать уютную и гармоничную атмосферу, подчеркивая комфорт и изысканность интерьера. Высокий индекс цветопередачи (CRI 90) обеспечивает точную и естественную передачу цветов, что особенно важно для интерьеров, где важны детали. Ключевые характеристики NOVE 208517: Мощность встроенных светодиодов — 12 Вт. Световой поток — 846 Лм. Индекс цветопередачи (CRI) — 90. Угол рассеивания — 360°. Диаметр — 200 мм. Высота — 200 мм. Материалы — двухслойное стекло, анодированный алюминий с порошковым окрашиванием. Пылевлагозащита — IP20. Трековая система Nove, с которой совместим данный светильник, позволяет создавать персонализированные световые решения благодаря гибкой системе перемещения элементов по треку. Этот светильник станет стильным акцентом в любом современном пространстве, добавив в него легкость и функциональность.",
+            "price": 10599.0,
+            "currency": "RUB",
+            "availability": "InStock",
+            "availability_status": "in_stock",
+            "availability_source_text": "https://schema.org/InStock",
+            "availability_checked_at": null,
+            "product_family": "track_spot",
+            "dimensions": null,
+            "width": null,
+            "height": null,
+            "diameter": null,
+            "depth": null,
+            "width_mm": null,
+            "height_mm": null,
+            "length_mm": null,
+            "diameter_mm": null,
+            "depth_mm": null,
+            "color": "черный",
+            "material": null,
+            "mounting_type": null,
+            "light_source": null,
+            "wattage": null,
+            "color_temperature": null,
+            "ip_rating": null,
+            "style": null,
+            "system": null,
+            "series": null,
+            "voltage": null,
+            "attributes": {
+              "brand": "Nove"
+            },
+            "image_urls": [
+              "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-350x350.jpg",
+              "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-50x50.jpg"
+            ],
+            "primary_image_url": "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-350x350.jpg",
+            "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\dd850e1ea3e833b6255050f07b645e14aa89ce633855f07275ef6713e63a3304.jpg",
+            "image_source": "jsonld",
+            "updated_at": "2026-08-25T03:50:40.051698+00:00"
+          },
+          "visual_similarity": 0.2,
+          "color_match": 1.0,
+          "family_relation": "exact",
+          "type_match": 0.4,
+          "dimension_match": 0.55,
+          "technical_match": 0.8,
+          "overall_score": 0.3,
+          "result_class": "похожий вариант",
+          "fit_explanation": "Трековый формат сам по себе подходит, но визуальный силуэт и цвет не соответствуют референсу.",
+          "differences": [
+            "округлый белый корпус вместо узкого чёрного цилиндра",
+            "другая геометрия"
+          ],
+          "color_mode": "primary",
+          "visual_review_status": "отклонён Codex по визуальному несоответствию",
+          "visual_reject_reason": "фото показывает округлый белый прибор, а референс - узкие чёрные цилиндры",
+          "image_reference": "../data/catalog/images/dd850e1ea3e833b6255050f07b645e14aa89ce633855f07275ef6713e63a3304.jpg",
+          "availability_mode": "stock_tracked",
+          "availability_label": "Подтверждено в наличии"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "id": "F-07",
+        "room": "гостиная / спальни",
+        "fixture_type": "шинопровод трековой системы",
+        "quantity": null,
+        "visual_description": "Система/шина, на которую могут устанавливаться направленные приборы; конкретная серия и напряжение в проекте не доказаны.",
+        "color": "чёрный",
+        "shape": "линейный профиль",
+        "mounting": "потолочный",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "система трека",
+          "нужна совместимость по типу шины",
+          "серия и напряжение требуют ручной проверки"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 10",
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_vis.pdf, страницы 1-8 и 11-22"
+        ],
+        "source_refs": [],
+        "confidence": 0.45,
+        "reference_pages": [],
+        "reference_image_paths": [],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-07\\reference_01.png"
+        ],
+        "taxonomy_family": "track_rail",
+        "coverage_status": "ambiguous",
+        "coverage_note": "На визуализациях видны направленные приборы; отдельный шинопровод и его серия не подтверждены."
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 96,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 0,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 78,
+        "color_alternative_pool": 8,
+        "visual_pool": 80,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 80,
+        "unavailable_wide_candidates_considered": 1,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    },
+    {
+      "requirement": {
+        "id": "F-08",
+        "room": "гардеробная / санузлы",
+        "fixture_type": "светодиодная лента или линейный профиль",
+        "quantity": null,
+        "visual_description": "Скрытая непрерывная подсветка ниш, мебели, зеркал и потолочных линий; длину и мощность нужно считать вручную по плану.",
+        "color": "нейтральный белый свет",
+        "shape": "линейный",
+        "mounting": "встроенный / скрытый",
+        "approximate_dimensions": null,
+        "exact_dimensions": null,
+        "technical_constraints": [
+          "непрерывная линия",
+          "нужен ручной расчёт длины по плану",
+          "профиль и LED-лента не считать взаимозаменяемыми без проверки"
+        ],
+        "source_pages": [
+          "Dan_dia-2.pdf, лист 10",
+          "Dan_dia-2.pdf, лист 11",
+          "Dan_vis.pdf, страницы 23-30"
+        ],
+        "source_refs": [],
+        "confidence": 0.58,
+        "reference_pages": [],
+        "reference_image_paths": [],
+        "reference_crop_paths": [
+          "D:\\My_dev_project\\LumiMatch_Codex\\output\\review\\F-08\\reference_01.png"
+        ],
+        "taxonomy_family": "led_strip",
+        "coverage_status": "visual_only",
+        "coverage_note": "В проекте есть несколько скрытых световых линий, но нет спецификации профиля/ленты."
+      },
+      "search_stats": {
+        "total_catalog": 206,
+        "excluded_availability": 85,
+        "excluded_family": 170,
+        "excluded_missing_photo": 0,
+        "excluded_mounting": 0,
+        "excluded_dimensions": 0,
+        "primary_color_pool": 18,
+        "color_alternative_pool": 1,
+        "visual_pool": 19,
+        "rejected_by_visual": 0,
+        "finalists": 0,
+        "discontinued_rejected": 0,
+        "availability_not_published_pool": 0,
+        "supplier_availability_modes": {
+          "stock_tracked": 206
+        },
+        "reasons": [],
+        "wide_candidates_considered": 19,
+        "unavailable_wide_candidates_considered": 0,
+        "live_recheck_rejected": 0,
+        "unavailable_live_recheck_rejected": 0,
+        "in_stock_visual_finalists": 0,
+        "out_of_stock_visual_finalists": 0,
+        "preorder_visual_finalists": 0,
+        "expected_visual_finalists": 0,
+        "check_availability_visual_finalists": 0,
+        "visual_rejected": 0,
+        "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
+        "color_fallback_used": false
+      },
+      "candidates": [],
+      "rejected_candidates": []
+    }
+  ],
+  "supplier_stats": [
+    {
+      "supplier": "ambrella.biz",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:49:43.925794+00:00",
+      "status": "partial",
+      "errors": []
+    },
+    {
+      "supplier": "artelamp.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 3,
+      "parsed_products": 3,
+      "in_stock_products": 3,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:49:48.234123+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "citilux.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:49:50.342357+00:00",
+      "status": "partial",
+      "errors": []
+    },
+    {
+      "supplier": "crystallux.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:49:50.595441+00:00",
+      "status": "partial",
+      "errors": []
+    },
+    {
+      "supplier": "divinare.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 21,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 8,
+      "last_refresh": "2026-08-25T03:49:52.914831+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "eurosvet.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 60,
+      "parsed_products": 4,
+      "in_stock_products": 4,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 4,
+      "last_refresh": "2026-08-25T03:49:55.460583+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "favourite-light.com",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 1,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 1,
+      "last_refresh": "2026-08-25T03:49:57.017696+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "kinklight.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 60,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 9,
+      "last_refresh": "2026-08-25T03:50:01.724427+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "lightstar.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 60,
+      "parsed_products": 8,
+      "in_stock_products": 7,
+      "out_of_stock": 1,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:50:05.350689+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "shop.lussole.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 1,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 1,
+      "last_refresh": "2026-08-25T03:50:07.802367+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "maytoni.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:50:09.224113+00:00",
+      "status": "partial",
+      "errors": []
+    },
+    {
+      "supplier": "mw-light.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 1,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 1,
+      "last_refresh": "2026-08-25T03:50:09.796282+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "odeon-light.com",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:50:11.661313+00:00",
+      "status": "partial",
+      "errors": []
+    },
+    {
+      "supplier": "freya-light.com",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 1,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 1,
+      "last_refresh": "2026-08-25T03:50:12.162260+00:00",
+      "status": "complete",
+      "errors": []
+    },
+    {
+      "supplier": "stluce.ru",
+      "availability_mode": "stock_tracked",
+      "discovered_product_urls": 0,
+      "parsed_products": 0,
+      "in_stock_products": 0,
+      "out_of_stock": 0,
+      "discontinued": 0,
+      "unknown_products": 0,
+      "failed_products": 0,
+      "last_refresh": "2026-08-25T03:50:12.316932+00:00",
+      "status": "partial",
+      "errors": []
+    }
+  ],
+  "notes": [
+    "Основной пользовательский отчёт содержит только подтверждённые in_stock товары; supplier capability не ослабляет этот customer-facing gate.",
+    "Товары без визуального подтверждения Codex и отклонённые по визуальному несоответствию не показываются."
+  ]
+}

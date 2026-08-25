@@ -1,0 +1,82 @@
+{
+  "F-01": [],
+  "F-02": [],
+  "F-03": [],
+  "F-04": [],
+  "F-05": [],
+  "F-06": [
+    {
+      "requirement_id": "F-06",
+      "product": {
+        "supplier": "lightstar.ru",
+        "source_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
+        "canonical_url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovyye-sistemy-nove-led/trekovye-nove-svetilniki/208517",
+        "sku": "208517",
+        "name": "Светильник трековый 48V 12W 3000K 360° черный Nove",
+        "category": null,
+        "collection": null,
+        "description": "Светильник для трека NOVE — это современное и стильное решение для интерьеров, выполненное в минималистичном дизайне. Белоснежный сферический плафон из двухслойного стекла кажется парящим в воздухе. Светильник обеспечивает мягкое освещение на 360°, равномерно распределяя свет во всех направлениях. Это позволяет создать уютную и гармоничную атмосферу, подчеркивая комфорт и изысканность интерьера. Высокий индекс цветопередачи (CRI 90) обеспечивает точную и естественную передачу цветов, что особенно важно для интерьеров, где важны детали. Ключевые характеристики NOVE 208517: Мощность встроенных светодиодов — 12 Вт. Световой поток — 846 Лм. Индекс цветопередачи (CRI) — 90. Угол рассеивания — 360°. Диаметр — 200 мм. Высота — 200 мм. Материалы — двухслойное стекло, анодированный алюминий с порошковым окрашиванием. Пылевлагозащита — IP20. Трековая система Nove, с которой совместим данный светильник, позволяет создавать персонализированные световые решения благодаря гибкой системе перемещения элементов по треку. Этот светильник станет стильным акцентом в любом современном пространстве, добавив в него легкость и функциональность.",
+        "price": 10599.0,
+        "currency": "RUB",
+        "availability": "InStock",
+        "availability_status": "in_stock",
+        "availability_source_text": "https://schema.org/InStock",
+        "availability_checked_at": null,
+        "product_family": "track_spot",
+        "dimensions": null,
+        "width": null,
+        "height": null,
+        "diameter": null,
+        "depth": null,
+        "width_mm": null,
+        "height_mm": null,
+        "length_mm": null,
+        "diameter_mm": null,
+        "depth_mm": null,
+        "color": "черный",
+        "material": null,
+        "mounting_type": null,
+        "light_source": null,
+        "wattage": null,
+        "color_temperature": null,
+        "ip_rating": null,
+        "style": null,
+        "system": null,
+        "series": null,
+        "voltage": null,
+        "attributes": {
+          "brand": "Nove"
+        },
+        "image_urls": [
+          "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-350x350.jpg",
+          "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-50x50.jpg"
+        ],
+        "primary_image_url": "https://lightstar.ru/image/cache/import_files/d9/d9909b07562c11ee8145c81f66f678b0_e8130ee40d4011ef80c0c81f66f678af-350x350.jpg",
+        "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\dd850e1ea3e833b6255050f07b645e14aa89ce633855f07275ef6713e63a3304.jpg",
+        "image_source": "jsonld",
+        "updated_at": "2026-08-25T03:50:40.051698+00:00"
+      },
+      "visual_similarity": 0.2,
+      "color_match": 1.0,
+      "family_relation": "exact",
+      "type_match": 0.4,
+      "dimension_match": 0.55,
+      "technical_match": 0.8,
+      "overall_score": 0.3,
+      "result_class": "похожий вариант",
+      "fit_explanation": "Трековый формат сам по себе подходит, но визуальный силуэт и цвет не соответствуют референсу.",
+      "differences": [
+        "округлый белый корпус вместо узкого чёрного цилиндра",
+        "другая геометрия"
+      ],
+      "color_mode": "primary",
+      "visual_review_status": "отклонён Codex по визуальному несоответствию",
+      "visual_reject_reason": "фото показывает округлый белый прибор, а референс - узкие чёрные цилиндры",
+      "image_reference": "../data/catalog/images/dd850e1ea3e833b6255050f07b645e14aa89ce633855f07275ef6713e63a3304.jpg",
+      "availability_mode": "stock_tracked",
+      "availability_label": "Подтверждено в наличии"
+    }
+  ],
+  "F-07": [],
+  "F-08": []
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "number": 1,
+    "requirement_id": "F-08",
+    "supplier": "artelamp.ru",
+    "sku": "A631105E",
+    "name": "Заглушка для профиля Arte Lamp TRACK ACCESSORIES A631105E",
+    "source_url": "https://artelamp.ru/catalog/trekovyie-sistemyi/komplektuyushhie-dlya-trekovyix-sistem/a631105e",
+    "local_image_path": null,
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 2,
+    "requirement_id": "F-08",
+    "supplier": "artelamp.ru",
+    "sku": "A700106",
+    "name": "Панель управления Arte Lamp SMART A700106",
+    "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAXz",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 3,
+    "requirement_id": "F-08",
+    "supplier": "artelamp.ru",
+    "sku": "A700106",
+    "name": "Панель управления Arte Lamp SMART A700106",
+    "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAY1",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 4,
+    "requirement_id": "F-08",
+    "supplier": "artelamp.ru",
+    "sku": "A700106",
+    "name": "Панель управления Arte Lamp SMART A700106",
+    "source_url": "https://artelamp.ru/catalog/magnitnyie-trekovyie-sistemyi/komplektuyushhie-dlya-magnitnyix-trekov/a700106?erid=F7NfYUJJzqK4jdcrtAY2",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\10cf5439b2c1d091a8c62c06a45618cf5a2e7d587cc378a9bcee3bd643c0760b.webp",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 5,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "011626",
+    "name": "Светильник встраиваемый MR16 max 1x12Вт Singo Base",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/011626",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\632d84860858cc08a5e9aacb5d49bf68fb370dc66d0e3ba820bdca30a0abde29.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 6,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "032016",
+    "name": "Светильник светодиодный встраиваемый \"Звездное небо\" Mobi",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/032016",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c7cee69cbe1c70b5fe547e71ac570c702585d5d892956118309116b677fdadf3.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 7,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "075084",
+    "name": "Модуль профессиональный светодиодный 12W 8° 4000K в сборе с суппортом с углом наклона до 30° STELLA PRO",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075084",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\1b2be1d3463bf4d85071536d50ccf1657c9c93d47dba3a794822c7b0777eef53.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 8,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "075514",
+    "name": "Рефлектор квадратный для рамок 07521х/07521X-01 и 07522х/07522X-01 STELLA",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075514",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ba7f0f8cfe8b7fbd60dc179621cbbae37fe3249a598c9fd02fef6e17612e23c0.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 9,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "081346",
+    "name": "Светильник скрытого монтажа светодиодный Guarda",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/081346",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\cec11a1d06b5d72b6b4afcad5f4272752e208016faf9cb17aef7ae3644822770.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 10,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225430",
+    "name": "Светильник настенно-потолочный Arco II",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225430",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ff64ec741457183b5a46921e403fdcc70a679ac19bd3ef59354c77f776ae3a51.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 11,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225530",
+    "name": "Светильник настенно-потолочный Arco III",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225530",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\3c944938229029124f4567c487560000cbc28fc6a36a7e6cabf8b4de6c00d4d4.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 12,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225540",
+    "name": "Светильник настенно-потолочный Arco III",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225540",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\bf026732055cc3f055ab07f4b8cbbb6d7636d14c18245ea767e4cb1acb523d20.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 13,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225630",
+    "name": "Светильник светодиодный настенно-потолочный Arco Shell",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225630",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c39d91056670910b2324d67f7209125e7c8d5d752189328b71e7813c67eb2edf.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 14,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225640",
+    "name": "Светильник светодиодный настенно-потолочный Arco Shell",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225640",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ce3ece6b9d54d6a6642a017c012ff7a05f95dd18132ce399a42567033fb485e6.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 15,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "225660",
+    "name": "Светильник светодиодный настенно-потолочный Arco Shell",
+    "source_url": "https://lightstar.ru/catalog/dekorativniy-svet/kupit-lustru-optom/potolochnye/225660",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\eca27d55d97c0f76d614f612bc7b122f8ae5d3252609d273649fd49ae75c15cb.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 16,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "002000",
+    "name": "Светильник встраиваемый гипсовый скрытой установки д/гипсокартонного потолка с малозаметной фиксирующей пружиной MR16 GU10 Anello",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/002000",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\33574469a428bb560f6e9e7c4b157fabac1e244e9373acd539105994a005da3d.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 17,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "075003",
+    "name": "Сменная оптика для модулей 07505х max 5W линза 3G STELLA BASE",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075003",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\588f962fff4f012749bf2991a97539958bd23549b1c07941c7ab3246616503ac.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 18,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "075092",
+    "name": "Модуль профессиональный светодиодный диммируемый 7W/12W 24° 2700K в сборе с суппортом с углом наклона до 30° STELLA PRO",
+    "source_url": "https://lightstar.ru/catalog/vstraivaemye-tochechnye-svetilniki-pod-lampy/075092",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\5d0a71442fb3756ae67e56ddab2d16a02339120aa865e680fec6bc5f45cf4304.jpg",
+    "color_mode": "primary",
+    "sheet": "sheet_01.jpg"
+  },
+  {
+    "number": 19,
+    "requirement_id": "F-08",
+    "supplier": "lightstar.ru",
+    "sku": "080942",
+    "name": "Светильник потолочный 9W 750LM 4000K, черный/золото Guarda",
+    "source_url": "https://lightstar.ru/catalog/nakladnye-tochechnye-svetilniki-pod-lampy/080942",
+    "local_image_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\290dae035c6c855ec96c08b29f96d8825199e9a39215e20e58c4e710e7f74aca.jpg",
+    "color_mode": "color_alternative",
+    "sheet": "sheet_01.jpg"
+  }
+]

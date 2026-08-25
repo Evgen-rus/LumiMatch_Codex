@@ -8,6 +8,7 @@
 - reference crops и contact sheets: `output/review/`
 - machine source: `output/lumimatch_sample.json`
 - reports: `output/lumimatch_sample.md` и `output/lumimatch_sample.html`
+- unavailable visual diagnostics: `output/lumimatch_sample_unavailable.md`, `output/lumimatch_sample_unavailable.html` и `output/lumimatch_sample_unavailable.json`
 - rejected diagnostics: `output/debug/rejected_candidates.json`
 
 ## Supplier coverage
@@ -32,23 +33,36 @@
 
 ## FixtureRequirement coverage and final results
 
-| id | wide pool | availability excluded | visual rejected | final | color fallback |
-|---|---:|---:|---:|---:|---|
-| F-01 | 22 | 85 | 0 | 1 | нет |
-| F-02 | 19 | 85 | 0 | 0 | нет |
-| F-03 | 19 | 85 | 0 | 0 | нет |
-| F-04 | 19 | 85 | 0 | 0 | нет |
-| F-05 | 0 | 85 | 0 | 0 | нет |
-| F-06 | 21 | 85 | 1 | 0 | нет |
-| F-07 | 80 | 85 | 0 | 0 | нет |
-| F-08 | 19 | 85 | 0 | 0 | нет |
+| id | wide pool | availability excluded | visual rejected | in_stock final | unavailable visual final | color fallback |
+|---|---:|---:|---:|---:|---:|---|
+| F-01 | 22 | 85 | 0 | 1 | 0 | нет |
+| F-02 | 19 | 85 | 0 | 0 | 0 | нет |
+| F-03 | 19 | 85 | 0 | 0 | 0 | нет |
+| F-04 | 19 | 85 | 0 | 0 | 0 | нет |
+| F-05 | 0 | 85 | 0 | 0 | 0 | нет |
+| F-06 | 21 | 85 | 1 | 0 | 0 | нет |
+| F-07 | 80 | 85 | 0 | 0 | 0 | нет |
+| F-08 | 19 | 85 | 0 | 0 | 0 | нет |
+
+### Availability diagnostic
+
+| id | in_stock visual | out_of_stock visual | preorder visual | expected visual | check_availability visual | discontinued rejected | visual rejected |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| F-01 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-02 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-03 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-04 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-05 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-06 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| F-07 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| F-08 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Comparison with previous V2
 
-- Каталог: `206 -> 206`; FixtureRequirement: `8 -> 8`; финальные кандидаты: `1 -> 1`.
-- Все 15 поставщиков текущего списка после bounded public-card проверки зафиксированы как `stock_tracked`.
-- Новых пулов `stock_not_published` нет: `unknown` на этих поставщиках по-прежнему исключается.
-- Новых визуально сильных аналогов не появилось; недоступные/архивные товары в финал не вернулись.
+- Каталог: `206 -> 206`; FixtureRequirement: `8 -> 8`; основные финальные кандидаты: `1 -> 1`; недоступные визуальные финалисты: `0`.
+- Проверенные supplier modes в текущем списке: `stock_tracked`.
+- Новые пулы по `stock_not_published`: `0` supplier(s) (нет).
+- Новых визуально сильных аналогов в sample не появилось; недоступные/архивные товары в финал не вернулись.
 
 ## Product decision
 

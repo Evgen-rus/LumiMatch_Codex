@@ -3,21 +3,24 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from pathlib import Path
 
 import typer
 
 from .audit import audit_all, write_audit
+from .availability import effective_availability_status
 from .collector import CatalogCollector
 from .fetch import PublicFetcher
 from .models import FixtureRequirement, ScoredCandidate
 from .paths import OUTPUT, ensure_dirs
 from .pdf_project import create_sample_reference_crops, inspect_project, render_pages
-from .report import write_reports
+from .report import write_reports, write_unavailable_report
 from .scoring import (
     apply_visual_review,
     candidate_pool_diagnostics,
     finalize_candidates,
+    finalize_unavailable_visual_candidates,
     live_recheck_candidate,
     wide_candidate_pool,
 )
@@ -209,51 +212,100 @@ def sample_run(
 
     products = store.all()
     shortlisted: dict[str, list[ScoredCandidate]] = {}
+    unavailable_shortlisted: dict[str, list[ScoredCandidate]] = {}
     rejected: dict[str, list[ScoredCandidate]] = {}
+    unavailable_rejected: dict[str, list[ScoredCandidate]] = {}
     search_stats: dict[str, dict[str, object]] = {}
     for requirement in requirements:
         diagnostics = candidate_pool_diagnostics(requirement, products, pool_size)
-        pool = wide_candidate_pool(requirement, products, pool_size, include_color_alternatives=True)
+        pool = wide_candidate_pool(requirement, products, pool_size, include_color_alternatives=True, availability_policy="sellable")
+        unavailable_diagnostics = candidate_pool_diagnostics(requirement, products, pool_size, availability_policy="unavailable_visual")
+        unavailable_pool = wide_candidate_pool(
+            requirement,
+            products,
+            pool_size,
+            include_color_alternatives=True,
+            availability_policy="unavailable_visual",
+        )
         diagnostics.visual_pool = len(pool)
         build_contact_sheets(requirement, pool, OUTPUT / "review")
+        build_contact_sheets(requirement, unavailable_pool, OUTPUT / "review_unavailable")
         reviewed = _apply_sample_visual_review(pool)
+        unavailable_reviewed = _apply_sample_visual_review(unavailable_pool)
         primary = [item for item in reviewed if item.color_mode == "primary"]
         alternatives = [item for item in reviewed if item.color_mode == "color_alternative"]
         finalists, visual_rejected = finalize_candidates(primary, alternatives)
+        unavailable_primary = [item for item in unavailable_reviewed if item.color_mode == "primary"]
+        unavailable_alternatives = [item for item in unavailable_reviewed if item.color_mode == "color_alternative"]
+        unavailable_finalists, unavailable_visual_rejected = finalize_unavailable_visual_candidates(unavailable_primary, unavailable_alternatives)
         live_rejected = 0
+        unavailable_live_rejected = 0
         live_fetcher = PublicFetcher(store)
         live_finalists: list[ScoredCandidate] = []
+        live_unavailable_finalists: list[ScoredCandidate] = []
         try:
             for candidate in finalists:
-                refreshed, reason = live_recheck_candidate(candidate, live_fetcher)
+                refreshed, reason = live_recheck_candidate(candidate, live_fetcher, availability_policy="sellable")
                 if refreshed:
                     live_finalists.append(refreshed)
                 else:
                     live_rejected += 1
                     candidate.visual_reject_reason = reason
                     visual_rejected.append(candidate)
+            for candidate in unavailable_finalists:
+                refreshed, reason = live_recheck_candidate(candidate, live_fetcher, availability_policy="unavailable_visual")
+                if refreshed:
+                    live_unavailable_finalists.append(refreshed)
+                else:
+                    unavailable_live_rejected += 1
+                    candidate.visual_reject_reason = reason
+                    unavailable_visual_rejected.append(candidate)
         finally:
             live_fetcher.close()
         shortlisted[requirement.id] = live_finalists[:5]
+        unavailable_keys = {(item.product.supplier, item.product.sku or item.product.source_url) for item in live_finalists}
+        unavailable_shortlisted[requirement.id] = [
+            item for item in live_unavailable_finalists
+            if (item.product.supplier, item.product.sku or item.product.source_url) not in unavailable_keys
+        ][:5]
         rejected[requirement.id] = visual_rejected
-        diagnostics.rejected_by_visual = len(visual_rejected)
+        unavailable_rejected[requirement.id] = unavailable_visual_rejected
+        diagnostics.rejected_by_visual = len(visual_rejected) + len(unavailable_visual_rejected)
         diagnostics.finalists = len(live_finalists)
+        unavailable_statuses = Counter(effective_availability_status(item.product) for item in unavailable_shortlisted[requirement.id])
         search_stats[requirement.id] = {
             **diagnostics.as_dict(),
             "wide_candidates_considered": len(pool),
+            "unavailable_wide_candidates_considered": len(unavailable_pool),
             "live_recheck_rejected": live_rejected,
+            "unavailable_live_recheck_rejected": unavailable_live_rejected,
+            "in_stock_visual_finalists": len(live_finalists),
+            "out_of_stock_visual_finalists": unavailable_statuses.get("out_of_stock", 0),
+            "preorder_visual_finalists": unavailable_statuses.get("preorder", 0),
+            "expected_visual_finalists": unavailable_statuses.get("expected", 0),
+            "check_availability_visual_finalists": unavailable_statuses.get("check_availability", 0),
+            "discontinued_rejected": unavailable_diagnostics.discontinued_rejected,
+            "visual_rejected": len(visual_rejected) + len(unavailable_visual_rejected),
             "availability_gate": "supplier capability: stock_tracked / stock_not_published / mixed",
             "color_fallback_used": any(item.color_mode == "color_alternative" for item in live_finalists),
         }
 
     supplier_stats = _supplier_stats(collection_results)
     write_reports(requirements, shortlisted, OUTPUT, "lumimatch_sample", search_stats=search_stats, rejected=rejected, supplier_stats=supplier_stats)
+    write_unavailable_report(
+        requirements,
+        unavailable_shortlisted,
+        OUTPUT,
+        "lumimatch_sample_unavailable",
+        search_stats=search_stats,
+        rejected=unavailable_rejected,
+    )
     Path("data/shortlist.json").write_text(json.dumps({key: [item.model_dump(mode="json") for item in value] for key, value in shortlisted.items()}, ensure_ascii=False, indent=2), encoding="utf-8")
-    Path("docs/SAMPLE_RUN.md").write_text(_sample_run_note(collection_results, store.count(), shortlisted, search_stats, supplier_stats, removed), encoding="utf-8")
-    typer.echo(f"Sample run V2 завершён. Карточек в каталоге: {store.count()}; требований: {len(requirements)}; finalists: {sum(len(items) for items in shortlisted.values())}")
+    Path("docs/SAMPLE_RUN.md").write_text(_sample_run_note(collection_results, store.count(), shortlisted, unavailable_shortlisted, search_stats, supplier_stats, removed), encoding="utf-8")
+    typer.echo(f"Sample run V2 завершён. Карточек в каталоге: {store.count()}; требований: {len(requirements)}; sellable finalists: {sum(len(items) for items in shortlisted.values())}; unavailable visual finalists: {sum(len(items) for items in unavailable_shortlisted.values())}")
 
 
-def _sample_run_note(results: list[object], count: int, shortlisted: dict[str, list[ScoredCandidate]], search_stats: dict[str, dict[str, object]], supplier_stats: list[dict[str, object]], removed: int) -> str:
+def _sample_run_note(results: list[object], count: int, shortlisted: dict[str, list[ScoredCandidate]], unavailable_shortlisted: dict[str, list[ScoredCandidate]], search_stats: dict[str, dict[str, object]], supplier_stats: list[dict[str, object]], removed: int) -> str:
     lines = [
         "# SAMPLE_RUN V2",
         "",
@@ -265,6 +317,7 @@ def _sample_run_note(results: list[object], count: int, shortlisted: dict[str, l
         "- reference crops и contact sheets: `output/review/`",
         "- machine source: `output/lumimatch_sample.json`",
         "- reports: `output/lumimatch_sample.md` и `output/lumimatch_sample.html`",
+        "- unavailable visual diagnostics: `output/lumimatch_sample_unavailable.md`, `output/lumimatch_sample_unavailable.html` и `output/lumimatch_sample_unavailable.json`",
         "- rejected diagnostics: `output/debug/rejected_candidates.json`",
         "",
         "## Supplier coverage",
@@ -274,16 +327,19 @@ def _sample_run_note(results: list[object], count: int, shortlisted: dict[str, l
     ]
     for item in supplier_stats:
         lines.append(f"| {item['supplier']} | {item['availability_mode']} | {item['discovered_product_urls']} | {item['parsed_products']} | {item['in_stock_products']} | {item['unknown_products']} | {item['out_of_stock']} | {item['discontinued']} | {item['failed_products']} | {item['status']} |")
-    lines.extend(["", "## FixtureRequirement coverage and final results", "", "| id | wide pool | availability excluded | visual rejected | final | color fallback |", "|---|---:|---:|---:|---:|---|"])
+    lines.extend(["", "## FixtureRequirement coverage and final results", "", "| id | wide pool | availability excluded | visual rejected | in_stock final | unavailable visual final | color fallback |", "|---|---:|---:|---:|---:|---:|---|"])
     for requirement_id, stats in search_stats.items():
-        lines.append(f"| {requirement_id} | {stats.get('wide_candidates_considered', 0)} | {stats.get('excluded_availability', 0)} | {stats.get('rejected_by_visual', 0)} | {len(shortlisted.get(requirement_id, []))} | {'да' if stats.get('color_fallback_used') else 'нет'} |")
+        lines.append(f"| {requirement_id} | {stats.get('wide_candidates_considered', 0)} | {stats.get('excluded_availability', 0)} | {stats.get('visual_rejected', stats.get('rejected_by_visual', 0))} | {len(shortlisted.get(requirement_id, []))} | {len(unavailable_shortlisted.get(requirement_id, []))} | {'да' if stats.get('color_fallback_used') else 'нет'} |")
+    lines.extend(["", "### Availability diagnostic", "", "| id | in_stock visual | out_of_stock visual | preorder visual | expected visual | check_availability visual | discontinued rejected | visual rejected |", "|---|---:|---:|---:|---:|---:|---:|---:|"])
+    for requirement_id, stats in search_stats.items():
+        lines.append(f"| {requirement_id} | {stats.get('in_stock_visual_finalists', 0)} | {stats.get('out_of_stock_visual_finalists', 0)} | {stats.get('preorder_visual_finalists', 0)} | {stats.get('expected_visual_finalists', 0)} | {stats.get('check_availability_visual_finalists', 0)} | {stats.get('discontinued_rejected', 0)} | {stats.get('visual_rejected', 0)} |")
     mode_names = sorted({str(item.get("availability_mode", "stock_tracked")) for item in supplier_stats})
     not_published_suppliers = [item["supplier"] for item in supplier_stats if item.get("availability_mode") == "stock_not_published"]
     lines.extend([
         "",
         "## Comparison with previous V2",
         "",
-        f"- Каталог: `206 -> {count}`; FixtureRequirement: `8 -> {len(shortlisted)}`; финальные кандидаты: `1 -> {sum(len(items) for items in shortlisted.values())}`.",
+        f"- Каталог: `206 -> {count}`; FixtureRequirement: `8 -> {len(shortlisted)}`; основные финальные кандидаты: `1 -> {sum(len(items) for items in shortlisted.values())}`; недоступные визуальные финалисты: `{sum(len(items) for items in unavailable_shortlisted.values())}`.",
         f"- Проверенные supplier modes в текущем списке: `{', '.join(mode_names) or 'нет'}`.",
         f"- Новые пулы по `stock_not_published`: `{len(not_published_suppliers)}` supplier(s) ({', '.join(not_published_suppliers) or 'нет'}).",
         "- Новых визуально сильных аналогов в sample не появилось; недоступные/архивные товары в финал не вернулись.",
