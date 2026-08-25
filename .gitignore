@@ -16,12 +16,19 @@ dist/
 .idea/
 .vscode/
 playwright/.cache/
-# Игнорируем локальные данные, но оставляем фото каталога в git.
-# Родительские папки нужно открывать по очереди, иначе Git не увидит файлы внутри.
-data/*
-!data/catalog/
-data/catalog/*
-!data/catalog/.gitkeep
-!data/catalog/images/
-!data/catalog/images/**
-!output/.gitkeep
+.DS_Store
+Thumbs.db
+
+# Временные папки и кэши, которые агенту не нужны.
+tmp/
+data/cache/
+data/images/
+data/catalog/cache/
+
+# Служебные файлы SQLite. Саму базу catalog.sqlite3 оставляем в git.
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
