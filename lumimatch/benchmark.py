@@ -3,17 +3,21 @@
 from __future__ import annotations
 
 import json
-from collections import defaultdict
+import re
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 from .availability import (
     UNAVAILABLE_VISUAL_STATUSES,
+    availability_allowed_for_policy,
     effective_availability_status,
     explicit_discontinued_availability,
 )
+from .inventory import ProductInventoryStore
 from .models import FixtureRequirement
 from .scoring import candidate_set_fingerprint, wide_candidate_pool
+from .scoring import technical_status as candidate_technical_status
 from .storage import CatalogStore
 from .visual_review import build_contact_sheets
 
@@ -61,16 +65,49 @@ def _visual_pool(requirement: FixtureRequirement, products: list[object], limit:
         limit=limit,
         include_color_alternatives=True,
         availability_policy="ignore",
+        allow_unknown_technical=True,
     )
     return [
         candidate
         for candidate in broad
         if (
-            effective_availability_status(candidate.product) == "in_stock"
+            availability_allowed_for_policy(candidate.product, "sellable")
             or effective_availability_status(candidate.product) in UNAVAILABLE_VISUAL_STATUSES
         )
         and not explicit_discontinued_availability(candidate.product)
     ]
+
+
+def _review_completeness(entry: object, pool: list[object]) -> dict[str, object]:
+    records = entry.get("candidates", []) if isinstance(entry, dict) else []
+    by_key: dict[str, dict[str, object]] = {}
+    if isinstance(records, list):
+        for record in records:
+            if isinstance(record, dict) and record.get("sku"):
+                by_key[_sku_key(str(record["sku"]))] = record
+    accepted = rejected = skipped = pending = 0
+    for candidate in pool:
+        record = by_key.get(_sku_key(candidate.product.sku))
+        decision = str(record.get("decision") or "").casefold() if record else ""
+        if decision == "accept":
+            accepted += 1
+        elif decision == "reject":
+            rejected += 1
+        elif decision == "skipped_with_reason" and str(record.get("reason") or "").strip():
+            skipped += 1
+        else:
+            pending += 1
+    candidate_count = len(pool)
+    reviewed_count = accepted + rejected + skipped
+    return {
+        "candidate_count": candidate_count,
+        "reviewed_count": reviewed_count,
+        "accepted_count": accepted,
+        "rejected_count": rejected,
+        "skipped_count": skipped,
+        "pending_count": pending,
+        "review_complete": pending == 0 and reviewed_count == candidate_count,
+    }
 
 
 def prepare_actual_visual_review(
@@ -97,6 +134,12 @@ def prepare_actual_visual_review(
         manifest["requirements"][requirement.id] = {
             "candidate_set_fingerprint": candidate_set_fingerprint(pool),
             "candidate_count": len(pool),
+            "reviewed_count": 0,
+            "accepted_count": 0,
+            "rejected_count": 0,
+            "skipped_count": 0,
+            "pending_count": len(pool),
+            "review_complete": len(pool) == 0,
             "contact_sheet_dir": str((output_dir / "review" / requirement.id).as_posix()),
             "candidates": [
                 {
@@ -428,42 +471,239 @@ def _production_recall_current(
     }
 
 
+def _inventory_record_match(record: object, sku: str, supplier: str | None) -> tuple[bool, str | None]:
+    if supplier and str(getattr(record, "supplier", "")) != supplier:
+        return False, None
+    target = _sku_key(sku)
+    record_sku = _sku_key(getattr(record, "sku", None))
+    if record_sku and record_sku == target:
+        return True, "inventory_sku"
+    url = str(getattr(record, "product_url", "") or "").casefold()
+    sku_parts = re.findall(r"[a-z0-9]+", str(sku).casefold())
+    url_pattern = r"(?<![a-z0-9])" + r"[\\W_]+".join(re.escape(part) for part in sku_parts) + r"(?![a-z0-9])"
+    if target and sku_parts and re.search(url_pattern, url):
+        return True, "normalized_sku_in_product_url"
+    return False, None
+
+
+def _inventory_recall_current(
+    golden_items: list[dict[str, object]],
+    inventory: ProductInventoryStore | None,
+    discovery_items: list[dict[str, object]],
+) -> dict[str, object]:
+    visual = [item for item in golden_items if item.get("product_role") == "VISUAL_SELECTION"]
+    records = inventory.all() if inventory else []
+    discovery_by_position = {
+        int(item["kp_position"]): item
+        for item in discovery_items
+        if item.get("kp_position") is not None
+    }
+    rows: list[dict[str, object]] = []
+    matchable = 0
+    present = 0
+    for item in visual:
+        sku = str(item.get("sku") or "") or None
+        discovery = discovery_by_position.get(int(item["kp_position"]), {})
+        supplier = str(item.get("likely_supplier") or discovery.get("supplier") or "") or None
+        matched = None
+        evidence = None
+        if sku:
+            matchable += 1
+            for record in records:
+                ok, candidate_evidence = _inventory_record_match(record, sku, supplier)
+                if ok:
+                    matched = record
+                    evidence = candidate_evidence
+                    break
+            present += int(matched is not None)
+        rows.append(
+            {
+                "kp_position": item.get("kp_position"),
+                "sku": sku,
+                "supplier": supplier,
+                "in_inventory": matched is not None,
+                "evidence": evidence,
+                "product_url": getattr(matched, "product_url", None),
+            }
+        )
+    return {
+        "visual_targets": len(visual),
+        "matchable_sku_targets": matchable,
+        "present": present,
+        "recall": present / matchable if matchable else None,
+        "items": rows,
+        "note": "Measured after production URL inventory build; golden data is only used here for evaluation.",
+    }
+
+
+def _hydrated_recall_current(
+    golden_items: list[dict[str, object]], store: CatalogStore, *, sellable: bool = False
+) -> dict[str, object]:
+    visual = [item for item in golden_items if item.get("product_role") == "VISUAL_SELECTION"]
+    rows: list[dict[str, object]] = []
+    matchable = 0
+    present = 0
+    for item in visual:
+        sku = str(item.get("sku") or "") or None
+        product = _find_product_by_sku(store, sku)
+        if sku:
+            matchable += 1
+            present += int(product is not None and (not sellable or availability_allowed_for_policy(product, "sellable")))
+        rows.append(
+            {
+                "kp_position": item.get("kp_position"),
+                "sku": sku,
+                "supplier": product.supplier if product else item.get("likely_supplier"),
+                "in_hydrated_catalog": product is not None,
+                "sellable": bool(product and availability_allowed_for_policy(product, "sellable")),
+                "availability_status": effective_availability_status(product) if product else None,
+                "url": product.canonical_url if product else None,
+            }
+        )
+    return {
+        "visual_targets": len(visual),
+        "matchable_sku_targets": matchable,
+        "present": present,
+        "recall": present / matchable if matchable else None,
+        "items": rows,
+        "note": "Measured only after requirement-driven hydration; golden data never selects hydration URLs.",
+    }
+
+
+def _supplier_diagnostics(
+    inventory: ProductInventoryStore | None,
+    hydration_report: dict[str, object] | None,
+    store: CatalogStore,
+    inventory_recall: dict[str, object],
+    hydrated_recall: dict[str, object],
+) -> list[dict[str, object]]:
+    priority = [
+        "freya-light.com",
+        "shop.lussole.ru",
+        "kinklight.ru",
+        "eurosvet.ru",
+        "odeon-light.com",
+        "ambrella.biz",
+    ]
+    inventory_counts = inventory.supplier_counts() if inventory else {}
+    build_suppliers = {}
+    if hydration_report and isinstance(hydration_report.get("inventory"), dict):
+        for item in hydration_report["inventory"].get("suppliers", []):
+            if isinstance(item, dict) and item.get("supplier"):
+                build_suppliers[str(item["supplier"])] = item
+    relevant: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    if hydration_report:
+        requirements = hydration_report.get("requirements", {})
+        if isinstance(requirements, dict):
+            for requirement_id, item in requirements.items():
+                if not isinstance(item, dict):
+                    continue
+                urls = item.get("urls", [])
+                if isinstance(urls, list):
+                    for record in urls:
+                        if isinstance(record, dict) and record.get("supplier"):
+                            relevant[str(record["supplier"])][str(requirement_id)] += 1
+    hydrated_counts = Counter(product.supplier for product in store.all())
+    inventory_hits = Counter(
+        str(item.get("supplier"))
+        for item in inventory_recall.get("items", [])
+        if item.get("in_inventory") and item.get("supplier")
+    )
+    hydrated_hits = Counter(
+        str(item.get("supplier"))
+        for item in hydrated_recall.get("items", [])
+        if item.get("in_hydrated_catalog") and item.get("supplier")
+    )
+    suppliers = set(priority) | set(inventory_counts) | set(hydrated_counts)
+    result: list[dict[str, object]] = []
+    for supplier in sorted(suppliers, key=lambda value: (priority.index(value) if value in priority else 99, value)):
+        build = build_suppliers.get(supplier, {})
+        approximate = build.get("approximate_catalog_urls")
+        inventory_urls = inventory_counts.get(supplier, 0)
+        result.append(
+            {
+                "supplier": supplier,
+                "priority": supplier in priority,
+                "approximate_total_product_urls": approximate,
+                "inventory_urls": inventory_urls,
+                "inventory_coverage": (
+                    min(inventory_urls / approximate, 1.0)
+                    if isinstance(approximate, (int, float)) and approximate
+                    else None
+                ),
+                "inventory_exceeds_approximation": bool(
+                    isinstance(approximate, (int, float))
+                    and approximate
+                    and inventory_urls > approximate
+                ),
+                "relevant_urls_by_requirement": dict(sorted(relevant.get(supplier, {}).items())),
+                "relevant_urls_selected": sum(relevant.get(supplier, {}).values()),
+                "hydrated_cards": hydrated_counts.get(supplier, 0),
+                "inventory_golden_hits": inventory_hits.get(supplier, 0),
+                "hydrated_golden_hits": hydrated_hits.get(supplier, 0),
+                "parse_success": next(
+                    (item.get("parse_success_rate") for item in (hydration_report or {}).get("supplier_stats", []) if isinstance(item, dict) and item.get("supplier") == supplier),
+                    None,
+                ),
+            }
+        )
+    return result
+
+
 def _write_markdown_current(payload: dict[str, object], path: Path) -> None:
-    recall = payload["production_catalog_recall"]
+    inventory = payload["production_inventory_recall"]
+    hydrated = payload["hydrated_catalog_recall"]
+    sellable = payload["sellable_hydrated_recall"]
     targeted = payload["targeted_discovery_recall"]
     retrieval = payload["retrieval"]["retrieval_at"]
     visual = payload["retrieval"]["visual_at"]
+    review = payload["actual_visual_review"]
     lines = [
         "# Golden benchmark — Dan",
         "",
-        "Production recall is measured against the clean production catalog. Target-aware golden discovery is reported separately.",
+        "Production stages are evaluated only after the clean inventory and hydration run. Golden discovery is diagnostic and never populates production storage.",
         "",
-        f"- Production catalog recall: `{recall['present']}/{recall['matchable_sku_targets']}`; targeted discovery recall: `{targeted['found']}/{targeted['matchable_sku_targets']}`.",
+        f"- Inventory recall: `{inventory['present']}/{inventory['matchable_sku_targets']}`; hydrated recall: `{hydrated['present']}/{hydrated['matchable_sku_targets']}`; sellable hydrated recall: `{sellable['present']}/{sellable['matchable_sku_targets']}`.",
+        f"- Target-aware discovery (diagnostic only): `{targeted['found']}/{targeted['matchable_sku_targets']}`.",
         f"- Retrieval: `retrieval@20={retrieval['retrieval_at_20']}`, `retrieval@50={retrieval['retrieval_at_50']}`, `retrieval@100={retrieval['retrieval_at_100']}`.",
-        f"- Actual visual review only: `visual@1={visual['visual_at_1']}`, `visual@3={visual['visual_at_3']}`, `visual@5={visual['visual_at_5']}`, `visual@10={visual['visual_at_10']}`.",
+        f"- Review completeness: `{review['review_complete']}`.",
+        f"- Actual visual@K: `@1={visual['visual_at_1']}`, `@3={visual['visual_at_3']}`, `@5={visual['visual_at_5']}`, `@10={visual['visual_at_10']}`.",
         "",
-        "| F | target | supplier | production | independent rank | production rank | visual status | visual rank | diagnosis |",
-        "|---|---|---|---|---:|---:|---|---:|---|",
+        "| F | target | inventory | hydrated | independent rank | production rank | visual status | diagnosis |",
+        "|---|---|---|---|---:|---:|---|---|",
     ]
     for item in payload["retrieval"]["visual_targets"]:
         values = {
             key: "" if item.get(key) is None else item.get(key)
             for key in (
-                "requirement_id", "sku", "supplier", "production_catalog_present",
+                "requirement_id", "sku", "inventory_present", "hydrated_present",
                 "independent_retrieval_rank", "production_retrieval_rank",
-                "visual_review_status", "visual_rank", "diagnosis",
+                "visual_review_status", "diagnosis",
             )
         }
-        lines.append("| {requirement_id} | {sku} | {supplier} | {production_catalog_present} | {independent_retrieval_rank} | {production_retrieval_rank} | {visual_review_status} | {visual_rank} | {diagnosis} |".format(**values))
+        lines.append("| {requirement_id} | {sku} | {inventory_present} | {hydrated_present} | {independent_retrieval_rank} | {production_retrieval_rank} | {visual_review_status} | {diagnosis} |".format(**values))
     lines.extend([
         "",
-        "## Production catalog recall",
+        "## Stage recall",
         "",
-        f"`{json.dumps(payload['production_catalog_recall'], ensure_ascii=False)}`",
+        f"- Inventory: `{json.dumps(payload['production_inventory_recall'], ensure_ascii=False)}`",
+        f"- Hydrated: `{json.dumps(payload['hydrated_catalog_recall'], ensure_ascii=False)}`",
+        f"- Sellable hydrated: `{json.dumps(payload['sellable_hydrated_recall'], ensure_ascii=False)}`",
         "",
         "System BOM is excluded from decorative visual metrics.",
         "",
-        "Actual visual metrics are zero until the current run's review manifest is completed; no golden visual annotation is substituted.",
+        "Visual@K is intentionally null until every candidate in every current review fingerprint has an explicit accept, reject, or skipped_with_reason decision.",
+        "",
+        "## Priority supplier diagnostics",
+        "",
+        "| supplier | approximate total | inventory | coverage | relevant selected | hydrated | parse success | inventory golden hits | hydrated golden hits |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ])
+    for item in payload.get("supplier_diagnostics", []):
+        lines.append(
+            f"| {item['supplier']} | {item.get('approximate_total_product_urls') or ''} | {item['inventory_urls']} | {item.get('inventory_coverage') if item.get('inventory_coverage') is not None else ''} | {item['relevant_urls_selected']} | {item['hydrated_cards']} | {item.get('parse_success') if item.get('parse_success') is not None else ''} | {item['inventory_golden_hits']} | {item['hydrated_golden_hits']} |"
+        )
+    lines.extend([
         "",
     ])
     path.write_text("\n".join(lines), encoding="utf-8")
@@ -477,6 +717,8 @@ def run_benchmark(
     output_dir: Path,
     *,
     actual_review_path: Path | None = None,
+    inventory_store: ProductInventoryStore | None = None,
+    hydration_report: dict[str, object] | None = None,
 ) -> dict[str, object]:
     requirement_by_id = {requirement.id: requirement for requirement in requirements}
     discovery_by_position = {
@@ -485,10 +727,37 @@ def run_benchmark(
         if item.get("kp_position") is not None
     }
     review_payload = _load_actual_visual_review(actual_review_path)
+    products = store.all()
+    inventory_recall = _inventory_recall_current(golden_items, inventory_store, discovery_items)
+    hydrated_recall = _hydrated_recall_current(golden_items, store)
+    sellable_hydrated_recall = _hydrated_recall_current(golden_items, store, sellable=True)
+    inventory_recall_by_position = {
+        int(item["kp_position"]): item
+        for item in inventory_recall.get("items", [])
+        if item.get("kp_position") is not None
+    }
     visual_pools: dict[str, list[object]] = {}
     review_states: dict[str, str] = {}
+    review_summaries: dict[str, dict[str, object]] = {}
     visual_targets: list[dict[str, object]] = []
     system_items: list[dict[str, object]] = []
+    # Review completeness belongs to the current candidate pools, including
+    # requirements that have no golden visual target.
+    for requirement in requirements:
+        visual_pools[requirement.id] = _visual_pool(requirement, products, limit=100)
+        review_states[requirement.id], _ = _review_records(
+            review_payload, requirement, visual_pools[requirement.id]
+        )
+        entry = (
+            review_payload.get("requirements", {}).get(requirement.id, {})
+            if isinstance(review_payload.get("requirements"), dict)
+            else {}
+        )
+        review_summaries[requirement.id] = _review_completeness(
+            entry, visual_pools[requirement.id]
+        )
+        output_dir.mkdir(parents=True, exist_ok=True)
+        build_contact_sheets(requirement, visual_pools[requirement.id], output_dir / "review")
     for item in golden_items:
         position = int(item["kp_position"])
         discovery = discovery_by_position.get(position, {})
@@ -516,17 +785,10 @@ def run_benchmark(
                 "discovery_found": bool(discovery.get("found")),
             })
             continue
-        if requirement.id not in visual_pools:
-            visual_pools[requirement.id] = _visual_pool(requirement, store.all(), limit=100)
-            review_states[requirement.id], _ = _review_records(
-                review_payload, requirement, visual_pools[requirement.id]
-            )
-            output_dir.mkdir(parents=True, exist_ok=True)
-            build_contact_sheets(requirement, visual_pools[requirement.id], output_dir / "review")
         independent_pool = visual_pools[requirement.id]
         production_pool = wide_candidate_pool(
             requirement,
-            store.all(),
+            products,
             limit=100,
             include_color_alternatives=True,
             availability_policy="sellable",
@@ -539,7 +801,32 @@ def run_benchmark(
         decision = str(review.get("decision") or "")
         visual_rank = review.get("visual_rank")
         visual_rank_int = int(visual_rank) if isinstance(visual_rank, int) or (isinstance(visual_rank, str) and visual_rank.isdigit()) else None
-        visual_approved = decision == "accept"
+        review_complete = bool(review_summaries.get(requirement.id, {}).get("review_complete"))
+        visual_approved = decision == "accept" and review_complete
+        if not inventory_store:
+            inventory_present = None
+        else:
+            inventory_present = bool(
+                inventory_recall_by_position.get(position, {}).get("in_inventory")
+            )
+        technical_state = candidate_technical_status(requirement, target) if target else None
+        if not target:
+            diagnosis = "inventory_miss" if inventory_present is False else "hydration_miss"
+        elif independent_rank is None:
+            if technical_state == "requires_ip_check":
+                diagnosis = "technical_verification"
+            elif not availability_allowed_for_policy(target, "sellable"):
+                diagnosis = "availability"
+            else:
+                diagnosis = "hard_gate_miss"
+        elif not production_rank:
+            diagnosis = "availability"
+        elif review_state != "current" or not review_complete:
+            diagnosis = "visual_review_incomplete"
+        elif decision == "reject":
+            diagnosis = "visual_reject"
+        else:
+            diagnosis = "retrieved"
         visual_targets.append({
             "kp_position": item.get("kp_position"),
             "sku": item.get("sku"),
@@ -552,6 +839,9 @@ def run_benchmark(
             "supplier": target.supplier if target else discovery.get("supplier"),
             "url": target.canonical_url if target else discovery.get("url"),
             "availability_status": effective_availability_status(target) if target else discovery.get("availability_status"),
+            "inventory_present": inventory_present,
+            "hydrated_present": target is not None,
+            "technical_status": technical_state,
             "availability_gate": "passed" if production_rank else "not_in_sellable_pool",
             "independent_retrieval_rank": independent_rank,
             "production_retrieval_rank": production_rank,
@@ -563,22 +853,15 @@ def run_benchmark(
             "visual_at_5": bool(visual_approved and visual_rank_int and visual_rank_int <= 5),
             "visual_at_10": bool(visual_approved and visual_rank_int and visual_rank_int <= 10),
             "candidate_set_fingerprint": candidate_set_fingerprint(independent_pool),
-            "diagnosis": (
-                "targeted_only_not_in_production_catalog"
-                if discovery.get("found") and target is None
-                else "not_in_production_catalog"
-                if target is None
-                else "retrieval_or_availability_or_hard_gate_failure"
-                if independent_rank is None
-                else "availability_gate_only"
-                if production_rank is None
-                else "retrieved"
-            ),
+            "diagnosis": diagnosis,
         })
+    review_complete = bool(review_summaries) and all(
+        bool(summary.get("review_complete")) for summary in review_summaries.values()
+    )
     visual_counts = {
         metric: sum(bool(item.get(metric)) for item in visual_targets)
         for metric in ("visual_at_1", "visual_at_3", "visual_at_5", "visual_at_10")
-    }
+    } if review_complete else {f"visual_at_{limit}": None for limit in (1, 3, 5, 10)}
     retrieval_counts = {
         f"retrieval_at_{limit}": sum(
             bool(item.get("independent_retrieval_rank")) and int(item["independent_retrieval_rank"]) <= limit
@@ -601,8 +884,8 @@ def run_benchmark(
         stats["targets"] += 1
         stats["found"] += int(bool(item.get("discovery_found")))
         stats["retrieved"] += int(item.get("independent_retrieval_rank") is not None)
-        stats["availability_gate_only"] += int(item.get("diagnosis") == "availability_gate_only")
-        stats["not_discovered"] += int(item.get("diagnosis") in {"not_in_production_catalog", "targeted_only_not_in_production_catalog"})
+        stats["availability_gate_only"] += int(item.get("diagnosis") == "availability")
+        stats["not_discovered"] += int(item.get("diagnosis") in {"inventory_miss", "hydration_miss"})
         for limit in (20, 50, 100):
             rank = item.get("independent_retrieval_rank")
             stats[f"retrieval_at_{limit}"] += int(rank is not None and rank <= limit)
@@ -631,6 +914,13 @@ def run_benchmark(
         found = sum(bool(item.get("found")) for item in items)
         state = "healthy" if found and parsed == discovered else "partial" if parsed else "broken"
         supplier_coverage.append({"supplier": supplier, "golden_targets": len(items), "discovered": discovered, "parsed": parsed, "found": found, "coverage_state": state})
+    supplier_diagnostics = _supplier_diagnostics(
+        inventory_store,
+        hydration_report,
+        store,
+        inventory_recall,
+        hydrated_recall,
+    )
     output_dir.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -646,14 +936,26 @@ def run_benchmark(
             "photo": sum(bool(item.get("photo")) for item in discovery_items),
         },
         "targeted_discovery_recall": _targeted_recall_current(golden_items, discovery_items),
-        "production_catalog_recall": _production_recall_current(golden_items, store),
+        "production_inventory_recall": inventory_recall,
+        "hydrated_catalog_recall": hydrated_recall,
+        "sellable_hydrated_recall": sellable_hydrated_recall,
+        "production_catalog_recall": hydrated_recall,
         "retrieval": {"visual_targets": visual_targets, "by_requirement": dict(by_requirement), "retrieval_at": retrieval_counts, "visual_at": visual_counts},
         "system_bom_coverage": bom_summary,
         "supplier_coverage": supplier_coverage,
+        "supplier_diagnostics": supplier_diagnostics,
+        "hydration": hydration_report or {},
         "actual_visual_review": {
             "path": str(actual_review_path) if actual_review_path else None,
             "run_id": review_payload.get("run_id"),
-            "requirements": review_states,
+            "requirements": {
+                requirement_id: {
+                    "state": review_states.get(requirement_id, "not_reviewed"),
+                    **summary,
+                }
+                for requirement_id, summary in review_summaries.items()
+            },
+            "review_complete": review_complete,
             "visual_metrics_require_actual_review": True,
         },
     }

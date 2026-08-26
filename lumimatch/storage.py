@@ -174,7 +174,11 @@ class CatalogStore:
         if not product.availability_source_text and product.availability:
             updates["availability_source_text"] = product.availability
         inferred_family = classify_product(product)
-        if not product.product_family or product.product_family == "wall_sconce" and inferred_family != "wall_sconce":
+        if (
+            not product.product_family
+            or product.product_family == "unknown"
+            or product.product_family == "wall_sconce" and inferred_family != "wall_sconce"
+        ):
             updates["product_family"] = inferred_family
         for short_name, normalized_name in (
             ("width", "width_mm"),

@@ -1,39 +1,76 @@
-# Golden benchmark — clean production discovery
+# Golden benchmark — V4 production stages
 
 Дата прогона: `2026-08-25`.
 
-Production catalog был собран отдельно в `data/catalog/production_clean.sqlite3` командой `production-build`. Во время этой сборки golden set, ожидаемые SKU и target-aware URL discovery не читались. После сборки golden был загружен только для evaluation.
+Production pipeline разделён на независимые стадии: URL inventory → requirement-driven hydration → hard gates/retrieval → Codex visual review. Golden set использовался только после production build для оценки и не выбирал production URL.
 
-## Recall и retrieval
+## Stage recall и retrieval
 
 | metric | result |
 |---|---:|
-| production catalog recall, SKU-matchable visual targets | `0/10` |
-| visual targets без SKU | `1` |
-| target-aware golden discovery, SKU-matchable visual targets | `5/10` |
-| target-aware discovery, all golden items | `6/22` |
-| production retrieval@20 / @50 / @100 | `0 / 0 / 0` |
-| actual visual@1 / @3 / @5 / @10 for golden targets | `0 / 0 / 0 / 0` |
+| product URL inventory | `10,291` |
+| hydrated unique URLs | `563` |
+| hydrated catalog cards | `518` |
+| inventory recall, SKU-matchable visual targets | `5/10` |
+| hydrated catalog recall, SKU-matchable visual targets | `0/10` |
+| sellable hydrated recall, SKU-matchable visual targets | `0/10` |
+| target-aware golden discovery, all golden items | `6/22` |
+| retrieval@20 / @50 / @100 | `0 / 0 / 0` |
+| actual visual@1 / @3 / @5 / @10 | `0 / 0 / 0 / 0` |
 
-Target-aware discovery и production catalog recall намеренно разделены. Golden discovery нашёл 5 из 10 SKU-matchable visual targets, но scratch store остался пустым и не изменил production catalog.
+`visual@K` считается только после полного review всех текущих candidate pools. В этом run review complete для всех 8 требований; нулевые visual@K означают, что golden SKU не попал в hydrated production pool, а не что review был неполным.
 
-## Фактический visual review
+## Current visual-review pools
 
-Открыты reference crops и свежие contact sheets из `output/golden/dan/review/`. В отдельном файле `output/golden/dan/actual_visual_review_completed.json` сохранены только judgments текущего запуска; старые annotation scores не использовались.
+Все текущие кандидаты были просмотрены по свежим contact sheets из `output/golden/dan/review/`. Для каждого кандидата записано явное `accept` или `reject` в `actual_visual_review_completed.json`.
 
-По текущим production pools визуально приняты два декоративных аналога:
+| F | current pool | accepted visual candidates |
+|---|---:|---:|
+| F-01 | 90 | 0 |
+| F-02 | 100 | 0 |
+| F-03 | 99 | 2 |
+| F-04 | 96 | 2 |
+| F-05 | 98 | 0 |
+| F-06 | 100 | 3 |
+| F-07 | 100 | 2 |
+| F-08 | 88 | 0 |
 
-- `F-02`: Ambrella `GV1451` — линейный чёрный корпус, но монтаж не доказан как recessed;
-- `F-03`: Eurosvet `00000055442` — близкая роль и светлый абажур, но классическая латунная арматура вместо чёрного основания.
+Принятые visual analogs:
 
-Для `F-01`, `F-04`, `F-06` и `F-08` достойных аналогов в текущих sheets не подтверждено. `F-05` остался пустым из-за технического hard gate по влажной зоне. `F-07` имеет визуально похожий шинопровод `GV1076`, но это system/ambiguous requirement и не входит в decorative visual metrics.
+- `F-03`: Freya `FR1007WL-01BS`, `FR1007WL-01N` — компактный настенный светильник с абажуром; цвет и арматура отличаются от чёрной референсной модели.
+- `F-04`: Freya `FR1011WL-01B`, `FR1011WL-02B` — близкий вертикальный овальный контур; стекло темнее, у второй модели два корпуса.
+- `F-06`: Ambrella `XP8111050`, Lussole `LSP-9509`, `LSP-9821` — чёрные цилиндрические/трековые spot-светильники; отличаются способом крепления, поэтому требуют проверки монтажа.
+- `F-07`: Lightstar `506217`, `506227` — чёрный линейный шинопровод соответствующей системной семьи; длина и конфигурация проекта не доказаны.
 
-## Supplier coverage
+Аксессуары DIY (крепёж, заглушки, основания, соединители) не считались светильниками. Для F-01, F-02, F-05 и F-08 в текущем hydrated pool действительно хороших аналогов не подтверждено; F-08 дополнительно требует не смешивать голую LED-ленту с готовым профилем.
 
-Полная детализация сохранена в `output/production_catalog_build.json`. В ней отдельно записаны sitemap URLs total, product URLs discovered, cards attempted, parsed cards, parse rate, approximate catalog coverage, discovery quality и parse quality. Поэтому supplier может быть parse-healthy, но discovery-partial/broken.
+## Stage diagnoses
 
-Чистая сборка содержит `281` карточку. При bounded лимите `35` карточек на supplier большинство адаптеров имеют healthy parse rate, но discovery coverage остаётся partial, потому что URL inventory больше обрабатываемого лимита. Generic suppliers с нулевым product URL inventory требуют отдельного adapter/fallback pass; это bottleneck discovery, а не доказательство отсутствия товаров.
+Из 10 SKU-matchable visual targets:
+
+- `5` найдены в URL inventory;
+- `5` отсутствуют уже на inventory stage;
+- из найденных `5` ни один не был выбран текущим hydration budget;
+- `0` достигли hard-gated hydrated catalog, поэтому retrieval и availability нельзя оценивать как главную причину потери этих SKU.
+
+Наиболее заметная следующая точка улучшения — requirement-driven quota/selection: inventory уже содержит `50248`, `lsp-4001`, `lsp-7187` и `LSP-4016`, но текущий bounded hydration отбирает другие URL. Это диагностическая проблема coverage/hydration, а не доказательство плохого visual matching и не availability-only loss.
+
+## Supplier diagnostics
+
+| supplier | inventory URLs | relevant selected | hydrated cards | parse success |
+|---|---:|---:|---:|---:|
+| freya-light.com | 1623 | 80 | 40 | 1.000 |
+| shop.lussole.ru | 1634 | 61 | 51 | 1.000 |
+| kinklight.ru | 1347 | 142 | 40 | 0.482 |
+| eurosvet.ru | 1843 | 138 | 69 | 1.000 |
+| odeon-light.com | 62 | 40 | 24 | 1.000 |
+| ambrella.biz | 208 | 134 | 82 | 1.000 |
+| artelamp.ru | 489 | 90 | 53 | 1.000 |
+| divinare.ru | 348 | 128 | 69 | 0.972 |
+| lightstar.ru | 2731 | 147 | 90 | 1.000 |
+
+Для cached inventory в этом отчёте не проставляется процент покрытия относительно sitemap approximation, если такой denominator не был сохранён в inventory payload. Это предотвращает ложные значения coverage >100%.
 
 ## Вывод
 
-На этом clean run главная проблема — discovery/coverage production catalog, а не availability: production recall ожидаемых SKU равен нулю ещё до sellable gate. При этом фактический visual review нашёл только два умеренно пригодных текущих аналога, поэтому после расширения catalog нужно повторно проверить и retrieval, и visual quality; нельзя считать все потери только availability.
+В текущем clean V4 run главная проблема — hydration/coverage до retrieval, а не availability и не финальный visual threshold. При этом Codex visual review независимо подтвердил хорошие аналоги для F-03, F-04, F-06 и F-07 и оставил F-01, F-02, F-05, F-08 пустыми без искусственного заполнения.

@@ -111,3 +111,6 @@ class ScoredCandidate(BaseModel):
     color_mode: str = "primary"
     visual_review_status: str = "не проверено Codex"
     visual_reject_reason: str | None = None
+    visual_fit: str = "unreviewed"
+    technical_status: str = "unknown"
+    availability_status: str = "unknown"

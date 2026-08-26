@@ -146,12 +146,39 @@ def _dimension_match(requirement: FixtureRequirement, product: CatalogProduct) -
     return sum(checks) / len(checks) if checks else 0.45
 
 
+def _required_ip_level(requirement: FixtureRequirement) -> int | None:
+    match = re.search(r"\bIP\s*([0-9]{2})\b", " ".join(requirement.technical_constraints), re.IGNORECASE)
+    return int(match.group(1)) if match else None
+
+
+def _ip_level(value: str | None) -> int | None:
+    match = re.search(r"\bIP\s*([0-9]{2})\b", value or "", re.IGNORECASE)
+    return int(match.group(1)) if match else None
+
+
+def technical_status(requirement: FixtureRequirement, product: CatalogProduct) -> str:
+    needs_ip = any(
+        token in " ".join(requirement.technical_constraints).casefold()
+        for token in ("влажн", "сануз", "ip")
+    )
+    if not needs_ip:
+        return "not_required"
+    product_ip = _ip_level(product.ip_rating)
+    if product_ip is None:
+        return "requires_ip_check"
+    required_ip = _required_ip_level(requirement)
+    if required_ip is not None and product_ip < required_ip:
+        return "explicit_mismatch"
+    return "verified"
+
+
 def hard_filter(
     requirement: FixtureRequirement,
     product: CatalogProduct,
     *,
     availability_mode: str | None = None,
     availability_policy: str = "supplier",
+    allow_unknown_technical: bool = False,
 ) -> tuple[bool, list[str]]:
     reasons: list[str] = []
     status = effective_availability_status(product)
@@ -173,8 +200,33 @@ def hard_filter(
         reasons.append("mounting_mismatch")
     if "подвес" in required_mounting and product_family in {"wall_sconce", "decorative_wall", "track_spot", "spot"}:
         reasons.append("mounting_mismatch")
-    if any(token in " ".join(requirement.technical_constraints).casefold() for token in ("влажн", "сануз", "ip")) and not product.ip_rating:
+    if (
+        "потолоч" in required_mounting
+        and actual_mounting
+        and "настенн" in actual_mounting
+        and "потолоч" not in actual_mounting
+    ):
+        reasons.append("mounting_mismatch")
+    if (
+        "трек" in required_mounting
+        and actual_mounting
+        and "настенн" in actual_mounting
+        and "трек" not in actual_mounting
+    ):
+        reasons.append("mounting_mismatch")
+    if (
+        "подвес" not in required_mounting
+        and actual_mounting
+        and "подвес" in actual_mounting
+    ):
+        reasons.append("mounting_mismatch")
+    if (
+        technical_status(requirement, product) == "requires_ip_check"
+        and not allow_unknown_technical
+    ):
         reasons.append("missing_ip_for_wet_zone")
+    if technical_status(requirement, product) == "explicit_mismatch":
+        reasons.append("ip_mismatch")
     dimensions = requirement.exact_dimensions or requirement.approximate_dimensions or {}
     for key, expected in dimensions.items():
         actual = getattr(product, {"width": "width_mm", "height": "height_mm", "length": "length_mm", "diameter": "diameter_mm", "depth": "depth_mm"}.get(key, key), None)
@@ -217,6 +269,8 @@ def score_product(requirement: FixtureRequirement, product: CatalogProduct, *, c
         fit_explanation=f"Coarse retrieval: family {relation}, цвет {color_match:.2f}, форма {shape_match:.2f}, размеры {dimension_match:.2f}.",
         differences=differences,
         color_mode=color_mode,
+        technical_status=technical_status(requirement, product),
+        availability_status=effective_availability_status(product),
     )
 
 
@@ -227,10 +281,16 @@ def wide_candidate_pool(
     *,
     include_color_alternatives: bool = False,
     availability_policy: str = "sellable",
+    allow_unknown_technical: bool = False,
 ) -> list[ScoredCandidate]:
     candidates: list[ScoredCandidate] = []
     for product in products:
-        allowed, _ = hard_filter(requirement, product, availability_policy=availability_policy)
+        allowed, _ = hard_filter(
+            requirement,
+            product,
+            availability_policy=availability_policy,
+            allow_unknown_technical=allow_unknown_technical,
+        )
         if not allowed:
             continue
         color_status, _ = color_relation(requirement.color, product.color or product_text(product))
@@ -328,8 +388,10 @@ def apply_visual_review(candidate: ScoredCandidate, review: dict[str, object]) -
     if rejected:
         updated.visual_review_status = "отклонён Codex по визуальному несоответствию"
         updated.visual_reject_reason = reason or "фундаментальное визуальное отличие от референса"
+        updated.visual_fit = "weak"
     else:
         updated.visual_review_status = "проверено Codex по фото кандидата"
+        updated.visual_fit = "strong" if (visual or 0) >= 0.75 else "possible"
     return updated
 
 

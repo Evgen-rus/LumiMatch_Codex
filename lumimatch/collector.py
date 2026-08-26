@@ -11,6 +11,7 @@ from .availability import effective_availability_status, supplier_availability_m
 from .discovery import discover_inventory
 from .extract import parse_product_page
 from .fetch import PublicFetcher
+from .inventory import InventoryRecord
 from .storage import CatalogStore
 
 LOGGER = logging.getLogger(__name__)
@@ -192,6 +193,76 @@ class CatalogCollector:
                 results.append(
                     self.collect_supplier(base_url, max_pages, download_images)
                 )
+        finally:
+            self.close()
+        return results
+
+    def collect_inventory(
+        self,
+        records: list[InventoryRecord],
+        *,
+        inventory_counts: dict[str, int] | None = None,
+        download_images: bool = True,
+    ) -> list[CollectionResult]:
+        """Hydrate an explicit requirement-driven URL selection.
+
+        Unlike ``collect_supplier`` this method never slices an inventory by
+        position.  The caller has already selected URLs from the persistent
+        product inventory using current FixtureRequirements.
+        """
+        counts = inventory_counts or {}
+        grouped: dict[str, list[InventoryRecord]] = {}
+        for record in records:
+            grouped.setdefault(record.supplier, []).append(record)
+        results: list[CollectionResult] = []
+        try:
+            for supplier, supplier_records in sorted(grouped.items()):
+                result = CollectionResult(
+                    supplier=supplier,
+                    availability_mode=supplier_availability_mode(supplier),
+                    discovered_product_urls=counts.get(supplier, len(supplier_records)),
+                    coverage_basis="product_inventory",
+                    discovery_quality="healthy" if counts.get(supplier, len(supplier_records)) else "broken",
+                    discovery_method="requirement_driven_hydration",
+                    adapter="inventory",
+                    discovery_coverage=1.0 if counts.get(supplier, len(supplier_records)) else 0.0,
+                )
+                result.last_refresh = datetime.now(timezone.utc).isoformat()
+                for record in supplier_records:
+                    result.cards_attempted += 1
+                    page = self.fetcher.get(record.product_url)
+                    if not page:
+                        result.failed_products += 1
+                        continue
+                    result.pages_visited += 1
+                    html = page.content.decode("utf-8", "replace")
+                    product = parse_product_page(html, page.final_url, supplier)
+                    if not product:
+                        result.failed_products += 1
+                        continue
+                    if download_images and product.primary_image_url:
+                        saved = self.fetcher.save_image(product.primary_image_url)
+                        if saved:
+                            product.local_image_path = saved
+                            result.images_saved += 1
+                    self.store.upsert(product)
+                    result.products_found += 1
+                    result.parsed_products += 1
+                    status = effective_availability_status(product)
+                    result.availability_counts[status] = result.availability_counts.get(status, 0) + 1
+                    if status == "in_stock":
+                        result.in_stock_products += 1
+                    elif status == "out_of_stock":
+                        result.out_of_stock += 1
+                    elif status == "discontinued":
+                        result.discontinued += 1
+                    elif status == "unknown":
+                        result.unknown_products += 1
+                result.parse_success_rate = result.parsed_products / result.cards_attempted if result.cards_attempted else 0.0
+                result.parse_quality = _quality(result.parse_success_rate, result.cards_attempted)
+                result.status = "healthy" if result.parse_quality == "healthy" else "partial" if result.parsed_products else "broken"
+                result.coverage_quality = f"inventory_healthy_parse_{result.parse_quality}"
+                results.append(result)
         finally:
             self.close()
         return results

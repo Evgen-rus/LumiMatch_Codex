@@ -44,6 +44,21 @@ def classify_text(text: str) -> str:
         return "magnetic_track_spot"
     if any(token in value for token in ("линейный модуль трека", "трековый линейный", "linear module")):
         return "track_linear_module"
+    if any(
+        token in value
+        for token in (
+            "крепеж",
+            "крепёж",
+            "кронштейн",
+            "заглушка",
+            "основание для",
+            "стойка для",
+            "кабель питания",
+            "комплектующие",
+            "аксессуар",
+        )
+    ):
+        return "accessory"
     if any(token in value for token in ("светодиодная лента", "led strip", "лента светодиод")):
         return "led_strip"
     if "профиль" in value and any(token in value for token in ("свет", "led", "линей")):
@@ -52,11 +67,11 @@ def classify_text(text: str) -> str:
         return "mirror_light"
     if any(token in value for token in ("трековый спот", "трековый светильник", "track spot", "трековый")):
         return "track_spot"
-    if any(token in value for token in ("точечный", "downlight", "встраиваемый спот", "накладной спот")):
+    if any(token in value for token in ("точечный", "downlight", "spotlight", " spot", "/spot", "-spot", "встраиваемый спот", "накладной спот")):
         return "spot"
     if any(token in value for token in ("линейный светильник", "линейная лампа", "linear fixture")) or "линей" in value and "светильник" in value:
         return "linear_fixture"
-    if re.search(r"(?<!\w)бра(?!\w)", value) or any(token in value for token in ("настенный светильник", "wall sconce", "sconce")):
+    if re.search(r"(?<!\w)бра(?!\w)", value) or any(token in value for token in ("настенный светильник", "nastenn", "wall sconce", "sconce", "bra")):
         if any(token in value for token in ("контур", "овал", "кольцо", "декоратив", "светящаяся форма")):
             return "decorative_wall"
         return "wall_sconce"
@@ -81,6 +96,8 @@ def classify_product(product: object) -> str:
             getattr(product, "description", None),
             getattr(product, "mounting_type", None),
             getattr(product, "style", None),
+            getattr(product, "source_url", None),
+            getattr(product, "canonical_url", None),
             " ".join(f"{key} {value}" for key, value in attrs.items()),
         )
     )
@@ -107,6 +124,8 @@ def family_relation(requirement_family: str, product_family: str) -> str:
     if {requirement_family, product_family} <= {"wall_sconce", "decorative_wall"}:
         return "compatible"
     if {requirement_family, product_family} <= {"track_spot", "magnetic_track_spot"}:
+        return "compatible"
+    if {requirement_family, product_family} <= {"track_spot", "spot"}:
         return "compatible"
     if {requirement_family, product_family} <= {"linear_profile", "linear_fixture"}:
         return "compatible"

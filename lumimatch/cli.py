@@ -18,6 +18,11 @@ from .golden import (
     write_discovery_report,
     write_golden_set,
 )
+from .inventory import (
+    ProductInventoryStore,
+    build_product_inventory,
+    select_hydration_urls,
+)
 from .models import FixtureRequirement, ScoredCandidate
 from .paths import OUTPUT, ensure_dirs
 from .pdf_project import create_sample_reference_crops, inspect_project, render_pages
@@ -178,33 +183,78 @@ def production_build(
     suppliers_file: Path = typer.Option(Path("suppliers.txt"), exists=True),  # noqa: B008
     suppliers: str | None = typer.Option(None, help="Домены через запятую; по умолчанию все разрешённые сайты."),
     db: Path = typer.Option(Path("data/catalog/production_clean.sqlite3")),  # noqa: B008
-    max_pages: int = typer.Option(120, min=1, max=1000),
+    inventory_db: Path = typer.Option(Path("data/catalog/product_inventory.sqlite3")),  # noqa: B008
+    max_pages: int = typer.Option(180, min=1, max=500),
+    inventory_max_urls: int = typer.Option(10000, min=100, max=20000),
+    supplier_budget: int = typer.Option(30, min=1, max=200),
     no_images: bool = typer.Option(False, help="Не скачивать локальные копии фотографий."),
     fresh: bool = typer.Option(False, help="Очистить только явно указанный SQLite-файл перед сборкой."),
+    fresh_inventory: bool = typer.Option(False, help="Перестроить только явно указанный URL inventory."),
 ) -> None:
-    """Build only the production catalog; golden data is not read by this command."""
+    """Build production inventory, requirement-driven hydration and catalog; golden data is not read."""
     ensure_dirs()
     if fresh:
         for candidate in (db, Path(f"{db}-wal"), Path(f"{db}-shm")):
             if candidate.exists():
                 candidate.unlink()
+    if fresh_inventory:
+        for candidate in (inventory_db, Path(f"{inventory_db}-wal"), Path(f"{inventory_db}-shm")):
+            if candidate.exists():
+                candidate.unlink()
+    supplier_urls = _suppliers(suppliers_file, suppliers)
     store = CatalogStore(db)
+    inventory_store = ProductInventoryStore(inventory_db)
+    inventory_payload = build_product_inventory(
+        supplier_urls,
+        inventory_store,
+        store,
+        max_urls=inventory_max_urls,
+        fresh=fresh_inventory,
+    )
+    requirements = _requirements(Path("data/fixture_requirements.json"))
+    plan = select_hydration_urls(
+        requirements,
+        inventory_store.all(),
+        per_requirement_limit=max_pages,
+        per_supplier_limit=supplier_budget,
+    )
     collector = CatalogCollector(store)
-    results = collector.collect(_suppliers(suppliers_file, suppliers), max_pages, not no_images)
+    results = collector.collect_inventory(
+        plan.records,
+        inventory_counts=inventory_store.supplier_counts(),
+        download_images=not no_images,
+    )
     removed = collector.refresh_cached()
+    supplier_stats = _supplier_stats(results)
+    hydration_payload = plan.as_dict()
+    hydration_payload["inventory"] = inventory_payload
+    hydration_payload["supplier_stats"] = supplier_stats
+    inventory_output = Path("output/production_inventory.json")
+    inventory_output.parent.mkdir(parents=True, exist_ok=True)
+    inventory_output.write_text(json.dumps(inventory_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    hydration_output = Path("output/production_hydration.json")
+    hydration_output.write_text(json.dumps(hydration_payload, ensure_ascii=False, indent=2), encoding="utf-8")
     payload = {
         "db": str(db),
+        "inventory_db": str(inventory_db),
         "fresh": fresh,
+        "fresh_inventory": fresh_inventory,
+        "fixture_requirements": [requirement.id for requirement in requirements],
         "catalog_products": store.count(),
+        "inventory_total": inventory_store.count(),
+        "hydrated_unique_urls": len(plan.records),
         "removed_after_refresh": removed,
-        "suppliers": _supplier_stats(results),
+        "inventory": inventory_payload,
+        "hydration": hydration_payload,
+        "suppliers": supplier_stats,
     }
     output = Path("output/production_catalog_build.json")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    lines = ["# Production catalog build", "", f"- DB: `{db}`", f"- Products: `{store.count()}`", "", "| supplier | adapter | sitemap total | discovered | cards attempted | parsed | parse rate | discovery coverage | discovery quality | parse quality |", "|---|---|---:|---:|---:|---:|---:|---:|---|---|"]
+    lines = ["# Production catalog build V4", "", f"- Inventory DB: `{inventory_db}`", f"- Catalog DB: `{db}`", f"- Inventory URLs: `{inventory_store.count()}`", f"- Unique hydrated URLs: `{len(plan.records)}`", f"- Hydrated products: `{store.count()}`", "", "| supplier | inventory URLs | relevant selected | hydrated attempted | parsed | parse rate | discovery quality | parse quality |", "|---|---:|---:|---:|---:|---:|---|---|"]
     for item in payload["suppliers"]:
-        lines.append(f"| {item['supplier']} | {item['adapter']} | {item['sitemap_urls_total']} | {item['discovered_product_urls']} | {item['cards_attempted']} | {item['parsed_products']} | {item['parse_success_rate']:.3f} | {item['discovery_coverage'] if item['discovery_coverage'] is not None else ''} | {item['discovery_quality']} | {item['parse_quality']} |")
+        selected = next((count for supplier, count in plan.by_supplier.items() if supplier == item["supplier"]), 0)
+        lines.append(f"| {item['supplier']} | {item['discovered_product_urls']} | {selected} | {item['cards_attempted']} | {item['parsed_products']} | {item['parse_success_rate']:.3f} | {item['discovery_quality']} | {item['parse_quality']} |")
     Path("output/production_catalog_build.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     typer.echo(f"Production catalog build завершён: products={store.count()}; отчёт: {output}")
 
@@ -262,6 +312,8 @@ def golden_benchmark(
     requirements: Path = typer.Option(Path("data/fixture_requirements.json"), exists=True),  # noqa: B008
     output_dir: Path = typer.Option(Path("output/golden/dan")),  # noqa: B008
     catalog: Path = typer.Option(Path("data/catalog/production_clean.sqlite3")),  # noqa: B008
+    inventory: Path = typer.Option(Path("data/catalog/product_inventory.sqlite3")),  # noqa: B008
+    hydration: Path = typer.Option(Path("output/production_hydration.json")),  # noqa: B008
     actual_review: Path = typer.Option(Path("output/golden/dan/actual_visual_review.json")),  # noqa: B008
 ) -> None:
     """Measure golden discovery, retrieval and BOM coverage without score boosts."""
@@ -269,6 +321,8 @@ def golden_benchmark(
     golden_items = json.loads(golden.read_text(encoding="utf-8"))
     discovery_payload = json.loads(discovery.read_text(encoding="utf-8"))
     store = CatalogStore(catalog)
+    inventory_store = ProductInventoryStore(inventory) if inventory.exists() else None
+    hydration_payload = json.loads(hydration.read_text(encoding="utf-8")) if hydration.exists() else None
     payload = run_benchmark(
         golden_items,
         discovery_payload.get("items", []),
@@ -276,8 +330,10 @@ def golden_benchmark(
         store,
         output_dir,
         actual_review_path=actual_review,
+        inventory_store=inventory_store,
+        hydration_report=hydration_payload,
     )
-    typer.echo(f"Golden benchmark завершён: production_catalog_recall={payload['production_catalog_recall']['present']}/{payload['production_catalog_recall']['matchable_sku_targets']}; targeted={payload['targeted_discovery_recall']['found']}/{payload['targeted_discovery_recall']['matchable_sku_targets']}; visual@10={payload['retrieval']['visual_at']['visual_at_10']}; отчёт: {output_dir}")
+    typer.echo(f"Golden benchmark завершён: inventory={payload['production_inventory_recall']['present']}/{payload['production_inventory_recall']['matchable_sku_targets']}; hydrated={payload['hydrated_catalog_recall']['present']}/{payload['hydrated_catalog_recall']['matchable_sku_targets']}; review_complete={payload['actual_visual_review']['review_complete']}; visual@10={payload['retrieval']['visual_at']['visual_at_10']}; отчёт: {output_dir}")
 
 
 @app.command("golden-review-init")

@@ -1,5 +1,9 @@
 # SAMPLE_RUN V2
 
+## V4 production-stage validation
+
+The clean production-stage run is documented separately in [`docs/GOLDEN_BENCHMARK.md`](GOLDEN_BENCHMARK.md). It uses URL inventory `10,291`, requirement-driven hydration `563` unique URLs / `518` cards, and a complete Codex review for all eight current FixtureRequirement pools. The historical V2 sample figures below are intentionally retained as the availability-gated sample report baseline.
+
 Повторный availability-gated, visual-first прогон на `samples/Dan_dia-2.pdf` и `samples/Dan_vis.pdf`.
 
 - FixtureRequirement после coverage pass: `8`
