@@ -78,7 +78,7 @@ https://github.com/Evgen-rus/Contact_harvester
 
 Целевой поток:
 
-`сайты поставщиков -> локальный каталог -> дизайн-проект -> FixtureRequirement -> shortlist кандидатов -> визуальная проверка Codex -> итоговая подборка`
+`дизайн-проект -> FixtureRequirement -> URL inventory поставщиков -> requirement-driven hydration -> локальный каталог -> hard gates -> широкий пул -> визуальная проверка Codex -> live recheck -> итоговая подборка`
 
 Не обходи все сайты заново для каждой позиции, если можно использовать локальный каталог и кэш.
 
@@ -264,11 +264,11 @@ Hard constraints важнее визуального сходства.
 ## Разработка
 
 Перед изменениями:
-1. прочитай `AGENTS.md`, `TASK.md`, `WORKFLOW.md`;
-2. изучи sample PDF;
-3. изучи Contact_harvester;
-4. проверь реальные сайты;
-5. коротко зафиксируй архитектуру.
+1. прочитай `AGENTS.md`, `ARCHITECTURE.md` и релевантные разделы `README.md`;
+2. определи затронутую стадию текущего pipeline и проверь её реальные входы/артефакты;
+3. для изменений обработки дизайн-проекта изучи sample PDF и golden evidence;
+4. для изменений сбора изучи Contact_harvester как архитектурный референс и проверь реальные сайты;
+5. при изменении контрактов или потока одновременно обнови `ARCHITECTURE.md`.
 
 После этого сразу реализуй.
 
@@ -288,9 +288,9 @@ Hard constraints важнее визуального сходства.
 - исправь очевидные проблемы;
 - сохрани результат в `docs/SAMPLE_RUN.md` и `output/`.
 
-## V2 фактическая архитектура и обязательные gates
+## Фактическая архитектура и обязательные gates
 
-Текущий pipeline visual-first: `discovery -> product extraction -> availability normalization -> taxonomy/hard filters -> sellable pool + unavailable diagnostic pool -> contact sheets -> visual review Codex -> reject -> live availability recheck -> два независимых набора 0-5 finalists`.
+Текущий pipeline visual-first: `discovery -> product URL inventory -> requirement-driven hydration -> product extraction -> availability normalization -> taxonomy/hard filters -> sellable pool + unavailable diagnostic pool -> contact sheets -> visual review Codex -> reject -> live availability recheck -> два независимых набора 0-5 finalists`.
 
 - Политика наличия supplier-level сохраняется в `data/supplier_availability.json`: для `stock_tracked` нормальный customer-facing pool допускает только `availability_status=in_stock`; `unknown`, `OutOfStock`, `Нет в наличии`, снятые с производства, preorder/expected и `Уточняйте наличие` исключаются. Для вручную проверенного `stock_not_published` отсутствие статуса может быть разрешено только его отдельной capability-политикой, но `unknown` глобально не разрешать. Диагностический unavailable pool — независимое исключение только для четырёх временных статусов и не меняет основной отчёт.
 - `FixtureRequirement.taxonomy_family` и `CatalogProduct.product_family` используют практическую taxonomy. Несовместимые family не попадают в visual pool.
@@ -301,3 +301,4 @@ Hard constraints важнее визуального сходства.
 - Основной customer-facing отчёт всегда содержит только подтверждённые `in_stock`. Отдельный `output/lumimatch_sample_unavailable.*` диагностирует visual matching и принимает только `out_of_stock`, `preorder`, `expected`, `check_availability`; `unknown`, discontinued и архивы исключаются. Все taxonomy/mounting/dimension/visual threshold/structural similarity/review gates общие, а один товар не должен попасть в оба отчёта.
 - Размеры товара хранятся в `width_mm/height_mm/length_mm/diameter_mm/depth_mm`; размеры упаковки не считать размерами светильника.
 - Поля характеристик брать из JSON-LD/specification table/site-specific selectors, а не из полного body text. `image_urls` должны относиться к текущему SKU, не к related/recommendations/certificates/counters.
+- Golden targets не должны влиять на production inventory или hydration selection. `experiments/visual_retrieval/` изолирован от production и не меняет gates/отчёты без отдельного подтверждённого решения.
