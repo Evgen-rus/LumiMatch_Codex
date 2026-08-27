@@ -25,6 +25,13 @@ data/cache/
 data/images/
 data/catalog/cache/
 
+# Isolated visual retrieval spike runtime cache and generated indexes.
+data/visual_spike/images/
+data/visual_spike/model_cache/
+data/visual_spike/embeddings/
+data/visual_spike/*.sqlite3
+data/visual_spike/*.sqlite3-*
+
 # Служебные файлы SQLite. Саму базу catalog.sqlite3 оставляем в git.
 *.sqlite
 *.sqlite-journal

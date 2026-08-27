@@ -1,0 +1,93 @@
+{
+  "scope": "oracle",
+  "created_at": "2026-08-26T08:55:13.590847+00:00",
+  "targets_considered": 8,
+  "found": 2,
+  "items": [
+    {
+      "kp_position": 1,
+      "sku": "50248",
+      "fixture_requirement": "F-01",
+      "confidence": 0.88,
+      "supplier": "eurosvet.ru",
+      "found": false,
+      "url": null,
+      "image": false,
+      "errors": []
+    },
+    {
+      "kp_position": 3,
+      "sku": "2207B,19",
+      "fixture_requirement": "F-03",
+      "confidence": 0.49,
+      "supplier": "kinklight.ru",
+      "found": false,
+      "url": null,
+      "image": false,
+      "errors": [
+        "https://kinklight.ru/podsvetki-arxitekturnyie/19910.html:target_mismatch:none"
+      ]
+    },
+    {
+      "kp_position": 4,
+      "sku": "LL-894-1",
+      "status": "not_run",
+      "reason": "no_allowed_supplier"
+    },
+    {
+      "kp_position": 9,
+      "sku": "FR2066WL-L40B",
+      "fixture_requirement": "F-03",
+      "confidence": 0.72,
+      "supplier": "freya-light.com",
+      "found": true,
+      "url": "https://freya-light.com/products/nastennye-svetilniki/fr2066wl_l40b/",
+      "image": true,
+      "errors": []
+    },
+    {
+      "kp_position": 10,
+      "sku": "5610/37WL",
+      "fixture_requirement": "F-04",
+      "confidence": 0.58,
+      "supplier": "odeon-light.com",
+      "found": false,
+      "url": null,
+      "image": false,
+      "errors": []
+    },
+    {
+      "kp_position": 11,
+      "sku": "1108",
+      "fixture_requirement": "F-05",
+      "confidence": 0.44,
+      "supplier": "eurosvet.ru",
+      "found": false,
+      "url": null,
+      "image": false,
+      "errors": []
+    },
+    {
+      "kp_position": 14,
+      "sku": "LSP-4016",
+      "fixture_requirement": "F-01",
+      "confidence": 0.42,
+      "supplier": "shop.lussole.ru",
+      "found": true,
+      "url": "https://shop.lussole.ru/podvesnoy-svetilnik-lussole-lsp-4016/",
+      "image": true,
+      "errors": []
+    },
+    {
+      "kp_position": 16,
+      "sku": "85078/01",
+      "fixture_requirement": "F-06",
+      "confidence": 0.79,
+      "supplier": "eurosvet.ru",
+      "found": false,
+      "url": null,
+      "image": false,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Isolated environment for experiments/visual_retrieval; do not install into .venv.
+torch>=2.5,<3
+torchvision>=0.20,<1
+numpy>=2,<3
+open_clip_torch>=2.32,<4
+psutil>=6,<8
+pytest>=8,<9
+httpx>=0.28,<1
+beautifulsoup4>=4.15,<5
+lxml>=6,<7
+pydantic>=2.12,<3
+tenacity>=9.1,<10

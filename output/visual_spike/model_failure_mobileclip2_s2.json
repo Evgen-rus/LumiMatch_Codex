@@ -1,0 +1,5 @@
+{
+  "model": "mobileclip2_s2",
+  "status": "failed",
+  "error": "RuntimeError: checkpoint download did not start/complete in isolated HF cache; smoke was stopped before inference"
+}

@@ -1,0 +1,68 @@
+{
+  "status": "manual_codex_review",
+  "model": "dinov2_vits14",
+  "scope": "natural",
+  "variant": "primary_image_only",
+  "decision": "no_strong_visual_finalists",
+  "strong_visual_finalists": 0,
+  "near_visual_analogue_count": 4,
+  "note": "Top-20 contact sheets were checked against the project reference crops. Golden SKU rank was not used as a visual approval signal. Candidates below are near-but-rejected observations, not final recommendations.",
+  "fixture_reviews": [
+    {
+      "fixture_requirement": "F-01",
+      "strong_visual_finalists": 0,
+      "near_candidates": [],
+      "rejection_reason": "The highest-ranked products are linear pendants with spherical diffusers, not compact black cylindrical spot pendants."
+    },
+    {
+      "fixture_requirement": "F-02",
+      "strong_visual_finalists": 0,
+      "near_candidates": [
+        {"rank": 3, "sku": "a072022", "supplier": "eurosvet.ru", "reason": "Linear silhouette, but warm alabaster pendant with visible suspension rather than a thin black ceiling line."}
+      ],
+      "rejection_reason": "No top-20 result preserves the black recessed/profile appearance and ceiling context together."
+    },
+    {
+      "fixture_requirement": "F-03",
+      "strong_visual_finalists": 0,
+      "near_candidates": [
+        {"rank": 2, "sku": "LSP-6037", "supplier": "shop.lussole.ru", "reason": "Wall-mounted shade and local light are related, but the black rectangular shade and hanging switch differ materially from the small light shade with dark base."}
+      ],
+      "rejection_reason": "LSP-7246 is geometric and directional; the remaining results are different sconce families or non-wall products."
+    },
+    {
+      "fixture_requirement": "F-04",
+      "strong_visual_finalists": 0,
+      "near_candidates": [],
+      "rejection_reason": "The top result is an angled geometric sconce, not the reference's vertical oval luminous contour with a dark centre."
+    },
+    {
+      "fixture_requirement": "F-05",
+      "strong_visual_finalists": 0,
+      "near_candidates": [],
+      "rejection_reason": "Results mix decorative wall products and pendants; none is a convincing mirror-side vertical/contour light."
+    },
+    {
+      "fixture_requirement": "F-06",
+      "strong_visual_finalists": 0,
+      "near_candidates": [],
+      "rejection_reason": "Linear and wall-light results do not match the black compact ceiling/track spot requirement."
+    },
+    {
+      "fixture_requirement": "F-07",
+      "strong_visual_finalists": 0,
+      "near_candidates": [
+        {"rank": 2, "sku": "LSP-7118", "supplier": "shop.lussole.ru", "reason": "Linear black form, but it is a wall sconce and not a compatible track rail."}
+      ],
+      "rejection_reason": "The only rail-like result is catalogued as a component and does not establish the required track system compatibility."
+    },
+    {
+      "fixture_requirement": "F-08",
+      "strong_visual_finalists": 0,
+      "near_candidates": [
+        {"rank": 2, "sku": "a052870", "supplier": "eurosvet.ru", "reason": "A linear luminous wall product is directionally related, but it is surface-mounted and not a concealed LED strip/profile."}
+      ],
+      "rejection_reason": "No candidate demonstrates the concealed niche/furniture/mirror profile context from the reference."
+    }
+  ]
+}

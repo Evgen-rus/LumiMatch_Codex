@@ -1,0 +1,53 @@
+{
+  "images": 250,
+  "models": [
+    {
+      "status": "ready",
+      "model": "dinov2_vits14",
+      "images": 250,
+      "dimension": 384,
+      "seconds": 51.955,
+      "images_per_second": 4.812,
+      "rss_before_mb": 57.0,
+      "rss_after_load_mb": 487.2,
+      "rss_after_encode_mb": 465.2,
+      "rss_peak_sampled_mb": 487.2,
+      "runtime": {
+        "model": "dinov2_vits14",
+        "model_id": "facebookresearch/dinov2:dinov2_vits14",
+        "model_name": "dinov2_vits14",
+        "pretrained": "facebookresearch/dinov2:dinov2_vits14",
+        "backend": "dinov2",
+        "supports_text": false,
+        "load_seconds": 4.003,
+        "parameter_size_mb": 84.14,
+        "checkpoint_size_mb": 661.3,
+        "device": "cpu"
+      }
+    },
+    {
+      "status": "ready",
+      "model": "openclip_vit_b32",
+      "images": 250,
+      "dimension": 512,
+      "seconds": 36.057,
+      "images_per_second": 6.934,
+      "rss_before_mb": 465.2,
+      "rss_after_load_mb": 1075.4,
+      "rss_after_encode_mb": 1049.7,
+      "rss_peak_sampled_mb": 1075.4,
+      "runtime": {
+        "model": "openclip_vit_b32",
+        "model_id": "openai/CLIP:ViT-B-32/openai",
+        "model_name": "ViT-B-32",
+        "pretrained": "openai",
+        "backend": "open_clip",
+        "supports_text": true,
+        "load_seconds": 4.941,
+        "parameter_size_mb": 577.08,
+        "checkpoint_size_mb": 661.3,
+        "device": "cpu"
+      }
+    }
+  ]
+}
