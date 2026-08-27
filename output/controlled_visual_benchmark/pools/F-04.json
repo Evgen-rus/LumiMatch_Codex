@@ -1,0 +1,3002 @@
+[
+  {
+    "candidate_id": "0c17c6c1497007bb",
+    "sku": "00000082119",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-10083-2-khrom-prozrachnyy-khrustal-strotskis-00000082119",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\924410816674058b2b9ff292bcdb20b5e367291f86f5e4339d7f7942fa44b2e3.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "0bc7b257d545f3cc",
+    "sku": null,
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/205.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6d8f9a63db203b76522fbe83746aed83f8213873564d386c69c6d35745aede44.jpg",
+    "title": "Бра Локс",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "480ccadcd653068e",
+    "sku": "21848",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21848.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\9a00bc3046c6451a3a1034cbcb0223947bc388ef9747b9d3da4eee9cb0609085.jpg",
+    "title": "Бра Канти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "61fa367a14b1a8f8",
+    "sku": "19177",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19177.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\146bc31115a80aa486e46b70e49249d041a8063689c8d63c882b0d62810c9833.jpg",
+    "title": "Бра Винетта",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "39efdbe721162e6a",
+    "sku": "LSP-7333",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7333",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5d32317e2f4ea1944bf3be20c266847cd2cad90f2788bfa4cc65c50eb899a2a3.jpg",
+    "title": "Бра Lussole LSP-7333",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "e0bea11957b54922",
+    "sku": "22413",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22413.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1a9eb3fa667a3ab9320fdf5c28ada480cdbe439d8570ac3e08fa8247648423a1.jpg",
+    "title": "Бра Астен",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "ba8884ee79a4e59d",
+    "sku": "LSP-7106",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7106",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f7f746d1be229ead5d095e7b9dbee4d9eff6e0d3020a19ddb1118548bf716df5.jpg",
+    "title": "Бра Lussole LSP-7106",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "73496d99bf5f02d0",
+    "sku": "LSP-8077",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-wasilla-lsp-8077",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\45e17e4b00dbe8846ebbdfc63b224467c0d382585591c9f8dd908126869f7cc7.jpg",
+    "title": "Бра Lussole Wasilla LSP-8077",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "0c75e2ad67097a5b",
+    "sku": "22383",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-gibkie/22383.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\72996cdd8e4d386730a53421e63f35bea0b9699e8bd6172cd1b59a9524ebaf07.jpg",
+    "title": "Бра Лайт",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "e3bdec0db2e5875e",
+    "sku": "LSP-7186",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7186",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2e7830f3f493bb5a3efb9b8a9b06919f2646da803f20bc10855b8aadde85b987.jpg",
+    "title": "Бра Lussole LSP-7186",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1261fda02a60da88",
+    "sku": "a038372",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-sankara-led-16w-ip20-belyy-a038372",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fd3420cb219322518c04acbe96632c700fb05eba983c5c77157616f602785990.jpg",
+    "title": "Настенный светодиодный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "be112f44f634a982",
+    "sku": "LSP-6052",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6052",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6db5a7880e337a253ced346b35c9ea06e5b0b4abe9cdf74cd48c3f558c15fb67.jpg",
+    "title": "Бра Lussole LSP-6052",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "9ef6e53c2dccf0ae",
+    "sku": "a071915",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-povorotnym-mekhanizmom-503111-chernyy-a071915",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7b4183a92764e47db59eb677fee3b6b1558f875cb11b1df28c10b61ba2beb386.jpg",
+    "title": "Настенный светильник с поворотным механизмом",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "beffe1517948efc9",
+    "sku": "LSP-7295",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7295",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5badab54d6c8720c5517492b8519cf38c385651de88282709cfc6834e727dc1a.jpg",
+    "title": "Бра Lussole LSP-7295",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "f92ef3cba65d8523",
+    "sku": "LSP-8167",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-hartwell-lsp-8167",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\41dce91650b572cab576dacdf65edce4cee0f72ab6b6d919d47493e20aadb4e1.jpg",
+    "title": "Бра Lussole Hartwell LSP-8167",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "33ce31b0c5d8fad7",
+    "sku": "LSP-7190",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7190",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\07aeeaad19df9727c20c9f17e79b969def86ebe2e48fecca8a459b559c9b4c18.jpg",
+    "title": "Бра Lussole LSP-7190",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "c8642a96d8ed18b4",
+    "sku": "LSP-7332",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7332",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\86002300fd936b977a58fb335527e3dd07d40c75aa79f20d4064028542c3aca5.jpg",
+    "title": "Бра Lussole LSP-7332",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "6607b9c7de309faa",
+    "sku": "a068862",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannymi-podveskami-476-1-a068862",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\182c4dc02555e5e51c7266893cafc631884503b38dd2c2b9d60fb71a8e0e358d.jpg",
+    "title": "Настенный светильник со стеклянными подвесками",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "8b339feee89ef756",
+    "sku": "a050350",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-fakturnym-steklom-326-1-a050350",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\293f89a1e9e9e9a13eacbf28ad47d871dd0c9167674619dbf1e7eadf3491d91e.jpg",
+    "title": "Настенный светильник с фактурным стеклом",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "35f8b9a10992de0a",
+    "sku": "LSP-7491",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7491",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ba99e13187d6b2b9a397175e995659e64aa5b720dc4864ea1058d84333803ef3.jpg",
+    "title": "Бра Lussole LSP-7491",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5a5aa925542e8599",
+    "sku": "LSP-9151",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-merrick-lsp-9151",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\add2f268c485a46eb1acc041fb469dbe80e1ffeeb74e044cbb8c500f30febc9a.jpg",
+    "title": "Бра Lussole Merrick LSP-9151",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "cffce10740066205",
+    "sku": "FR5053WL-02BS",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5053wl_02bs",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\0bd78b381252ca6a4b1e1830a27004076d5410fc40fb89d282f56532085f05b7.jpg",
+    "title": "серия Савой / Savoy",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "917f1d9454b860c8",
+    "sku": "FR6074WL-L12GB",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr6074wl_l12gb",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\268a0b1ee381747f34f2ea612a084a44cfd6b4fb50c6804ecab90087e2375299.jpg",
+    "title": "серия Тумблер / Tumbler",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "8af4ee1cc680595b",
+    "sku": "LSP-7393",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7393",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cd599f277abbb637a950d7a0bf9227ed1031b59d3e360bf03df2eec0f6e54b3f.jpg",
+    "title": "Бра Lussole LSP-7393",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "c03c499e595cdc2d",
+    "sku": "LSP-7355",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7355",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f553631ab8732b207ee49b4898ab241c9a2d102490872c003b4fd86c4b47a9b4.jpg",
+    "title": "Бра Lussole LSP-7355",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "538c0cb8a6b285fd",
+    "sku": "LSP-4004",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-4004",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f221fcabc94ae9fdb26c32453112a02f8510b7074a5199038d040669322b6ddd.jpg",
+    "title": "Бра Lussole LSP-4004",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "647a91d468f9e0bd",
+    "sku": "LSP-8127",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-navajo-lsp-8127",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\20b4d891884211353738ff29ea3371cf7336253dba5ad684857bb3843a510563.jpg",
+    "title": "Бра Lussole Navajo LSP-8127",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "60c0289e1ffd71d2",
+    "sku": "LSP-7185",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7185",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a53fe903b9c6f4de1de6f1729535df4b52458283dcc6ecb1bdd1713a41685952.jpg",
+    "title": "Бра Lussole LSP-7185",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "794ce0f223d35794",
+    "sku": "FR5217WL-02FG",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5217wl_02fg",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a270b18ac1688c71261c1440cf28cdbb26c757e8f5889eee227f9508052801c8.jpg",
+    "title": "серия Лукресия / Lucrecia",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "74b23d740ee6e60a",
+    "sku": "a068395",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-5449-luna-a068395",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\10968485bf7e3a98c6723b72c9f1e648eabb8225f22436326334339e1c258b5b.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "a34be4b7f9ed03b2",
+    "sku": "LSP-7179",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7179",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e423928097d8b0ea7f169961501921bf47566cf88adf8b8a3ac0a77b42d3f817.jpg",
+    "title": "Бра Lussole LSP-7179",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "0ad1e62dcf69f655",
+    "sku": "FR1006WL-01G",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1006wl_01g/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\44dc52ee4620e641876545e9686434d9bd52e19d43f471597e8b0c8c07958dda.jpg",
+    "title": "серия Форте / Forte",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "5522bcd2688937ac",
+    "sku": "00000059682",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-12205-2-belyy-00000059682",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\65b9f79c1ea78060732eb0787b8b26f74e1a3eb207848e0749edc8d2675506ae.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "0d9828cb629b70ea",
+    "sku": "a063046",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-s-povorotnym-mekhanizmom-40161-led-chernyy-a063046",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5edd245e7c26eb33b4b7ee68a8ce0c59b8061212cdf00ad94ccceee5be7e809e.jpg",
+    "title": "Настенный светодиодный светильник с поворотным механизмом",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "67bf037595965c22",
+    "sku": "FR1006WL-01N",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1006wl_01n/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\7ce0152fa8d1b0e2ae61e57304dceb66ff07ee063fa59b7a15ad84d9fb9be7d1.jpg",
+    "title": "серия Форте / Forte",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "80d8b7da1e546c25",
+    "sku": "a068653",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-tkanevym-abazhurom-10081-maja-a068653",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f143dcacdd485c31e65544ee343d5e4c1e34622f6f638e3c87628cc30e8fd762.jpg",
+    "title": "Настенный светильник с тканевым абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d2468499a3175f69",
+    "sku": "LSP-6059",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6059",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f5748f9715e1b5fe6b9c8c9c13840a1568cf4993445414b99ff18ad142cbe05e.jpg",
+    "title": "Бра Lussole LSP-6059",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5d74133a4b53fc88",
+    "sku": "22081",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22081.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fbf62f6324b802496cba21bb173c86a948d30f3a2612b0d1b0704bef1bfb80ba.jpg",
+    "title": "Бра Мелисса",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "0a38fcae32807aff",
+    "sku": "FR1010WL-03G",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1010wl_03g/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\0acd784e001844db858768c64617e6efaa86e0000dd57980bdc1184d0a0a4e61.jpg",
+    "title": "серия Минерал / Mineral",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "d956c9eb02b5d390",
+    "sku": "FL76152",
+    "supplier": "ambrella.biz",
+    "url": "https://www.ambrella.biz/catalog/dekorativnyy_svet/nastennye_svetilniki_bra/fl76152_wh_belyy_33w_2700k_1200_48_17/",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\da560f4950056e482fa9219de42a1957916eccde85a59f0beedc376eb08fffb1.jpg",
+    "title": "FL76152 WH белый 33Вт 2700К 1200*48*17",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "82a42ccef6c1780b",
+    "sku": "21846",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21846.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\8915ae89c07d694a194ac7dea11a6d679e5d6a17b4589403f91740dee9256519.jpg",
+    "title": "Бра Норти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "ab09ccb3fd7cdda8",
+    "sku": "LSP-9552",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-leinell-lsp-9552",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b4c193e96f02ea5e59002db250e941bf8c06afcc2a8e3f84f03d29c95d722bd5.jpg",
+    "title": "Бра Lussole Leinell LSP-9552",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "013e88d9f148d13f",
+    "sku": "LSP-8237",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8237",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7a3c4ac545aca169fdc3d9ff443ed7ee7d796d9921400ea65f70bd289c97bbfa.jpg",
+    "title": "Бра Lussole Cozy LSP-8237",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "62a81f630a93b607",
+    "sku": "00000083416",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-so-steklyannym-plafonom-70085-1-belyy-00000083416",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\af58c0e4ec355fb9e64c84e4fa5806055fa19634c36ce55a27d6f88880e90ad1.jpg",
+    "title": "Бра со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "a2d3142209e7330b",
+    "sku": "LSP-9120",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-nastennoe-lussole-lsp-9120/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\8b85466ea10ba7a83e2f7e02ccc9d32cb0a046219c2d643440be03816d0b67ba.jpg",
+    "title": "Бра настенное Lussole LSP-9120",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "a3454ebf39640e8c",
+    "sku": "a072175",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-fakturnym-steklom-101015-a072175",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2202d6d7f4d635759a159fc45f2e4036dfdc32cb41b944a0469fe1a2ea23f6f7.jpg",
+    "title": "Бра с фактурным стеклом",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d0cdb35b92ca168d",
+    "sku": "20812",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/20812.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\41b8ad052f422295f4e3544e793c24064af8ee55ac38aa5405dfc77e109e61ea.jpg",
+    "title": "Бра Адис",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "b392796968ce68c5",
+    "sku": "LSP-7330",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7330",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\193e1d08c22d4150f828807f3b75d317e6167c8b678c9362ca9c4591d79c2805.jpg",
+    "title": "Бра Lussole LSP-7330",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "f68a39a5d9d6acb5",
+    "sku": "a064969",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-50265-led-latun-a064969",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d21f6acf5ecaf7da7b04618be9fcf6473dadc2230e0cbb812d6dedf11a33e5c7.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "0af82f3c45729313",
+    "sku": "LSP-5009",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5009",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4bf70e34ee0d1eecbd20be9763adf0694d14c1079c2b4af1c82bed4557c27e2d.jpg",
+    "title": "Бра Lussole LSP-5009",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "398251cc42b44c33",
+    "sku": "21548",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21548.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fb3c03a4a61fc3545680762d08195cf778beebf8c398d2e85f056e46fd107f8b.jpg",
+    "title": "Бра Канти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "de01ec8c69a07d47",
+    "sku": "FR10003WL-L4B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr10003wl_l4b/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\4ef2d448afd1b3ae910131c6026dce3cccb250410cc99b6f52e3e7de9cf999aa.jpg",
+    "title": "серия Три точки / PointThree",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "4cb75eadc7d4bbf2",
+    "sku": "21573",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21573.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e0cd555c3664e6859c9aa8b3fe9c817451b36b2fbf001ef51fdcb7de1a2ff8f8.jpg",
+    "title": "Бра Викси",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "16c460686eae7e4e",
+    "sku": "200637",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200637",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\b3353c7b4ac56f57ebc58e0b8f002ff111f9c32a3e2a9ea8720469788915f2b8.jpg",
+    "title": "Бра 5W 260LM 3000K, черный Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "7ff0e62f69ad2d47",
+    "sku": "LSP-7370",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7370",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7390cfad693a462deefccfc089bd30dc4dfbf9c260a0d44f2e01e0ff32f694e3.jpg",
+    "title": "Бра Lussole LSP-7370",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5dcd6b423dd701ce",
+    "sku": null,
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/129.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\10d10cfb76a6de114fb7b64002c4d5b4a472730856f0b2923a735242f886f063.jpg",
+    "title": "Бра Виани",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "68eeb70676d15898",
+    "sku": "LSP-8236",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8236",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f1fd11270c8f00d399bd4fb4fddfbf910afa1860d4e5b2ddd6af88381b169edd.jpg",
+    "title": "Бра Lussole Cozy LSP-8236",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "71680d3febb76b95",
+    "sku": "FR6182WL-L5BS1",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr6182wl_l5bs1",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\76b4cd40ff04f9d61fe4f7dd56e97aefe752ee595d8edd37d300ea9b36c78e50.jpg",
+    "title": "серия Блеск / Eclat",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "7181d353918f602a",
+    "sku": "21578",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21578.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fe2d4c4a45c529d61fc128b5e20d0c0fbac2b1c42aeb93380fead43bf84c9bbc.jpg",
+    "title": "Бра Берти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "c1a0959fc1739c2b",
+    "sku": "LSP-7352",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7352",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4f5b9d9191b9f7f74bf0da02b5532933968699486a166991be5a583cfbbad7f2.jpg",
+    "title": "Бра Lussole LSP-7352",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "e177345d7e58b03e",
+    "sku": "LSP-7526",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7526",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fb6a2bd222fa543f0347bfb05fc8b63edd2f81d69b39c5a592bd5d3b8054c340.jpg",
+    "title": "Бра Lussole LSP-7526",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5c79499c92d4eb71",
+    "sku": "LSP-7105",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7105",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\bfa78be04a4d3e4bc84dbb694f600a62f4484ce3d594fa7c46adbf3727d447b6.jpg",
+    "title": "Бра Lussole LSP-7105",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "c9cba45da916a3ce",
+    "sku": "LSP-7358",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7358",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ddda48df434d2b85833f62ceb134eba773d13c0597d6621ac1b7869f7ce6c2c9.jpg",
+    "title": "Бра Lussole LSP-7358",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "68aa2f7e99c6aef1",
+    "sku": "LSP-7113",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7113",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\af37d487d7d405d5aa58a6c1db81130836635ac78e2d3ee6e8c39969df6529a1.jpg",
+    "title": "Бра Lussole LSP-7113",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "99d31cc06d477919",
+    "sku": "LSP-8157",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-vermilion-lsp-8157",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\377187a8bfa256fdfe4e973e3cec18903cfa76ecb59e3b65729ed7d52b70291b.jpg",
+    "title": "Бра Lussole Vermilion LSP-8157",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "c9ee666038e886b7",
+    "sku": "FR2012-WL-01-BZ",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2012_wl_01_bz",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b13505eaf3ff58764e89f94ff7420f7dbb0a7479d8b29aa28b40540e538b505b.jpg",
+    "title": "серия Герберт / Herbert",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "2d786e34cea64e0c",
+    "sku": "22384",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-gibkie/22384.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ac012e028b181eb1328600633ec6f481cd3079ff0570faccf8808cffdb40ee78.jpg",
+    "title": "Бра Лайт",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "47333c817e045969",
+    "sku": "LSP-8713",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8713",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b442728d46b4eabdec0ba93981c0d0d87820a1fede52069718f20d5fdff26af4.jpg",
+    "title": "Бра Lussole LSP-8713",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "36c45b177291b979",
+    "sku": "200244",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200244",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\8636e5a75a45a9c0a9fc6b9c3a2e25ce428c1ae651c8919e466f64fd735ec47b.jpg",
+    "title": "Бра 3W 155LM 4000K, алюминий Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "99cd06a11026ec37",
+    "sku": "LSP-7241",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7241",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e99118b0a65267b45bca42f9b64c18b48b79d08afccef85fb77642d556d4b343.jpg",
+    "title": "Бра Lussole LSP-7241",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b9e9178fa4e4d3a1",
+    "sku": "FR4008WL-01BBS",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr4008wl_01bbs",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\648f625a4a79db9aa14b039617e6ec98c20698e420031e02317a9dc48b319619.jpg",
+    "title": "серия Изза / Izza",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "ebcf7ad8ba67195b",
+    "sku": "22385",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-gibkie/22385.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d92bc0ebf03663cfecb986d6316a52dc342fb5701a9de8581c27ef1a59555a46.jpg",
+    "title": "Бра Лайт",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "9562edb93d1ec20e",
+    "sku": "200337",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200337",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\9690512cd9093fda5f3b7a9a0efbdb5c863cef0c0c34bc8216021f9759a43e22.jpg",
+    "title": "Бра 3W 160LM 3000K, черный Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "6f6ebff5d4ee7442",
+    "sku": "FR6100WL-L16B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr6100wl_l16b",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d712b2ed87daa4daba967e0b3f8524d0843778f30b78680f6b1f41e7c7c9e859.jpg",
+    "title": "серия Сoordinate",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "ee5f443f059c1050",
+    "sku": "14740",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/14740.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\056337f8ecc25dba2aa6975d366a186a0840a4bab5216ccc2d5f1c1d6d813e13.jpg",
+    "title": "Бра Аква",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "8faf606924dc67e7",
+    "sku": "a050197",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-povorotnym-plafonom-20090-1-chernyy-khrom-a050197",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e524b1078fa73c01e0ce3944f8d547cdbb420c271c63b51edea58727a26f6368.jpg",
+    "title": "Настенный светильник с поворотным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "339951326af3df32",
+    "sku": "LSP-7037",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7037",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b765def99f2b20cca13487a3d99639ab383995677a1ae964f3ade5d1764f7d09.jpg",
+    "title": "Бра Lussole LSP-7037",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "9788e90fecb12a8d",
+    "sku": "a072603",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-matovym-plafonom-iz-stekla-501001-a072603",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7e7b211bb7155ca47d04bf81b61ad30108ce90716539392eb7475640cb0980b6.jpg",
+    "title": "Настенный светильник с матовым плафоном из стекла",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "2d875154772bd028",
+    "sku": "a060645",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-10130-1-khrom-a060645",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ae53c67e9bbb25a9f069c50ca84d85cb956b9703e88dc2808d6174b09f00058c.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "7534f1779a78349e",
+    "sku": "19663",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19663.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a38a7ff9771a06d82106289a725cd1ce982e217f5f46b558354522dc90a9fea7.jpg",
+    "title": "Бра Баттерфляй",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "010dac496f230fbb",
+    "sku": "LSP-7117V",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7117v",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\68d6c7e92e5ee688291c5bc1ecd845d6b81d78fe2774db83a5c8a2506628a785.jpg",
+    "title": "Бра Lussole LSP-7117V",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "450d2782ddaec794",
+    "sku": "22021",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22021.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b0c7f368cd2e2b48dbf16f1a2b87f540b35543ae5839c6cbd27c0f9a7032c052.jpg",
+    "title": "Бра Норти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "9aa5fcc14559cc85",
+    "sku": "21969",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21969.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c7d7ce8d018a7a8ae97670a3a6794114b2346b234fd5fae4018b9b0074d846ab.jpg",
+    "title": "Бра Ризи",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "6f51649d741aded4",
+    "sku": "LSP-0186",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-phoenix-lsp-0186",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\33e31f1e14e8dfed9e3f24bc3721ae70a70b950b3656830e8d18a4c82dc61783.jpg",
+    "title": "Бра Lussole Phoenix LSP-0186",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "fc92e0fea905acb1",
+    "sku": "LSP-9102",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-new-york-lsp-9102",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e1321b68786e99701ee43edfcb4268b2952eeda7ee99c8e52aa5921a6fb6c4b9.jpg",
+    "title": "Бра Lussole New york LSP-9102",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1158b6a5e6eecf7b",
+    "sku": "LSP-8724",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8724",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\da3bd25c9df1a57b8a9b772aeebc478ac21016773ce6c8dc126c7bdffcd02bdb.jpg",
+    "title": "Бра Lussole LSP-8724",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "db3ffde69143c101",
+    "sku": "FR2001WL-01G",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2001wl_01g/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\e4a8e4a0a9ac1ca20c240edf9dc37cc2915406f485375eee84caaa4673f63a54.jpg",
+    "title": "серия Моник / Monique",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "6c6b80014b44b39d",
+    "sku": "LSP-7150",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7150",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\9fe95445aee8da5ee5576e019f8f1b3263af1b638b86ee0139fea1769ad00295.jpg",
+    "title": "Бра Lussole LSP-7150",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5db9c8cde4a1c50a",
+    "sku": "LSP-8125",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-navajo-lsp-8125",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\945c39f9aa8f2ecd9a044bfa3e4596dc3e20c91982688c54907f40452e42e1ca.jpg",
+    "title": "Бра Lussole Navajo LSP-8125",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "e1d7d2c66984091e",
+    "sku": "LSP-7147",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7147",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\99f6a62503432494423b56731d7a51215c89542ba461e2b25bfcfd4351a7fda2.jpg",
+    "title": "Бра Lussole LSP-7147",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "6a5fb2494118198a",
+    "sku": "FR1006WL-02N",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1006wl_02n/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\5c730c46b7dfa9558b7391cf00e2a22f7e8b27e30bf40151fc20766db124f43e.jpg",
+    "title": "серия Форте / Forte",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "c4071fc480654dbb",
+    "sku": "FR2405-WL-01-BZ",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2405_wl_01_bz",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ef094bf1575caf1afd23723be931e1c7ecbe797ff990fed20719eabb4bcfb2e7.jpg",
+    "title": "серия Дриана / Driana",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "58227f6f2e1e9f99",
+    "sku": "LSP-7525",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7525",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\097cf9fc246242700b8a28215de592ac8c8955228c2ac7390fa7c3711c267d28.jpg",
+    "title": "Бра Lussole LSP-7525",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "8c8638c7c9d0f4fb",
+    "sku": "LSP-7476",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7476",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\eb473cfb37528507b21c8cb64b08b1f744ebc140dfda2cbfa63ed3705ce4e755.jpg",
+    "title": "Бра Lussole LSP-7476",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3a4d4d1fb1c8d5a8",
+    "sku": "21570",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21570.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b99fb66fed0916cf4a8aac285ed11cc401522a3ece840559f9935cece9b82b63.jpg",
+    "title": "Бра Астен",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "1f94ffb1fdde687b",
+    "sku": "FR1007WL-01N",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1007wl_01n/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\001c4767275b26c3fa3dd5d48fb290952540616bc7854d1b17a1aacbd508ecec.jpg",
+    "title": "серия Берег реки / Riverside",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "c652328146f4cec3",
+    "sku": "LSP-8180",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-texoma-lsp-8180",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d622048ef868020a7dc89c4ce67a863a199d8d80b3b11fbae322ffb76e33d0be.jpg",
+    "title": "Бра Lussole Texoma LSP-8180",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b0075a61a06f8967",
+    "sku": "00000082041",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-abazhurom-60065-1-serebro-00000082041",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2c2276d55cdcf8a026d3f56f9259c8fcaaeb6b351afa3111dd7e0b5facb2234e.jpg",
+    "title": "Бра с абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "6dc32c063e0191f5",
+    "sku": null,
+    "supplier": "divinare.ru",
+    "url": "https://divinare.ru/catalog/nastennyie-svetilniki-i-bra/bra/118806-ap-6",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\e2b821dd85fffab6ddd08742ee241ce337946f1e73644729b6092c6d0967219b.webp",
+    "title": "Бра Divinare SUMMER 1188/06 AP-6",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "bbac3724f1b8e8c6",
+    "sku": "LSP-7228",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7228",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\53bbce295dc6e4973f99ff42a00d5d0fa54db59ce80696dcc9107b0894afc555.jpg",
+    "title": "Бра Lussole LSP-7228",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "142736b9260d58ac",
+    "sku": "a055593",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-v-stile-loft-70127-1-chernyy-a055593",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5cdd0446f996650a8113161755edfc7c34c96f5aa23677ed2d23f2e3f7356e75.jpg",
+    "title": "Настенный светильник в стиле лофт",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d5d42e7974f15ccb",
+    "sku": "a062084",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-40021-1-led-latun-dymchatyy-a062084",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\070b3e52222be04f674d84d95199e0134276222f4d8753e1c88a3f1be8b450df.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "7cedaab5963ad968",
+    "sku": "LSP-6024",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6024",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\72c7bada1cbfffbdb9b639fd1729788c876a55363ef4f00fc8177548340d1108.jpg",
+    "title": "Бра Lussole LSP-6024",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3146f4e5edbcae1e",
+    "sku": "FR1010WL-02G",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1010wl_02g/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\b65dd51e140661663562ae3e38f802eba03aab3aa21efd083190c2e2fabf6dcd.jpg",
+    "title": "серия Минерал / Mineral",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "984e801fc4285b92",
+    "sku": "23498",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/23498.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\754e6a9d2847519343133d5c13a2a6c61c8c588c38295c8785ea5e529ce61a17.jpg",
+    "title": "Бра Грета",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "a1f8cee8af46b9da",
+    "sku": "a047505",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/lustri/nastenno-potolochnyy-svetodiodnyy-svetilnik-20084-1-led-belyy-a047505",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2f34382381df479b3daf5560fb071a89387ca1039e1216f726cccbd13c5fbeed.jpg",
+    "title": "Настенно-потолочный светодиодный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1075f229e3cca82b",
+    "sku": "22068",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22068.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7ee8484b2e7437a56b313ccdbc2bc5a8b89d019178876ee2b93d26e384d3cd28.jpg",
+    "title": "Бра Мелисса",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "53f32be90bc73954",
+    "sku": "LSP-4033",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-4033",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\88da741e744795b68e5b8e769d67a3ec115ecff6687d1eae2240ca0f9ad50752.jpg",
+    "title": "Бра Lussole LSP-4033",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "fcb4a2423d9f9bc3",
+    "sku": "23858",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23858.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\dc2ee93b5f090b6a75fa478dac95ee4bed40de0b98f2bd0343a921003532cffa.jpg",
+    "title": "Бра Алери",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "4f6af35a0472e40f",
+    "sku": "FR10009CW-L6W",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr10009cw_l6w/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\d9dfdc365058634f937c34ee134b71629fa4093d745855363870331275ec8dbc.jpg",
+    "title": "серия Бит / Bit",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "f54674aff5d4b9fc",
+    "sku": "LSP-7435",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7435",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d1db9d82bce1c4259ac8e85f75b275bdc86e8555dea2703ccb33bb10f31c34e5.jpg",
+    "title": "Бра Lussole LSP-7435",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "bad18902088a0f60",
+    "sku": "LSP-5051",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5051",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7f86bbba5aa44ef11ef24ad0e62524b04ef036c2ee8b553a28c7d0e5a85f00e8.jpg",
+    "title": "Бра Lussole LSP-5051",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "8cff99c77fcf1441",
+    "sku": "LSP-8869",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8869",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\50d710a881a4d33126d9c694a45450a5d594190a40a1fc6e6d9dd722318bacb8.jpg",
+    "title": "Бра Lussole LSP-8869",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "082ea01fd206f00a",
+    "sku": "LSP-4015",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-4015",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\840e7626cd769daa721b31b920bc7a8abcd1e24ae044c4cdc5d48fdd7e62ddfd.jpg",
+    "title": "Бра Lussole LSP-4015",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "fdaf9c4345b4d21c",
+    "sku": "LSP-7226",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7226",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\99a2e54f0bb0e161fedc9f9b1e58a5d207cbcd4ee040b301dbfbdd977aeb558e.jpg",
+    "title": "Бра Lussole LSP-7226",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "212a873f2ff2ad53",
+    "sku": "00000059680",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-12205-1-belyy-00000059680",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a337a886a7e155b73a36e421e93ec361a3721ee47ed839c3dd5f8a38617c52c6.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "8b55d8ee2b0a13fd",
+    "sku": "LSP-8239",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8239",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b984108c38e9ab562d5da15d76465e45def63a713c5a8a11a3099f7625e1897f.jpg",
+    "title": "Бра Lussole Cozy LSP-8239",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "f404e86f1752b0ce",
+    "sku": "LSP-9109",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-centereach-lsp-9109",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ac5ace22e9b31d1349bae5b3b72e67931f284765183e6b431126b3e824e7ec8e.jpg",
+    "title": "Бра Lussole Centereach LSP-9109",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "86a1a26e1cfbd7ab",
+    "sku": "23495",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23495.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\bb2c20674fbcbd6212a9ad23d9f8dfa78d73cc69b9dc6c4a8d2a41144c8f1cc5.jpg",
+    "title": "Бра Каспи",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "9f86377a77954898",
+    "sku": "LSP-8078",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-wasilla-lsp-8078",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1aa6e32a9a3ddca92994f52d607fcf28e442e4a461ccc5bf0bc597d6b1a3bd5d.jpg",
+    "title": "Бра Lussole Wasilla LSP-8078",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "d23f75f74eca4c12",
+    "sku": "00000083578",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-abazhurom-60080-1-satin-nikel-00000083578",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\493de9bda53e1f4f82d5c4d763b461da6fd5aed277a2b88a40aaa3707bc682c0.jpg",
+    "title": "Бра с абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "6b76e65b8410dc64",
+    "sku": "LSP-8238",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8238",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\69876fb2ef064d554cf1b5c165b4c1674e66985b9977ecb430bf39da7eb839ec.jpg",
+    "title": "Бра Lussole Cozy LSP-8238",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "70e6dab53121afa6",
+    "sku": "00000065239",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-3281-2-antichnaya-bronza-prozrachnyy-khrustal-00000065239",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4cef13720de49857d46f4365f0383afd1586d89bca3b20c8e43ca3555224af68.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "422f18183af2e07f",
+    "sku": "21362",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/21362.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\54228a62ba96414c5b6a4b693689a607e0dd6043b2f6a44cd227632e5193d5bb.jpg",
+    "title": "Бра Илина",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "fc49b1909c9ebe90",
+    "sku": "FR5227WL-01B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5227wl_01b",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\9c473274cf44f40abd6c2e7b5de7e4c929b497ff998861f78dd372c4145bd721.jpg",
+    "title": "серия Тайна / Mystic",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "42b3e084904a1f58",
+    "sku": "a043767",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-abazhurom-60088-1-a043767",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f778611cd221f40a1d8390abd29da14b9958d6fd92302b9a575dfe08d49a3edf.jpg",
+    "title": "Бра с абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "e5e76b42621e3a8a",
+    "sku": "LSP-8234",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8234",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1eee9e14cb0bf11e9acfa31144d199db690a64ff8237778a6f2a8fe7682d12f1.jpg",
+    "title": "Бра Lussole Cozy LSP-8234",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "cca93b181a733807",
+    "sku": "21543",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/21543.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ce9063d0a69a9bf03219fa53bbeba988bf7c7224ef9c61dacb7fe34ebc53338a.jpg",
+    "title": "Бра Роули",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "f8b9270b0e7e75df",
+    "sku": "a062377",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-40037-1-zoloto-a062377",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\60aee6a16dbbb7e20bb4724ca9c1902eb5cbcd0d77191ddd41e6ce0107f44f8a.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "29b9c83d86314611",
+    "sku": "00000053358",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-abazhurom-i-khrustalem-2045-1-khrom-belyy-00000053358",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\df526d2d70c89e55443f66129c103d1541c9bef91d5b2a82f12e9cc03705e869.jpg",
+    "title": "Бра с абажуром и хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d410b12d37897a59",
+    "sku": "LSP-7145",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7145",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\69c9e2a673576eeac72a08040a1e79a0b63caec0f4ecf80163fc1119267c3a69.jpg",
+    "title": "Бра Lussole LSP-7145",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "03590396d8d7c9b2",
+    "sku": "LSP-9126",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-merrick-lsp-9126",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ffc4bbe1a0ba03b867413b0ccf0a282c5c14eed9f09828583817b1f7afb2f56a.jpg",
+    "title": "Бра Lussole Merrick LSP-9126",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "a7a8e1d82eb8ee2c",
+    "sku": "LSP-7403",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7403",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\892f94bbbeb5eb90bbe19cdd15ca44a13e1eb9ff1a9e92e62f96a0c5fc28e420.jpg",
+    "title": "Бра Lussole LSP-7403",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5c4f4d294c79d693",
+    "sku": "LSP-7187",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7187",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\08014794296122ca43486540ed8dcf2fc8496a384ef5b51b967b11146db84335.jpg",
+    "title": "Бра Lussole LSP-7187",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "ca8e21b77e5a2fcc",
+    "sku": "200136",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200136",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ec0fe1722a9e11803644f67e94399533de2e7ce29a2e13b1b65863b168fef9ba.jpg",
+    "title": "Бра 3W 145LM 3000K, белый Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "b7d20c7d4610029d",
+    "sku": "a069322",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannym-plafonom-60175-1-latun-a069322",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b98aa8821017f8728c6c7b4624e32c6165a8edd652cc1f848a4cb4352f0e8789.jpg",
+    "title": "Настенный светильник со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "3f574e01d791491a",
+    "sku": "LSP-5050",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5050",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6801130e6afda6151f75d72e5d06f0d453edb85dbac522149d77a14dd45c6e25.jpg",
+    "title": "Бра Lussole LSP-5050",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "75ef26a1eebfc867",
+    "sku": "LSP-7203",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7203",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3e2ae397e2324249bcd2f0f65d03cb85e9649a8209c7d5c959e7e233840f42d2.jpg",
+    "title": "Бра Lussole LSP-7203",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "083cd0b8394ecb30",
+    "sku": "a060668",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-70142-2-khrom-a060668",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cd90a9f78d187f026ac362d87ab555837c4385ae7fa1d66f8e435329b3d156d2.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "9e209f4d50998d24",
+    "sku": "LSP-7477",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7477",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\afc1c8a4bd441ebad412be1e6c4f52e54031b64bbbabb11dcdf3a9c1baeb017a.jpg",
+    "title": "Бра Lussole LSP-7477",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "818b1690772440f0",
+    "sku": "21446",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-gibkie/21446.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\59263c25b536a303e28cb1d0a77804352a51810c181da338c1b701a0c6ac57fb.jpg",
+    "title": "Бра Венди",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "5cc2ab5b2ffc4af6",
+    "sku": "22262",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/svetilniki/svetilniki-nastennyie/22262.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ab8c9c601794719a033207bc6be925b234494239a8d61e758d4be712454a74dd.jpg",
+    "title": "Настенный светильник Некси",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "180add9ffa9e4017",
+    "sku": "LSP-7237",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7237",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ded0ce227d410f305daa00a64278f6aa4de4f19bac875fc2717209d12624430c.jpg",
+    "title": "Бра Lussole LSP-7237",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "03645d8a9f3aa029",
+    "sku": "23505",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/23505.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f4cf0806888be7dad8841795ac071dce5eafebb56ac7585e31006967dbe96a6c.jpg",
+    "title": "Бра Элени",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "f197ce81f04baab2",
+    "sku": "LSP-7331",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7331",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\04cd6b8b94ee20dc7eac639cc190da0670ec942e86c32794a4db23d617eb6a42.jpg",
+    "title": "Бра Lussole LSP-7331",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "54b936f17088a39b",
+    "sku": "LSP-8042",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-tanaina-lsp-8042",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\bd0bc58848df13f2695e98635ed87428eafb5e3d4060484a46abf40448ff2c1f.jpg",
+    "title": "Бра Lussole Tanaina LSP-8042",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1c115e0811b318c4",
+    "sku": "a061524",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-377-1-a061524",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\84b19e1a774d68f3739a104d506228211600ad960e7850a43a3184ba8a0db29d.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "27e8106bd8471a05",
+    "sku": "21970",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21970.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\20f0f38a20444478c00629454a1985672692d43f0b09c23e9a036188bdd604bb.jpg",
+    "title": "Бра Эви",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "189a48ac75281938",
+    "sku": "23064",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/23064.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\81ff7818f34b54f6d9d10cfed143701533b39fc9eb9ddfbfa8850be39b110815.jpg",
+    "title": "Бра Прани",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "18f63ebdef89d2ab",
+    "sku": "22402",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/22402.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\88c7904462adcdaf02c850b18a59d8d9051a6e43f06ffa3dc5f290afbd1e32f7.jpg",
+    "title": "Бра Лилиан",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "79c63d283c8a5599",
+    "sku": "20830",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/20830.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\91c02a638ba23abad034e4bfeac6ec91250353e24b2e667314f81f08236e94fb.jpg",
+    "title": "Бра Райма",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "5ed0ef11d7c9bf65",
+    "sku": "LSP-7109",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7109",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\698daebf9d52f2edeb0e7408750d3f1a48ca65aebd1ff3030da227c7745c8aaf.jpg",
+    "title": "Бра Lussole LSP-7109",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "20dc556d4e74b3a5",
+    "sku": "LSP-7384",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7384",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\faaa362b8aa560f80c88f5af714889c8341b8e876b0b44a16c07b6a518c61adf.jpg",
+    "title": "Бра Lussole LSP-7384",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "592f81a2bedb37cc",
+    "sku": "FR5166WL-01BS",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5166wl_01bs",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1c313debd6eb5db425cecdfe1e69c7a4063a70dd410d7bef5bd312d5487988b6.jpg",
+    "title": "серия Базилика / Basilica",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "5c0b137e396f4370",
+    "sku": "LSP-7240",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7240",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2ea977b2cd22691b09789bd76690c88d73da98296ed82c6ba8847c951d7e75da.jpg",
+    "title": "Бра Lussole LSP-7240",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "5c8be390e39782d6",
+    "sku": "LSP-8158",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-vermilion-lsp-8158",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\39d8dea619a6ffdb2adcc1f6e8cbfab79f262f21a7e03bee17bcd9a32712c1c6.jpg",
+    "title": "Бра Lussole Vermilion LSP-8158",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "fac133d92b812f9c",
+    "sku": "LSP-7371",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7371",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\15bf30ec5ad11cfe13120bd2818377bed059179ec9ccffff6e811b283d46ecfb.jpg",
+    "title": "Бра Lussole LSP-7371",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "af577e14ae997b0e",
+    "sku": "21971",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21971.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\148fcadcd7b19cc8c4bd13d970608b1f92a3c94058b27768574993f67dc3585d.jpg",
+    "title": "Бра Эви",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "2b0e03666ed9c752",
+    "sku": "FR1012WL-02BS",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr1012wl_02bs/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\d7d313689fe747a8d8857e4f47ff7a77e8503ea8a5e61c42eaab79b9e1b54d73.jpg",
+    "title": "серия Шарлот / Sharlot",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "ddf416dc6c6b3d0f",
+    "sku": "FR2039WL-01N",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2039wl_01n",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\50d80791f20830d27b6e259e392218446717191b4b7f2aa1ba93462350373755.jpg",
+    "title": "серия Джейд / Jade",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "c39479ad2e46e50b",
+    "sku": "a045450",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/klassicheskoe-bra-s-khrustalem-10108-1-belyy-prozrachnyy-khrustal-strotskis-a045450",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\042254ac2cc49b01e566cee510bbc11fadfb61c9c3085bc63f659682acd6efc6.jpg",
+    "title": "Классическое бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "e0b77874be92ed7f",
+    "sku": "21685",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/svetilniki/svetilniki-nastennyie/21685.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fd81ea775a26573bbeefbb3da57b75983830af785d531da6ff213748ccad1c6c.jpg",
+    "title": "Настенный светильник Спутник",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "f7d607f368d1d2f9",
+    "sku": "a065358",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-6014-luna-black-a065358",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3e2a0af269b1bfc6ec60ef32acf299b46bcd619da44d03df72a949fd3faf1dd2.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1693948fd0b7191e",
+    "sku": "200246",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200246",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\d1a667d13e14243aac533d4cc4f54e3166037454b2c8f64d48371ae61869dc35.jpg",
+    "title": "Бра 3W 155LM 4000K, белый Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "5054ee8e766ec2f5",
+    "sku": "LSP-8399",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-mohave-lsp-8399",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\524662cd3e41dc4c1f8e52fbb79f6b4cb5e83edb25bf218b0e3f18e2b7d17823.jpg",
+    "title": "Бра Lussole Mohave LSP-8399",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "bcfb58831bd447cf",
+    "sku": "LSP-8486",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8486",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c8d7d5d4b3ac42e74746b8d671d8f371c93638b2ae08177cb4a681fd03465165.jpg",
+    "title": "Бра Lussole LSP-8486",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "ed2183ada7958e8d",
+    "sku": "a057866",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannym-plafonom-50251-1-chernyy-zhemchug-a057866",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\346511eb7e7ad63387f22bd91772f1ebf16a6bba4858fbddc06c266721b626d5.jpg",
+    "title": "Настенный светильник со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "feb39abb48a17709",
+    "sku": "LSP-5003",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5003",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\082f3ef6231b0fbf3ac2bf895e837b76d554bf2d85fcda4d77530f69804bdfa1.jpg",
+    "title": "Бра Lussole LSP-5003",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "6fd557bcd2a594b4",
+    "sku": "a064386",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannym-plafonom-60147-1-chernyy-a064386",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\78156b2f2a0be53836d0ad8d18270ea2e637ac632a8968b3753bcb943e19049c.jpg",
+    "title": "Настенный светильник со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "28eca69872274542",
+    "sku": "a065354",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-6010-luna-white-a065354",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4e2c5891f2dacac10f02945eb5aea06dcbe05cb05982767b046974c7819d3f66.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "6e739c1ce2db743f",
+    "sku": "LSP-7066",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7066",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c3550ebaded38118d604c9aadd350730930954cbe69a9829b61774d8df0ab851.jpg",
+    "title": "Бра Lussole LSP-7066",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3ee3917488a6b246",
+    "sku": "LSP-8475",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8475",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\87a9438493a3833be66aa30714937464c5c5250b1a2ab002768282bcbd3c4da2.jpg",
+    "title": "Бра Lussole LSP-8475",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "d273aaf555ddd2c7",
+    "sku": "FR5582WL-01W",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5582wl_01w",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\73a08ff8392ed7131791bf676108e736634a6003af9bff53ab500b5e2b27dd21.jpg",
+    "title": "серия Терра / Terra",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "555b1676ffbf1b2a",
+    "sku": "FL76146",
+    "supplier": "ambrella.biz",
+    "url": "https://www.ambrella.biz/catalog/dekorativnyy_svet/nastennye_svetilniki_bra/fl76146_bk_chernyy_21w_2700k_805_48_17/",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\5556ba23e6e254c4b44a342cb400f8d19d49af947557dba919b163ab164f0d10.jpg",
+    "title": "FL76146 BK черный 21Вт 2700K 805*48*17",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "92b6363afda34cef",
+    "sku": "23826",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23826.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\0f667b80140c7d097b786b44f83562b1016ca6864dbf5c82cfcd8c999e2760a6.jpg",
+    "title": "Бра Лива",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "45bd6c86af331052",
+    "sku": "LSP-8481",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8481",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\499f2c291a0d7707907df723f82b971222137a492f3967ca2251d1bb42f17d8c.jpg",
+    "title": "Бра Lussole LSP-8481",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "2d641906c6dafc11",
+    "sku": "FR5600WL-L5MG",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5600wl_l5mg",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6e17226133f758480814bb3f02946b44e4145ddaef21bbd8bf5711c90d6ddfc3.jpg",
+    "title": "серия Фари / Fari",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "c77a131c5299d4a1",
+    "sku": "00000055442",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-klassicheskoe-s-plafonom-22010-1-antichnaya-bronza-00000055442",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4202b45301c0b3773abc418a853e15ed5119ce8ce404cdd5f26159c101593fef.jpg",
+    "title": "Бра классическое с плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "4a0076c348588a27",
+    "sku": "LSP-4036",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-4036",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\0834e94b867139ceb950f79f80b79d0c0bb10f9cf801dc5d777101974e8b8e68.jpg",
+    "title": "Бра Lussole LSP-4036",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "789357c9b864c088",
+    "sku": "LSP-7100",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7100",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d95faa45eb1bcd62f7265af9c188e41a9c929bda563d0aea244943fd1edffe0a.jpg",
+    "title": "Бра Lussole LSP-7100",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "591185ccc4a09673",
+    "sku": "21547",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21547.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ddde984f2f001fd3df8fbdbfe989fa83b134dc277c5d4c9783e2109e30522c08.jpg",
+    "title": "Бра Канти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "3d281025f23e18c2",
+    "sku": "FL76166",
+    "supplier": "ambrella.biz",
+    "url": "https://www.ambrella.biz/catalog/dekorativnyy_svet/nastennye_svetilniki_bra/fl76166_bk_chernyy_44w_2700k_1600_48_17/",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\17ef14296e3334e62a024c01b4841ae91d6a9dbc2c318d5b07f6717044f9e7ff.jpg",
+    "title": "FL76166 BK черный 44Вт 2700K 1600*48*17",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "67f5f773a0027423",
+    "sku": "LSP-7104",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7104",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3e282c6ac58fddb97d01d5f2659c347bfebf261ec68fbce12dd7cc68f257d8d5.jpg",
+    "title": "Бра Lussole LSP-7104",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "32b01134253e6b0e",
+    "sku": "LSP-8241",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-cozy-lsp-8241",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\55948f82a869544f31ce83db9e3c33c4b9d0913bd45ef7a7c443bfd17ff5351e.jpg",
+    "title": "Бра Lussole Cozy LSP-8241",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "a8453166c1f7d9fa",
+    "sku": "LSP-7348",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7348",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5ce4c98ec50246c877706b3c6523f3e3a919f8823dc61705cf44b1575fd0bb5a.jpg",
+    "title": "Бра Lussole LSP-7348",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "f258b6c755703bd2",
+    "sku": "LSP-9171",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-levittown-lsp-9171",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\afe0e68ae3bb18b4794e67b09e7ea42e7d95635b32670caa33063b06ea2f8d49.jpg",
+    "title": "Бра Lussole Levittown LSP-9171",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3328e4b974802cbd",
+    "sku": "23476",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/23476.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1c32137879761f0d12c58b29eeea804a242d72bcd40183623f40b4ad103efbf7.jpg",
+    "title": "Бра Элени",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "cac9ca4be50d2d96",
+    "sku": "LSP-7018",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7018",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\636c64ae6ccafac7f157fc077fb975436b0a68c5f29da85d688a00d5abbc6a8d.jpg",
+    "title": "Бра Lussole LSP-7018",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "8cd3b6624f797ea1",
+    "sku": "23115",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23115.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a28377a517af79f24fff383dc4173e2a50d6fb22df5c9833c24f7565d0ad5e78.jpg",
+    "title": "Бра Райви",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "748f3b207e1c7a3a",
+    "sku": "22080",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22080.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\de92dd93429ccd98e6be4cdaa72952904e330f7f4654d1833d446d30c78a8429.jpg",
+    "title": "Бра Мелисса",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "cf21d8e662a4bba7",
+    "sku": "a072611",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-202056-led-a072611",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cc601e756cd1f3d6ab6ba1fa429ac8175111eef2a462d2498aad6a6d96d7f58e.jpg",
+    "title": "Настенный светодиодный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "330c73fafa5f0e85",
+    "sku": "LSP-8935",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8935",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7820fde3fcba084766c609a85214e7794548877e3a3780ea485bfdd1a188120d.jpg",
+    "title": "Бра Lussole LSP-8935",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "17aee229994ca1e0",
+    "sku": "LSP-7065",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7065",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\0b40ef67791ad3a2a53815440d1c70c4877a49376580f3e62abee01e4c99d076.jpg",
+    "title": "Бра Lussole LSP-7065",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "6fb7d306afe7f6a7",
+    "sku": "00000065241",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-3281-1-antichnaya-bronza-prozrachnyy-khrustal-00000065241",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\2ff770cc5894760b37d58e1b7dfea8ad275dc8d8fda702a2c47afbc0f1e9924a.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "728500804b931d80",
+    "sku": "22067",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22067.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\0c52204ced5b339ce49523c4b9836c636445e4f27f3b0ea4cadc27e16857321a.jpg",
+    "title": "Бра Мелисса",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "8e3ce48d51e4b5bf",
+    "sku": "LSP-8580",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8580",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b037a9b527b4f0df1207c65649c18101aef3928d44b78d94132db00b22eb37fa.jpg",
+    "title": "Бра Lussole LSP-8580",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "928fbf14b6f15591",
+    "sku": "LSP-7227",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7227",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1eaecbef723db47ed82307792d56e06f7a2b3645647dcc32576ecb5824b921c4.jpg",
+    "title": "Бра Lussole LSP-7227",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "bff17a4063310a19",
+    "sku": "23527",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23527.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\52416c74891350a22092f154575afa9bff1af1a6614025709669272ba60272ca.jpg",
+    "title": "Бра Верто",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "1cb554f47200d868",
+    "sku": "200431",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200431",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\8c8429237e53598f7c6b8beefed9384de7b4fda8455c03b4e39cf5a01830c328.jpg",
+    "title": "Бра 3W 277LM 3000K, бронза Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "08deadacb874cc46",
+    "sku": "21937",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21937.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\318c13767c11d58ac06c83cd6f2de79c45ea862bfced908f139487df32b9a355.jpg",
+    "title": "Бра Аури",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "e907d3b5262bc713",
+    "sku": "LSP-7448",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7448",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\053aeeeb6c0450e4498f262c7f63fe70b28fa8dacebd32e1b624710c5a61f617.jpg",
+    "title": "Бра Lussole LSP-7448",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "15121dc655bb8c5c",
+    "sku": "LSP-0923",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-0923",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ad5b7598df8d2733af8f8077bac8abb0d3abd3d3c58a48d392d604be466e4a36.jpg",
+    "title": "Бра Lussole LSP-0923",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "ceb69d42b72b307a",
+    "sku": "23504",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23504.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\482cddaa7af8441977749730c47e1f7763fa12254708d33bb1a1fd20a20a7245.jpg",
+    "title": "Бра Элени",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "51261642e530722c",
+    "sku": "a047325",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-so-steklyannym-plafonom-30164-1-khrom-a047325",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\22db41b54fb6e8c1975725dbc5a572b915f7458eab4bbb954eb8e911183cb1af.jpg",
+    "title": "Бра со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "b7ca4e3526582090",
+    "sku": "a065726",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannymi-plafonami-50383-3-latun-a065726",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\98fc587e2a659c14bf78e2b8bcb01d7c1c2a10a4da26a8454c8921924f0f52c0.jpg",
+    "title": "Настенный светильник со стеклянными плафонами",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "6d9e13e210475612",
+    "sku": "a047275",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastolnie-lampi/nastolnyy-svetodiodnyy-svetilnik-brava-bezhevyy-brava-bezhevyy-tl90530-a047275",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3873e2b8f68adb14e6a88f60219ffb1706848edfadc2c5b2e8e17baa8990305c.jpg",
+    "title": "Настольный светодиодный светильник Brava бежевый",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1658f5b6690ac847",
+    "sku": "FR2057WL-L5BG",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2057wl_l5bg",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\41f2b1cfe36e75622aee69a41b573ff1414c64106cfb9855bbd358406a729e40.jpg",
+    "title": "серия Батлер / Butler",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "3c5556f5ec24ec10",
+    "sku": "LSP-9515",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-decatur-lsp-9515",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5cbbc37ba347956db6a2fd9525270e2e9a05401641b3f838e426c3ddcbe69651.jpg",
+    "title": "Бра Lussole Decatur LSP-9515",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "294a47e315454a24",
+    "sku": "a060646",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-10130-1-zoloto-a060646",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5919c1946b2b8f198a6b1c05759e879b3062c850baa8bc51b47120cc18d97535.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "c23b16b775260b91",
+    "sku": "LSP-9553",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-leinell-lsp-9553",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\940ed262ae947c45f5bb9b8bbb91d6c0709e8fc8fdd25317bd259f85237fcac5.jpg",
+    "title": "Бра Lussole Leinell LSP-9553",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "2011981c8911d3b9",
+    "sku": "FR5634WL-L6R1",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5634wl_l6r1",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d0fbde7ad03b147b754eda7b93c6d5f056553d4f1dc0d2499a21192b9fe2d24b.jpg",
+    "title": "серия Ротонда / Rotonda",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "887f442a674622a1",
+    "sku": "21422",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/21422.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c81bec374f9d9c21128af32b98c44a7d4453511aa9d2799cc38cbd5523eca96b.jpg",
+    "title": "Бра Адели",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "0ee0925d8180906d",
+    "sku": "LSP-7390",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7390",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\9207cd2198cb1879190a405e6cca1a4e709bdda3fee5682ab70b805ce48776d8.jpg",
+    "title": "Бра Lussole LSP-7390",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b2a7dfc3b55d25ab",
+    "sku": "LSP-7443",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7443",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c4ffca3b6aca2b3024a4bc17b16545054e85399288d590300514e075a6972f9b.jpg",
+    "title": "Бра Lussole LSP-7443",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3f782af06aeedea6",
+    "sku": "201011",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/201011",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\d06612b1879ec078eb81de152247dc6251e59365476149267d2b0c3dfcaa135b.jpg",
+    "title": "Бра Noce",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "ce7fbf6b33659f12",
+    "sku": "LSP-7392",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7392",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c326bb381b078552af03b5fa3cb0f2fc1a4d3e3d67f4de72aa35fec5475da9c2.jpg",
+    "title": "Бра Lussole LSP-7392",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "33b6f9c7b16b8e7d",
+    "sku": "19919",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19919.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\738fe0e39a46db707443e2bff172af83bf9b6a8078f2918360becc220549d7c4.jpg",
+    "title": "Бра Арси",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "5aa1b5834824e154",
+    "sku": "LSP-9172",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-freeport-lsp-9172",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cdeb3bf0fa77ff79bac97bea826e2c9a961771fe8cd5c1a2f895c5020fa321c8.jpg",
+    "title": "Бра Lussole Freeport LSP-9172",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "723973b33665608b",
+    "sku": "LSP-8510",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8510",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b62c902f43fe9fd4bedf15f30872232cd1ef1e1c2a099a1bd7ac5120372707e1.jpg",
+    "title": "Бра Lussole LSP-8510",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b509bb36496a9155",
+    "sku": "00000078345",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-plafonom-i-vyklyuchatelem-30107-1-antichnaya-bronza-00000078345",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d056b450b1065fea272583345c4c6f2258da2a75cdc57e86ff3b949f86f6c319.jpg",
+    "title": "Бра с плафоном и выключателем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "520411d9cf6ddc44",
+    "sku": "a050092",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-v-stile-loft-70152-1-latun-a050092",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6496aaafa73ed23a6babada7934b4be3dcb8eded52a901754fd4cb825918b218.jpg",
+    "title": "Бра в стиле лофт",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "ee0fc48a63cc8601",
+    "sku": "21532",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/21532.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7c9ac5fe5e0d71eba78a42b90f92973d1642e74b8fd62c60f573460c6108d5fb.jpg",
+    "title": "Бра Авани",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "a53374de10ed263a",
+    "sku": "FR5494WL-L4GR",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5494wl_l4gr",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7572a08c1c195c960666f9c3a61833e925e0e475bf7213084ba0c910f9a071bc.jpg",
+    "title": "серия Акустика / Acoustic",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "731a55a261a4b621",
+    "sku": "FR5482WL-L8BG",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5482wl_l8bg",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fc3e23e0fc89fe0bbbdc064c7a2559fd93901cadca5b03374f8d1ab350f53dc1.jpg",
+    "title": "серия Солнечное пятно / Sunspot",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "dc4596091b361efd",
+    "sku": "LSP-8595",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8595",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b8b73876e6ad5d00976613ab8f69e976ffb07a43367ebb79178acd0f8d3fb1e5.jpg",
+    "title": "Бра Lussole LSP-8595",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "13b63bdb3620b64a",
+    "sku": "19969",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19969.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\33fa2087fc107069428818db53aac4a1c2323104e73dfaeef073877630b7f5d9.jpg",
+    "title": "Бра Илина",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "81f38b8a8ef2a493",
+    "sku": "23526",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-2-plafonami/23526.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fe13b905a90ebc6ab91de1b51af87d259e4d729c1211b089b812920c523db9b5.jpg",
+    "title": "Бра Верто",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "b6108954e249b66a",
+    "sku": "LSP-7391",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7391",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\da54f02f22989182f92092f19a2044d3dfa00b8b3393dd49e042eec47f4843be.jpg",
+    "title": "Бра Lussole LSP-7391",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "aa345385e9744a2f",
+    "sku": "23075",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/23075.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ab9ba22718391f3b752995a55b79eeb3f586ae4290bcefe3eae5ec77a707dfee.jpg",
+    "title": "Бра Гайли",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "b0d8e6667ec99b94",
+    "sku": "LSP-7114",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7114",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\51b7b8d4c5956747b9f2bbfc8710de5a2bb42b897a95373d72bf75c79155d70c.jpg",
+    "title": "Бра Lussole LSP-7114",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "7ce2044c2dc1ba4e",
+    "sku": "a052870",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-protect-led-belyy-mrl-led-1111-a052870",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\bc4832fb567d08d430e7032927eaac74d87e4e101b6578f164b190d0671a866b.jpg",
+    "title": "Настенный светодиодный светильник Protect LED белый",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "5a5558ad8b913c6c",
+    "sku": "21682",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21682.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\84e42df02afee1e6e132301e2fbbfcd202d41083a110923ee7db09f71117b604.jpg",
+    "title": "Бра Алери",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "c7173841c21b517d",
+    "sku": "200937",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200937",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\9fd32bf3cf09c61e6c56db8de52c57d244831db16a8092cca7c396a4b3a2cb8b.jpg",
+    "title": "Бра 3W 277LM 3000K, черный Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "e7deeaefcf8af8b6",
+    "sku": "21849",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/21849.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e4fa92f619d5720161ce48b5811202e26ff77dbf9935fcf3e97e9b23c7a35475.jpg",
+    "title": "Бра Канти",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "60fd117dab5599b0",
+    "sku": "a044101",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-10101-1-khrom-prozrachnyy-khrustal-strotskis-a044101",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\22976ce276a1fef659df73d72a6ff58956aa809ebe57cd4881be11d76e471de4.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "f5558155ac283fbc",
+    "sku": "LSP-7447",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7447",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7731a0796762cb52f2d9fabe4f15d03e223e946119ef7689e8f9a705a824e392.jpg",
+    "title": "Бра Lussole LSP-7447",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "ae0962003eb2aff9",
+    "sku": "18619",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/18619.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\9286e35c32ef68a77900b6af6767a9ae24b2477ab460c97751df2c93ed2909ae.jpg",
+    "title": "Бра Предложение",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "e51146269e60d85b",
+    "sku": "a049414",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-povorotnymi-plafonami-20089-2-bronza-a049414",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fd02e0ceef2beeef0c2cf18635be95fa89fb0e34bda299354e67e3595cb830f4.jpg",
+    "title": "Настенный светильник с поворотными плафонами",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "053968d75f5fb768",
+    "sku": "22267",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22267.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7b901539b8c813c0d5020a06e1deb64677d51de46b015936c166bd0db13ffc0a.jpg",
+    "title": "Бра Сида",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "f7c2ea895a8656d6",
+    "sku": "a041315",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-light-line-mrl-led-1248-belyy-a041315",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ed8bc80b4f9a826f689dde008018b471d5076836a75715fcd15bba2a6a946ef1.jpg",
+    "title": "Настенный светодиодный светильник Light Line",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "f16ea4738a0f21f4",
+    "sku": "LSP-7335",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7335",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\038c9dea08502ccd670a6f834c55c20e77d8039bb5580cc63f72d1b6e32d056d.jpg",
+    "title": "Бра Lussole LSP-7335",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "de2de73aaeced6f0",
+    "sku": "LSP-7108",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7108",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c433ee1a12a515b09b6a72c5a5a294b58b70b2a792db3459027d11778608e360.jpg",
+    "title": "Бра Lussole LSP-7108",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "d75922debc0fff1d",
+    "sku": "FR5445CL-L15B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5445cl_l15b",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e72d7b66f089898930cb6879e647226442e260ef3864d4d4cc2f314d5982ff09.jpg",
+    "title": "серия Капля / Drop",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "6c7483dce436f27a",
+    "sku": null,
+    "supplier": "divinare.ru",
+    "url": "https://divinare.ru/catalog/nastennyie-svetilniki-i-bra/bra/134102-ap-2",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\1f32ceffe6318feda7d3d410d623bff2a90bfbb1a7bcf1d5a5fbf3a72201948d.webp",
+    "title": "Бра Divinare SOPRANO 1341/02 AP-2",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "fae66d6dcb0cf8bc",
+    "sku": "FR5329-WL-01-CH",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5329_wl_01_ch",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c780512925391c2560acc710add702ceac1d9eaa07304ad7d1a25f5974fadde2.jpg",
+    "title": "серия Хелен / Helen",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "2acd6c85c5d8eec5",
+    "sku": "FR5756-WL-01-W",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5756_wl_01_w",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\415a238834fbc92485932ec4a4c90ae6662b756daeca022e193c74749b300155.jpg",
+    "title": "серия Элиза / Eliza",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "f9ade20e947228c1",
+    "sku": "19826",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19826.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1e0ab58193918337ed3fe1100cf47ad18d7695176530a41b694af40a96548cab.jpg",
+    "title": "Бра Винетта",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "d4353cec627bde30",
+    "sku": "23199",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23199.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\dde1ffda8ac13b85b19c9262327572a0d27bf430019df07a621388df7cbc70ba.jpg",
+    "title": "Бра Элисон",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "20f21143c8ddebed",
+    "sku": "23688",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23688.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4ba305bcd3dcad3ab7eec9123e04e96edf703f1f8ccdb3de6186c83b4877834d.jpg",
+    "title": "Бра Дайни",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "c591c3aae58239db",
+    "sku": "200737",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200737",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\2a1862e0598d02822b67219149956e3125aa0dc0e20e28411f4619032e113874.jpg",
+    "title": "Бра 3W 180LM 3000K, черный Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "332c039dc2d8b6e8",
+    "sku": "LSP-6033",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6033",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\31f81a84d41e66a086ac2607d86bd61228e410a16d2f498ce7b2a7d13cf8c5ef.jpg",
+    "title": "Бра Lussole LSP-6033",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "d607676c1b945a5b",
+    "sku": "LSP-9555",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-anchorage-lsp-9555",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\417ecbe1d6d3cdaa1d53e4b6770e29390f7e860a14c32368d0c8292eebf69abc.jpg",
+    "title": "Бра Lussole Anchorage LSP-9555",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "7714622594d564cb",
+    "sku": "a039169",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-venta-neo-venta-neo-led-khrom-mrl-led-12w-1005-ip20-a039169",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\25c651b81c394e5b4439e47c03df1c60e7b4bcf74fa42b3e22ecf95af6748191.jpg",
+    "title": "Настенный светодиодный светильник Venta Neo",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "8e21893b78b6cd69",
+    "sku": "LSP-7329",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7329",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6af4797c2bb070f24d3041808867491743a8e1fca303cae7891ab6318b492826.jpg",
+    "title": "Бра Lussole LSP-7329",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "de05606e91023e99",
+    "sku": "LSP-8168",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lgo-rogers-lsp-8168",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e9a7a364176f431f223c5d74c59dfd0962d9b0ec6c70f45fafa247d9775da456.jpg",
+    "title": "Бра Lussole Rogers LSP-8168",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "93a47c2ec85d9aa6",
+    "sku": "21164",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-gibkie/21164.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\76e93ac21d185d7b6b15dc1c40b05951b94fa6f76b6e6016eb312d891ed84639.jpg",
+    "title": "Бра Далия",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "5c4baee068f670fa",
+    "sku": "a068535",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-so-steklyannym-plafonom-10243-cubus-a068535",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ea9f02b63f9dba4dcf1172e1c00de00c59a5845f3f82a5014e718c5af57400c5.jpg",
+    "title": "Настенный светильник со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "7a1e87068e3fabe0",
+    "sku": "LSP-6037",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6037",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\e070b88a3ecda249840f95abd13b4e821e19c65e050ffaf96053892969879edb.jpg",
+    "title": "Бра Lussole LSP-6037",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "896e947a6838a740",
+    "sku": "00000080886",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-khrustalem-276-2-00000080886",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a520fef34db2d025823e7084ebc0b9bf24dccf3bf244fc90efa4e3fb4b79b246.jpg",
+    "title": "Бра с хрусталем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1ed3a20db01c824c",
+    "sku": "200134",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200134",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\c37c0cb8bcfff5425b3b8ef1d89507def473c1c5272b4c24e05825fd92b85486.jpg",
+    "title": "Бра 3W 145LM 3000K, алюминий Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "545bcddd3fa86c62",
+    "sku": "a060767",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-plafonom-40019-1-a060767",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\76d66fc23b90d7d1eecb248a3861e4db1719b8c0bfb29f582a491c8e0fa69c76.jpg",
+    "title": "Настенный светильник с плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1615b6c8741776bf",
+    "sku": "FR2030WL-02G",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr2030wl_02g",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\c330b4886547d9555ea729f4383a7d7948116ba63d967bb92feae2d400559370.jpg",
+    "title": "серия Ванда / Vanda",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "a6430cf83ee76a28",
+    "sku": "LSP-9563",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-fairbanks-lsp-9563",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\24b15b723954d29c3898adcc1acadf0975f481e5fbec5cd0c5d029fd4431e568.jpg",
+    "title": "Бра Lussole Fairbanks LSP-9563",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "81bd9066d8775f4d",
+    "sku": "LSP-8480",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8480",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d63fff84ebb6957da1d886a563c3144df0997f2f64e2d8a0f45f5c28cb061f2b.jpg",
+    "title": "Бра Lussole LSP-8480",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "62ad971c4e195000",
+    "sku": "LSP-5036",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5036",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3585931130b64a9bd558227fe29736b75a72a59e98cbbe3425ace6a988472b74.jpg",
+    "title": "Бра Lussole LSP-5036",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "8fa2c7ab2560d0bd",
+    "sku": "a071577",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetodiodnyy-svetilnik-so-steklyannym-plafonom-303054-led-latun-a071577",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cc2187258ee88a7c1c1f75d4440de173fb521fdc0518a5045e101026415cd78c.jpg",
+    "title": "Настенный светодиодный светильник со стеклянным плафоном",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d016673d8128a6f7",
+    "sku": "LSP-7394",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7394",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7cf85be63d70a739d32834aa7e5de3624b40e8817191a085a2ea65eaad6638df.jpg",
+    "title": "Бра Lussole LSP-7394",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b3fb9a663260f7e5",
+    "sku": "a055332",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-abazhurom-10122-2-khrom-a055332",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\950384526aa4a77499757f065bcacc1e211eee6187dc4169ed9e45291b162599.jpg",
+    "title": "Бра с абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "5d354879cc8c113f",
+    "sku": "23659",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23659.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\f83653d8f7cdd252603236e2b4e64bb48b3a373f882e5aec8c8faa7bb6d2bf5d.jpg",
+    "title": "Бра Лайли",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "7cb91fb6a4feead6",
+    "sku": "LSP-8807",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-8807",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\10b5cfe6c43bdbe245cd3074ffb2ed9843eba33702fd47fe1169d06e465af079.jpg",
+    "title": "Бра Lussole LSP-8807",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "d4417994f99cc7c4",
+    "sku": "200736",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200736",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\2ae78f4dc2fed0aac13006cef1a6799e59868d75a05ba6dc53a119855ae4cb00.jpg",
+    "title": "Бра 3W 180LM 3000K, белый Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "00b80f2d8f868c97",
+    "sku": "23662",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23662.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7e1d791f609c1f7446705681b9fb1811949d7959092002dfad40afa32403be02.jpg",
+    "title": "Бра Иста",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "ce7b3f47234686dd",
+    "sku": "a069016",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-tkanevym-abazhurom-60173-1-latun-a069016",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\58664ac4329afa123a558b78d47f1350dcf4568e11fda76a8ec3df80355fbaed.jpg",
+    "title": "Настенный светильник с тканевым абажуром",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "865d3a69a3b6d243",
+    "sku": "FR5203WL-02BS",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5203wl_02bs",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\01ebf647e35fe8baa7efe13e40db04a57d4fee88e5c2e860ae5e60c7c7adbe2a.jpg",
+    "title": "серия Савия / Savia",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1104bef39544fefc",
+    "sku": "22401",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/22401.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\40023f1809bdc91662a2d3d6d114295eb2c09a3a165c42b6806741f60a15f726.jpg",
+    "title": "Бра Лилиан",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "914b15079d3db04d",
+    "sku": "LSP-7376",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7376",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cac550a5b2d7531a3fb4e7d43a3e1918656d385a5fcab590de8de352c8314030.jpg",
+    "title": "Бра Lussole LSP-7376",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1e9a4da4188ed752",
+    "sku": "00000080265",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/bra-s-vyklyuchatelem-60060-1-chernyy-00000080265",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3a91ec9fa266599324aac5458cd6cc0a2480ab2de1573e646d27bdc976d83b27.jpg",
+    "title": "Бра с выключателем",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "c1b71f979913f069",
+    "sku": "LSP-7189",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7189",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\1523a41bcb30e8c893f530a554c8aa08c24e5f6d1ca7b8b9f1cbc1c910d835fe.jpg",
+    "title": "Бра Lussole LSP-7189",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "777fe8a4e9d4ebd5",
+    "sku": "LSP-5035",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-5035",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\de13450f9120f4c7cda3ec04547ec64f3b4644169d507b559c26c4ef081eefd2.jpg",
+    "title": "Бра Lussole LSP-5035",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "4a0fc8bc6d9207cc",
+    "sku": "22005",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/22005.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\a12feb4d754656111289e296b191dbeb4916c49090579573d787dcf4bfd16c67.jpg",
+    "title": "Бра Ризи",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "f06de5056ed364a4",
+    "sku": "LSP-7180",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7180",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\306b6abca466898710d2575e1d1fb7c8a9406c3fe0d5966fe2d6366748cd24d1.jpg",
+    "title": "Бра Lussole LSP-7180",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "abb94963dd920d3e",
+    "sku": "LSP-7118V",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7118v",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b43bef5a956f4a8cab356898b00a5bb5091a2c1d5af71c0bd9d078bbd78f2079.jpg",
+    "title": "Бра Lussole LSP-7118V",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "e6d0fd8fa698cb3f",
+    "sku": "LSP-7511",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7511",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b997a8a4955231a0663137ce8eaa8563c52c4a2abcf5aed0ad8ccb3bb04f0df8.jpg",
+    "title": "Бра Lussole LSP-7511",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "bed30c8454a37ad1",
+    "sku": "200636",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/kupit-bra-optom/200636",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\f12210e85ce392cb1cc169f026b597ff80e5f9f7e052b21068e1808a1ccc8f52.jpg",
+    "title": "Бра 5W 260LM 3000K, белый Omega",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "687a1dd34c1313eb",
+    "sku": "FR10020WL-L7W",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr10020wl_l7w",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d05646777fa36f8af7367151a4ad5f7fd6d1602adf48ca481fcd901313023613.jpg",
+    "title": "серия Radane Market",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "f764bf53521a666d",
+    "sku": "a059974",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-3272-tavola-a059974",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\bcef1a9125afb87a3c2acac5cf6f65af1e8e3283bc300f0bb45d636ae9818af9.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "1ecb7e74deb9da9c",
+    "sku": "a061949",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-60145-1-latun-a061949",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cd477b8404da801f2fa064ccfaa7125f3e5191ed9fe15f1c64ff7056dda434d4.jpg",
+    "title": "Настенный светильник",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "589948869681a6b7",
+    "sku": "LSP-6070",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-6070",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\be9f77b7a9d5174b006bc21d0719d84ac7b191981a34ae389d4eb1386a6fec0a.jpg",
+    "title": "Бра Lussole LSP-6070",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "f479f2e76ae3aeae",
+    "sku": "LSP-7169",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7169",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\3c578f564377982e9da4e0d7bb1084382ede735d73a76178c858646eeabc15a4.jpg",
+    "title": "Бра Lussole LSP-7169",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "b31edd48cf2e59d7",
+    "sku": "LSP-7456",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7456",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b56e4ae1154349947ddf01011f1d7e8260d52a82c6982b3402648485478293bb.jpg",
+    "title": "Бра Lussole LSP-7456",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "0b4336a8398dfa4a",
+    "sku": "23475",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/23475.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\ac06735ff86bd7002c3da902a553f50e29ae58f8e2e4a13cde2e98f19a298af2.jpg",
+    "title": "Бра Элени",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "d8e0b7c7feecebd8",
+    "sku": "FR5625WL-L10B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr5625wl_l10b",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\412cffb10acce51e7f95180802f884db3bccf5d8f70fc98268e7b4456a087e18.jpg",
+    "title": "серия Точно / Even",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "5f22f2b1a7df97b8",
+    "sku": "FR10005WL-L6B",
+    "supplier": "freya-light.com",
+    "url": "https://freya-light.com/products/nastennye-svetilniki/fr10005wl_l6b/",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\629a378987d63a825565bd82e6858e54ed9e2e68010abe45dfe9eae48bd56e53.jpg",
+    "title": "серия Флесс / Fless",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "dcb739e9e738be2f",
+    "sku": null,
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-s-1-plafonom/202.html",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\fed3b7977b1d80de49dc903dcd4be27b50d5af97a201f3c1029dce621195f9c4.jpg",
+    "title": "Бра Сида",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "c6fac3b0f797236f",
+    "sku": "19186",
+    "supplier": "kinklight.ru",
+    "url": "https://kinklight.ru/bra-dekorativnyie/19186.html",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\8b1721050b53072a9cb19273c3a76025f2ed3ae039eea160b3ab77f6bb543f8c.jpg",
+    "title": "Бра Арвен",
+    "image_source": "product_gallery"
+  },
+  {
+    "candidate_id": "3fb4dd68c5338266",
+    "sku": "LSP-7444",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7444",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\4bf5a0b6b3665c16e80a3ee381a9ea93ad528109138f58ffcc835cdf77205eb9.jpg",
+    "title": "Бра Lussole LSP-7444",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "206d507b536e02c5",
+    "sku": "LSP-7296",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7296",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\553c54b0f98d406bf295053c8e466bad92997713023984b9c297714bb689e94d.jpg",
+    "title": "Бра Lussole LSP-7296",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "85fd70e40026a15c",
+    "sku": "a072039",
+    "supplier": "eurosvet.ru",
+    "url": "https://eurosvet.ru/catalog/nastennie-svetilniki/nastennyy-svetilnik-s-keramicheskim-dekorom-103014-a072039",
+    "family": "decorative_wall",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\64e7ffd53c641b6f96df0a7a7a6484fc516427966d8023f794d346664e3e72f8.jpg",
+    "title": "Настенный светильник с керамическим декором",
+    "image_source": "jsonld"
+  },
+  {
+    "candidate_id": "d1a1c448533c5416",
+    "sku": "LSP-7298",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-lsp-7298",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\b1c207d5b8aa6fe42964f826ddfd88473acb0f3f23a465f57f17e11bdfe0a376.jpg",
+    "title": "Бра Lussole LSP-7298",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "3d9cf76a4a1b6547",
+    "sku": "LSP-8048",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/bra-lussole-loft-koyukuk-lsp-8048",
+    "family": "wall_sconce",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\46fab9855784ee20f8ac5ac4c0f9acd8069516003a0efbb5bf0a7794bd7a4085.jpg",
+    "title": "Бра Lussole Koyukuk LSP-8048",
+    "image_source": "og"
+  }
+]

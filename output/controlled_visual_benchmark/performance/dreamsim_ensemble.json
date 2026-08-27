@@ -1,0 +1,18 @@
+{
+  "model": "dreamsim_ensemble",
+  "model_id": "dreamsim/ensemble",
+  "model_name": "ensemble",
+  "pretrained": "official_dreamsim",
+  "backend": "dreamsim",
+  "supports_text": false,
+  "load_seconds": 7.821,
+  "parameter_size_mb": 1014.67,
+  "checkpoint_size_mb": 3257.4,
+  "device": "cpu",
+  "query_latency_seconds_median": 0.9689464999828488,
+  "sec_per_image": 1.0430728583208595,
+  "embedding_dimension": 1792,
+  "rss_mb": 1571.76171875,
+  "embedding_cache_mb": 2.0247802734375,
+  "cache_images": 291
+}

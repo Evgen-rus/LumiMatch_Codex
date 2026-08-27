@@ -1,0 +1,38 @@
+{
+  "F-01": {
+    "candidate_id": "d1d29ed5dad7316d",
+    "golden_sku": "50248",
+    "source_url": "https://eurosvet.ru/catalog/lustri/podvesnoy-svetilnik-50248-1-led-chernyy-a061423",
+    "image_source": "jsonld",
+    "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\258a767a309189f44f6f9bd8404e0ed0604c4f8cc81524d359f8fed4dbeadd00.jpg",
+    "primary": true,
+    "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render."
+  },
+  "F-03": {
+    "candidate_id": "ca1e1dca3c7cd1ef",
+    "golden_sku": "FR2066WL-L40B",
+    "source_url": "https://freya-light.com/products/nastennye-svetilniki/fr2066wl_l40b/",
+    "image_source": "jsonld",
+    "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\df3d82052062a5dcca0179705e631bdcb3d1a28a92c4aaaad8d81250ac0031f0.jpg",
+    "primary": true,
+    "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade."
+  },
+  "F-04": {
+    "candidate_id": "5c4f4d294c79d693",
+    "golden_sku": "LSP-7187",
+    "source_url": "https://shop.lussole.ru/bra-lussole-lsp-7187",
+    "image_source": "og",
+    "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\08014794296122ca43486540ed8dcf2fc8496a384ef5b51b967b11146db84335.jpg",
+    "primary": true,
+    "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis."
+  },
+  "F-06": {
+    "candidate_id": "af4759566c99c033",
+    "golden_sku": "85078/01",
+    "source_url": "samples/golden/dan/expected_kp.docx",
+    "image_source": "expected_kp_docx_fallback",
+    "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\positives\\F-06.jpeg",
+    "primary": false,
+    "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders."
+  }
+}

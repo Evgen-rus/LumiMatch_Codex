@@ -1,0 +1,18 @@
+{
+  "model": "dinov2_vits14",
+  "model_id": "facebookresearch/dinov2:dinov2_vits14",
+  "model_name": "dinov2_vits14",
+  "pretrained": "facebookresearch/dinov2:dinov2_vits14",
+  "backend": "dinov2",
+  "supports_text": false,
+  "load_seconds": 1.577,
+  "parameter_size_mb": 84.14,
+  "checkpoint_size_mb": 2930.06,
+  "device": "cpu",
+  "query_latency_seconds_median": 0.1001296000322327,
+  "sec_per_image": 0.09700721665285528,
+  "embedding_dimension": 384,
+  "rss_mb": 486.4609375,
+  "embedding_cache_mb": 1.8106689453125,
+  "cache_images": 1141
+}

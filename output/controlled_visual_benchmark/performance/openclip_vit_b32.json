@@ -1,0 +1,18 @@
+{
+  "model": "openclip_vit_b32",
+  "model_id": "openai/CLIP:ViT-B-32/openai",
+  "model_name": "ViT-B-32",
+  "pretrained": "openai",
+  "backend": "open_clip",
+  "supports_text": true,
+  "load_seconds": 5.368,
+  "parameter_size_mb": 577.08,
+  "checkpoint_size_mb": 2930.06,
+  "device": "cpu",
+  "query_latency_seconds_median": 0.10659314994700253,
+  "sec_per_image": 0.10656122498524685,
+  "embedding_dimension": 512,
+  "rss_mb": 1025.70703125,
+  "embedding_cache_mb": 3.9366455078125,
+  "cache_images": 1897
+}

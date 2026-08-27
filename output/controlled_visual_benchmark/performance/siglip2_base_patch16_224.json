@@ -1,0 +1,18 @@
+{
+  "model": "siglip2_base_patch16_224",
+  "model_id": "google/siglip2-base-patch16-224",
+  "model_name": "google/siglip2-base-patch16-224",
+  "pretrained": "official_huggingface",
+  "backend": "transformers_siglip",
+  "supports_text": true,
+  "load_seconds": 4.831,
+  "parameter_size_mb": 1431.23,
+  "checkpoint_size_mb": 2930.06,
+  "device": "cpu",
+  "query_latency_seconds_median": 0.277019549976103,
+  "sec_per_image": 0.27257371668626246,
+  "embedding_dimension": 768,
+  "rss_mb": 1011.8984375,
+  "embedding_cache_mb": 3.228759765625,
+  "cache_images": 1058
+}

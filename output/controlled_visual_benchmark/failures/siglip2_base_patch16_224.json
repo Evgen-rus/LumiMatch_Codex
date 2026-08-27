@@ -1,0 +1,5 @@
+{
+  "model": "siglip2_base_patch16_224",
+  "status": "failed",
+  "error": "AttributeError: 'BaseModelOutputWithPooling' object has no attribute 'float'"
+}

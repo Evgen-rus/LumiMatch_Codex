@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "pool_revision": 2,
+  "mode": "controlled_same_family_evaluation_only",
+  "golden_not_used_for_scoring": true,
+  "candidate_source_count": 1342,
+  "queries": [
+    {
+      "requirement_id": "F-01",
+      "variant": "tight",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 2,
+      "normalized_box": [
+        0.73,
+        0.125,
+        0.755,
+        0.215
+      ],
+      "pixel_size": [
+        89,
+        227
+      ],
+      "object_area_ratio": 0.4,
+      "visual_note": "one complete cylinder, little room context; source-resolution limited",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-01_tight.png"
+    },
+    {
+      "requirement_id": "F-01",
+      "variant": "medium",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 2,
+      "normalized_box": [
+        0.715,
+        0.112,
+        0.77,
+        0.225
+      ],
+      "pixel_size": [
+        196,
+        285
+      ],
+      "object_area_ratio": 0.15,
+      "visual_note": "same cylinder with modest ceiling/wall context",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-01_medium.png"
+    },
+    {
+      "requirement_id": "F-01",
+      "variant": "alternate",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 11,
+      "normalized_box": [
+        0.147,
+        0.076,
+        0.177,
+        0.198
+      ],
+      "pixel_size": [
+        107,
+        308
+      ],
+      "object_area_ratio": 0.41,
+      "visual_note": "one full cylinder from a second room angle",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-01_alternate.png"
+    },
+    {
+      "requirement_id": "F-03",
+      "variant": "tight",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 11,
+      "normalized_box": [
+        0.343,
+        0.545,
+        0.382,
+        0.645
+      ],
+      "pixel_size": [
+        140,
+        252
+      ],
+      "object_area_ratio": 0.74,
+      "visual_note": "complete shade, base and reading arm; close bounding box",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-03_tight.png"
+    },
+    {
+      "requirement_id": "F-03",
+      "variant": "medium",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 11,
+      "normalized_box": [
+        0.318,
+        0.5,
+        0.405,
+        0.675
+      ],
+      "pixel_size": [
+        311,
+        442
+      ],
+      "object_area_ratio": 0.19,
+      "visual_note": "sconce with modest marble-wall context",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-03_medium.png"
+    },
+    {
+      "requirement_id": "F-03",
+      "variant": "alternate",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 11,
+      "normalized_box": [
+        0.665,
+        0.54,
+        0.704,
+        0.65
+      ],
+      "pixel_size": [
+        140,
+        278
+      ],
+      "object_area_ratio": 0.61,
+      "visual_note": "right-side second instance, tightly framed",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-03_alternate.png"
+    },
+    {
+      "requirement_id": "F-04",
+      "variant": "tight",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 18,
+      "normalized_box": [
+        0.253,
+        0.383,
+        0.285,
+        0.53
+      ],
+      "pixel_size": [
+        114,
+        372
+      ],
+      "object_area_ratio": 0.72,
+      "visual_note": "complete pair of offset oval contours and dark center; close bounding box",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-04_tight.png"
+    },
+    {
+      "requirement_id": "F-04",
+      "variant": "medium",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 18,
+      "normalized_box": [
+        0.235,
+        0.345,
+        0.305,
+        0.56
+      ],
+      "pixel_size": [
+        250,
+        544
+      ],
+      "object_area_ratio": 0.23,
+      "visual_note": "left light with a small surrounding dark-wall area",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-04_medium.png"
+    },
+    {
+      "requirement_id": "F-04",
+      "variant": "alternate",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 18,
+      "normalized_box": [
+        0.615,
+        0.383,
+        0.647,
+        0.53
+      ],
+      "pixel_size": [
+        114,
+        372
+      ],
+      "object_area_ratio": 0.68,
+      "visual_note": "right-side second instance tightly framed",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-04_alternate.png"
+    },
+    {
+      "requirement_id": "F-06",
+      "variant": "tight",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 29,
+      "normalized_box": [
+        0.301,
+        0.052,
+        0.327,
+        0.142
+      ],
+      "pixel_size": [
+        93,
+        228
+      ],
+      "object_area_ratio": 0.55,
+      "visual_note": "one narrow black ceiling cylinder; top limited by original page",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-06_tight.png"
+    },
+    {
+      "requirement_id": "F-06",
+      "variant": "medium",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 29,
+      "normalized_box": [
+        0.285,
+        0.035,
+        0.39,
+        0.17
+      ],
+      "pixel_size": [
+        375,
+        341
+      ],
+      "object_area_ratio": 0.1,
+      "visual_note": "one cylinder with local ceiling context",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-06_medium.png"
+    },
+    {
+      "requirement_id": "F-06",
+      "variant": "alternate",
+      "source_file": "samples/Dan_vis.pdf",
+      "page": 30,
+      "normalized_box": [
+        0.474,
+        0.059,
+        0.505,
+        0.132
+      ],
+      "pixel_size": [
+        111,
+        184
+      ],
+      "object_area_ratio": 0.38,
+      "visual_note": "single cylinder in adjacent room angle",
+      "path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\queries\\F-06_alternate.png"
+    }
+  ],
+  "pools": {
+    "F-01": {
+      "family": "pendant_single",
+      "allowed_families": [
+        "pendant_single"
+      ],
+      "size": 300,
+      "suppliers": [
+        "eurosvet.ru",
+        "freya-light.com",
+        "kinklight.ru",
+        "shop.lussole.ru"
+      ],
+      "pool_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\pools\\F-01.json"
+    },
+    "F-03": {
+      "family": "wall_sconce",
+      "allowed_families": [
+        "wall_sconce",
+        "decorative_wall"
+      ],
+      "size": 300,
+      "suppliers": [
+        "ambrella.biz",
+        "divinare.ru",
+        "eurosvet.ru",
+        "freya-light.com",
+        "kinklight.ru",
+        "lightstar.ru",
+        "shop.lussole.ru"
+      ],
+      "pool_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\pools\\F-03.json"
+    },
+    "F-04": {
+      "family": "decorative_wall",
+      "allowed_families": [
+        "wall_sconce",
+        "decorative_wall"
+      ],
+      "size": 300,
+      "suppliers": [
+        "ambrella.biz",
+        "divinare.ru",
+        "eurosvet.ru",
+        "freya-light.com",
+        "kinklight.ru",
+        "lightstar.ru",
+        "shop.lussole.ru"
+      ],
+      "pool_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\pools\\F-04.json"
+    },
+    "F-06": {
+      "family": "track_spot",
+      "allowed_families": [
+        "track_spot",
+        "spot"
+      ],
+      "size": 19,
+      "suppliers": [
+        "eurosvet.ru",
+        "lightstar.ru",
+        "shop.lussole.ru"
+      ],
+      "pool_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\pools\\F-06.json"
+    }
+  }
+}

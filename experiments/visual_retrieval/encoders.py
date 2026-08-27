@@ -17,6 +17,13 @@ from typing import Any
 from PIL import Image
 
 MODEL_SPECS: dict[str, dict[str, object]] = {
+    "dreamsim_ensemble": {
+        "backend": "dreamsim",
+        "model_name": "ensemble",
+        "pretrained": "official_dreamsim",
+        "model_id": "dreamsim/ensemble",
+        "text": False,
+    },
     "openclip_vit_b32": {
         "backend": "open_clip",
         "model_name": "ViT-B-32",
@@ -45,6 +52,20 @@ MODEL_SPECS: dict[str, dict[str, object]] = {
         "model_id": "facebookresearch/dinov2:dinov2_vits14",
         "text": False,
     },
+    "dinov3_vits16": {
+        "backend": "transformers_dino",
+        "model_name": "facebook/dinov3-vits16-pretrain-lvd1689m",
+        "pretrained": "official_gated_huggingface",
+        "model_id": "facebook/dinov3-vits16-pretrain-lvd1689m",
+        "text": False,
+    },
+    "siglip2_base_patch16_224": {
+        "backend": "transformers_siglip",
+        "model_name": "google/siglip2-base-patch16-224",
+        "pretrained": "official_huggingface",
+        "model_id": "google/siglip2-base-patch16-224",
+        "text": True,
+    },
 }
 
 
@@ -58,6 +79,7 @@ class Encoder:
     tokenizer: Callable[[list[str]], Any] | None
     device: str
     load_seconds: float
+    processor: Any | None = None
 
     @property
     def supports_text(self) -> bool:
@@ -71,26 +93,50 @@ class Encoder:
         with self.torch.inference_mode():
             for start in range(0, len(paths), max(1, batch_size)):
                 batch_paths = paths[start : start + max(1, batch_size)]
-                tensors = []
-                for path in batch_paths:
-                    with Image.open(path) as image:
-                        tensors.append(self.preprocess(image.convert("RGB")))
-                batch = self.torch.stack(tensors).to(self.device)
-                if self.spec["backend"] == "open_clip":
-                    features = self.model.encode_image(batch)
+                if str(self.spec["backend"]).startswith("transformers_"):
+                    if self.processor is None:
+                        raise RuntimeError(f"{self.name} has no Hugging Face processor")
+                    images = []
+                    for path in batch_paths:
+                        with Image.open(path) as image:
+                            images.append(image.convert("RGB").copy())
+                    inputs = self.processor(images=images, return_tensors="pt")
+                    inputs = {
+                        key: value.to(self.device) if hasattr(value, "to") else value
+                        for key, value in inputs.items()
+                    }
+                    if self.spec["backend"] == "transformers_siglip":
+                        features = self.model.get_image_features(**inputs)
+                        if not self.torch.is_tensor(features):
+                            features = features.pooler_output
+                    else:
+                        output = self.model(**inputs)
+                        features = getattr(output, "pooler_output", None)
+                        if features is None:
+                            features = output.last_hidden_state[:, 0]
                 else:
-                    features = self.model(batch)
-                    if isinstance(features, dict):
-                        selected = features.get("x_norm_clstoken")
-                        if selected is None:
-                            selected = features.get("x_prenorm")
-                        features = (
-                            selected
-                            if selected is not None
-                            else next(iter(features.values()))
-                        )
-                        if getattr(features, "ndim", 0) == 3:
-                            features = features[:, 0]
+                    tensors = []
+                    for path in batch_paths:
+                        with Image.open(path) as image:
+                            tensors.append(self.preprocess(image.convert("RGB")))
+                    batch = self.torch.stack(tensors).to(self.device)
+                    if self.spec["backend"] == "open_clip":
+                        features = self.model.encode_image(batch)
+                    elif self.spec["backend"] == "dreamsim":
+                        features = self.model.embed(batch)
+                    else:
+                        features = self.model(batch)
+                        if isinstance(features, dict):
+                            selected = features.get("x_norm_clstoken")
+                            if selected is None:
+                                selected = features.get("x_prenorm")
+                            features = (
+                                selected
+                                if selected is not None
+                                else next(iter(features.values()))
+                            )
+                            if getattr(features, "ndim", 0) == 3:
+                                features = features[:, 0]
                 features = features.float()
                 features = features / features.norm(dim=-1, keepdim=True).clamp_min(
                     1e-12
@@ -105,9 +151,23 @@ class Encoder:
     def encode_text(self, texts: list[str]) -> Any:
         if not self.supports_text or self.tokenizer is None:
             raise RuntimeError(f"{self.name} does not expose a shared image/text space")
-        tokens = self.tokenizer(texts).to(self.device)
         with self.torch.inference_mode():
-            features = self.model.encode_text(tokens)
+            if self.spec["backend"] == "transformers_siglip":
+                if self.processor is None:
+                    raise RuntimeError(f"{self.name} has no Hugging Face processor")
+                inputs = self.processor(
+                    text=texts, padding="max_length", return_tensors="pt"
+                )
+                inputs = {
+                    key: value.to(self.device) if hasattr(value, "to") else value
+                    for key, value in inputs.items()
+                }
+                features = self.model.get_text_features(**inputs)
+                if not self.torch.is_tensor(features):
+                    features = features.pooler_output
+            else:
+                tokens = self.tokenizer(texts).to(self.device)
+                features = self.model.encode_text(tokens)
             features = features.float()
             features = features / features.norm(dim=-1, keepdim=True).clamp_min(1e-12)
         return features.detach().cpu().numpy().astype("float32", copy=False)
@@ -174,7 +234,16 @@ def load_encoder(
     device = "cpu"
     started = time.monotonic()
     tokenizer: Callable[[list[str]], Any] | None = None
-    if spec["backend"] == "open_clip":
+    processor: Any | None = None
+    if spec["backend"] == "dreamsim":
+        from dreamsim import dreamsim
+
+        model, dream_preprocess = dreamsim(
+            pretrained=True, device="cpu", cache_dir=str(model_cache / "dreamsim"),
+            dreamsim_type="ensemble",
+        )
+        preprocess = lambda image: dream_preprocess(image).squeeze(0)
+    elif spec["backend"] == "open_clip":
         try:
             import open_clip
         except ImportError as exc:
@@ -182,9 +251,25 @@ def load_encoder(
                 "open_clip_torch is not installed in the visual environment"
             ) from exc
         model, _, preprocess = open_clip.create_model_and_transforms(
-            str(spec["model_name"]), pretrained=str(spec["pretrained"]), device=device
+            str(spec["model_name"]), pretrained=str(spec["pretrained"]), device=device,
+            **({"force_quick_gelu": True} if name == "openclip_vit_b32" else {}),
         )
         tokenizer = open_clip.get_tokenizer(str(spec["model_name"]))
+    elif str(spec["backend"]).startswith("transformers_"):
+        try:
+            from transformers import AutoImageProcessor, AutoModel, AutoProcessor
+        except ImportError as exc:
+            raise RuntimeError(
+                "transformers is not installed in the visual environment"
+            ) from exc
+        model_name = str(spec["model_name"])
+        if spec["backend"] == "transformers_siglip":
+            processor = AutoProcessor.from_pretrained(model_name)
+            tokenizer = lambda texts: processor(text=texts, padding="max_length", return_tensors="pt")["input_ids"]
+        else:
+            processor = AutoImageProcessor.from_pretrained(model_name)
+        model = AutoModel.from_pretrained(model_name)
+        preprocess = lambda image: image
     else:
         torch.hub.set_dir(str((model_cache or Path.home() / ".cache") / "torch"))
         model = torch.hub.load(
@@ -201,6 +286,7 @@ def load_encoder(
         tokenizer,
         device,
         time.monotonic() - started,
+        processor,
     )
 
 

@@ -1,0 +1,192 @@
+[
+  {
+    "candidate_id": "0fb33de2ee3ffcbd",
+    "sku": "LSP-9956",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-9956/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\bee87dbb07fc75e4df815a8cbe802d14d6df7b3f778612dbe2a3816dca3e9c8f.jpg",
+    "title": "Спот Lussole LSP-9956",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "a30290de14d1bd31",
+    "sku": "LSP-8059",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-8059/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\e04e806f9c2c29456f8966b808c2d30c9d65048290e2b331fa727f28a47f988d.jpg",
+    "title": "Спот Lussole LSP-8059",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "4e35c36cc065f725",
+    "sku": "LSP-8057",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-8057/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\34b9fa8e297fb7d264428bcc3c5ba98e453556866db5c69731ab4be8bda0600a.jpg",
+    "title": "Спот Lussole LSP-8057",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "908e5f5812b060be",
+    "sku": "208032",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovye-svetilniki/208032",
+    "family": "track_spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\26bcea52724c25a91fae24f1b76f34687e866f1a85573ed61b7ec398f36bd2ce.jpg",
+    "title": "Светильник трековый 48V 12W 3000K 24° красный Nove",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "2014fcfecde6305e",
+    "sku": "LSP-8802",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spotovyy-svetilnik-lussole-lsp-8802",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\7bac226c8b172dce1e897f1b72cd0249cbc4e1fd22c8a01fae13c3901f311643.jpg",
+    "title": "Спотовый светильник Lussole LSP-8802",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "cfe7640009b6af1d",
+    "sku": "LSP-9957",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-loft-lsp-9957",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cfcbddaca2f8a839c6392d85b5c36816b928271596c525d07b6be70455d136a9.jpg",
+    "title": "Спот Lussole LSP-9957",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "0cf79d46f09a8067",
+    "sku": "LSP-9567",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-9567/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\7655a1cd906e14155e4804a627fcb69538f3eef7872c2ab243c4aa720bdc5958.jpg",
+    "title": "Спот Lussole LSP-9567",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "a6bdee862000b142",
+    "sku": "LSP-9564",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-loft-lsp-9564",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6d158b1a3af5e4d4d0963104a70f3d83f325f85f09a25d145b810e1ea904ca3d.jpg",
+    "title": "Спот Lussole LSP-9564",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "6ddc101d6638ccaf",
+    "sku": "LSP-9566",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-9566",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\cbbd94efdfb497f0f065f8d1e5100c15f5aa8d32b370636c85228abf1f8a5359.jpg",
+    "title": "Спот Lussole LSP-9566",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1fb09b3e3dcd1d59",
+    "sku": "LSP-8045",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-loft-lsp-8045",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\5ee0b8769b989cddfb9ca93c79beed668d76df9cfb89b77fff9c51f34c17a680.jpg",
+    "title": "Спот Lussole LSP-8045",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "1d02a2ee09e7fad4",
+    "sku": "LSP-0122",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-jeddito-lsp-0122/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\32363cf9a5888183871e65fed9e4d2bd5857d9134899d0475cbf00711addd1b2.jpg",
+    "title": "Спот Lussole Jeddito LSP-0122",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "274cba926d0cf045",
+    "sku": "208037",
+    "supplier": "lightstar.ru",
+    "url": "https://lightstar.ru/catalog/trekovye-sistemy-osveshcheniya/trekovye-svetilniki/208037",
+    "family": "track_spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\ea53b5692886edb0223312da7e7851785b2f82df467b1e1adbc556600d70f829.jpg",
+    "title": "Светильник трековый 48V 12W 3000K 24° черный Nove",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "22f94c169acfb3c8",
+    "sku": "LSP-9955",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-9955/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\65a4cfdba2e1f68aabe32b0887fb4227eaca1e949fda888355a00d3972e156cc.jpg",
+    "title": "Спот Lussole LSP-9955",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "af4759566c99c033",
+    "sku": "85078/01",
+    "supplier": "eurosvet.ru",
+    "url": "samples/golden/dan/expected_kp.docx",
+    "family": "track_spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\positives\\F-06.jpeg",
+    "title": "Golden product 85078/01",
+    "image_source": "expected_kp_docx_fallback"
+  },
+  {
+    "candidate_id": "20259e17f64a5806",
+    "sku": "LSP-9509",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-9509/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\44192004eb634b2add294d806f849e183be65798b9afa32f6d08abb3008e033c.jpg",
+    "title": "Спот Lussole LSP-9509",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "1095fa47ed741dc7",
+    "sku": "LSP-8058",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-8058/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\6814570f03aacb624c05520f9bd9218d76a964b985454a3b2fa8481ffd9b9382.jpg",
+    "title": "Спот Lussole LSP-8058",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "a385e4175cf1d285",
+    "sku": "LSP-8076",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-loft-thornton-lsp-8076",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\6823424e7a7c4b5f79a3bf84cd18647b05528a8f61ee8fcd779b64075499835c.jpg",
+    "title": "Спот Lussole Thornton LSP-8076",
+    "image_source": "og"
+  },
+  {
+    "candidate_id": "8d711cc79e03ee63",
+    "sku": "LSP-8423",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-loft-antelope-lsp-8423/",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\catalog\\images\\90ae62f25b9553aa09cb41dee9f94fa743b213a39e6f7648551edb1b00b4bf49.jpg",
+    "title": "Спот Lussole Antelope LSP-8423",
+    "image_source": "existing_production_cache"
+  },
+  {
+    "candidate_id": "a418afe52876d8c6",
+    "sku": "LSP-8056",
+    "supplier": "shop.lussole.ru",
+    "url": "https://shop.lussole.ru/spot-lussole-lgo-lsp-8056",
+    "family": "spot",
+    "image": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\d2593e8c40e0c91b4e01eb185cb6cef57b8cba408ddb8b489b545e4ac17b3cba.jpg",
+    "title": "Спот Lussole LSP-8056",
+    "image_source": "og"
+  }
+]

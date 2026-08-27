@@ -1,0 +1,2644 @@
+{
+  "benchmark": "controlled_same_family_visual_retrieval",
+  "primary_targets": [
+    "F-01",
+    "F-03",
+    "F-04"
+  ],
+  "diagnostic_targets": [
+    "F-06"
+  ],
+  "models": {
+    "dinov2_vits14": {
+      "runtime": {
+        "model": "dinov2_vits14",
+        "model_id": "facebookresearch/dinov2:dinov2_vits14",
+        "model_name": "dinov2_vits14",
+        "pretrained": "facebookresearch/dinov2:dinov2_vits14",
+        "backend": "dinov2",
+        "supports_text": false,
+        "load_seconds": 2.062,
+        "parameter_size_mb": 84.14,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "embedding_dimension": 384,
+        "total_seconds": 9.216,
+        "rss_mb_at_end": 497.5
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.3333,
+        "recall_at_10": 0.3333,
+        "recall_at_20": 0.3333,
+        "recall_at_50": 0.3333,
+        "recall_at_100": 0.6667,
+        "mrr": 0.1176,
+        "median_rank_of_retrieved": 97,
+        "ranks": [
+          97,
+          3,
+          110
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 300,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "tight": 115,
+            "medium": 97,
+            "alternate": 86,
+            "max": 97,
+            "mean": 92,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 8,
+            "poor": 11,
+            "strong_ranks": [
+              7
+            ],
+            "plausible_ranks": [
+              1,
+              2,
+              3,
+              4,
+              10,
+              11,
+              15,
+              18
+            ],
+            "note": "Final tight-crop review: one close black tube; eight cylindrical alternatives differing in material/color/proportion."
+          }
+        },
+        "F-03": {
+          "pool_size": 300,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "tight": 7,
+            "medium": 5,
+            "alternate": 3,
+            "max": 3,
+            "mean": 3,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 12,
+            "poor": 7,
+            "strong_ranks": [
+              3
+            ],
+            "plausible_ranks": [
+              1,
+              2,
+              4,
+              5,
+              6,
+              8,
+              11,
+              13,
+              15,
+              16,
+              18,
+              19
+            ],
+            "note": "Final tight-crop review: close black-base shade at position 3 and many plausible shade sconces."
+          }
+        },
+        "F-04": {
+          "pool_size": 300,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "tight": 105,
+            "medium": 101,
+            "alternate": 140,
+            "max": 110,
+            "mean": 106,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 1,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [
+              7
+            ],
+            "note": "Final tight-crop review: one oval-loop light with a different central block; mostly straight bars or cylinders."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "tight": 2,
+            "medium": 1,
+            "alternate": 1,
+            "max": 1,
+            "mean": 1,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "Directional family is now clean but no narrow black cylinder close to the render; disk is visibly different."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "tight": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.3333,
+          "mrr": 0.05369220151828847,
+          "ranks": [
+            115,
+            7,
+            105
+          ]
+        },
+        "medium": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.6667,
+          "mrr": 0.07340342281650845,
+          "ranks": [
+            97,
+            5,
+            101
+          ]
+        },
+        "alternate": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.6667,
+          "mrr": 0.11736803248431155,
+          "ranks": [
+            86,
+            3,
+            140
+          ]
+        },
+        "max": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.6667,
+          "mrr": 0.11757784025825263,
+          "ranks": [
+            97,
+            3,
+            110
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.6667,
+          "mrr": 0.11787895360495852,
+          "ranks": [
+            92,
+            3,
+            106
+          ]
+        }
+      }
+    },
+    "dinov2_vits14__dreamsim": {
+      "runtime": {
+        "model": "dreamsim_ensemble",
+        "model_id": "dreamsim/ensemble",
+        "model_name": "ensemble",
+        "pretrained": "official_dreamsim",
+        "backend": "dreamsim",
+        "supports_text": false,
+        "load_seconds": 9.899,
+        "parameter_size_mb": 1014.67,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "total_seconds": 15.769,
+        "embedding_dimension": 1792
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.3333,
+        "recall_at_5": 0.3333,
+        "recall_at_10": 0.3333,
+        "recall_at_20": 0.3333,
+        "recall_at_50": 0.3333,
+        "recall_at_100": 0.3333,
+        "mrr": 0.3333,
+        "median_rank_of_retrieved": 1,
+        "ranks": [
+          null,
+          1,
+          null
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 50,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "max": null,
+            "mean": null
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 11,
+            "poor": 8,
+            "strong_ranks": [
+              1
+            ],
+            "plausible_ranks": [
+              2,
+              3,
+              6,
+              7,
+              9,
+              10,
+              11,
+              14,
+              15,
+              18,
+              20
+            ],
+            "note": "One close black tube; several cylindrical variants. No identity labels were opened."
+          }
+        },
+        "F-03": {
+          "pool_size": 50,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 12,
+            "poor": 7,
+            "strong_ranks": [
+              1
+            ],
+            "plausible_ranks": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12,
+              14,
+              17
+            ],
+            "note": "Close black-base shade lamp first; simple shade variants remain useful, decorative crystals and dissimilar structures rejected."
+          }
+        },
+        "F-04": {
+          "pool_size": 50,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "max": null,
+            "mean": null
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 1,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [
+              9
+            ],
+            "note": "Only oval loop has comparable contour. Helical ribbons are not the same loop structure."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No close narrow black cylinder; the leading disk differs from the render."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "max": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.3333,
+          "mrr": 0.3333333333333333,
+          "ranks": [
+            null,
+            1,
+            null
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 0.3333,
+          "recall_at_100": 0.3333,
+          "mrr": 0.3333333333333333,
+          "ranks": [
+            null,
+            1,
+            null
+          ]
+        }
+      },
+      "source_model": "dinov2_vits14"
+    },
+    "openclip_vit_b32": {
+      "runtime": {
+        "model": "openclip_vit_b32",
+        "model_id": "openai/CLIP:ViT-B-32/openai",
+        "model_name": "ViT-B-32",
+        "pretrained": "openai",
+        "backend": "open_clip",
+        "supports_text": true,
+        "load_seconds": 5.808,
+        "parameter_size_mb": 577.08,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "embedding_dimension": 512,
+        "total_seconds": 12.079,
+        "rss_mb_at_end": 1009.0
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.3333,
+        "recall_at_20": 0.6667,
+        "recall_at_50": 0.6667,
+        "recall_at_100": 1.0,
+        "mrr": 0.0704,
+        "median_rank_of_retrieved": 12,
+        "ranks": [
+          9,
+          12,
+          60
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 300,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "tight": 19,
+            "medium": 9,
+            "alternate": 13,
+            "max": 9,
+            "mean": 13,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 2,
+            "plausible": 3,
+            "poor": 15,
+            "strong_ranks": [
+              3,
+              9
+            ],
+            "plausible_ranks": [
+              2,
+              7,
+              11
+            ],
+            "note": "Final tight-crop review: two black cylinder pendants; three more tube-like variants. Other products are rings, globes and bars."
+          }
+        },
+        "F-03": {
+          "pool_size": 300,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "tight": 32,
+            "medium": 12,
+            "alternate": 26,
+            "max": 12,
+            "mean": 8,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 12,
+            "poor": 7,
+            "strong_ranks": [
+              12
+            ],
+            "plausible_ranks": [
+              1,
+              3,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              14,
+              17,
+              18,
+              20
+            ],
+            "note": "Final tight-crop review: useful shade-sconce retrieval; one close black-base light-shade structure."
+          }
+        },
+        "F-04": {
+          "pool_size": 300,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "tight": 32,
+            "medium": 58,
+            "alternate": 36,
+            "max": 60,
+            "mean": 33,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 20,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No close closed oval-loop structure; bars and reading lights dominate."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "tight": 6,
+            "medium": 1,
+            "alternate": 2,
+            "max": 1,
+            "mean": 2,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No close narrow black ceiling cylinder in this small pool."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "tight": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.03837719298245614,
+          "ranks": [
+            19,
+            32,
+            32
+          ]
+        },
+        "medium": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 0.6667,
+          "recall_at_100": 1.0,
+          "mrr": 0.07056194125159641,
+          "ranks": [
+            9,
+            12,
+            58
+          ]
+        },
+        "alternate": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "recall_at_20": 0.3333,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.047720797720797715,
+          "ranks": [
+            13,
+            26,
+            36
+          ]
+        },
+        "max": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 0.6667,
+          "recall_at_100": 1.0,
+          "mrr": 0.07037037037037037,
+          "ranks": [
+            9,
+            12,
+            60
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.07740870240870242,
+          "ranks": [
+            13,
+            8,
+            33
+          ]
+        }
+      }
+    },
+    "openclip_vit_b32__dreamsim": {
+      "runtime": {
+        "model": "dreamsim_ensemble",
+        "model_id": "dreamsim/ensemble",
+        "model_name": "ensemble",
+        "pretrained": "official_dreamsim",
+        "backend": "dreamsim",
+        "supports_text": false,
+        "load_seconds": 9.899,
+        "parameter_size_mb": 1014.67,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "total_seconds": 18.739,
+        "embedding_dimension": 1792
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.3333,
+        "recall_at_5": 0.3333,
+        "recall_at_10": 0.3333,
+        "recall_at_20": 0.6667,
+        "recall_at_50": 0.6667,
+        "recall_at_100": 0.6667,
+        "mrr": 0.3571,
+        "median_rank_of_retrieved": 7.5,
+        "ranks": [
+          14,
+          1,
+          null
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 50,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "max": 14,
+            "mean": 13
+          },
+          "manual_top20": {
+            "strong": 2,
+            "plausible": 6,
+            "poor": 12,
+            "strong_ranks": [
+              1,
+              3
+            ],
+            "plausible_ranks": [
+              2,
+              5,
+              7,
+              12,
+              13,
+              14
+            ],
+            "note": "Two close black tubes and six cylinder alternatives; globes, cones and broad shades rejected."
+          }
+        },
+        "F-03": {
+          "pool_size": 50,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 10,
+            "poor": 9,
+            "strong_ranks": [
+              1
+            ],
+            "plausible_ranks": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10,
+              13,
+              19
+            ],
+            "note": "Black-base shade lamp leads; ten simple shade alternatives."
+          }
+        },
+        "F-04": {
+          "pool_size": 50,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "max": null,
+            "mean": null
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 20,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No comparable closed oval-loop light in Top20."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No close narrow black cylinder."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "max": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 0.6667,
+          "recall_at_100": 0.6667,
+          "mrr": 0.35714285714285715,
+          "ranks": [
+            14,
+            1,
+            null
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.3333,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 0.6667,
+          "recall_at_100": 0.6667,
+          "mrr": 0.358974358974359,
+          "ranks": [
+            13,
+            1,
+            null
+          ]
+        }
+      },
+      "source_model": "openclip_vit_b32"
+    },
+    "siglip2_base_patch16_224": {
+      "runtime": {
+        "model": "siglip2_base_patch16_224",
+        "model_id": "google/siglip2-base-patch16-224",
+        "model_name": "google/siglip2-base-patch16-224",
+        "pretrained": "official_huggingface",
+        "backend": "transformers_siglip",
+        "supports_text": true,
+        "load_seconds": 6.014,
+        "parameter_size_mb": 1431.23,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "embedding_dimension": 768,
+        "total_seconds": 12.431,
+        "rss_mb_at_end": 640.5
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.6667,
+        "recall_at_5": 0.6667,
+        "recall_at_10": 0.6667,
+        "recall_at_20": 0.6667,
+        "recall_at_50": 1.0,
+        "recall_at_100": 1.0,
+        "mrr": 0.6768,
+        "median_rank_of_retrieved": 1,
+        "ranks": [
+          1,
+          1,
+          33
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 300,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "tight": 1,
+            "medium": 1,
+            "alternate": 1,
+            "max": 1,
+            "mean": 1,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 2,
+            "plausible": 10,
+            "poor": 8,
+            "strong_ranks": [
+              1,
+              2
+            ],
+            "plausible_ranks": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              9,
+              10,
+              14,
+              17,
+              18
+            ],
+            "note": "Final tight-crop review: many slender tubes; two close black cylindrical pendants."
+          }
+        },
+        "F-03": {
+          "pool_size": 300,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "tight": 1,
+            "medium": 1,
+            "alternate": 1,
+            "max": 1,
+            "mean": 1,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 12,
+            "poor": 7,
+            "strong_ranks": [
+              1
+            ],
+            "plausible_ranks": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              15,
+              18,
+              19
+            ],
+            "note": "Final tight-crop review: close black rectangular-base shade lamp leads; many shade alternatives."
+          }
+        },
+        "F-04": {
+          "pool_size": 300,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "tight": 37,
+            "medium": 33,
+            "alternate": 31,
+            "max": 33,
+            "mean": 32,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 1,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [
+              2
+            ],
+            "note": "Final tight-crop review: only one close vertical oval-loop analogue; other contours differ structurally."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "tight": 1,
+            "medium": 1,
+            "alternate": 1,
+            "max": 1,
+            "mean": 1,
+            "catalog_self": 1,
+            "catalog_perturbed": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "All candidates differ substantially from the narrow cylinder render; mapping diagnostic only."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "tight": {
+          "recall_at_1": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.6756756756756758,
+          "ranks": [
+            1,
+            1,
+            37
+          ]
+        },
+        "medium": {
+          "recall_at_1": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.6767676767676768,
+          "ranks": [
+            1,
+            1,
+            33
+          ]
+        },
+        "alternate": {
+          "recall_at_1": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.6774193548387096,
+          "ranks": [
+            1,
+            1,
+            31
+          ]
+        },
+        "max": {
+          "recall_at_1": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.6767676767676768,
+          "ranks": [
+            1,
+            1,
+            33
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.6770833333333334,
+          "ranks": [
+            1,
+            1,
+            32
+          ]
+        }
+      }
+    },
+    "siglip2_base_patch16_224__dreamsim": {
+      "runtime": {
+        "model": "dreamsim_ensemble",
+        "model_id": "dreamsim/ensemble",
+        "model_name": "ensemble",
+        "pretrained": "official_dreamsim",
+        "backend": "dreamsim",
+        "supports_text": false,
+        "load_seconds": 9.899,
+        "parameter_size_mb": 1014.67,
+        "checkpoint_size_mb": 3257.4,
+        "device": "cpu",
+        "total_seconds": 21.305,
+        "embedding_dimension": 1792
+      },
+      "primary_metrics_max": {
+        "targets": 3,
+        "recall_at_1": 0.3333,
+        "recall_at_5": 0.3333,
+        "recall_at_10": 0.6667,
+        "recall_at_20": 0.6667,
+        "recall_at_50": 1.0,
+        "recall_at_100": 1.0,
+        "mrr": 0.3948,
+        "median_rank_of_retrieved": 7,
+        "ranks": [
+          24,
+          1,
+          7
+        ]
+      },
+      "targets": {
+        "F-01": {
+          "pool_size": 50,
+          "golden_sku": "50248",
+          "primary": true,
+          "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render.",
+          "ranks": {
+            "max": 24,
+            "mean": 22
+          },
+          "manual_top20": {
+            "strong": 2,
+            "plausible": 8,
+            "poor": 10,
+            "strong_ranks": [
+              1,
+              3
+            ],
+            "plausible_ranks": [
+              2,
+              6,
+              7,
+              8,
+              9,
+              10,
+              16,
+              19
+            ],
+            "note": "Two close black tubes; eight cylinder variants. Broad shades and cones are poor."
+          }
+        },
+        "F-03": {
+          "pool_size": 50,
+          "golden_sku": "FR2066WL-L40B",
+          "primary": true,
+          "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 1,
+            "plausible": 11,
+            "poor": 8,
+            "strong_ranks": [
+              1
+            ],
+            "plausible_ranks": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11,
+              13,
+              16
+            ],
+            "note": "One close black-base shade light; eleven structurally recognizable shade alternatives."
+          }
+        },
+        "F-04": {
+          "pool_size": 50,
+          "golden_sku": "LSP-7187",
+          "primary": true,
+          "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis.",
+          "ranks": {
+            "max": 7,
+            "mean": 6
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 1,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [
+              9
+            ],
+            "note": "Oval loop is plausible; helical ribbons are structurally different from the reference."
+          }
+        },
+        "F-06": {
+          "pool_size": 19,
+          "golden_sku": "85078/01",
+          "primary": false,
+          "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders.",
+          "ranks": {
+            "max": 1,
+            "mean": 1
+          },
+          "manual_top20": {
+            "strong": 0,
+            "plausible": 0,
+            "poor": 19,
+            "strong_ranks": [],
+            "plausible_ranks": [],
+            "note": "No close narrow black cylinder; Top19 only."
+          }
+        }
+      },
+      "primary_metrics_by_variant": {
+        "max": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.3948412698412698,
+          "ranks": [
+            24,
+            1,
+            7
+          ]
+        },
+        "mean": {
+          "recall_at_1": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.6667,
+          "recall_at_20": 0.6667,
+          "recall_at_50": 1.0,
+          "recall_at_100": 1.0,
+          "mrr": 0.40404040404040403,
+          "ranks": [
+            22,
+            1,
+            6
+          ]
+        }
+      },
+      "source_model": "siglip2_base_patch16_224"
+    }
+  },
+  "failures": [
+    {
+      "model": "dinov3_vits16",
+      "status": "failed",
+      "error": "OSError: You are trying to access a gated repo.\nMake sure to have access to it at https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m.\n401 Client Error. (Request ID: Root=1-6a8fcbb1-6a0264911b3180dc1699d10b;e1691d77-ec7f-41a1-a248-0af58657f3e1)\n\nCannot access gated repo for url https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m/resolve/main/processor_config.json.\nAccess to model facebook/dinov3-vits16-pretrain-lvd1689m is restricted. You must have access to it and be authenticated to access it. Please log in."
+    }
+  ],
+  "table": [
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14",
+      "crop_variant": "tight",
+      "golden_rank": 115,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.008695652173913044
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14",
+      "crop_variant": "medium",
+      "golden_rank": 97,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.010309278350515464
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14",
+      "crop_variant": "alternate",
+      "golden_rank": 86,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.011627906976744186
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14",
+      "crop_variant": "max",
+      "golden_rank": 97,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 9,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.010309278350515464
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14",
+      "crop_variant": "mean",
+      "golden_rank": 92,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.010869565217391304
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14",
+      "crop_variant": "tight",
+      "golden_rank": 7,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.14285714285714285
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14",
+      "crop_variant": "medium",
+      "golden_rank": 5,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.2
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14",
+      "crop_variant": "alternate",
+      "golden_rank": 3,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14",
+      "crop_variant": "max",
+      "golden_rank": 3,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 13,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14",
+      "crop_variant": "mean",
+      "golden_rank": 3,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14",
+      "crop_variant": "tight",
+      "golden_rank": 105,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.009523809523809525
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14",
+      "crop_variant": "medium",
+      "golden_rank": 101,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.009900990099009901
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14",
+      "crop_variant": "alternate",
+      "golden_rank": 140,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.007142857142857143
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14",
+      "crop_variant": "max",
+      "golden_rank": 110,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 1,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.00909090909090909
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14",
+      "crop_variant": "mean",
+      "golden_rank": 106,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0.009433962264150943
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14",
+      "crop_variant": "tight",
+      "golden_rank": 2,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14",
+      "crop_variant": "medium",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14",
+      "crop_variant": "alternate",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 12,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-01",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 13,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 1,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-04",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "dinov2_vits14__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32",
+      "crop_variant": "tight",
+      "golden_rank": 19,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.05263157894736842
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32",
+      "crop_variant": "medium",
+      "golden_rank": 9,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.1111111111111111
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32",
+      "crop_variant": "alternate",
+      "golden_rank": 13,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.07692307692307693
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32",
+      "crop_variant": "max",
+      "golden_rank": 9,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 5,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.1111111111111111
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32",
+      "crop_variant": "mean",
+      "golden_rank": 13,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.07692307692307693
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32",
+      "crop_variant": "tight",
+      "golden_rank": 32,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.03125
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32",
+      "crop_variant": "medium",
+      "golden_rank": 12,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.08333333333333333
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32",
+      "crop_variant": "alternate",
+      "golden_rank": 26,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.038461538461538464
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32",
+      "crop_variant": "max",
+      "golden_rank": 12,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 13,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.08333333333333333
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32",
+      "crop_variant": "mean",
+      "golden_rank": 8,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.125
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32",
+      "crop_variant": "tight",
+      "golden_rank": 32,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.03125
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32",
+      "crop_variant": "medium",
+      "golden_rank": 58,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.017241379310344827
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32",
+      "crop_variant": "alternate",
+      "golden_rank": 36,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.027777777777777776
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32",
+      "crop_variant": "max",
+      "golden_rank": 60,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 0,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.016666666666666666
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32",
+      "crop_variant": "mean",
+      "golden_rank": 33,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.030303030303030304
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32",
+      "crop_variant": "tight",
+      "golden_rank": 6,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.16666666666666666
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32",
+      "crop_variant": "medium",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32",
+      "crop_variant": "alternate",
+      "golden_rank": 2,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32",
+      "crop_variant": "mean",
+      "golden_rank": 2,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 14,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 8,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.07142857142857142
+    },
+    {
+      "target": "F-01",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 13,
+      "r_at_10": 0,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.07692307692307693
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 11,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": 0,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-04",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": null,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 0,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 0,
+      "reciprocal_rank": 0
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "openclip_vit_b32__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "tight",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "medium",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "alternate",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 12,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "tight",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "medium",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "alternate",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 13,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "tight",
+      "golden_rank": 37,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.02702702702702703
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "medium",
+      "golden_rank": 33,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.030303030303030304
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "alternate",
+      "golden_rank": 31,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.03225806451612903
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "max",
+      "golden_rank": 33,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": 1,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.030303030303030304
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "mean",
+      "golden_rank": 32,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.03125
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "tight",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "medium",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "alternate",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 24,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": 10,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.041666666666666664
+    },
+    {
+      "target": "F-01",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 22,
+      "r_at_10": 0,
+      "r_at_20": 0,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.045454545454545456
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 12,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-03",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 7,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 1,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.14285714285714285
+    },
+    {
+      "target": "F-04",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 6,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 0,
+      "recall_at_5": 0,
+      "recall_at_100": 1,
+      "reciprocal_rank": 0.16666666666666666
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "max",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": 0,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "target": "F-06",
+      "model": "siglip2_base_patch16_224__dreamsim",
+      "crop_variant": "mean",
+      "golden_rank": 1,
+      "r_at_10": 1,
+      "r_at_20": 1,
+      "r_at_50": 1,
+      "useful_top20": null,
+      "recall_at_1": 1,
+      "recall_at_5": 1,
+      "recall_at_100": 1,
+      "reciprocal_rank": 1.0
+    }
+  ],
+  "performance": {
+    "dinov2_vits14": {
+      "model": "dinov2_vits14",
+      "model_id": "facebookresearch/dinov2:dinov2_vits14",
+      "model_name": "dinov2_vits14",
+      "pretrained": "facebookresearch/dinov2:dinov2_vits14",
+      "backend": "dinov2",
+      "supports_text": false,
+      "load_seconds": 1.577,
+      "parameter_size_mb": 84.14,
+      "checkpoint_size_mb": 2930.06,
+      "device": "cpu",
+      "query_latency_seconds_median": 0.1001296000322327,
+      "sec_per_image": 0.09700721665285528,
+      "embedding_dimension": 384,
+      "rss_mb": 486.4609375,
+      "embedding_cache_mb": 1.8106689453125,
+      "cache_images": 1141
+    },
+    "dreamsim_ensemble": {
+      "model": "dreamsim_ensemble",
+      "model_id": "dreamsim/ensemble",
+      "model_name": "ensemble",
+      "pretrained": "official_dreamsim",
+      "backend": "dreamsim",
+      "supports_text": false,
+      "load_seconds": 7.821,
+      "parameter_size_mb": 1014.67,
+      "checkpoint_size_mb": 3257.4,
+      "device": "cpu",
+      "query_latency_seconds_median": 0.9689464999828488,
+      "sec_per_image": 1.0430728583208595,
+      "embedding_dimension": 1792,
+      "rss_mb": 1571.76171875,
+      "embedding_cache_mb": 2.0247802734375,
+      "cache_images": 291
+    },
+    "openclip_vit_b32": {
+      "model": "openclip_vit_b32",
+      "model_id": "openai/CLIP:ViT-B-32/openai",
+      "model_name": "ViT-B-32",
+      "pretrained": "openai",
+      "backend": "open_clip",
+      "supports_text": true,
+      "load_seconds": 5.368,
+      "parameter_size_mb": 577.08,
+      "checkpoint_size_mb": 2930.06,
+      "device": "cpu",
+      "query_latency_seconds_median": 0.10659314994700253,
+      "sec_per_image": 0.10656122498524685,
+      "embedding_dimension": 512,
+      "rss_mb": 1025.70703125,
+      "embedding_cache_mb": 3.9366455078125,
+      "cache_images": 1897
+    },
+    "siglip2_base_patch16_224": {
+      "model": "siglip2_base_patch16_224",
+      "model_id": "google/siglip2-base-patch16-224",
+      "model_name": "google/siglip2-base-patch16-224",
+      "pretrained": "official_huggingface",
+      "backend": "transformers_siglip",
+      "supports_text": true,
+      "load_seconds": 4.831,
+      "parameter_size_mb": 1431.23,
+      "checkpoint_size_mb": 2930.06,
+      "device": "cpu",
+      "query_latency_seconds_median": 0.277019549976103,
+      "sec_per_image": 0.27257371668626246,
+      "embedding_dimension": 768,
+      "rss_mb": 1011.8984375,
+      "embedding_cache_mb": 3.228759765625,
+      "cache_images": 1058
+    }
+  },
+  "positive_provenance": {
+    "F-01": {
+      "candidate_id": "d1d29ed5dad7316d",
+      "golden_sku": "50248",
+      "source_url": "https://eurosvet.ru/catalog/lustri/podvesnoy-svetilnik-50248-1-led-chernyy-a061423",
+      "image_source": "jsonld",
+      "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\258a767a309189f44f6f9bd8404e0ed0604c4f8cc81524d359f8fed4dbeadd00.jpg",
+      "primary": true,
+      "mapping_note": "The black 50248/1 LED supplier variant matches the compact cylindrical pendant render."
+    },
+    "F-03": {
+      "candidate_id": "ca1e1dca3c7cd1ef",
+      "golden_sku": "FR2066WL-L40B",
+      "source_url": "https://freya-light.com/products/nastennye-svetilniki/fr2066wl_l40b/",
+      "image_source": "jsonld",
+      "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\df3d82052062a5dcca0179705e631bdcb3d1a28a92c4aaaad8d81250ac0031f0.jpg",
+      "primary": true,
+      "mapping_note": "Bedside sconce with a dark rectangular base and a light fabric shade."
+    },
+    "F-04": {
+      "candidate_id": "5c4f4d294c79d693",
+      "golden_sku": "LSP-7187",
+      "source_url": "https://shop.lussole.ru/bra-lussole-lsp-7187",
+      "image_source": "og",
+      "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\data\\visual_spike\\images\\08014794296122ca43486540ed8dcf2fc8496a384ef5b51b967b11146db84335.jpg",
+      "primary": true,
+      "mapping_note": "Vertical illuminated ribbon/loop around a dark central axis."
+    },
+    "F-06": {
+      "candidate_id": "af4759566c99c033",
+      "golden_sku": "85078/01",
+      "source_url": "samples/golden/dan/expected_kp.docx",
+      "image_source": "expected_kp_docx_fallback",
+      "local_path": "D:\\My_dev_project\\LumiMatch_Codex\\output\\controlled_visual_benchmark\\positives\\F-06.jpeg",
+      "primary": false,
+      "mapping_note": "Mapping ambiguity: the KP photo is a wide disk track light, while the render shows narrow vertical cylinders."
+    }
+  },
+  "manual_protocol": {
+    "reviewer": "Codex visual inspection",
+    "ranking_mode": "MAX across three render crops",
+    "labels_hidden": true,
+    "golden_ranks_opened": false,
+    "limitation": "Procedural masking, not independently blinded research: target SKU names existed in the task, but sheets contain only images and anonymous IDs. Ratings use render geometry, not known identity.",
+    "rubric": "strong = close silhouette, structure and color; plausible = recognizable structural analogue with visible differences (color alternatives included); poor = only same category or unrelated structure. No technical/availability approval.",
+    "F-06": "Only 19 candidates; counts refer to Top-19, never an artificial twentieth item. Excluded from PRIMARY."
+  },
+  "secondary": {
+    "dinov2_vits14": {
+      "F-01": {
+        "neutral_background_rank": 65,
+        "gallery_max_rank": 13,
+        "gallery_images": 53
+      },
+      "F-03": {
+        "neutral_background_rank": 5,
+        "gallery_max_rank": 4,
+        "gallery_images": 41
+      },
+      "F-04": {
+        "neutral_background_rank": 86,
+        "gallery_max_rank": 110,
+        "gallery_images": 36
+      },
+      "F-06": {
+        "neutral_background_rank": 6,
+        "gallery_max_rank": 1,
+        "gallery_images": 7
+      }
+    },
+    "openclip_vit_b32": {
+      "F-01": {
+        "neutral_background_rank": 21,
+        "gallery_max_rank": 16,
+        "gallery_images": 53
+      },
+      "F-03": {
+        "neutral_background_rank": 15,
+        "gallery_max_rank": 14,
+        "gallery_images": 41
+      },
+      "F-04": {
+        "neutral_background_rank": 37,
+        "gallery_max_rank": 59,
+        "gallery_images": 36
+      },
+      "F-06": {
+        "neutral_background_rank": 6,
+        "gallery_max_rank": 1,
+        "gallery_images": 7
+      }
+    },
+    "siglip2_base_patch16_224": {
+      "F-01": {
+        "neutral_background_rank": 1,
+        "gallery_max_rank": 1,
+        "gallery_images": 53
+      },
+      "F-03": {
+        "neutral_background_rank": 1,
+        "gallery_max_rank": 1,
+        "gallery_images": 41
+      },
+      "F-04": {
+        "neutral_background_rank": 54,
+        "gallery_max_rank": 30,
+        "gallery_images": 36
+      },
+      "F-06": {
+        "neutral_background_rank": 1,
+        "gallery_max_rank": 1,
+        "gallery_images": 7
+      }
+    }
+  },
+  "dreamsim_comparison": [
+    {
+      "target": "F-01",
+      "source_model": "dinov2_vits14",
+      "before": 97,
+      "after": null,
+      "positive_in_top50": false
+    },
+    {
+      "target": "F-03",
+      "source_model": "dinov2_vits14",
+      "before": 3,
+      "after": 1,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-04",
+      "source_model": "dinov2_vits14",
+      "before": 110,
+      "after": null,
+      "positive_in_top50": false
+    },
+    {
+      "target": "F-06",
+      "source_model": "dinov2_vits14",
+      "before": 1,
+      "after": 1,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-01",
+      "source_model": "openclip_vit_b32",
+      "before": 9,
+      "after": 14,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-03",
+      "source_model": "openclip_vit_b32",
+      "before": 12,
+      "after": 1,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-04",
+      "source_model": "openclip_vit_b32",
+      "before": 60,
+      "after": null,
+      "positive_in_top50": false
+    },
+    {
+      "target": "F-06",
+      "source_model": "openclip_vit_b32",
+      "before": 1,
+      "after": 1,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-01",
+      "source_model": "siglip2_base_patch16_224",
+      "before": 1,
+      "after": 24,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-03",
+      "source_model": "siglip2_base_patch16_224",
+      "before": 1,
+      "after": 1,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-04",
+      "source_model": "siglip2_base_patch16_224",
+      "before": 33,
+      "after": 7,
+      "positive_in_top50": true
+    },
+    {
+      "target": "F-06",
+      "source_model": "siglip2_base_patch16_224",
+      "before": 1,
+      "after": 1,
+      "positive_in_top50": true
+    }
+  ]
+}
